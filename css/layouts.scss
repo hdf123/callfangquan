@@ -1,0 +1,41 @@
+@charset "UTF-8";
+//基础布局
+
+html,body{
+    margin:0 auto;
+}
+body{
+    max-width:10rem;
+}
+.headers{
+    width:10rem;
+    position:fixed;
+    top:0;
+    left:auto;
+}
+.contents{
+    width:100%;
+}
+.footers{
+    width:10rem;
+    height:1.5rem;
+    background:white;
+    position:fixed;
+    left:auto;
+    bottom:0;
+    z-index:999;
+    display: flex;
+    box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.53);
+    >a{
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.267rem;
+        >div{
+            font-size:0.64rem;
+        }
+    }
+}

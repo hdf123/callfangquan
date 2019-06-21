@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import "../../css/base";
+@import "../../css/styles";
+.headers{
+    height:2.24rem;
+    z-index:99;
+    background-color: #ffffff;
+    box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.36);
+    >div:nth-child(1){
+        padding:0.16rem 0.4rem;
+        >input{
+            width:9.2rem;
+            height: 0.747rem;
+            padding:0 0.16rem;
+            background-color: #eeeeee;
+            border-radius: 0.373rem;
+        }
+    }
+}
+.swiper1{
+    .swiper-slide{
+        height: 1.173rem;
+        @extend .flexs;
+        @extend .yincang;
+        font-size: 0.4rem;
+    }
+}
+/**
+     * 内容区
+ */
+.contents{
+    width:10rem !important;
+    position:absolute;
+    top:2.24rem;
+    left:auto;
+    bottom:1.5rem;
+    background: #F5F5F5;
+    overflow:auto;
+    >ul{
+        width: 9.52rem;
+        margin:0 auto;
+    }
+}
+.connoisseur_box{
+    width:100%;
+    margin-top:0.213rem;
+    background: white;
+    >div:nth-child(1){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0.4rem;
+        border-bottom:1px solid #dddddd;
+        >div:nth-child(2){
+            font-size: 0.293rem;
+            padding:0.06rem 0.12rem;
+            border-radius: 0.053rem;
+        }
+        >.Care_about{
+            color: #fba447;
+            border: solid 0.027rem #fba447;
+            >i{
+                color: #fba447;
+                font-size:0.45rem;
+            }
+        }
+        .cancel{
+            color: #999999;
+            border: solid 0.027rem #e5e5e5;
+        }
+    }
+}
+.connoisseur{
+    display: flex;
+    >div:nth-child(1){
+        position: relative;
+        >img:nth-child(1){
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius:50%;
+        }
+        >img:nth-child(2){
+            width:0.3rem;
+            position: absolute;
+            right:5%;
+            bottom:5%;
+        }
+    }
+    >div:nth-child(2){
+        margin-left:0.267rem;
+        >h3{
+            font-size: 0.4rem;
+        }
+        >p{
+            font-size: 0.32rem;
+            margin:0.17rem 0;
+        }
+        >div{
+            color: #666666;
+            font-size: 0.32rem;
+        }
+    }
+}
+.tiwen{
+    display: flex;
+    >div{
+        width:100%;
+        height:1.067rem;
+        display: flex;
+        align-items: center;
+        >div{
+            width:100%;
+            font-size: 0.373rem;
+            text-align: center;
+        }
+    }
+    >div:nth-child(1){
+        >div{
+            color: #5facfb;
+            border-right:1px solid red;
+        }
+    }
+}
+/**
+     * 底部
+ */
+.footers{
+    >a:nth-child(2){
+        color: #5facfb;
+        >div{
+            color: #5facfb;
+        }
+    }
+}
+
+
+
+
+
+
+
+
