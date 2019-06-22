@@ -12,14 +12,26 @@ body {
   top: 0;
   left: auto;
 }
+.headers .lefts {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headers .rights {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 .contents {
-  width: 100%;
+  width: 10rem !important;
+  position: absolute;
+  overflow: auto;
 }
 
 .footers {
   width: 10rem;
-  height: 1.5rem;
+  height: 1.307rem;
   background: white;
   position: fixed;
   left: auto;

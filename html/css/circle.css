@@ -1,0 +1,234 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .conksa > div > div, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs, .list_box > li > div > h3 {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers {
+  height: 1.173rem;
+  background-color: #ffffff;
+  z-index: 99;
+  font-size: 0.48rem;
+  text-align: center;
+  line-height: 1.173rem;
+  border-bottom: 1px solid #dddddd;
+  /*no*/
+}
+
+.contents {
+  padding: 0 0.4rem;
+  top: 1.173rem;
+  left: auto;
+  bottom: 1.5rem;
+}
+
+.boxa {
+  margin-top: 0.28rem;
+}
+
+.boxb, .boxc, .boxd {
+  margin-top: 0.693rem;
+}
+
+.circle_box {
+  padding-top: 0.573rem;
+  background: #eff7ff;
+}
+.circle_box > h3:nth-child(1) {
+  text-align: center;
+  font-size: 0.4rem;
+}
+.circle_box > div:nth-child(2) {
+  margin-top: 0.52rem;
+  background: white;
+  border-radius: 0.213rem 0.213rem 0.053rem 0.053rem;
+  box-shadow: 0rem 0.053rem 0.293rem 0rem rgba(0, 0, 0, 0.05);
+}
+.circle_box > div:nth-child(2) > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.693rem;
+}
+.circle_box > div:nth-child(2) > div:nth-child(2) > p {
+  font-size: 0.293rem;
+  padding: 0.133rem 0.227rem;
+  border-radius: 0.213rem 0.213rem 0rem 0rem;
+  background: #eef9ff;
+}
+
+.conksa {
+  display: flex;
+  padding: 0.693rem 0 0 0.48rem;
+}
+.conksa > div {
+  height: 0.667rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.333rem;
+  padding: 0.04rem 0.4rem 0.04rem 0.053rem;
+  background-image: linear-gradient(90deg, #5facfb 0%, #a3cffb 100%);
+}
+.conksa > div img {
+  width: 0.587rem;
+  height: 0.587rem;
+  border-radius: 50%;
+  margin-right: 0.12rem;
+}
+.conksa > div > div {
+  max-width: 7rem;
+  color: #ffffff;
+  font-size: 0.293rem;
+}
+
+.conksb {
+  padding-top: 0.64rem;
+  display: flex;
+  justify-content: center;
+}
+.conksb > div {
+  color: #ffffff;
+  font-size: 0.293rem;
+  padding: 0.25rem 0.8rem;
+}
+.conksb > div:nth-child(1) {
+  background-image: linear-gradient(90deg, #5facfb 0%, #a3cffb 100%);
+  border-radius: 0.053rem;
+}
+.conksb > div:nth-child(2) {
+  margin-left: 0.413rem;
+  background-image: linear-gradient(90deg, #f06947 0%, #f19a84 100%);
+  border-radius: 0.053rem;
+}
+
+.list_box {
+  margin-top: 0.266rem;
+}
+.list_box > li {
+  padding: 0.427rem 0 0.547rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+}
+.list_box > li > div {
+  width: 6.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list_box > li > div > h3 {
+  font-size: 0.4rem;
+}
+.list_box > li > div > p {
+  color: #999999;
+  font-size: 0.267rem;
+}
+.list_box > li > img {
+  width: 2.4rem;
+  height: 1.813rem;
+  border-radius: 0.053rem;
+}
+
+/**
+     * 底部
+ */
+.footers > a:nth-child(4) {
+  color: #5facfb;
+}
+.footers > a:nth-child(4) > div {
+  color: #5facfb;
+}
+
+/*# sourceMappingURL=circle.css.map */

@@ -135,12 +135,9 @@ a {
      * 内容区
  */
 .contents {
-  width: 10rem !important;
-  position: absolute;
-  top: 1.153rem;
+  top: 1.173rem;
   left: auto;
-  bottom: 1.5rem;
-  overflow: auto;
+  bottom: 1.307rem;
 }
 
 .swiper_box {

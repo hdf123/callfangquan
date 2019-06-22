@@ -119,6 +119,9 @@ a {
   height: 1.173rem;
   font-size: 0.4rem;
 }
+.swiper1 .act {
+  color: rgba(33, 33, 33, 0.5);
+}
 
 .more {
   padding: 0 0.2rem;
@@ -151,13 +154,10 @@ a {
      * 内容区
  */
 .contents {
-  width: 10rem !important;
-  position: absolute;
   top: 2.24rem;
   left: auto;
-  bottom: 1.5rem;
+  bottom: 1.307rem;
   background: #F5F5F5;
-  overflow: auto;
 }
 .contents > ul {
   width: 9.52rem;
@@ -242,7 +242,7 @@ a {
 }
 .questions > div:nth-child(1) > div {
   color: #5facfb;
-  border-right: 1px solid red;
+  border-right: 1px solid #e5e5e5;
 }
 
 /**

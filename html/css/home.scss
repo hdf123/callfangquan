@@ -34,12 +34,10 @@
      * 内容区
  */
 .contents{
-    width:10rem !important;
-    position:absolute;
-    top:1.153rem;
+    top:1.173rem;
     left:auto;
-    bottom:1.5rem;
-    overflow:auto;
+    bottom:1.307rem;
+    
 }
 .swiper_box{
     width:100%;
@@ -130,7 +128,7 @@
        height:100%; 
        >div{
            height:50%;
-           font-size: 0.373rem;
+           font-size:$fontsb;
            >i{
                font-size:.1rem;
            }
@@ -194,20 +192,20 @@
                 font-size: 0.4rem;
             }
             p{
-                color: #999999;
-                font-size: 0.293rem;
+                color:$colorb;
+                font-size:$fontsd;
             }
         }
     }
     >div:nth-child(2){
         display: flex;
         align-items: center;
-        color: #999999;
-        font-size: 0.293rem;
+        color:$colorb;
+        font-size:$fontsd;
     }
 }
 .problem_cont{
-    font-size: 0.373rem;
+    font-size:$fontsb;
     @extend .yincangs;
 }
 .problem_answer{
@@ -244,7 +242,7 @@
         >div{
             height:100%;
             line-height: 0.36rem;
-            font-size: 0.373rem;
+            font-size:$fontsb;
         }
         >div:nth-child(1){
             padding-right:0.133rem;
@@ -302,7 +300,7 @@
             border-radius: 0.053rem;
         }
         >div{
-            font-size: 0.373rem;
+            font-size:$fontsb;
             margin:0.293rem 0 0.253rem 0;
             @extend .yincangs;
         }
@@ -328,7 +326,7 @@
 .details{
     margin-left:0.44rem;
     >div:nth-child(1){
-        font-size: 0.373rem;
+        font-size:$fontsb;
     }
     >div:nth-child(2){
         display: flex;
@@ -340,17 +338,17 @@
             align-items: center;
             border-right:0.027rem solid #e5e5e5;
             >div{
-                color: #666666;
+                color:$colora;
                 font-size: 0.293rem;
                 padding-right:0.133rem;
             }
         }
         >div:nth-child(2){
             height:100%;
-            color: #666666;
+            color:$colora;
             display: flex;
             align-items: center;
-            font-size: 0.293rem;
+            font-size:$fontsd;
             padding-left:0.133rem;
         }
     }

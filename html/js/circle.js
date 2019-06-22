@@ -4,39 +4,6 @@ $(function(){
 	 */
 	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));//转为对象
 	if(!yz_logins) location.href="home.html";
-	/**
-	 * 搜索
-	 */
-	$(".search").click(function(){
-		location.href="search.html";
-	})
-	var mySwiper = new Swiper('.swiper1', {
-		slidesPerView :6.7,
-		onClick: function(swiper) {
-			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
-			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
-		} 
-	})
-	$(".more").hide();
-	$(".swiper1").on("click",".morek",function(){
-		$(".more").toggle();
-	})
-	$(".more>div").click(function(){
-		console.log($(this).index());
-		$(this).children().addClass("act").parent().siblings().children().removeClass("act");
-	})
-	/**
-	 * 关注
-	 */
-	$(".contents").on("click",".guanzhu",function(){
-		if($(this).is(".cancel")){
-			$(this).removeClass("cancel").addClass("Care_about");
-			$(this).html(`<i class="iconfont">&#xe609;</i>关注`);
-		}else{
-			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html(`√已关注`);
-		}
-	})
     /**
      * 上拉加载
      */

@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import "../../../css/base.scss";
-@import "../../../css/styles.scss";
+@import "../../css/base.scss";
+@import "../../css/styles.scss";
 .headers{
     height: 1.173rem;
     z-index:96;
@@ -11,9 +11,6 @@
         height:100%;
         padding:0 0.4rem;
         font-size: 0.373rem;
-        position:absolute;
-        top:0;
-        left:0;
         @extend .flexs;
     }
     .centers{
@@ -26,9 +23,6 @@
         height:100%;
         padding:0 0.4rem;
         font-size: 0.373rem;
-        position:absolute;
-        top:0;
-        right:0;
         @extend .flexs;
     }
 }
