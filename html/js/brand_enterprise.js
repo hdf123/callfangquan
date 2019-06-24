@@ -1,34 +1,12 @@
 $(function(){
-	var call_logins=true;//登录状态
-	localStorage.setItem('call_logins',JSON.stringify(call_logins));//转为json字符串
-	var mySwiper1 = new Swiper('.swiper1', {
-		loop : true,
-		autoplay: 2000,//可选选项，自动滑动
-		centeredSlides : true,
-		spaceBetween :10,
-		pagination : '.swiper-pagination',
-		observer:true,//修改swiper自己或子元素时，自动初始化swiper
-    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
-	})
 	/**
-	 * 搜索
+	 * 登录状态
 	 */
-	$(".search").click(function(){
-		location.href="search.html";
-	})
-	/**
-	 * 滚动通知
-	 */
-    var num=$(".ul1").find("li").length;
-    if (num>1) {
-        setInterval(function(){ 
-        	$('.ul1').animate({
-            	marginTop:"-1.1rem"
-        	},300,function(){
-            	$(this).css({marginTop : "0"}).find("li:first").appendTo(this);
-        	});
-    	},2000);
-    }
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="home.html";
+	//企业
+	var call_enterprise=JSON.parse(localStorage.getItem('call_enterprise'));//转为对象
+	$(".centers").html(call_enterprise);
     /**
      * 上拉加载
      */

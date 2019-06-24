@@ -101,7 +101,6 @@ a {
   height: 1.173rem;
   padding: 0.16rem 0.4rem;
   background-color: #ffffff;
-  z-index: 99;
 }
 .headers > input {
   width: 100%;

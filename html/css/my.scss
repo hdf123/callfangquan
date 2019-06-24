@@ -2,6 +2,7 @@
 @import "../../css/base";
 @import "../../css/styles";
 .headers{
+    padding-top:0.45rem;
     padding-bottom:0.9rem;
     >div:nth-child(1){
         padding-right:0.4rem;
@@ -91,9 +92,11 @@
     }
 }
 .contents{
-    top:7.2rem;
+    top:5.45rem;
     left:auto;
     bottom:1.307rem;
+    padding-top:1.85rem;
+    background: white;
 }
 .menu{
     width:100%;

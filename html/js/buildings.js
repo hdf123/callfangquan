@@ -1,5 +1,10 @@
 $(function(){
 	/**
+	 * 登录状态
+	 */
+	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));//转为对象
+	if(!yz_logins) location.href="home.html";
+	/**
 	 * 页面渲染
 	 */
 	var yz_building=JSON.parse(localStorage.getItem('yz_building'));//转为对象

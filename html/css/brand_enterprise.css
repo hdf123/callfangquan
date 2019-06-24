@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .lists > li > div > h3:nth-child(1), .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .preferential_title > div:nth-child(2) {
+.flexs, .headers .lefts, .headers .centers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,100 +100,97 @@ a {
 .headers {
   height: 1.173rem;
   background-color: #ffffff;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.2);
+  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+}
+.headers .lefts {
+  width: 1.173rem;
+  height: 100%;
+  font-size: 0.42rem;
+}
+.headers .centers {
+  height: 100%;
   font-size: 0.48rem;
-  text-align: center;
-  line-height: 1.173rem;
-  border-bottom: 1px solid #dddddd;
-  /*no*/
 }
 
 .contents {
-  padding-left: 0.4rem;
   top: 1.173rem;
   left: auto;
-  bottom: 1.307rem;
-}
-.contents > ul {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-.contents > ul > li {
-  padding-right: 0.4rem;
-  border-bottom: 1px solid #e5e5e5;
-  /*no*/
-}
-.contents > ul > li > img {
-  width: 9.2rem;
-  height: 4.347rem;
-}
-.contents > ul > li > div:nth-child(3) {
-  padding: 0.267rem 0;
-  display: flex;
-  justify-content: flex-end;
-}
-.contents > ul > li > div:nth-child(3) > img {
-  width: 0.747rem;
-  height: 0.747rem;
-}
-.contents > ul > li > div:nth-child(3) > img:nth-child(1) {
-  margin-right: 0.667rem;
+  bottom: 0;
+  padding-left: 0.4rem;
+  padding-top: 0.267rem;
 }
 
-.preferential_title {
+.lists > li {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.547rem 0 0.4rem 0;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid #dddddd;
 }
-.preferential_title > div:nth-child(1) {
-  display: flex;
-}
-.preferential_title > div:nth-child(1) > img {
-  width: 0.987rem;
-  height: 0.987rem;
-  border-radius: 50%;
-}
-.preferential_title > div:nth-child(1) > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 0.213rem;
-}
-.preferential_title > div:nth-child(1) > div > h3 {
-  font-size: 0.4rem;
-}
-.preferential_title > div:nth-child(1) > div > p {
-  color: #999999;
-  font-size: 0.32rem;
-}
-.preferential_title > div:nth-child(2) {
-  width: 1.52rem;
-  height: 0.587rem;
-  font-size: 0.293rem;
+.lists > li > img {
+  width: 2.88rem;
+  height: 2.133rem;
   border-radius: 0.053rem;
 }
-.preferential_title > .Care_about {
-  color: #fba447;
-  border: solid 0.027rem #fba447;
+.lists > li > div {
+  padding-left: 0.32rem;
 }
-.preferential_title > .Care_about > i {
-  color: #fba447;
-  font-size: 0.45rem;
+.lists > li > div > h3:nth-child(1) {
+  width: 7rem;
+  font-size: 0.427rem;
 }
-.preferential_title .cancel {
+.lists > li > div > h3:nth-child(2) {
+  color: #f9351a;
+  font-size: 0.373rem;
+  margin-top: 0.05rem;
+}
+.lists > li > div > div:nth-child(3) {
+  display: flex;
+  height: 0.293rem;
+  margin-top: 0.12rem;
+}
+.lists > li > div > div:nth-child(3) > div:nth-child(1) {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 0.027rem solid #e5e5e5;
+}
+.lists > li > div > div:nth-child(3) > div:nth-child(1) > div {
+  color: #666666;
+  font-size: 0.293rem;
+  padding-right: 0.133rem;
+}
+.lists > li > div > div:nth-child(3) > div:nth-child(2) {
+  height: 100%;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  font-size: 0.293rem;
+  padding-left: 0.133rem;
+}
+.lists > li > div > p {
   color: #999999;
-  border: solid 0.027rem #e5e5e5;
+  font-size: 0.267rem;
+  margin-top: 0.15rem;
+}
+.lists > li > div > div:nth-child(5) {
+  display: flex;
+  margin-top: 0.15rem;
+}
+.lists > li > div > div:nth-child(5) > div {
+  color: #999999;
+  font-size: 0.267rem;
+  padding: 0.03rem 0.08rem;
+  background-color: #f5f5f5;
+  border-radius: 0.027rem;
+  margin-right: 0.133rem;
+}
+.lists > li > div > div:nth-child(5) > .sell {
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.3);
+}
+.lists > li > div > div:nth-child(5) > .waiting {
+  color: #ffffff;
+  background-color: #ffb956;
 }
 
-/**
-     * 底部
- */
-.footers > a:nth-child(3) {
-  color: #5facfb;
-}
-.footers > a:nth-child(3) > div {
-  color: #5facfb;
-}
-
-/*# sourceMappingURL=preferential.css.map */
+/*# sourceMappingURL=brand_enterprise.css.map */

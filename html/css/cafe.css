@@ -52,7 +52,7 @@ a {
 }
 
 /*多行隐藏*/
-.yincangs {
+.yincangs, .cafe_cont > li > div > div {
   overflow: hidden;
   /*超出隐藏*/
   display: -webkit-box;
@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .preferential_title > div:nth-child(2) {
+.flexs, .headers .lefts, .headers .centers, .ak > li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,100 +100,128 @@ a {
 .headers {
   height: 1.173rem;
   background-color: #ffffff;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.2);
+  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+}
+.headers .lefts {
+  width: 1.173rem;
+  height: 100%;
+  font-size: 0.42rem;
+}
+.headers .centers {
+  height: 100%;
   font-size: 0.48rem;
-  text-align: center;
-  line-height: 1.173rem;
-  border-bottom: 1px solid #dddddd;
-  /*no*/
+}
+.headers .rights {
+  width: 1.8rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.headers .rights > h3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.45rem;
+}
+.headers .rights > h3:nth-child(1) {
+  padding-right: 0.1rem;
+  justify-content: flex-end;
+}
+.headers .rights > h3:nth-child(2) {
+  padding-left: 0.1rem;
+}
+
+.ak {
+  width: 3.067rem;
+  padding: 0 0.187rem;
+  background: white;
+  position: absolute;
+  top: 135%;
+  right: .133rem;
+}
+.ak .triangle {
+  width: 0;
+  height: 0;
+  border-left: .15rem solid transparent;
+  border-right: .15rem solid transparent;
+  border-bottom: .3rem solid white;
+  position: absolute;
+  top: -0.29rem;
+  right: 10%;
+}
+.ak > li {
+  height: 1.067rem;
+  font-size: 0.373rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.ak > li > h3 {
+  margin-right: 0.15rem;
+  font-size: 0.4rem;
 }
 
 .contents {
-  padding-left: 0.4rem;
   top: 1.173rem;
   left: auto;
-  bottom: 1.307rem;
-}
-.contents > ul {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-.contents > ul > li {
-  padding-right: 0.4rem;
-  border-bottom: 1px solid #e5e5e5;
-  /*no*/
-}
-.contents > ul > li > img {
-  width: 9.2rem;
-  height: 4.347rem;
-}
-.contents > ul > li > div:nth-child(3) {
-  padding: 0.267rem 0;
-  display: flex;
-  justify-content: flex-end;
-}
-.contents > ul > li > div:nth-child(3) > img {
-  width: 0.747rem;
-  height: 0.747rem;
-}
-.contents > ul > li > div:nth-child(3) > img:nth-child(1) {
-  margin-right: 0.667rem;
+  bottom: 0;
 }
 
-.preferential_title {
+.swiper1 img {
+  height: 4.32rem;
+}
+
+.cafe_title {
+  padding: 0 0.32rem;
+  margin-top: 0.52rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.547rem 0 0.4rem 0;
 }
-.preferential_title > div:nth-child(1) {
+.cafe_title > h3 {
+  font-size: 0.48rem;
+}
+.cafe_title > div {
+  height: 100%;
   display: flex;
-}
-.preferential_title > div:nth-child(1) > img {
-  width: 0.987rem;
-  height: 0.987rem;
-  border-radius: 50%;
-}
-.preferential_title > div:nth-child(1) > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 0.213rem;
-}
-.preferential_title > div:nth-child(1) > div > h3 {
-  font-size: 0.4rem;
-}
-.preferential_title > div:nth-child(1) > div > p {
-  color: #999999;
+  align-items: center;
+  color: #666666;
   font-size: 0.32rem;
+  padding-left: 0.4rem;
 }
-.preferential_title > div:nth-child(2) {
-  width: 1.52rem;
-  height: 0.587rem;
-  font-size: 0.293rem;
-  border-radius: 0.053rem;
+.cafe_title > div > i {
+  padding-top: 0.05rem;
+  color: #666666;
+  font-size: 0.5rem;
 }
-.preferential_title > .Care_about {
-  color: #fba447;
-  border: solid 0.027rem #fba447;
+
+.cafe_cont {
+  padding: 0 0.32rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.preferential_title > .Care_about > i {
-  color: #fba447;
-  font-size: 0.45rem;
+.cafe_cont > li {
+  width: 4.533rem;
+  border-radius: 0.107rem;
+  border: 1px solid #e5e5e5;
+  /*no*/
+  margin-top: 0.267rem;
 }
-.preferential_title .cancel {
+.cafe_cont > li > img {
+  width: 4.533rem;
+  height: 2.827rem;
+}
+.cafe_cont > li > div {
+  padding: 0 0.3rem;
+}
+.cafe_cont > li > div > div {
+  font-size: 0.347rem;
+  margin: 0.2rem 0 0.22rem 0;
+}
+.cafe_cont > li > div > p {
   color: #999999;
-  border: solid 0.027rem #e5e5e5;
+  font-size: 0.293rem;
+  padding: 0.2rem 0;
 }
 
-/**
-     * 底部
- */
-.footers > a:nth-child(3) {
-  color: #5facfb;
-}
-.footers > a:nth-child(3) > div {
-  color: #5facfb;
-}
-
-/*# sourceMappingURL=preferential.css.map */
+/*# sourceMappingURL=cafe.css.map */

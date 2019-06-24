@@ -2,8 +2,8 @@ $(function(){
 	/**
 	 * 登录状态
 	 */
-	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));//转为对象
-	if(!yz_logins) location.href="home.html";
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="home.html";
 	/**
 	 * 搜索
 	 */
@@ -14,7 +14,7 @@ $(function(){
 		slidesPerView :6.7,
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
-			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
+//			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
 		} 
 	})
 	$(".more").hide();

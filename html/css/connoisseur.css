@@ -99,7 +99,6 @@ a {
 
 .headers {
   height: 2.24rem;
-  z-index: 99;
   position: relative;
   background-color: #ffffff;
   box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.36);

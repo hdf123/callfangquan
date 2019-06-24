@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import "../../css/base";
+@import "../../css/styles";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+    padding-left:0.4rem;
+    .Brand_title{
+        height:1.49rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        >h3{
+            font-size: 0.48rem;
+        }
+        >div{
+            height:100%;
+            display: flex;
+            align-items: center;
+            color: #666666;
+            font-size: 0.32rem;
+            padding:0 0.4rem;
+            >i{
+                padding-top:0.05rem;
+                color: #666666;
+                font-size: 0.5rem;
+            }
+        }
+    }
+    .sentiment,.newk{
+        margin-top:0.133rem;
+    }
+}
+.swiper1{
+    .swiper-slide{
+        img{
+            width: 2.693rem;
+            height: 2.693rem;
+            border-radius: 0.053rem;
+            border: solid 0.013rem #e5e5e5;
+        }
+    }
+}
+.lists{
+    >li{
+        display: flex;
+        padding:0.32rem 0;
+        border-bottom:1px solid #dddddd;
+        >img{
+            width: 2.88rem;
+            height: 2.133rem;
+            border-radius: 0.053rem;
+        }
+        >div{
+            >h3{
+                width:7rem;
+                padding-left:0.32rem;
+                font-size: 0.427rem;
+                @extend .yincang;
+            }
+            >div{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top:0.094rem;
+                >div{
+                    color: #666666;
+                    font-size: 0.32rem;
+                    margin-left:0.32rem;
+                    margin-top:0.133rem;
+                    padding:0.12rem 0.307rem;
+                    border: solid 0.013rem #e5e5e5;
+                }
+            }
+        }
+    }
+    >li:first-child{
+        padding-top:0;
+    }
+}
