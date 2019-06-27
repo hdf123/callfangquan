@@ -4,26 +4,11 @@ $(function(){
 	 */
 	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
 	if(!call_logins) location.href="home.html";
-	//更多
-	$(".ak").hide();
-	$(".rights>h3:eq(1)").click(function(){
-		$(".ak").toggle();
-	})
-	var mySwiper1 = new Swiper('.swiper1', {
-		loop : true,
-		autoplay: 2000,//可选选项，自动滑动
-		centeredSlides : true,
-		spaceBetween :10,
-		pagination : '.swiper-pagination',
-		observer:true,//修改swiper自己或子元素时，自动初始化swiper
-    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
-	})
-	//热门视频:0;我的关注:1;
-	$(".btn").click(function(){
-		var ind=$(this).attr("videow");
-		localStorage.setItem('call_videow',JSON.stringify(ind));
-		location.href="hot_video.html";
-	})
+	//视频类型
+	var call_videow=JSON.parse(localStorage.getItem('call_videow'));//转为对象
+	if(call_videow==0) $(".centers").html("热门视频")
+	else if(call_videow==1) $(".centers").html("我的关注")
+	else location.href="home.html";
     /**
      * 上拉加载
      */

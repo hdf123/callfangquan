@@ -1,0 +1,347 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs, .cafe_cont > li > div > div {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .headers .lefts, .headers .centers, .ak > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs, .cafe_cont > li > div > div {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .headers .lefts, .headers .centers, .ak > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers {
+  height: 1.173rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.2);
+  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+}
+.headers .lefts {
+  width: 1.173rem;
+  height: 100%;
+  font-size: 0.42rem;
+}
+.headers .centers {
+  height: 100%;
+  font-size: 0.48rem;
+}
+.headers .rights {
+  width: 1.8rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.headers .rights > h3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 0.45rem;
+}
+.headers .rights > h3:nth-child(1) {
+  padding-right: 0.1rem;
+  justify-content: flex-end;
+}
+.headers .rights > h3:nth-child(2) {
+  padding-left: 0.1rem;
+}
+
+.ak {
+  width: 3.067rem;
+  padding: 0 0.187rem;
+  background: white;
+  position: absolute;
+  top: 135%;
+  right: .133rem;
+}
+.ak .triangle {
+  width: 0;
+  height: 0;
+  border-left: .15rem solid transparent;
+  border-right: .15rem solid transparent;
+  border-bottom: .3rem solid white;
+  position: absolute;
+  top: -0.29rem;
+  right: 10%;
+}
+.ak > li {
+  height: 1.067rem;
+  font-size: 0.373rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.ak > li > h3 {
+  margin-right: 0.15rem;
+  font-size: 0.4rem;
+}
+
+.contents {
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+}
+
+.swiper1 img {
+  height: 4.32rem;
+}
+
+.cafe_title {
+  padding: 0 0.32rem;
+  margin-top: 0.52rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cafe_title > h3 {
+  font-size: 0.48rem;
+}
+.cafe_title > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #666666;
+  font-size: 0.32rem;
+  padding-left: 0.4rem;
+}
+.cafe_title > div > i {
+  padding-top: 0.05rem;
+  color: #666666;
+  font-size: 0.5rem;
+}
+
+.cafe_cont {
+  padding: 0 0.32rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cafe_cont > li {
+  width: 4.533rem;
+  border-radius: 0.107rem;
+  border: 1px solid #e5e5e5;
+  /*no*/
+  margin-top: 0.267rem;
+}
+.cafe_cont > li > img {
+  width: 4.533rem;
+  height: 2.827rem;
+}
+.cafe_cont > li > div {
+  padding: 0 0.3rem;
+}
+.cafe_cont > li > div > div {
+  font-size: 0.347rem;
+  margin: 0.2rem 0 0.22rem 0;
+}
+.cafe_cont > li > div > p {
+  color: #999999;
+  font-size: 0.293rem;
+  padding: 0.2rem 0;
+}
+
+.headers {
+  height: 1.173rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.2);
+  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+}
+.headers .lefts {
+  width: 1.173rem;
+  height: 100%;
+  font-size: 0.42rem;
+}
+.headers .centers {
+  height: 100%;
+  font-size: 0.48rem;
+}
+
+.contents {
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=hot_video.css.map */

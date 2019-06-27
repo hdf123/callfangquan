@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/mortgage.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
+			<div class="centers">房贷计算器</div>
+		</header>
+		<section class="contents">
+			<ul class="mortgage_tab">
+				<li>公积金贷款</li>
+				<li>商业贷款</li>
+				<li>组合贷款</li>
+				<div></div>
+			</ul>
+			<div class="tab_childa">
+				<ul class="fund_box">
+					<li class="way">
+						<div>计算方式</div>
+						<div class="fund_btn calculatek">
+							<div class="">
+								<i class="iconfont icon-xuanze-danxuan"></i>按房价总额
+							</div>
+							<div class="">
+								<i class="iconfont icon-xuanze"></i>按贷款总额
+							</div>
+						</div>
+					</li>
+					<li class="way">
+						<div>还款方式</div>
+						<div class="fund_btn reimbursement">
+							<div class="">
+								<i class="iconfont icon-xuanze-danxuan"></i>等额本息
+							</div>
+							<div class="">
+								<i class="iconfont icon-xuanze"></i>等额本金
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>房价总额</div>
+						<div>
+							<input type="text" value="0" />万元
+						</div>
+					</li>
+					<li class="proportion">
+						<div>贷款比例</div>
+						<div>
+							<span>7成</span><i class="iconfont">&#xe642;</i>
+						</div>
+					</li>
+					<li class="mortgage">
+						<div>按揭年数</div>
+						<div>
+							<span>30年(360期)</span>
+							<i class="iconfont">&#xe642;</i>
+						</div>
+					</li>
+					<li>
+						<div>公积金利率</div>
+						<div>
+							<span>4.9%</span>
+							<i class="iconfont">&#xe642;</i>
+						</div>
+					</li>
+				</ul>
+				<p>公积金贷款利率4.9%</p>
+				<input type="button" value="开始计算" />
+			</div>
+		</section>
+		<div class="select_box select_box1"></div>
+		<div class="select_box select_box2"></div>
+		
+<script src="js/mortgage.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
