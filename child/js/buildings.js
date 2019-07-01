@@ -2,8 +2,8 @@ $(function(){
 	/**
 	 * 登录状态
 	 */
-	var yz_logins=JSON.parse(localStorage.getItem('yz_logins'));//转为对象
-	if(!yz_logins) location.href="home.html";
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="home.html";
 	/**
 	 * 页面渲染
 	 */
@@ -47,17 +47,101 @@ $(function(){
 		observeParents:true,
 		slidesPerView :2.2,
 		spaceBetween: 16,
+		onClick: function(swiper) {
+			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
+			console.log(ind);
+			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
+//	    	location.href="buildings.html";
+		} 
 	})
 	var mySwiper4= new Swiper('.swiper4', {
 		observer:true,
 		observeParents:true,
 		slidesPerView :2.2,
 		spaceBetween: 16,
+		onClick: function(swiper) {
+			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
+			console.log(ind);
+			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
+//	    	location.href="buildings.html";
+		} 
+	})
+//选项卡切换
+	var tabIndex = 0;
+	var tabBar = function() {
+		var aTab = $('.mortgage_tab>li');
+		aTab.on('click', function() {
+			var tabIndex=$(this).index();
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.animate({ 'left': mm + '%' }, 300, function() {
+				console.log(tabIndex);
+				if(tabIndex==0){
+					$(".contents").scrollTop(0)
+				}else if(tabIndex==1){
+					$(".contents").scrollTop(790)
+				}else if(tabIndex==2){
+					$(".contents").scrollTop(810)
+				}else{
+					$(".contents").scrollTop(1277)
+				}
+			});
+
+		})
+	}
+	tabBar();
+	/**
+	 * 滚动显示
+	 */
+	console.log("基础信息------------"+$(".swiper1").position().top);
+	console.log("户型------------"+$(".door_box").position().top);
+	console.log("周边------------"+$(".surrounding_title").position().top);
+	console.log("点评------------"+$(".review_title").position().top);
+	$(".headersk").hide();
+	$(".contents").scroll(function(){
+		$(".headersk").show();
+		console.log($(".contents").scrollTop());
+		var sk=$(".contents").scrollTop();
+		if(sk<530){
+			tabIndex=0;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
+		}else if(sk>530&&sk<810){
+			tabIndex=1;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
+		}else if(sk>810&&sk<1270){
+			tabIndex=2;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
+		}else if(sk>1270){
+			tabIndex=3;
+			var mm=8.5+(100/4*tabIndex);
+			var oLine = $('.mortgage_tab>div');
+			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
+		}
+		
+		
+		if($(".contents").scrollTop()>1){
+			$(".headers").hide();
+			$(".headersk").stop(true,true).animate({opacity:$(".contents").scrollTop()/150});
+		}else{
+			$(".headersk").animate({opacity:$(".contents").scrollTop()/150},function(){
+				$(".headersk").hide();
+			});
+			$(".headers").show();
+		}
+	})
+	$(".conters").click(function(){
+		alert(111)
 	})
 	/**
 	 * 更多信息
 	 */
-	$(".btn1").click(function(){
+	$(".situation>div:eq(1),.situation>div:eq(2),.btn1").click(function(){
 		location.href="building_information.html";
 	})
 	/**
@@ -158,7 +242,7 @@ $(function(){
 		location.href="surrounding.html"
 	})
 	/**
-	 * 滚动通知
+	 * 最新动态
 	 */
     var num=$(".ul1").find("li").length;
     if (num>1) {
@@ -178,6 +262,10 @@ $(function(){
     		$(".ul1>li").eq(i).addClass("flexk");
     	}
     }
+    $(".ul1>li").click(function(){
+    	localStorage.setItem('yz_consulting',JSON.stringify(2));
+    	location.href="consulting.html";
+    })
     /**
      * 查看全部点评
      */

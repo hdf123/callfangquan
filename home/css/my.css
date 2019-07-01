@@ -198,8 +198,6 @@ a {
 
 .menu {
   width: 100%;
-  border-bottom: 1px solid #dddddd;
-  /*no*/
 }
 .menu > li {
   width: 100%;
@@ -219,7 +217,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #F5F5F5;
   /*no*/
 }
 .menu > li > div > p {
@@ -227,9 +225,6 @@ a {
 }
 .menu > li > div > i {
   font-size: 0.4rem;
-}
-.menu > li:last-child > div {
-  border: none;
 }
 
 /**

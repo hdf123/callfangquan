@@ -55,6 +55,9 @@ $(function(){
 		$(".interest_rate span").html($(".inputk input").val());
 		$(".tab_childa>p").html("公积金贷款利率"+$(".inputk input").val()+"%");
 	})
+	$(".hides").click(function(){
+		$(".interestRate").hide();
+	})
 	/**
 	 * 货款比例选择
 	 */

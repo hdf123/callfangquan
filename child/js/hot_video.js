@@ -4,12 +4,11 @@ $(function(){
 	 */
 	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
 	if(!call_logins) location.href="home.html";
-	//品牌类型
-	var call_typew=JSON.parse(localStorage.getItem('call_typew'));//转为对象
-	if(call_typew==0) $(".centers").html("精选品牌")
-	else if(call_typew==1) $(".centers").html("人气品牌")
-	else if(call_typew==2) $(".centers").html("新锐品牌")
-	else location.href="home.html";
+	//视频类型
+	var call_videow=JSON.parse(localStorage.getItem('call_videow'));//转为对象
+	if(call_videow==0) $(".centers").html("热门视频")
+	else if(call_videow==1) $(".centers").html("我的关注")
+	else location.href="../home/home.html";
     /**
      * 上拉加载
      */
@@ -25,7 +24,7 @@ $(function(){
 		off_on = true;
 	};
 	//初始化， 第一次加载
-	$(document).ready(function(){
+	$(document).ready(function() {
 	    LoadingDataFn();
 	});
 	$('.contents').scroll(function() {

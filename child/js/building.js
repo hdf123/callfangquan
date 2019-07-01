@@ -3,7 +3,7 @@ $(function(){
 	 * 登录状态
 	 */
 	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="home.html";
+	if(!call_logins) location.href="../home/home.html";
 	/**
 	 * 搜索
 	 */
@@ -290,8 +290,8 @@ $(function(){
 	
 	
 	$(".contents").on("click",".building_box",function(){
-		localStorage.setItem('yz_building',JSON.stringify(data[$(this).index()]));//转为json字符串
-		var ss =JSON.parse(localStorage.getItem('yz_building'));//转为对象
+		localStorage.setItem('call_building',JSON.stringify(data[$(this).index()]));//转为json字符串
+		var ss =JSON.parse(localStorage.getItem('call_building'));//转为对象
 		location.href="buildings.html";
 	})
 })

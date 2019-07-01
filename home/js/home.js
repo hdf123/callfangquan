@@ -1,14 +1,34 @@
 $(function(){
+	var call_logins=true;//登录状态
+	localStorage.setItem('call_logins',JSON.stringify(call_logins));//转为json字符串
+	var mySwiper1 = new Swiper('.swiper1', {
+		loop : true,
+		autoplay: 2000,//可选选项，自动滑动
+		centeredSlides : true,
+		spaceBetween :10,
+		pagination : '.swiper-pagination',
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
+	})
 	/**
-	 * 登录状态
+	 * 搜索
 	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="home.html";
-	//视频类型
-	var call_videow=JSON.parse(localStorage.getItem('call_videow'));//转为对象
-	if(call_videow==0) $(".centers").html("热门视频")
-	else if(call_videow==1) $(".centers").html("我的关注")
-	else location.href="home.html";
+	$(".search").click(function(){
+		location.href="../child/search.html";
+	})
+	/**
+	 * 滚动通知
+	 */
+    var num=$(".ul1").find("li").length;
+    if (num>1) {
+        setInterval(function(){ 
+        	$('.ul1').animate({
+            	marginTop:"-1.1rem"
+        	},300,function(){
+            	$(this).css({marginTop : "0"}).find("li:first").appendTo(this);
+        	});
+    	},2000);
+    }
     /**
      * 上拉加载
      */
