@@ -15,7 +15,7 @@
 			<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
 			<div class="centers">房贷计算器</div>
 		</header>
-		<section class="contents">
+		<section class="contents contentk1">
 			<ul class="mortgage_tab">
 				<li>公积金贷款</li>
 				<li>商业贷款</li>
@@ -65,7 +65,7 @@
 							<i class="iconfont">&#xe642;</i>
 						</div>
 					</li>
-					<li>
+					<li class="interest_rate">
 						<div>公积金利率</div>
 						<div>
 							<span>4.9%</span>
@@ -73,13 +73,37 @@
 						</div>
 					</li>
 				</ul>
-				<p>公积金贷款利率4.9%</p>
+				<p class="">公积金贷款利率4.9%</p>
 				<input type="button" value="开始计算" />
 			</div>
 		</section>
+		<div class="interestRate">
+			<header class="headers">
+				<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
+				<div class="centers">公积金利率</div>
+				<div class="rights">完成</div>
+			</header>
+			<section class="contents contentk2">
+				<div class="inputk">
+					<div>
+						<div>自定义:</div>
+						<div><input type="text" placeholder="" value="3.25" />%</div>
+					</div>
+					<div>或选择公积金利率</div>
+				</div>
+				<ul class="lists">
+					<!--<li rate="3.25">
+						<p>15年10月24日基准利率</p>
+						<i class="iconfont">&#xe73b;</i>
+					</li>
+					<li rate="3.4125"><p>15年10月24日利率上限（1.05倍）</p></li>-->
+				</ul>
+			</section>
+		</div>
 		<div class="select_box select_box1"></div>
 		<div class="select_box select_box2"></div>
 		
+<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/mortgage.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .tab_childa > p, .lists > li > p, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, .mortgage_tab > li {
+.flexs, .headers .lefts, .headers .centers, .mortgage_tab > li, .interestRate .rights {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,7 +113,7 @@ a {
   font-size: 0.48rem;
 }
 
-.contents {
+.contentk1 {
   top: 1.173rem;
   left: auto;
   bottom: 0;
@@ -147,7 +147,7 @@ a {
   color: #999999;
   font-size: 0.267rem;
   text-align: right;
-  padding: 0.24rem 0.4rem 0.24rem 0;
+  padding: 0.24rem 0.4rem 0.24rem 0.4rem;
 }
 .tab_childa > input[type="button"] {
   display: block;
@@ -210,6 +210,77 @@ a {
 }
 .fund_box > .way > div:nth-child(2) > div:nth-child(1) {
   margin-right: 0.25rem;
+}
+
+.interestRate {
+  width: 10rem;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  z-index: 98;
+}
+.interestRate .rights {
+  width: 1.6rem;
+  height: 100%;
+  font-size: 0.42rem;
+}
+
+.contentk2 {
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+  padding-left: 0.4rem;
+}
+
+.inputk > div {
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  color: #999999;
+  font-size: 0.4rem;
+  border-bottom: 1px solid #E5E5E5;
+  /*no*/
+}
+.inputk > div:nth-child(1) {
+  font-size: 0.4rem;
+  padding-right: 0.8rem;
+  justify-content: space-between;
+}
+.inputk > div:nth-child(1) > div:nth-child(1) {
+  width: 1.4rem;
+}
+.inputk > div:nth-child(1) > div:nth-child(2) {
+  width: 7.3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.4rem;
+}
+.inputk > div:nth-child(1) > div:nth-child(2) input {
+  width: 92%;
+  height: 100%;
+  border: none;
+  font-size: 0.4rem;
+}
+
+.lists > li {
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0.8rem;
+  border-bottom: 1px solid #E5E5E5;
+}
+.lists > li > p {
+  width: 85%;
+  font-size: 0.4rem;
+}
+.lists > li > i {
+  color: #F9351A;
+  font-size: 0.575rem;
 }
 
 .swiper-container, .selectData {

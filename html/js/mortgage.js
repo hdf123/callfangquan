@@ -43,6 +43,19 @@ $(function(){
 		}
 	})
 	/**
+	 * 公积金利率
+	 */
+	$(".interestRate").hide();
+	$(".interest_rate").click(function(){
+		$(".interestRate").show();
+//		location.href="interest_rate.html";
+	})
+	$(".rights").click(function(){
+		$(".interestRate").hide();
+		$(".interest_rate span").html($(".inputk input").val());
+		$(".tab_childa>p").html("公积金贷款利率"+$(".inputk input").val()+"%");
+	})
+	/**
 	 * 货款比例选择
 	 */
     var hgS1 = new selectSwiper({
@@ -103,7 +116,38 @@ $(function(){
     	$(".select .tits").html("按揭年数");
         hgS2.openSelectSwiper(); // 打开选择框
     });
-    
+	/**
+	 * 渲染利率
+	 */
+	for(i in interest_rate){
+		for(j in interest_rate[i].arr1){
+			var rate=(interest_rate[i].rate*10000)*(interest_rate[i].arr1[j]*10000)/100000000;
+			$(".lists").append(`<li rate=${rate}><p>${interest_rate[i].arr2[j]}</p></li>`)
+		}
+	}
+	$(".lists>li:first-child").append(`<i class="iconfont">&#xe73b;</i>`);
+	/**
+	 * 获取利率
+	 */
+	$('.inputk input').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	    var texts=$(this).val();
+	　　//keycode是键码，13也是电脑物理键盘的 enter 
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	console.log("texts="+texts);
+	    }
+	});
+	$(".lists li").click(function(){
+		if($(this).find("i").length==0){
+			$(this).append(`<i class="iconfont">&#xe73b;</i>`);
+			$(this).siblings().children().remove("i");
+			$(".inputk input").val($(this).attr("rate"));
+		}
+	})
+	/**
+	 * 弹出框
+	 */
 	function selectSwiper(obj) {
 	    var _self = this;
 	    _self.el = $(obj.el); // 根元素

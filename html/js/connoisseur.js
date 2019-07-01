@@ -14,7 +14,7 @@ $(function(){
 		slidesPerView :6.7,
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
-//			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
+			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
 		} 
 	})
 	$(".more").hide();
