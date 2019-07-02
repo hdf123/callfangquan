@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, .mortgage_tab > li, .interestRate1 .rights, .interestRate2 .rights {
+.flexs, .headers .lefts, .headers .centers, .mortgage_tab > li, .interestRate1 .rights {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,8 +149,7 @@ a {
   text-align: right;
   padding: 0.24rem 0.4rem 0.24rem 0.4rem;
 }
-
-.button1, .button2, .button3 {
+.tab_childa > input[type="button"], .tab_childb > input[type="button"], .tab_childc > input[type="button"] {
   display: block;
   width: 9.2rem;
   height: 1.173rem;
@@ -188,12 +187,12 @@ a {
 .fund_box > li > div:nth-child(2) > span {
   color: #999999;
   font-size: 0.4rem;
-  margin-right: 0.1rem;
 }
 .fund_box > li > div:nth-child(2) > i {
   color: #8a8a8a;
   font-size: 0.35rem;
   margin-top: 0.1rem;
+  margin-left: 0.1rem;
 }
 .fund_box > .way > div:nth-child(2) {
   display: flex;
@@ -213,7 +212,7 @@ a {
   margin-right: 0.25rem;
 }
 
-.interestRate1, .interestRate2 {
+.interestRate1 {
   width: 10rem;
   background: white;
   position: fixed;
@@ -222,7 +221,7 @@ a {
   bottom: 0;
   z-index: 98;
 }
-.interestRate1 .rights, .interestRate2 .rights {
+.interestRate1 .rights {
   width: 1.6rem;
   height: 100%;
   font-size: 0.42rem;
@@ -319,7 +318,6 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 98;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
@@ -382,4 +380,4 @@ a {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/*# sourceMappingURL=mortgage.css.map */
+/*# sourceMappingURL=mmm.css.map */

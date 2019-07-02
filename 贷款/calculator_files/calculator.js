@@ -835,7 +835,6 @@ function reg_Num(str){
 //得到利率
 function getlilv(lilv_class,type,years){
 	var lilv_class = parseInt(lilv_class);
-	
     if (years==1){
 		 return lilv_array[lilv_class][type][1];
 	}else if (years<=3){
@@ -864,11 +863,12 @@ function getMonthMoney1(lilv,total,month){
 }
 
 function ext_total(fmobj){
+	//期限
 	var years = fmobj.years.value;
 	var month = fmobj.years.value * 12;
 
-	fmobj.month1.value = month;
-	fmobj.month2.value = month;
+//	fmobj.month1.value = month;
+//	fmobj.month2.value = month;
 	if (fmobj.type.value == 3 ){
 		//--  组合型贷款(组合型贷款的计算，只和商业贷款额、和公积金贷款额有关，和按贷款总额计算无关)
 		if (!reg_Num(fmobj.total_sy.value)){alert("混合型贷款请填写商贷比例");fmobj.total_sy.focus();return false;}

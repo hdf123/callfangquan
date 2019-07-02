@@ -24,7 +24,7 @@
 			</ul>
 			<div class="tab_child">
 				<!--公积金贷款-->
-				<form class="tab_childa" name="form1">
+				<div class="tab_childa">
 					<ul class="fund_box">
 						<li class="way">
 							<div>计算方式</div>
@@ -57,7 +57,7 @@
 						<li class="proportion">
 							<div>贷款比例</div>
 							<div>
-								<span ind="2">七成</span><i class="iconfont">&#xe642;</i>
+								<span>7成</span><i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
 						<li class="mortgage">
@@ -76,10 +76,10 @@
 						</li>
 					</ul>
 					<p class="">公积金贷款利率4.9%</p>
-					<input type="button" class="button1" value="开始计算" />
-				</form>
+					<input type="button1" value="开始计算" />
+				</div>
 				<!--商业贷款-->
-				<form class="tab_childb" name="form2">
+				<div class="tab_childb">
 					<ul class="fund_box">
 						<li class="way">
 							<div>计算方式</div>
@@ -112,7 +112,7 @@
 						<li class="proportion">
 							<div>贷款比例</div>
 							<div>
-								<span ind="2">七成</span><i class="iconfont">&#xe642;</i>
+								<span>7成</span><i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
 						<li class="mortgage">
@@ -130,11 +130,11 @@
 							</div>
 						</li>
 					</ul>
-					<p class="">商业贷款利率4.9%</p>
-					<input type="button" class="button2" value="开始计算" />
-				</form>
+					<p class="">公积金贷款利率4.9%</p>
+					<input type="button2" value="开始计算" />
+				</div>
 				<!--组合贷款-->
-				<form class="tab_childc" name="form3">
+				<div class="tab_childc">
 					<ul class="fund_box">
 						<li class="way">
 							<div>计算方式</div>
@@ -158,32 +158,20 @@
 								</div>
 							</div>
 						</li>
-						<li class="amount">
+						<li>
 							<div>房价总额</div>
 							<div>
-								<input type="text" value="" />万元
+								<input type="text" value="0" />万元
 							</div>
 						</li>
 						<li class="proportion">
 							<div>贷款比例</div>
 							<div>
-								<span ind="2">七成</span><i class="iconfont">&#xe642;</i>
-							</div>
-						</li>
-						<li class="amountks">
-							<div>贷款金额</div>
-							<div>
-								<span>0</span>万元
-							</div>
-						</li>
-						<li class="">
-							<div>公积金贷款金额</div>
-							<div>
-								<input type="text" value="" />万元
+								<span>7成</span><i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
 						<li class="mortgage">
-							<div>公积金按揭年数</div>
+							<div>按揭年数</div>
 							<div>
 								<span>30年(360期)</span>
 								<i class="iconfont">&#xe642;</i>
@@ -196,30 +184,10 @@
 								<i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
-						<li class="">
-							<div>商业贷款金额</div>
-							<div>
-								<input type="text" value="" />万元
-							</div>
-						</li>
-						<li class="mortgage">
-							<div>商业贷款按揭年数</div>
-							<div>
-								<span>30年(360期)</span>
-								<i class="iconfont">&#xe642;</i>
-							</div>
-						</li>
-						<li class="interest_rate">
-							<div>商贷利率</div>
-							<div>
-								<span>4.9%</span>
-								<i class="iconfont">&#xe642;</i>
-							</div>
-						</li>
 					</ul>
 					<p class="">公积金贷款利率4.9%</p>
-					<input type="button" class="button3" value="开始计算" />
-				</form>
+					<input type="button3" value="开始计算" />
+				</div>
 			</div>
 		</section>
 		<div class="interestRate1">
@@ -245,40 +213,8 @@
 				</ul>
 			</section>
 		</div>
-		<div class="interestRate2">
-			<header class="headers">
-				<h3 class="iconfont lefts hides">&#xe632;</h3>
-				<div class="centers">商贷利率</div>
-				<div class="rights">完成</div>
-			</header>
-			<section class="contents contentk2">
-				<div class="inputk">
-					<div>
-						<div>自定义:</div>
-						<div><input type="text" placeholder="" value="3.25" />%</div>
-					</div>
-					<div>或选择商贷利率</div>
-				</div>
-				<ul class="lists">
-					<!--<li rate="3.25">
-						<p>15年10月24日基准利率</p>
-						<i class="iconfont">&#xe73b;</i>
-					</li>
-					<li rate="3.4125"><p>15年10月24日利率上限（1.05倍）</p></li>-->
-				</ul>
-			</section>
-		</div>
-		<!--公积金-->
-		<div class="select_box fund1"></div>
-		<div class="select_box fund2"></div>
-		<!--商贷-->
-		<div class="select_box business1"></div>
-		<div class="select_box business2"></div>
-		<!--组合-->
-		<div class="select_box combination1"></div>
-		<div class="select_box combination2"></div>
-		<div class="select_box combination3"></div>
-		<div class="select_box combination4"></div>
+		<div class="select_box select_box1"></div>
+		<div class="select_box select_box2"></div>
 		
 <script src="js/mortgage.js" type="text/javascript" charset="utf-8"></script>
 	</body>

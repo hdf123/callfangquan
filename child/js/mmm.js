@@ -5,83 +5,40 @@ $(function(){
 	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
 	if(!call_logins) location.href="../home/home.html";
 //选项卡切换
-	var tabIndex =0;
+	var tabIndex = 0;
 	var tabBar = function() {
 		var aTab = $('.mortgage_tab>li');
 		var oLine = $('.mortgage_tab>div');
+		
 		aTab.on('click', function() {
 			tabIndex = $(this).index();
 			var mm=12.5+(100/3*tabIndex);
 			oLine.animate({ 'left': mm + '%' }, 300, function() {
-				$(".tab_child>form").eq(tabIndex).show();
-				$(".tab_child>form").eq(tabIndex).siblings().hide();
+				$(".tab_child>div").eq(tabIndex).show();
+				$(".tab_child>div").eq(tabIndex).siblings().hide();
 			});
 		})
 	}
 	tabBar();
-	$(".tab_child>form").hide();
+	$(".tab_child>div").hide();
 	$(".tab_childa").show();
-	/**
-	 * 计算方式
-	 */
-	//公积金
-	$(".tab_childa .calculatek>div").click(function(){
+	//计算方式
+	$(".calculatek>div").click(function(){
 		calculatek=$(this).index();
 		if($(this).index()==1){//贷款总额
-			$(".tab_childa .proportion").hide();
-			$(".tab_childa .amount>div:eq(0)").html("贷款金额");
+			$(".proportion").hide();
+			$(".amount>div:eq(0)").html("贷款总额");
 		}else{//房价总额
-			$(".tab_childa .proportion").show()
-			$(".tab_childa .amount>div:eq(0)").html("房价总额");
+			$(".proportion").show()
+			$(".amount>div:eq(0)").html("房价总额");
 		}
 		if($(this).children("i").is(".icon-xuanze")){
 			$(this).children("i").removeClass("icon-xuanze").addClass("icon-xuanze-danxuan");
 			$(this).siblings().children("i").removeClass("icon-xuanze-danxuan").addClass("icon-xuanze");
 		}
 	})
-	//商贷
-	$(".tab_childb .calculatek>div").click(function(){
-		calculatek=$(this).index();
-		if($(this).index()==1){//贷款总额
-			$(".tab_childb .proportion").hide();
-			$(".tab_childb .amount>div:eq(0)").html("贷款金额");
-		}else{//房价总额
-			$(".tab_childb .proportion").show()
-			$(".tab_childb .amount>div:eq(0)").html("房价总额");
-		}
-		if($(this).children("i").is(".icon-xuanze")){
-			$(this).children("i").removeClass("icon-xuanze").addClass("icon-xuanze-danxuan");
-			$(this).siblings().children("i").removeClass("icon-xuanze-danxuan").addClass("icon-xuanze");
-		}
-	})
-	//组合
-	$(".tab_childc .calculatek>div").click(function(){
-		calculatek=$(this).index();
-		if($(this).index()==1){//贷款总额
-			$(".tab_childc .amount").hide();
-			$(".tab_childc .proportion").hide();
-			$(".tab_childc .amountks").hide();
-		}else{//房价总额
-			$(".tab_childc .amount").show();
-			$(".tab_childc .proportion").show();
-			$(".tab_childc .amountks").show();
-		}
-		if($(this).children("i").is(".icon-xuanze")){
-			$(this).children("i").removeClass("icon-xuanze").addClass("icon-xuanze-danxuan");
-			$(this).siblings().children("i").removeClass("icon-xuanze-danxuan").addClass("icon-xuanze");
-		}
-	})
-	/**
-	 * 还款方式
-	 */
-	$(".tab_childa .reimbursement>div").click(function(){
-		reimbursement=$(this).index();
-		if($(this).children("i").is(".icon-xuanze")){
-			$(this).children("i").removeClass("icon-xuanze").addClass("icon-xuanze-danxuan");
-			$(this).siblings().children("i").removeClass("icon-xuanze-danxuan").addClass("icon-xuanze");
-		}
-	})
-	$(".tab_childb .reimbursement>div").click(function(){
+	//还款方式
+	$(".reimbursement>div").click(function(){
 		reimbursement=$(this).index();
 		if($(this).children("i").is(".icon-xuanze")){
 			$(this).children("i").removeClass("icon-xuanze").addClass("icon-xuanze-danxuan");
@@ -89,58 +46,32 @@ $(function(){
 		}
 	})
 	/**
-	 * 利率
+	 * 公积金利率
 	 */
-	//公积金利率
 	$(".interestRate1").hide();
-	$(".interestRate2").hide();
-	$(".tab_childa .interest_rate").click(function(){
+	$(".interest_rate").click(function(){
 		$(".interestRate1").show();
+//		location.href="interest_rate.html";
 	})
-	$(".interestRate1 .rights").click(function(){
+	$(".rights").click(function(){
 		$(".interestRate1").hide();
-		$(".tab_childa .interest_rate span").html($(".inputk input").val());
+		$(".interest_rate span").html($(".inputk input").val());
 		$(".tab_childa>p").html("公积金贷款利率"+$(".inputk input").val()+"%");
 	})
-	$(".interestRate1 .hides").click(function(){
+	$(".hides").click(function(){
 		$(".interestRate1").hide();
 	})
-	//商贷利率
-	$(".tab_childb .interest_rate").click(function(){
-		$(".interestRate2").show();
-	})
-	$(".interestRate2 .rights").click(function(){
-		$(".interestRate2").hide();
-		$(".tab_childb .interest_rate span").html($(".inputk input").val());
-		$(".tab_childb>p").html("公积金贷款利率"+$(".inputk input").val()+"%");
-	})
-	$(".interestRate2 .hides").click(function(){
-		$(".interestRate2").hide();
-	})
-	
 	/**
 	 * 货款比例选择
 	 */
-	var proportion=0;
-    var fund1 = new selectSwiper({
-        el:'.fund1',
+    var hgS1 = new selectSwiper({
+        el:'.select_box1',
         mustSelect:true, // 是否必选，默认false
         activeIndex:2,//默认激活项下标
         data: ['九成','八成','七成','六成','五成','四成','三成','二成','一成'],//选项数据
         init:function(index){
             if(index !== -1){
-            	if(proportion==1){
-            		$('.tab_childa .proportion span').html(this.data[index]);
-            		$('.tab_childa .proportion span').attr("ind",index);
-            	}else if(proportion==2){
-            		$('.tab_childb .proportion span').html(this.data[index]);
-            		$('.tab_childb .proportion span').attr("ind",index);
-            	}else{
-            		$('.tab_childa .proportion span').html(this.data[index]);
-            		$('.tab_childa .proportion span').attr("ind",index);
-            		$('.tab_childb .proportion span').html(this.data[index]);
-            		$('.tab_childb .proportion span').attr("ind",index);
-            	}
+                $('.proportion span').html(this.data[index]);
             }
         },
         okFunUndefind: function () {//选择说明项-'请选择'
@@ -148,45 +79,32 @@ $(function(){
             return false;
         },
         okFun: function (index) {//确认按钮
-        	if(proportion==1){
-        		$('.tab_childa .proportion span').html(this.data[index]);
-        		$('.tab_childa .proportion span').attr("ind",index);
-        	}else if(proportion==2){
-        		$('.tab_childb .proportion span').html(this.data[index]);
-        		$('.tab_childb .proportion span').attr("ind",index);
-        	}
+            $('.proportion span').html(this.data[index]);
         },
         closeFun: function () {//取消按钮
             console.log('取消');
         },
     });
-    $('.tab_childa .proportion').on('click', function () {
-    	proportion=1;
-    	$(".fund1 .select .tits").html("货款比例");
-        fund1.openSelectSwiper(); // 打开选择框
-    });
-    $('.tab_childb .proportion').on('click', function () {
-    	proportion=2;
-    	$(".business1 .select .tits").html("货款比例");
-        fund1.openSelectSwiper(); // 打开选择框
+    $('.proportion').on('click', function () {
+    	$(".select .tits").html("货款比例");
+        hgS1.openSelectSwiper(); // 打开选择框
     });
     /**
      * 按揭年数
      */
-    //公积金
-    var arrys1=[];
+    var data2=[];
     for(var i=0;i<30;i++){
     	var menuk=i+1;
-    	arrys1.push(menuk+"年("+menuk*12+"期)")
+    	data2.push(menuk+"年("+menuk*12+"期)")
     }
-    var fund2 = new selectSwiper({
-        el:'.fund2',
+    var hgS2 = new selectSwiper({
+        el:'.select_box2',
         mustSelect:true, // 是否必选，默认false
         activeIndex:2,//默认激活项下标
-        data:arrys1,//选项数据
+        data:data2,//选项数据
         init:function(index){
             if(index !== -1){
-                $('.tab_childa .mortgage span').html(this.data[index]);
+                $('.mortgage span').html(this.data[index]);
             }
         },
         okFunUndefind: function () {//选择说明项-'请选择'
@@ -194,46 +112,15 @@ $(function(){
             return false;
         },
         okFun: function (index) {//确认按钮
-            $('.tab_childa .mortgage span').html(this.data[index]);
+            $('.mortgage span').html(this.data[index]);
         },
         closeFun: function () {//取消按钮
             console.log('取消');
         },
     });
-    $('.tab_childa .mortgage').on('click', function () {
-    	$(".fund2 .select .tits").html("按揭年数");
-        fund2.openSelectSwiper(); // 打开选择框
-    });
-    //商贷
-    var arrys2=[];
-    for(var i=0;i<30;i++){
-    	var menuk=i+1;
-    	arrys2.push(menuk+"年("+menuk*12+"期)")
-    }
-    var business2 = new selectSwiper({
-        el:'.business2',
-        mustSelect:true, // 是否必选，默认false
-        activeIndex:2,//默认激活项下标
-        data:arrys2,//选项数据
-        init:function(index){
-            if(index !== -1){
-                $('.tab_childb .mortgage span').html(this.data[index]);
-            }
-        },
-        okFunUndefind: function () {//选择说明项-'请选择'
-            alert('必须选择一项');
-            return false;
-        },
-        okFun: function (index) {//确认按钮
-            $('.tab_childb .mortgage span').html(this.data[index]);
-        },
-        closeFun: function () {//取消按钮
-            console.log('取消');
-        },
-    });
-    $('.tab_childb .mortgage').on('click', function () {
-    	$(".business2 .select .tits").html("按揭年数");
-        business2.openSelectSwiper(); // 打开选择框
+    $('.mortgage').on('click', function () {
+    	$(".select .tits").html("按揭年数");
+        hgS2.openSelectSwiper(); // 打开选择框
     });
 	/**
 	 * 渲染利率
@@ -363,8 +250,6 @@ $(function(){
 	$(".button1").click(function(){
 		
 	})
-	
-
 	/**
 	 * 利率计算
 	 */
@@ -380,6 +265,7 @@ $(function(){
 		var hhh=getMonthMoney2(0.0445,100000,120,i);
 		console.log(hhh);
 	}
+	
 	//本息还款的月还款额(参数: 年利率/贷款总额/贷款总月份)
 	function getMonthMoney1(lilv,total,month){
 		var lilv_month = lilv / 12;//月利率
