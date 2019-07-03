@@ -57,13 +57,13 @@
 						<li class="proportion">
 							<div>贷款比例</div>
 							<div>
-								<span ind="2">七成</span><i class="iconfont">&#xe642;</i>
+								<span ind="0">七成</span><i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
 						<li class="mortgage">
 							<div>按揭年数</div>
 							<div>
-								<span>30年(360期)</span>
+								<span ind="2">30年(360期)</span>
 								<i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
@@ -75,7 +75,7 @@
 							</div>
 						</li>
 					</ul>
-					<p class="">公积金贷款利率4.9%</p>
+					<div class="">公积金贷款利率4.9%</div>
 					<input type="button" class="button1" value="开始计算" />
 				</form>
 				<!--商业贷款-->
@@ -112,7 +112,7 @@
 						<li class="proportion">
 							<div>贷款比例</div>
 							<div>
-								<span ind="2">七成</span><i class="iconfont">&#xe642;</i>
+								<span ind="1">七成</span><i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
 						<li class="mortgage">
@@ -130,7 +130,7 @@
 							</div>
 						</li>
 					</ul>
-					<p class="">商业贷款利率4.9%</p>
+					<div class="">商业贷款利率4.9%</div>
 					<input type="button" class="button2" value="开始计算" />
 				</form>
 				<!--组合贷款-->
@@ -182,14 +182,14 @@
 								<input type="text" value="" />万元
 							</div>
 						</li>
-						<li class="mortgage">
+						<li class="mortgagea">
 							<div>公积金按揭年数</div>
 							<div>
-								<span>30年(360期)</span>
+								<span ind="0">30年(360期)</span>
 								<i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
-						<li class="interest_rate">
+						<li class="interest_ratea">
 							<div>公积金利率</div>
 							<div>
 								<span>4.9%</span>
@@ -202,14 +202,14 @@
 								<input type="text" value="" />万元
 							</div>
 						</li>
-						<li class="mortgage">
+						<li class="mortgageb">
 							<div>商业贷款按揭年数</div>
 							<div>
 								<span>30年(360期)</span>
 								<i class="iconfont">&#xe642;</i>
 							</div>
 						</li>
-						<li class="interest_rate">
+						<li class="interest_rateb">
 							<div>商贷利率</div>
 							<div>
 								<span>4.9%</span>
@@ -217,7 +217,11 @@
 							</div>
 						</li>
 					</ul>
-					<p class="">公积金贷款利率4.9%</p>
+					<div>
+						<p>公积金贷款利率4.9%</p>
+						<p>商业贷款利率4.9%</p>
+					</div>
+					<!--<p class="">公积金贷款利率<span>4.9</span>%商业贷款利率<span>4.9</span>%</p>-->
 					<input type="button" class="button3" value="开始计算" />
 				</form>
 			</div>
@@ -269,16 +273,15 @@
 			</section>
 		</div>
 		<!--公积金-->
-		<div class="select_box fund1"></div>
-		<div class="select_box fund2"></div>
+		<div class="select_box fund1"></div><!--货款比例-->
+		<div class="select_box fund2"></div><!--按揭年数-->
 		<!--商贷-->
-		<div class="select_box business1"></div>
-		<div class="select_box business2"></div>
+		<div class="select_box business1"></div><!--货款比例-->
+		<div class="select_box business2"></div><!--按揭年数-->
 		<!--组合-->
-		<div class="select_box combination1"></div>
-		<div class="select_box combination2"></div>
-		<div class="select_box combination3"></div>
-		<div class="select_box combination4"></div>
+		<div class="select_box combination1"></div><!--货款比例-->
+		<div class="select_box combination2"></div><!--公积金按揭年数-->
+		<div class="select_box combination3"></div><!--商贷按揭年数-->
 		
 <script src="js/mortgage.js" type="text/javascript" charset="utf-8"></script>
 	</body>

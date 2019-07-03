@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .tab_childa > p, .tab_childb > p, .tab_childc > p, .lists > li > p, .wdows > div, #wdows > div {
+.yincang, .lists > li > p, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -140,14 +140,26 @@ a {
   border-bottom: 0.04rem solid #5facfb;
 }
 
+.tab_child {
+  width: 100%;
+  height: 92.5%;
+  overflow: auto;
+}
+
 .tab_childa > ul, .tab_childb > ul, .tab_childc > ul {
   background: white;
 }
-.tab_childa > p, .tab_childb > p, .tab_childc > p {
+.tab_childa > div, .tab_childb > div, .tab_childc > div {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.4rem;
   color: #999999;
   font-size: 0.267rem;
-  text-align: right;
   padding: 0.24rem 0.4rem 0.24rem 0.4rem;
+}
+.tab_childa > div > p, .tab_childb > div > p, .tab_childc > div > p {
+  color: #999999;
+  font-size: 0.267rem;
 }
 
 .button1, .button2, .button3 {
