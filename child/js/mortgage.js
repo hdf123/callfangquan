@@ -64,8 +64,12 @@ $(function(){
 		}
 	})
 	//组合
+	var combination={
+		way:0,//计算方式
+		reimbursement:0,//还款方式
+	}
 	$(".tab_childc .calculatek>div").click(function(){
-		calculatek=$(this).index();
+		combination.way=$(this).index();
 		if($(this).index()==1){//贷款总额
 			$(".tab_childc .amount").hide();
 			$(".tab_childc .proportion").hide();
@@ -98,7 +102,7 @@ $(function(){
 		}
 	})
 	$(".tab_childc .reimbursement>div").click(function(){
-		funds.reimbursement=$(this).index();
+		combination.reimbursement=$(this).index();
 		if($(this).children("i").is(".icon-xuanze")){
 			$(this).children("i").removeClass("icon-xuanze").addClass("icon-xuanze-danxuan");
 			$(this).siblings().children("i").removeClass("icon-xuanze-danxuan").addClass("icon-xuanze");
@@ -135,10 +139,6 @@ $(function(){
     	$(".fund1 .select .tits").html("货款比例");
         fund1.openSelectSwiper(); // 打开选择框
     });
-    //span内容改变时触发
-	$('.tab_childa .proportion span').bind('DOMNodeInserted', function(e) {
-		alert(111);
-	});
     //商贷
     var business1 = new selectSwiper({
         el:'.business1',
@@ -186,6 +186,9 @@ $(function(){
         okFun: function (index) {//确认按钮
     		$('.tab_childc .proportion span').html(this.data[index]);
     		$('.tab_childc .proportion span').attr("ind",index);
+    		moneys();
+    		$('.tab_childc .fund3 input').val("");
+			$('.tab_childc .business3 input').val("");
         },
         closeFun: function () {//取消按钮
             console.log('取消');
@@ -279,7 +282,7 @@ $(function(){
         init:function(index){
             if(index !== -1){
                 $('.tab_childc .mortgagea span').html(this.data[index]);
-                $('.tab_childc .mortgage span').attr("ind",index+1);
+                $('.tab_childc .mortgagea span').attr("ind",index+1);
             }
         },
         okFunUndefind: function () {//选择说明项-'请选择'
@@ -288,7 +291,7 @@ $(function(){
         },
         okFun: function (index) {//确认按钮
             $('.tab_childc .mortgagea span').html(this.data[index]);
-            $('.tab_childc .mortgage span').attr("ind",index+1);
+            $('.tab_childc .mortgagea span').attr("ind",index+1);
         },
         closeFun: function () {//取消按钮
             console.log('取消');
@@ -392,28 +395,32 @@ $(function(){
 		$('.tab_childc .fund3 input').val("");
 		$('.tab_childc .business3 input').val("");
 	})
-    //span内容改变时触发，比例
-	$('.tab_childc .proportion span').bind('DOMNodeInserted', function(e) {
-		$('.tab_childc .fund3 input').val("");
-		$('.tab_childc .business3 input').val("");
-		moneys();
-		
-	});
 	$('.tab_childc .fund3 input').blur(function() {
-		moneys();
-		if($(this).val()>money){
-			console.log("不能大于贷款金额");
-			$(this).val("");
+		if(combination.way==0){//房价
+			moneys();
+			if($(this).val()>money/10000){
+				$(this).val("");
+				$('.tab_childc .business3 input').val("");
+				console.log("不能大于贷款金额");
+			}else{
+				$('.tab_childc .business3 input').val(money/10000-$(this).val());
+			}
+		}else{//贷款
+			
 		}
-		$('.tab_childc .business3 input').val(money-$(this).val());
 	});
 	$('.tab_childc .business3 input').blur(function() {
-		moneys();
-		if($(this).val()>money){
-			console.log("不能大于贷款金额");
-			$(this).val("");
+		if(combination.way==0){
+			moneys();
+			if($(this).val()>money/10000){
+				$(this).val("");
+				$('.tab_childc .fund3 input').val("");
+				console.log("不能大于贷款金额");
+			}else{
+				$('.tab_childc .fund3 input').val(money/10000-$(this).val());
+			}
 		}
-		$('.tab_childc .fund3 input').val(money-$(this).val());
+
 	});
 	
 	/**
@@ -547,7 +554,7 @@ $(function(){
  * 公积金利率:glilv
  * 商贷利率:slilv
  * 月供:Monthly1
- * 期限:limit
+ * 期限:limit(公积金1,商贷2)
  * 类型:types
  * 每月递减:diminishing
  * types:(*)(类型)(方式)
@@ -557,66 +564,91 @@ $(function(){
  * 022:商贷本金
  */
 	
-	var lixi=0,glilv,slilv,yuegong,limit,diminishing,types;
+	var lixi=0,glilv,slilv,yuegong,limit1,limit2,diminishing,types;
 	$(".button1").click(function(){
-//		console.log(funds.way);//计算方式
-//		console.log(funds.reimbursement);//还款方式
 		money=$(".tab_childa .amount input").val()*10000;
 		if(funds.way==0){//获取贷款金额
 			var total=$(".tab_childa .amount input").val()*10000;
 			var ind=1-((Number($(".tab_childa .proportion span").attr("ind"))+Number(1))/10);
 			money=Number(total)*ind;
 		}
-		limit=$(".tab_childa .mortgage span").attr("ind")*12;//期限
+		limit1=$(".tab_childa .mortgage span").attr("ind")*12;//期限
 		glilv= Trim($(".tab_childa .interest_rate span").text())/100;//利率
 		console.log("贷款金额--"+money);
-		console.log("公积金按揭年数--"+limit);
+		console.log("公积金按揭年数--"+limit1);
 		console.log("公积金利率--"+glilv);
-		if(funds.reimbursement==0){//本息
+		var chart1,chart2;
+		gbenxi();
+		gbenjin();
+		function gbenxi(){
 			types="011";
-			Monthly1=getMonthMoney1(glilv,money,limit);
-//			console.log("每月还款额="+Monthly1);//每月还款额
+			Monthly1=getMonthMoney1(glilv,money,limit1);
+			//console.log("每月还款额="+Monthly1);//每月还款额
 			var ylilv=glilv/12;
-//			console.log("月利率="+ylilv);//月利率
-			for(var i=0;i<limit;i++){//月还本金
+			var arr=[],arr1=[];
+			for(var i=0;i<limit1;i++){//月还本金
 				/*每月所还本金=贷款总金额*月利率*(1+月利率)^第几月/(((1+月利率)^总月数)-1)*/
-				var bj=money*ylilv*Math.pow((1+ylilv),i)/(Math.pow((1+ylilv),limit)-1);
+				var bj=money*ylilv*Math.pow((1+ylilv),i)/(Math.pow((1+ylilv),limit1)-1);
 				var lixis=Monthly1-bj;
-//				console.log("本金="+bj);//本金
-//				console.log("每月利息"+i+"-------" + lixis);
+				arr.push(bj);
+				arr1.push(lixis);
+				//console.log("本金="+bj);//本金
+				//console.log("每月利息"+i+"-------" + lixis);
 				lixi+=lixis;
 			}
-		}else{//本金
+			chart1={
+				money:money/10000,//贷款总额
+				lixi:lixi,//利息
+				glilv:glilv,//公积金利率
+				yuegong:Monthly1,//月供
+				limit1:limit1,//期限
+				ybenjin:arr,//月本金数组
+				ylixi:arr1,//月利息数组
+				type:types//类型
+			}
+		}
+		function gbenjin(){
 			types="012";
 			var max='',min='';
-			var capital=money/limit;
-			console.log(money/limit);//每月本金
-			for(var i=0;i<limit;i++){
-				var yg=getMonthMoney2(glilv,money,limit,i);
-				var interest=yg-capital;
+			var capital=money/limit1;
+			//console.log(money/limit1);//每月本金
+			var interest=[],yuegong=[];
+			for(var i=0;i<limit1;i++){
+				var yg=getMonthMoney2(glilv,money,limit1,i);
+				yuegong.push(yg);
+				interest.push(yg-capital);
 				console.log("月供="+yg);
 				console.log("每月利息---"+interest);
-				lixi+=interest
 				if(i==0){
 					max=yg;
-					Monthly1=yg;
 				}
-				if(i==limit-1) min=yg;
+				if(i==limit1-1) min=yg;
 			}
-			diminishing=(max-min)/limit;
-			console.log("每月递减----"+diminishing);//平均每月递减多少
+			diminishing=(max-min)/limit1;
+			//console.log("每月递减----"+diminishing);//平均每月递减多少
+			
+			chart2={
+				money:money/10000,//贷款总额
+				lixi:eval(interest.join("+")),//利息
+				glilv:glilv,//公积金利率
+				yuegong:yuegong,//月供数组
+				limit1:limit1,//期限
+				diminishing:diminishing,//每月递减
+				ybenjin:capital,//月本金
+				ylixi:interest,//月利息数组
+				type:types//类型
+			}
 		}
-		var chart={
-			money:money/10000,//贷款总额
-			lixi:lixi,//利息
-			glilv:glilv,//公积金利率
-			yuegong:Monthly1,//月供
-			limit:limit,//期限
-			diminishing:diminishing,//每月递减
-			type:types//类型
+
+		if(funds.reimbursement==0){//本息
+			localStorage.setItem('call_chart',JSON.stringify(chart1));//展示
+			localStorage.setItem('call_chart1',JSON.stringify(chart2));
+		}else{//本金
+			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
+			localStorage.setItem('call_chart1',JSON.stringify(chart1));
 		}
-		console.log(chart);
-		localStorage.setItem('call_chart',JSON.stringify(chart));//转为json字符串
+	var call_chart=JSON.parse(localStorage.getItem('call_chart'));//转为对象
+	console.log(call_chart);
 //		location.href="chart.html";
 	})
 	$(".button2").click(function(){
@@ -626,93 +658,187 @@ $(function(){
 			var ind=1-((Number($(".tab_childb .proportion span").attr("ind"))+Number(1))/10);
 			money=Number(total)*ind;
 		}
-		limit=$(".tab_childb .mortgage span").attr("ind")*12;//期限
+		limit1=$(".tab_childb .mortgage span").attr("ind")*12;//期限
 		slilv= Trim($(".tab_childb .interest_rate span").text())/100;//利率
-		if(calculatek.reimbursement==0){//本息
+//		glilv= Trim($(".tab_childb .interest_rate span").text())/100;//利率
+		var chart1,chart2;
+		gbenxi();
+		gbenjin();
+		function gbenxi(){
 			types="021";
-			Monthly1=getMonthMoney1(slilv,money,limit);
+			Monthly1=getMonthMoney1(slilv,money,limit1);
 			var ylilv=slilv/12;
-			for(var i=0;i<limit;i++){//月还本金
-				/*每月所还本金=贷款总金额*月利率*(1+月利率)^第几月/(((1+月利率)^总月数)-1)*/
-				var bj=money*ylilv*Math.pow((1+ylilv),i)/(Math.pow((1+ylilv),limit)-1);
+			var arr=[],arr1=[];
+			for(var i=0;i<limit1;i++){//月还本金
+				var bj=money*ylilv*Math.pow((1+ylilv),i)/(Math.pow((1+ylilv),limit1)-1);
 				var lixis=Monthly1-bj;
+				arr.push(bj);
+				arr1.push(lixis);
 				lixi+=lixis;
 			}
-		}else{//本金
+			chart1={
+				money:money/10000,//贷款总额
+				lixi:lixi,//利息
+				slilv:slilv,//公积金利率
+				yuegong:Monthly1,//月供
+				limit1:limit1,//期限
+				ybenjin:arr,//月本金数组
+				ylixi:arr1,//月利息数组
+				type:types//类型
+			}
+		}
+		function gbenjin(){
 			types="022";
 			var max='',min='';
-			var capital=money/limit;
-			for(var i=0;i<limit;i++){
-				var yg=getMonthMoney2(slilv,money,limit,i);
-				var interest=yg-capital;
-				lixi+=interest
+			var capital=money/limit1;
+			var interest=[],yuegong=[];
+			for(var i=0;i<limit1;i++){
+				var yg=getMonthMoney2(slilv,money,limit1,i);
+				yuegong.push(yg);
+				interest.push(yg-capital);
 				if(i==0){
 					max=yg;
-					Monthly1=yg;
 				}
-				if(i==limit-1) min=yg;
+				if(i==limit1-1) min=yg;
 			}
-			diminishing=(max-min)/limit;
+			diminishing=(max-min)/limit1;
+			chart2={
+				money:money/10000,//贷款总额
+				lixi:eval(interest.join("+")),//利息
+				slilv:slilv,//商贷利率
+				yuegong:yuegong,//月供数组
+				limit1:limit1,//期限
+				diminishing:diminishing,//每月递减
+				ybenjin:capital,//月本金数组
+				ylixi:interest,//月利息数组
+				type:types//类型
+			}
 		}
-		var chart={
-			money:money/10000,//贷款总额
-			lixi:lixi,//利息
-			glilv:glilv,//公积金利率
-			slilv:slilv,//商贷利率
-			yuegong:Monthly1,//月供
-			limit:limit,//期限
-			diminishing:diminishing,//每月递减
-			type:types//类型
+		if(calculatek.reimbursement==0){//本息
+			localStorage.setItem('call_chart',JSON.stringify(chart1));//展示
+			localStorage.setItem('call_chart1',JSON.stringify(chart2));
+		}else{//本金
+			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
+			localStorage.setItem('call_chart1',JSON.stringify(chart1));
 		}
-		localStorage.setItem('call_chart',JSON.stringify(chart));//转为json字符串
-		location.href="chart.html";
+		var call_chart=JSON.parse(localStorage.getItem('call_chart'));//转为对象
+		console.log(call_chart);
+//		location.href="chart.html";
 	})
 	$(".button3").click(function(){
-		money=$(".tab_childc .amount input").val()*10000;
-		if(calculatek.way==0){//获取贷款金额
-			var total=$(".tab_childc .amount input").val()*10000;
-			var ind=1-((Number($(".tab_childc .proportion span").attr("ind"))+Number(1))/10);
-			money=Number(total)*ind;
-		}
-		limit=$(".tab_childc .mortgage span").attr("ind")*12;//期限
-		slilv= Trim($(".tab_childc .interest_rate span").text())/100;//利率
-		if(calculatek.reimbursement==0){//本息
+		//公积金
+		var gmoney=$('.tab_childc .fund3 input').val();//金额
+		var glimit=$('.tab_childc .mortgagea span').attr("ind")*12;//期限
+		glilv= Trim($(".tab_childc .interest_ratea span").text())/100;//利率
+		console.log("公积金期限---"+glimit);
+		console.log("公积金金额---"+gmoney);
+		console.log("公积金利率---"+glilv);
+		//商贷
+		var smoney=$('.tab_childc .business3 input').val();//金额
+		var slimit=$('.tab_childc .mortgageb span').attr("ind")*12;//期限
+		slilv= Trim($(".tab_childc .interest_rateb span").text())/100;//利率
+		console.log("商贷期限---"+slimit);
+		console.log("商贷金额---"+smoney);
+		console.log("商贷利率---"+slilv);
+		
+		var chart1,chart2;
+		zbenxi();
+		zbenjin();
+		function zbenxi(){//本息
 			types="031";
-			Monthly1=getMonthMoney1(slilv,money,limit);
-			var ylilv=slilv/12;
-			for(var i=0;i<limit;i++){//月还本金
-				/*每月所还本金=贷款总金额*月利率*(1+月利率)^第几月/(((1+月利率)^总月数)-1)*/
-				var bj=money*ylilv*Math.pow((1+ylilv),i)/(Math.pow((1+ylilv),limit)-1);
+			//公积金
+			gmoney=gmoney*10000;
+			Monthly1=getMonthMoney1(glilv,gmoney,glimit);
+			console.log("月供---"+Monthly1);
+			var gylilv=glilv/12;
+			var glixi=0,slixi=0;
+			var arr=[],arr1=[],arrys=[],arrys1=[];
+			for(var i=0;i<glimit;i++){//月还本金
+				var bj=gmoney*gylilv*Math.pow((1+gylilv),i)/(Math.pow((1+gylilv),glimit)-1);
 				var lixis=Monthly1-bj;
-				lixi+=lixis;
+				arr.push(bj);
+				arr1.push(lixis);
+				glixi+=lixis;
 			}
-		}else{//本金
+			//商贷
+			smoney=smoney*10000;
+			Monthly2=getMonthMoney1(slilv,smoney,slimit);
+			var sylilv=glilv/12;
+			for(var i=0;i<slimit;i++){//月还本金
+				/*每月所还本金=贷款总金额*月利率*(1+月利率)^第几月/(((1+月利率)^总月数)-1)*/
+				var bj=smoney*sylilv*Math.pow((1+sylilv),i)/(Math.pow((1+sylilv),slimit)-1);
+				var lixis=Monthly2-bj;
+				arrys.push(bj);
+				arrys1.push(lixis);
+				slixi+=lixis;
+			}
+			console.log(glixi);
+			console.log(slixi);
+			lixi=glixi+slixi;
+			chart1={
+				money:Number(gmoney)+Number(smoney),//贷款总额
+				lixi:lixi,//利息
+				glilv:glilv,//公积金利率
+				slilv:slilv,//商贷利率
+				gyuegong:Monthly1,//公积金月供
+				syuegong:Monthly2,//商贷月供
+				glimit:glimit,//公积金期限
+				slimit:slimit,//商贷期限
+				gybenjin:arr,//公积金月本金
+				sybenjin:arrys,//商贷月本金
+				gylixi:arr1,//公积金月利息
+				sylixi:arrys1,//商贷月利息
+				type:types//类型
+			}
+		}
+		function zbenjin(){//本金
 			types="032";
-			var max='',min='';
-			var capital=money/limit;
-			for(var i=0;i<limit;i++){
-				var yg=getMonthMoney2(slilv,money,limit,i);
-				var interest=yg-capital;
-				lixi+=interest
-				if(i==0){
-					max=yg;
-					Monthly1=yg;
-				}
-				if(i==limit-1) min=yg;
+			//公积金
+			var glixi=0,slixi=0,zlixi=0;
+			var ybenjin=money/slimit;
+			console.log(ybenjin);
+			var gylixi=[],gyuegong=[];
+			for(var i=0;i<limit1;i++){
+				var yg=getMonthMoney2(glilv,money,limit1,i);
+				gyuegong.push(yg);//公积金月供
+				gylixi.push(yg-ybenjin);//公积金月利息
+				glixi+=yg-ybenjin
 			}
-			diminishing=(max-min)/limit;
+			//商贷
+			var sbenjin=money/slimit;
+			var sylixi=[],syuegong=[];
+			for(var i=0;i<limit1;i++){
+				var yg=getMonthMoney2(glilv,money,limit1,i);
+				syuegong.push(yg);//商贷月供
+				sylixi.push(yg-sbenjin);//商贷月利息
+				slixi+=yg-sbenjin;
+			}
+			zlixi=glixi+slixi;
+			chart2={
+				money:money/10000,//贷款总额
+				lixi:zlixi,//利息
+				glilv:glilv,//公积金利率
+				slilv:slilv,//商贷利率
+				gyuegong:gyuegong,//公积金月供数组
+				syuegong:syuegong,//商贷月供数组
+				glimit:glimit,//公积金期限
+				slimit:slimit,//商贷期限
+				ybenjin:ybenjin,//公积金月本金数组
+				sbenjin:sbenjin,//商贷月本金数组
+				gylixi:gylixi,//公积金月利息数组
+				sylixi:sylixi,//商贷月利息数组
+				type:types//类型
+			}
 		}
-		var chart={
-			money:money/10000,//贷款总额
-			lixi:lixi,//利息
-			glilv:glilv,//公积金利率
-			slilv:slilv,//商贷利率
-			yuegong:Monthly1,//月供
-			limit:limit,//期限
-			diminishing:diminishing,//每月递减
-			type:types//类型
+		if(combination.reimbursement==0){//本息
+			localStorage.setItem('call_chart',JSON.stringify(chart1));//展示
+			localStorage.setItem('call_chart1',JSON.stringify(chart2));
+		}else{//本金
+			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
+			localStorage.setItem('call_chart1',JSON.stringify(chart1));
 		}
-		localStorage.setItem('call_chart',JSON.stringify(chart));//转为json字符串
+		console.log(chart1);
+		console.log(chart2);
 		location.href="chart.html";
 	})
 	function Trim(str){//去掉%

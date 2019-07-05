@@ -16,15 +16,15 @@
 </style>
 	<body>
 		<span id="ceshi">
-			565656
+			111111111
 		</span>
 		<button class="btn">5555555555</button>
     <script type="text/javascript">
-    	$("#ceshi").click(function(){
+    	$(".btn").click(function(){
     		$("#ceshi").html("666666")
     	})
 		$("#ceshi").bind('DOMNodeInserted',function(e){
-			console.log(111);
+			console.log($(this).text());
 		//执行相应的操作
 		
 		});

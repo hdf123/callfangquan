@@ -14,7 +14,7 @@ $(function(){
 	}else if(call_chart.type=="012"){//公积金本金
 		$(".diminishing").show();
 		$(".funds>td:eq(1)>p").html(call_chart.glilv*100);//公积金利率
-		$(".Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong.toFixed(0)}</p>元/月`);//月供
+		$(".Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong[0].toFixed(0)}</p>元/月`);//月供
 		$(".diminishing>td:eq(1)>p").html(call_chart.diminishing.toFixed(2));//递减
 	}else if(call_chart.type=="021"){//商贷本息
 		$(".business").show();//商贷利率
@@ -25,8 +25,12 @@ $(function(){
 		$(".diminishing").show();
 		$(".funds").hide();//商贷利率
 		$(".business>td:eq(1)>p").html(call_chart.slilv*100);//商贷利率
-		$(".Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong.toFixed(0)}</p>元/月`);//月供
+		$(".Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong[0].toFixed(0)}</p>元/月`);//月供
 		$(".diminishing>td:eq(1)>p").html(call_chart.diminishing.toFixed(2));//递减
+	}else if(call_chart.type=="031"){//组合本息
+		
+	}else if(call_chart.type=="032"){//组合本金
+		
 	}
 	$(".totals>td:eq(1)>p").html(call_chart.money);//总额
 	$(".interest>td:eq(1)>p").html((call_chart.lixi/10000).toFixed(2));//利息
