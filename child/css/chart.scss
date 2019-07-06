@@ -36,9 +36,12 @@
     height:6rem;
     margin:0 auto;
 }
-.forms1{
+.tab_box{
+    display: flex;
+    justify-content: center;
+}
+.forms1,.forms2{
     margin:0 auto;
-    width:60%;
     tr{
         line-height:0.65rem;
         >td:nth-child(2){
@@ -78,6 +81,9 @@
             }
         }
     }
+}
+.forms2{
+    display: none;
 }
 .totals,.interest{
     >td:nth-child(1){

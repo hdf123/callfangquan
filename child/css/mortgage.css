@@ -233,6 +233,7 @@ a {
   left: auto;
   bottom: 0;
   z-index: 98;
+  display: none;
 }
 .interestRate1 .rights, .interestRate2 .rights {
   width: 1.6rem;

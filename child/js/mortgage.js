@@ -333,15 +333,13 @@ $(function(){
 	 * 利率选择
 	 */
 	//公积金利率
-	$(".interestRate1").hide();
-	$(".interestRate2").hide();
 	var k1=0,k2=0;
 	$(".tab_childa .interest_rate").click(function(){
-		$(".interestRate1").show();
+		$(".interestRate1").css({"display":"block"});
 		k1=1;
 	})
 	$(".interestRate1 .rights").click(function(){
-		$(".interestRate1").hide();
+		$(".interestRate1").css({"display":"none"});
 		if(k1==1){
 			$(".tab_childa .interest_rate span").html($(".inputk input").val()+"%");
 			$(".tab_childa>div").html("公积金贷款利率"+$(".inputk input").val()+"%");
@@ -351,15 +349,15 @@ $(function(){
 		}
 	})
 	$(".interestRate1 .hides").click(function(){
-		$(".interestRate1").hide();
+		$(".interestRate1").css({"display":"none"});
 	})
 	//商贷利率
 	$(".tab_childb .interest_rate").click(function(){
-		$(".interestRate2").show();
+		$(".interestRate2").css({"display":"none"});
 		k2=1;
 	})
 	$(".interestRate2 .rights").click(function(){
-		$(".interestRate2").hide();
+		$(".interestRate2").css({"display":"none"});
 		if(k2==1){
 			$(".tab_childb .interest_rate span").html($(".inputk input").val()+"%");
 			$(".tab_childb>div").html("商业贷款利率"+$(".inputk input").val()+"%");
@@ -369,15 +367,15 @@ $(function(){
 		}
 	})
 	$(".interestRate2 .hides").click(function(){
-		$(".interestRate2").hide();
+		$(".interestRate2").css({"display":"none"});
 	})
 	//组合
 	$(".tab_childc .interest_ratea").click(function(){
-		$(".interestRate1").show();
+		$(".interestRate1").css({"display":"block"});
 		k1=2;
 	})
 	$(".tab_childc .interest_rateb").click(function(){
-		$(".interestRate2").show();
+		$(".interestRate2").css({"display":"block"});
 		k2=2;
 	})
 	var money='';//贷款金额
@@ -647,9 +645,9 @@ $(function(){
 			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
 			localStorage.setItem('call_chart1',JSON.stringify(chart1));
 		}
-	var call_chart=JSON.parse(localStorage.getItem('call_chart'));//转为对象
-	console.log(call_chart);
-//		location.href="chart.html";
+		console.log(chart1);
+		console.log(chart2);
+		location.href="chart.html";
 	})
 	$(".button2").click(function(){
 		money=$(".tab_childb .amount input").val()*10000;
@@ -721,9 +719,9 @@ $(function(){
 			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
 			localStorage.setItem('call_chart1',JSON.stringify(chart1));
 		}
-		var call_chart=JSON.parse(localStorage.getItem('call_chart'));//转为对象
-		console.log(call_chart);
-//		location.href="chart.html";
+		console.log(chart1);
+		console.log(chart2);
+		location.href="chart.html";
 	})
 	$(".button3").click(function(){
 		//公积金
@@ -763,7 +761,7 @@ $(function(){
 			//商贷
 			smoney=smoney*10000;
 			Monthly2=getMonthMoney1(slilv,smoney,slimit);
-			var sylilv=glilv/12;
+			var sylilv=slilv/12;
 			for(var i=0;i<slimit;i++){//月还本金
 				/*每月所还本金=贷款总金额*月利率*(1+月利率)^第几月/(((1+月利率)^总月数)-1)*/
 				var bj=smoney*sylilv*Math.pow((1+sylilv),i)/(Math.pow((1+sylilv),slimit)-1);
@@ -776,7 +774,7 @@ $(function(){
 			console.log(slixi);
 			lixi=glixi+slixi;
 			chart1={
-				money:Number(gmoney)+Number(smoney),//贷款总额
+				money:(Number(gmoney)+Number(smoney))/10000,//贷款总额
 				lixi:lixi,//利息
 				glilv:glilv,//公积金利率
 				slilv:slilv,//商贷利率
@@ -795,27 +793,29 @@ $(function(){
 			types="032";
 			//公积金
 			var glixi=0,slixi=0,zlixi=0;
-			var ybenjin=money/slimit;
+			var ybenjin=gmoney/glimit;
+			console.log(gmoney);
+			console.log(glimit);
 			console.log(ybenjin);
 			var gylixi=[],gyuegong=[];
-			for(var i=0;i<limit1;i++){
-				var yg=getMonthMoney2(glilv,money,limit1,i);
+			for(var i=0;i<glimit;i++){
+				var yg=getMonthMoney2(glilv,gmoney,glimit,i);
 				gyuegong.push(yg);//公积金月供
 				gylixi.push(yg-ybenjin);//公积金月利息
 				glixi+=yg-ybenjin
 			}
 			//商贷
-			var sbenjin=money/slimit;
+			var sbenjin=smoney/slimit;
 			var sylixi=[],syuegong=[];
-			for(var i=0;i<limit1;i++){
-				var yg=getMonthMoney2(glilv,money,limit1,i);
+			for(var i=0;i<slimit;i++){
+				var yg=getMonthMoney2(slilv,smoney,slimit,i);
 				syuegong.push(yg);//商贷月供
 				sylixi.push(yg-sbenjin);//商贷月利息
 				slixi+=yg-sbenjin;
 			}
 			zlixi=glixi+slixi;
 			chart2={
-				money:money/10000,//贷款总额
+				money:(Number(gmoney)+Number(smoney))/10000,//贷款总额
 				lixi:zlixi,//利息
 				glilv:glilv,//公积金利率
 				slilv:slilv,//商贷利率
