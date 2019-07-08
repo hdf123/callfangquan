@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "../../css/base";
+@import "../../css/styles";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+    .rights{}
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+    overflow: visible!important;
+    >div:nth-child(1){
+        padding:0.6rem 0;
+        background-color: #5facfb;
+        >p{
+            color: #ffffff;
+            font-size: 0.32rem;
+            text-align: center;
+        }
+        .money{
+            color: #ffffff;
+            font-size: 0.907rem;
+            text-align: center;
+            padding:0.373rem 0 0.96rem 0;
+        }
+    }
+    
+}
+.reimbursement_title{
+    display: flex;
+    >li{
+        width:100%;
+        border-right:1px solid #ffffff;
+        >p{
+            text-align: center;
+            color: #ffffff;
+            font-size: 0.373rem;
+        }
+    }
+}
+.money_title{
+    display: flex;
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    >li{
+        width:100%;
+        @extend .flexs;
+        height: 1.2rem;
+        font-size: 0.4rem;
+    }
+    .act{
+        border-bottom:3px solid #5facfb;
+    }
+}
+.money_conts{
+    width:100%;
+    position: absolute;
+    top:6.38rem;
+    left:auto;
+    bottom:0;
+    overflow: auto;
+    border-collapse:collapse;
+    background-color: rgba(0,0,0,0);
+    tr{
+        border-bottom:1px solid #E5E5E5;
+        th{
+            height: 1.067rem;
+            font-size: 0.32rem;
+        }
+        td{
+            text-align: center;
+            height: 1.067rem;
+            font-size: 0.32rem;
+        }
+    }
+}

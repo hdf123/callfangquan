@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>还款详情</title>
+		<link rel="stylesheet" type="text/css" href="css/Payment_details.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
+			<div class="centers">还款详情</div>
+		</header>
+		<section class="contents">
+			<div>
+				<p>月均还款(元)</p>
+				<div class="money"></div>
+				<ul class="reimbursement_title">
+					<li>
+						<p>贷款总额(万元)</p>
+						<p>100</p>
+					</li>
+					<li>
+						<p>利息总额(万元)</p>
+						<p>100</p>
+					</li>
+					<li>
+						<p>贷款年限(年)</p>
+						<p>100</p>
+					</li>
+				</ul>
+			</div>
+			<ul class="money_title">
+				<li class="act">等额本息</li>
+				<li>等额本金</li>
+			</ul>
+			<!--<ul class="money_conts">
+				<li></li>
+			</ul>-->
+			<table class="money_conts">
+				<tr>
+					<th>期数</th>
+					<th>月供总额</th>
+					<th>月供本金</th>
+					<th>月供利息</th>
+					<th>剩余本金</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>5307.27</td>
+					<td>1223.93</td>
+					<td>4083.34</td>
+					<td>998776.07</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>5307.27</td>
+					<td>1223.93</td>
+					<td>4083.34</td>
+					<td>998776.07</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>5307.27</td>
+					<td>1223.93</td>
+					<td>4083.34</td>
+					<td>998776.07</td>
+				</tr>
+			</table>
+		</section>
+<!--今日工作内容：
+1.针对公积金贷款总额等额本息还款方式,进行操作,获取贷款总额、按揭年数、公积金利率；
+2.获取月还款额后，计算获得月利率后：根据贷款总金额*月利率*(1+月利率)^第几月/(((1+月利率)^总月数)-1)公式获得月换本金，从而再得出月利息
+3.讲所有数据保存下来，为后期贷款详情展示铺垫-->
+
+<script src="js/Payment_details.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

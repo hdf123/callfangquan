@@ -13,13 +13,26 @@
 		height:100px;
 		background:red;
 	}
+	.inps{
+		text-align: right;
+	}
 </style>
 	<body>
+		<div class="names">
+			<input type="number" oninput="" class="inps" />
+		</div>
 		<span id="ceshi">
 			111111111
 		</span>
 		<button class="btn">5555555555</button>
     <script type="text/javascript">
+		$(".inps").on('input propertychange',function(){
+			if($(".inps").val().length<=4){
+				$(this).css({"color":"black"});
+			}else{
+				$(this).css({"color":"red"});
+			}
+		})
     	$(".btn").click(function(){
     		$("#ceshi").html("666666")
     	})

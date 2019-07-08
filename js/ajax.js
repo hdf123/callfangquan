@@ -1,4 +1,6 @@
-//ajax封装调用
+/**
+ * ajax封装调用
+ */
 var urs="";
 function ajaxs(url,type,data,suFn,erFn,params){
  	var token= JSON.parse(localStorage.getItem('tokens'));//获取token
@@ -15,8 +17,9 @@ function ajaxs(url,type,data,suFn,erFn,params){
         }
 	},params||{}));
 }
-
-//地址栏传参
+/**
+ * 地址栏传参
+ */
 //getRequest();//全部参数
 function getRequest(){
 	var url=window.location.search; //获取url中"?"符后的字串
@@ -35,8 +38,9 @@ function getRequest(){
 function loading(){
 	return html = '<div id="loading" style="width:100%;height:100%;background:rgba(238,238,238,0.9);z-index:1;text-align:center;position:absolute;left:0px;top:0px;"><div style="width:32px;height:32px;position:fixed;top:45%;left:50%;margin-left:-16px;z-index:1000;"><img src="../../img/loadings.gif" /></div></div>';
 }
-
-//图片加载失败时，动态添加也包含在内
+/**
+ * 图片加载失败（态添加也包含在内）
+ */
 function imgks(){
 	document.addEventListener("error", function (e) {
 	  var elem = e.target;
@@ -45,42 +49,44 @@ function imgks(){
 	  }
 	}, true);
 }
+/**
+ * 基础布局
+ */
+//function funkr(){
+//	var ss=$(document.body).outerHeight(true);
+//	var he=$(".heads").outerHeight();
+//	var ft=$(".foots").outerHeight();
+//	he==undefined?he=0:he=he;
+//	ft==undefined?ft=0:ft=ft;
+//	var bod=ss-(he+ft);
+//	$(".sets").css({"height":bod+"px"});
+//}
+/**
+ * 弹窗(1秒后自动隐藏)，待改善
+ */
+//function popups(contents,address){//contents：内容；address：地址
+//	$("#wdows").remove();
+//	$("body").append(`<div id="wdows">
+//						<div>${contents}</div>
+//					</div>`);
+//	$("#wdows").hide();//初始化异常弹窗
+//	$("#wdows").fadeIn(500,function(){
+//		setTimeout(function(){
+//			$("#wdows").fadeOut(1000,function(){
+//				console.log(address);
+//				address==""||address==undefined||address==null?location.reload():wode(address);//有传地址跳转，没有就刷新当前页面.
+//				function wode(address){
+//					address!="no"?location.href=address:console.log("什么也不做");
+//				}
+//			});
+//		},1000);
+//	});
+//}
 
-//基础布局
-function funkr(){
-	var ss=$(document.body).outerHeight(true);
-	var he=$(".heads").outerHeight();
-	var ft=$(".foots").outerHeight();
-	he==undefined?he=0:he=he;
-	ft==undefined?ft=0:ft=ft;
-	var bod=ss-(he+ft);
-	$(".sets").css({"height":bod+"px"});
-}
 
-//弹窗(1秒后自动隐藏)，待改善
-function popups(contents,address){//contents：内容；address：地址
-	$("#wdows").remove();
-	$("body").append(`<div id="wdows">
-						<div>${contents}</div>
-					</div>`);
-	$("#wdows").hide();//初始化异常弹窗
-	$("#wdows").fadeIn(500,function(){
-		setTimeout(function(){
-			$("#wdows").fadeOut(1000,function(){
-				console.log(address);
-				address==""||address==undefined||address==null?location.reload():wode(address);//有传地址跳转，没有就刷新当前页面.
-				function wode(address){
-					address!="no"?location.href=address:console.log("什么也不做");
-				}
-			});
-		},1000);
-	});
-}
-//弹窗（需要手动确认或取消），待完善
-
-
-
-//上拉加载
+/**
+ * 上拉加载
+ */
 //_loadIndex 为请求的页数    _loadState为请求状态  0 可以请求  1 正在请求  2 请求结束
 	var _loadIndex =1,
 	    _loadState = 0;
@@ -156,15 +162,106 @@ function popups(contents,address){//contents：内容；address：地址
 	    }
 	};
 //上拉加载调用js
-	/*loadmore('#wrapper','/store/tradeapi','post',{},function (data) {
-	    $.each(data.data.list,function (key,val) {
-	        $('#wrapper ul').append();
-	    });
-	},function () {   
-	});*/
+/*loadmore('#wrapper','/store/tradeapi','post',{},function (data) {
+    $.each(data.data.list,function (key,val) {
+        $('#wrapper ul').append();
+    });
+},function () {   
+});*/
 
+/**
+ * 弹出选择框
+ */
+function selectSwiper(obj) {
+    var _self = this;
+    _self.el = $(obj.el); // 根元素
+    _self.selectSwiper = null; // swiper对象
+    _self.swiperData = {}; // swiper数据对象
+    _self.swiperData.mustSelect = obj.mustSelect || false; // 是否必选
+    _self.swiperData.activeIndex = (typeof obj.activeIndex === 'number' && obj.activeIndex >= -1) ? obj.activeIndex : -1;// 激活索引
+    _self.swiperData.oldIndex = _self.swiperData.activeIndex; // 旧索引，取消返回上一次索引
+    _self.swiperData.data = obj.data || []; // swiper数据
 
+    _self.swiperData.okFun = obj.okFun; // OK按钮执行函数
+    _self.swiperData.okFunUndefind = obj.okFunUndefind || function () {
+    };//选择说明项-'请选择'
+    _self.swiperData.closeFun = obj.closeFun || function () {
+    }; // 取消按钮执行函数
+    _self.swiperData.init = obj.init; // 初始化
+    var hgSelect = `
+        <div class="select">
+        	<div>
+	            <span class="close">取消</span>
+	            <div class="tits">111</div>
+	            <span class="ok">确定</span>
+        	</div>
+            <div class="selectData">
+                <div class="swiper-container">
+                    <div class="cloth"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">请选择</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    _self.init = function () { // 初始化
+        _self.el.html(hgSelect);
+        _self.el.addClass('click_no'); // 取消移动端点击阴影
+        _self.selectSwiper = new Swiper(obj.el + ' .swiper-container', {
+            direction: 'vertical',
+            slidesPerView:5,//可视区域数目
+            centeredSlides: true,//激活项居中
+            slideToClickedSlide: true,//点击切换
+            onInit: function (swiper) {
+                swiper.removeSlide(0);
+                var data = _self.swiperData.data;
+                var s = [];
+                s[0] = '<div class="swiper-slide">请选择</div>';
+                for (i = 0; i < data.length; i++) {
+                    s[i + 1] = '<div class="swiper-slide">' + data[i] + '</div>';
+                }
+                swiper.appendSlide(s);
+                _self.swiperData.init(_self.swiperData.activeIndex);
 
+            },
+            onSlideChangeEnd: function (swiper) {
+                _self.swiperData.activeIndex = swiper.activeIndex - 1;
+            },
+        });
+        _self.el.find('.ok').on('click', _self.okSelectSwiper);
+        _self.el.find('.close').on('click', function () {
+            _self.swiperData.activeIndex = _self.swiperData.oldIndex;
+            _self.swiperData.closeFun();
+            _self.closeSelectSwiper();
+        });
+        _self.el.on('click', function () {
+            _self.el.find('.close').trigger('click');
+        });
+        $('.select').on('click', function (e) {//阻止选择区域关闭select
+            e.stopPropagation();
+        });
+    };
+    _self.openSelectSwiper = function () {
+        var _self = this;
+        _self.el.addClass('yes');
+        _self.selectSwiper.update();
+        _self.selectSwiper.slideTo(_self.swiperData.activeIndex + 1, 0);
+    };
+    _self.okSelectSwiper = function () {
+        if (_self.swiperData.mustSelect && _self.swiperData.activeIndex === -1) {
+            _self.swiperData.okFunUndefind();
+        } else {
+            _self.swiperData.okFun(_self.swiperData.activeIndex);
+            _self.swiperData.oldIndex = _self.swiperData.activeIndex;
+            _self.closeSelectSwiper();
+        }
+    };
+    _self.closeSelectSwiper = function () {
+        _self.el.removeClass('yes');
+    };
+    _self.init();
+}
 
 
 

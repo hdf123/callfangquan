@@ -192,6 +192,8 @@ a {
   align-items: center;
 }
 .fund_box > li > div:nth-child(2) > input {
+  min-width: 1rem;
+  max-width: 5rem;
   font-size: 0.4rem;
   text-align: right;
   margin-right: 0.1rem;
