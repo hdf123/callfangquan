@@ -8,12 +8,15 @@ $(function(){
 	console.log(call_chart);
 	$(".forms1 .business").hide();//商贷利率
 	$(".forms1 .diminishing").hide();//本金递减
+	var typeks=0;
 	if(call_chart.type=="011"){//公积金本息
+		typeks=0;
 		$(".forms1 .totals p").html(call_chart.money);//总额
 		$(".forms1 .interest p").html((call_chart.lixi/10000).toFixed(2));//利息
 		$(".forms1 .funds>td:eq(1)>p").html(call_chart.glilv*100);//公积金利率
 		$(".forms1 .Monthly>td:eq(1)>p").html(call_chart.yuegong.toFixed(0));//月供
 	}else if(call_chart.type=="012"){//公积金本金
+		typeks=1;
 		$(".forms1 .diminishing").show();
 		$(".forms1 .totals p").html(call_chart.money);//总额
 		$(".forms1 .interest p").html((call_chart.lixi/10000).toFixed(2));//利息
@@ -21,6 +24,7 @@ $(function(){
 		$(".forms1 .Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong[0].toFixed(0)}</p>元/月`);//月供
 		$(".forms1 .diminishing>td:eq(1)>p").html(call_chart.diminishing.toFixed(2));//递减
 	}else if(call_chart.type=="021"){//商贷本息
+		typeks=0;
 		$(".forms1 .business").show();//商贷利率
 		$(".forms1 .funds").hide();//商贷利率
 		$(".forms1 .totals p").html(call_chart.money);//总额
@@ -28,12 +32,14 @@ $(function(){
 		$(".forms1 .business>td:eq(1)>p").html(call_chart.slilv*100);//商贷利率
 		$(".forms1 .Monthly>td:eq(1)>p").html(call_chart.yuegong.toFixed(0));//月供
 	}else if(call_chart.type=="022"){//商贷本金
+		typeks=1;
 		$(".forms1 .diminishing").show();
 		$(".forms1 .funds").hide();//商贷利率
 		$(".forms1 .business>td:eq(1)>p").html(call_chart.slilv*100);//商贷利率
 		$(".forms1 .Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong[0].toFixed(0)}</p>元/月`);//月供
 		$(".forms1 .diminishing>td:eq(1)>p").html(call_chart.diminishing.toFixed(2));//递减
 	}else if(call_chart.type=="031"){//组合本息
+		typeks=0;
 		$(".forms1").css({"display":"none"});
 		$(".forms2").css({"display":"block"});
 		//首月月供、递减1、递减2、第几个月、前几个月、后几个月
@@ -62,6 +68,7 @@ $(function(){
 			$(".forms2 .Monthly p").html((call_chart.gyuegong+call_chart.syuegong).toFixed(2));//参考月供
 		}
 	}else if(call_chart.type=="032"){//组合本金
+		typeks=1;
 		$(".forms1").css({"display":"none"});
 		$(".forms2").css({"display":"block"});
 		$(".forms2 .front,.forms2 .behind").hide();//前几年、后几年
@@ -90,14 +97,19 @@ $(function(){
 		}
 		var poor=Math.max(call_chart.glimit,call_chart.slimit)-Math.min(call_chart.glimit,call_chart.slimit);
 		console.log(poor);
-		
-		
 	}
 	var color1="#5facfb",color2="#fba447";
 	$(".forms1 .totals>td:eq(0)>div").css({"background-color":color1});//总额
 	$(".forms1 .interest>td:eq(0)>div").css({"background-color":color2});//利息
 	$(".forms2 .totals>td:eq(0)>div").css({"background-color":color1});
 	$(".forms2 .interest>td:eq(0)>div").css({"background-color":color2});
+	$(".detaila .details").click(function(){
+		location.href="Payment_details.html?type="+typeks;
+	})
+	
+	/**
+	 * 扇形图
+	 */
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
     // 指定图表的配置项和数据

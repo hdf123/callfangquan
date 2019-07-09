@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<ul class="btn">
+			<li>111</li>
+			<li>222</li>
+		</ul>
+		
+		
+<script type="text/javascript">
+	/*
+    var arr1 = [1,2,3,4,5,6];
+    var arr2 = [11,12,13,14,15,16];
+    var arr3 = [10,21,31,41,51,61];
+    var json = {arr1,arr2,arr3}; //json中有任意多个数组
+    //保存结果的数组
+    var result = [];  
+    //遍历json
+    for(var key in json){
+        //遍历数组的每一项
+        $.each(json[key],function(index,value){
+            if( isBlank(result[index]) ){
+                result[index] = 0 ;
+            }
+            result[index] += value ;
+        })
+    }
+    //打印结果
+    console.log(result);  //[22, 35, 47, 59, 71, 83]
+    //判断值是否存在函数
+    function isBlank(val){
+        if(val == null || val == ""){
+            return true;
+        }
+    }*/
+   
+   var a={
+   		a1:2,//价格
+   		a2:3//几个月
+   }
+   var b={
+   		b1:5,//价格
+   		b2:4//几个月
+   }
+   //每个月付出一个a和一个b的价格,展示价格列表
+   /*
+	    第一月付出.7
+	    第二月付出.7
+	    第三月付出.7
+	    第四月付出.5
+    * */
+   for(var i=0;i<b.b2;i++){
+   		if(i<a.a2){
+   			console.log(a.a1+b.b1);
+   		}else{
+   			console.log(b.b1);
+   		}
+   }
+   
+   
+</script>
+	</body>
+</html>

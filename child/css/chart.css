@@ -182,6 +182,24 @@ a {
   display: none;
 }
 
+.detaila > td:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.detaila > td:nth-child(2) > div {
+  font-size: 0.373rem;
+}
+.detaila > td:nth-child(2) > div:nth-child(1) {
+  color: #999999;
+}
+.detaila > td:nth-child(2) > div:nth-child(2) {
+  color: #f9351a;
+}
+.detaila > td:nth-child(2) > div:nth-child(2) > i {
+  color: #f9351a;
+  font-size: 0.35rem;
+}
+
 .totals > td:nth-child(1), .interest > td:nth-child(1) {
   width: 0.6rem;
 }

@@ -85,6 +85,25 @@
 .forms2{
     display: none;
 }
+.detaila{
+    >td:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        >div{
+            font-size: 0.373rem;
+        }
+        >div:nth-child(1){
+            color: #999999;
+        }
+        >div:nth-child(2){
+            color: #f9351a;
+            >i{
+                color: #f9351a;
+                font-size:0.35rem;
+            }
+        }
+    }
+}
 .totals,.interest{
     >td:nth-child(1){
         width:0.6rem;
