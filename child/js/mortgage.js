@@ -562,6 +562,7 @@ $(function(){
 			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
 			localStorage.setItem('call_chart1',JSON.stringify(chart1));
 		}
+		
 		console.log(chart1);
 		console.log(chart2);
 		location.href="chart.html";
