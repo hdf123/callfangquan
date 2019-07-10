@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .swiper1 .swiper-slide, .wdows > div, #wdows > div {
+.yincang, .swiper1 .swiper-slide, .connoisseur > div:nth-child(2) > div, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .swiper1 .swiper-slide, .more > div {
+.flexs, .swiper1 .swiper-slide, .more > div, .recommended .swiper-slide > div, .recommended .swiper-slide > i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,21 +158,18 @@ a {
   bottom: 1.307rem;
   background: #F5F5F5;
 }
-.contents > ul {
-  width: 9.52rem;
-  margin: 0 auto;
-}
 
 .connoisseur_box {
-  width: 100%;
   margin-top: 0.213rem;
-  background: white;
 }
 .connoisseur_box > div:nth-child(1) {
+  width: 9.52rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.4rem;
+  background: white;
   border-bottom: 1px solid #dddddd;
 }
 .connoisseur_box > div:nth-child(1) > div:nth-child(2) {
@@ -194,6 +191,7 @@ a {
 }
 
 .connoisseur {
+  width: 6rem;
   display: flex;
 }
 .connoisseur > div:nth-child(1) {
@@ -221,12 +219,85 @@ a {
   margin: 0.17rem 0;
 }
 .connoisseur > div:nth-child(2) > div {
+  width: 4rem;
   color: #666666;
   font-size: 0.32rem;
 }
 
-.questions {
+.recommended_box {
+  padding-bottom: 0.4rem;
+}
+.recommended_box > p {
+  padding: 0.253rem 0 0.267rem 0.4rem;
+  font-size: 0.293rem;
+}
+
+.recommended {
+  padding-left: 0.4rem;
+}
+.recommended .swiper-slide {
+  width: 3.147rem;
+  padding: 0.24rem 0 0.293rem 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+}
+.recommended .swiper-slide > img {
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 50%;
+}
+.recommended .swiper-slide > h3 {
+  padding: 0.267rem 0 0.09rem 0;
+  font-size: 0.32rem;
+}
+.recommended .swiper-slide > p {
+  font-size: 0.293rem;
+}
+.recommended .swiper-slide > p:nth-child(3) {
+  padding: 0.09rem 0;
+}
+.recommended .swiper-slide > div {
+  width: 2.453rem;
+  height: 0.613rem;
+  margin-top: 0.2rem;
+  font-size: 0.293rem;
+  border-radius: 0.053rem;
+}
+.recommended .swiper-slide > div > i {
+  color: #ffffff;
+  font-size: 0.45rem;
+}
+.recommended .swiper-slide > .Care_about {
+  color: #ffffff;
+  background-color: #fba447;
+}
+.recommended .swiper-slide > .Care_about > i {
+  color: #ffffff;
+  font-size: 0.45rem;
+}
+.recommended .swiper-slide > .cancel {
+  color: #999999;
+  border: solid 0.027rem #e5e5e5;
+}
+.recommended .swiper-slide > i {
+  width: 0.59rem;
+  height: 0.59rem;
+  color: #cccccc;
+  font-size: 0.45rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.questions {
+  width: 9.52rem;
+  margin: 0 auto;
+  display: flex;
+  background: white;
 }
 .questions > div {
   width: 100%;

@@ -37,6 +37,28 @@ $(function(){
 			$(this).html(`√已关注`);
 		}
 	})
+	/**
+	 * 轮播推荐
+	 */
+	var mySwiper = new Swiper('.recommended', {
+		slidesPerView :2.9,
+		spaceBetween : 20,
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
+	})
+	$(".recommended").on("click",".deletes",function(){
+		$(this).parent().remove();
+	})
+	$(".recommended").on("click",".guanzhu",function(){
+		if($(this).is(".cancel")){
+			console.log(111);
+			$(this).removeClass("cancel").addClass("Care_about");
+			$(this).html(`<i class="iconfont">&#xe609;</i>关注`);
+		}else{
+			$(this).removeClass("Care_about").addClass("cancel");
+			$(this).html(`√已关注`);
+		}
+	})
     /**
      * 上拉加载
      */
