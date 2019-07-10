@@ -10,19 +10,19 @@ $(function(){
 	var types=getRequest().type;
 	typeks(types);
 	function typeks(types){//判断是等额本息还是等额本金
-		if(types==0){
-			console.log("-------"+0);
+		var loan='',loan1='';//本息、本金
+		if(getRequest().type==0){
+			loan=JSON.parse(localStorage.getItem('call_chart'));//本息
+			loan1=JSON.parse(localStorage.getItem('call_chart1'));//本金
 		}else{
-			console.log("-------"+1);
+			loan=JSON.parse(localStorage.getItem('call_chart1'));//本息
+			loan1=JSON.parse(localStorage.getItem('call_chart'));//本金
 		}
 		if(types==0){//本息
-			var loan='',loan1='';//本息、本金
-			loan=JSON.parse(localStorage.getItem('call_chart'));//本息
-			console.log(loan);
 			$(".money_title>div:eq(0)>div").eq(0).addClass("act").siblings().removeClass("act");
 			if(loan.type=="011"||loan.type=="021"){
 				$(".reimbursement_title>li:eq(0)>p:eq(1)").html(loan.money);//总额
-				$(".reimbursement_title>li:eq(1)>p:eq(1)").html((loan.lixi/10000).toFixed(2));//利息
+				$(".reimbursement_title>li:eq(1)>p:eq(1)").html(Math.abs((loan.lixi/10000).toFixed(2)));//利息
 				$(".reimbursement_title>li:eq(2)>p:eq(1)").html(loan.limit/12);//期限
 				var huankuan=0,ks='';
 				var ago=loan.yuegong.toFixed(2);
@@ -32,9 +32,9 @@ $(function(){
 					var benjin=loan.money*10000-huankuan.toFixed(2);//剩余本金
 					ks+=`<li>
 							<div>${i+1}</div>
-							<div>${yuezong.toFixed(2)}</div>
-							<div>${loan.ybenjin[i].toFixed(2)}</div>
-							<div>${loan.ylixi[i].toFixed(2)}</div>
+							<div>${Math.abs(yuezong.toFixed(2))}</div>
+							<div>${Math.abs(loan.ybenjin[i].toFixed(2))}</div>
+							<div>${Math.abs(loan.ylixi[i].toFixed(2))}</div>
 							<div>${Math.abs(benjin.toFixed(2))}</div>
 						</li>`;
 				};
@@ -43,7 +43,7 @@ $(function(){
 				$(".money_conts").animate({scrollTop:0},10);
 			}else{//组合本息
 				$(".reimbursement_title>li:eq(0)>p:eq(1)").html(loan.money);//总额
-				$(".reimbursement_title>li:eq(1)>p:eq(1)").html((loan.lixi/10000).toFixed(2));//利息
+				$(".reimbursement_title>li:eq(1)>p:eq(1)").html(Math.abs((loan.lixi/10000).toFixed(2)));//利息
 				var maxs=Math.max(loan.glimit,loan.slimit);
 				var mins=Math.min(loan.glimit,loan.slimit);
 				$(".reimbursement_title>li:eq(2)>p:eq(1)").html(maxs/12);//期限
@@ -86,54 +86,101 @@ $(function(){
 				}
 				//月供，本金,利息，剩余本金
 				function agos(ago,capital,interest,remaining){
-					var ybenjin=(loan.gybenjin[i]+loan.sybenjin[i]).toFixed(2);//月本金
-					var ylixi=(loan.gylixi[i]+loan.sylixi[i]).toFixed(2);//月利息
-					var benjin=loan.money*10000-huankuan.toFixed(2);//剩余本金
 					ks+=`<li>
 							<div>${i+1}</div>
-							<div>${ago.toFixed(2)}</div>
-							<div>${capital.toFixed(2)}</div>
-							<div>${interest.toFixed(2)}</div>
+							<div>${Math.abs(ago.toFixed(2))}</div>
+							<div>${Math.abs(capital.toFixed(2))}</div>
+							<div>${Math.abs(interest.toFixed(2))}</div>
 							<div>${Math.abs((loan.money*10000-remaining).toFixed(2))}</div>
 					</li>`;
 				}
-				
-				
 				$(".money_conts").html(ks);
 				var jun=((loan.gyuegong*loan.glimit+loan.syuegong*loan.slimit)/maxs).toFixed(2);
 				$(".money").html(formatCurrencyTenThou(jun.split(".")[0])+"."+jun.split(".")[1]);
 				$(".money_conts").animate({scrollTop:0},10);
-				
-				
 			}
 		}else if(types==1){//本金
-			var loan='',loan1='';//本息、本金
-			loan=JSON.parse(localStorage.getItem('call_chart1'));//本息
-			console.log(loan);
 			$(".money_title>div:eq(0)>div").eq(1).addClass("act").siblings().removeClass("act");
-			if(loan.type=="012"||loan.type=="022"){
-				console.log("-------"+4);
-				$(".reimbursement_title>li:eq(0)>p:eq(1)").html(loan.money);//总额
-				$(".reimbursement_title>li:eq(1)>p:eq(1)").html((loan.lixi/10000).toFixed(2));//利息
-				$(".reimbursement_title>li:eq(2)>p:eq(1)").html(loan.limit/12);//期限
+			if(loan1.type=="012"||loan1.type=="022"){
+				$(".reimbursement_title>li:eq(0)>p:eq(1)").html(loan1.money);//总额
+				$(".reimbursement_title>li:eq(1)>p:eq(1)").html(Math.abs((loan1.lixi/10000).toFixed(2)));//利息
+				$(".reimbursement_title>li:eq(2)>p:eq(1)").html(loan1.limit/12);//期限
 				var huankuan=0,ks='',ago=0;
-				for(var i=0;i<loan.limit;i++){
-					huankuan+=loan.ybenjin;
-					ago+=Number(loan.yuegong[i]);
+				for(var i=0;i<loan1.limit;i++){
+					huankuan+=loan1.ybenjin;
+					ago+=Number(loan1.yuegong[i]);
 					ks+=`<li>
 							<div>${i+1}</div>
-							<div>${(loan.yuegong[i]).toFixed(2)}</div>
-							<div>${loan.ybenjin.toFixed(2)}</div>
-							<div>${loan.ylixi[i].toFixed(2)}</div>
-							<div>${Math.abs((loan.money*10000-huankuan).toFixed(2))}</div>
+							<div>${Math.abs((loan1.yuegong[i]).toFixed(2))}</div>
+							<div>${Math.abs(loan1.ybenjin.toFixed(2))}</div>
+							<div>${Math.abs(loan1.ylixi[i].toFixed(2))}</div>
+							<div>${Math.abs((loan1.money*10000-huankuan).toFixed(2))}</div>
 						</li>`;
 				}
 				$(".money_conts").html(ks);
-				ago=(ago/loan.limit).toFixed(2);
+				ago=(ago/loan1.limit).toFixed(2);
 				$(".money").html(formatCurrencyTenThou(ago.split(".")[0])+"."+ago.split(".")[1]);
 				$(".money_conts").animate({scrollTop:0},10);
 			}else{
-				
+				console.log(loan1);
+				$(".reimbursement_title>li:eq(0)>p:eq(1)").html(loan1.money);//总额
+				$(".reimbursement_title>li:eq(1)>p:eq(1)").html(Math.abs((loan1.lixi/10000).toFixed(2)));//利息
+				var maxs=Math.max(loan1.glimit,loan1.slimit);
+				var mins=Math.min(loan1.glimit,loan1.slimit);
+				$(".reimbursement_title>li:eq(2)>p:eq(1)").html(maxs/12);//期限
+				//月供，本金,利息，已还本金
+				var ago=0,capital=0,interest=0,remaining=0,ks='',jun=0,gz=0,sz=0;
+				if(loan1.glimit>loan1.slimit){
+					for(var i=0;i<loan1.glimit;i++){
+						if(i<loan1.slimit){
+							ago=Number(loan1.gyuegong[i])+Number(loan1.syuegong[i]);//月供
+							capital=Number(loan1.ybenjin)+Number(loan1.sbenjin);//本金
+							interest=Number(loan1.gylixi[i])+Number(loan1.sylixi[i]);//利息
+							gz+=Number(loan1.gyuegong[i]);
+							sz+=Number(loan1.syuegong[i]);
+						}else{
+							ago=loan1.gyuegong[i];//月供
+							capital=Number(loan1.ybenjin);//本金
+							interest=Number(loan1.gylixi[i]);//利息
+							gz+=loan1.gyuegong[i];
+						}
+						remaining+=Number(capital);
+						agos(ago,capital,interest,remaining);
+					}
+				}else{
+					for(var i=0;i<loan1.slimit;i++){
+						if(i<loan1.glimit){
+							ago=Number(loan1.gyuegong[i])+Number(loan1.syuegong[i]);//月供
+							capital=Number(loan1.ybenjin)+Number(loan1.sbenjin);//本金
+							interest=Number(loan1.gylixi[i])+Number(loan1.sylixi[i]);//利息
+							gz+=Number(loan1.gyuegong[i]);
+							sz+=Number(loan1.syuegong[i]);
+						}else{
+							ago=Number(loan1.syuegong[i]);//月供
+							capital=Number(loan1.sbenjin);//本金
+							interest=Number(loan1.sylixi[i]);//利息
+							gz+=loan1.syuegong[i];
+						}
+						remaining+=Number(capital);
+						console.log(remaining);
+						agos(ago,capital,interest,remaining);
+					}
+				}
+				console.log((gz+sz)/loan1.glimit);
+				//月供，本金,利息，剩余本金
+				function agos(ago,capital,interest,remaining){
+					ks+=`<li>
+							<div>${i+1}</div>
+							<div>${Math.abs(ago.toFixed(2))}</div>
+							<div>${Math.abs(capital.toFixed(2))}</div>
+							<div>${Math.abs(interest.toFixed(2))}</div>
+							<div>${Math.abs((loan1.money*10000-remaining).toFixed(2))}</div>
+					</li>`;
+				}
+				$(".money_conts").html(ks);
+				jun=((gz+sz)/loan1.glimit).toFixed(2);
+				$(".money").html(Math.abs(formatCurrencyTenThou(jun.split(".")[0])+"."+jun.split(".")[1]));
+				$(".money_conts").animate({scrollTop:0},10);
 			}
 		}
 		

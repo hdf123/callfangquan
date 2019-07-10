@@ -555,6 +555,10 @@ $(function(){
 			}
 		}
 
+//		localStorage.setItem('call_chart1',JSON.stringify(chart1));//本息
+//		localStorage.setItem('call_chart2',JSON.stringify(chart2));//本金
+		
+		
 		if(funds.reimbursement==0){//本息
 			localStorage.setItem('call_chart',JSON.stringify(chart1));//展示
 			localStorage.setItem('call_chart1',JSON.stringify(chart2));
