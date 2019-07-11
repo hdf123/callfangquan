@@ -8,10 +8,12 @@ $(function(){
 	 * 搜索
 	 */
 	$(".search").click(function(){
-		location.href="search.html";
+		location.href="../child/search.html";
 	})
 	var mySwiper = new Swiper('.swiper1', {
 		slidesPerView :6.7,
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
@@ -32,32 +34,84 @@ $(function(){
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
 			$(this).html(`<i class="iconfont">&#xe609;</i>关注`);
+			$(this).closest(".connoisseur_box").find(".recommended_box").remove();
 		}else{
 			$(this).removeClass("Care_about").addClass("cancel");
 			$(this).html(`√已关注`);
+			$(this).closest(".connoisseur_box").children("div:eq(0)").after(`<div class="recommended_box">
+						<p>相关推荐</p>
+						<ul class="recommended">
+							<li class="">
+						    	<img src="" alt="" />
+						    	<h3>孙家财1</h3>
+						    	<p>和昌集团郑州公司</p>
+						    	<p>总经理</p>
+						    	<div class="guanzhus Care_about">
+						    		<i class="iconfont">&#xe609;</i>关注
+						    	</div>
+						    	<i class="iconfont deletes">&#xe65b;</i>
+						   </li>
+							<li class="">
+						    	<img src="" alt="" />
+						    	<h3>孙家财2</h3>
+						    	<p>和昌集团郑州公司</p>
+						    	<p>总经理</p>
+						    	<div class="guanzhus Care_about">
+						    		<i class="iconfont">&#xe609;</i>关注
+						    	</div>
+						    	<i class="iconfont deletes">&#xe65b;</i>
+						   </li>
+							<li class="">
+						    	<img src="" alt="" />
+						    	<h3>孙家财3</h3>
+						    	<p>和昌集团郑州公司</p>
+						    	<p>总经理</p>
+						    	<div class="guanzhus Care_about">
+						    		<i class="iconfont">&#xe609;</i>关注
+						    	</div>
+						    	<i class="iconfont deletes">&#xe65b;</i>
+						   </li>
+							<li class="">
+						    	<img src="" alt="" />
+						    	<h3>孙家财4</h3>
+						    	<p>和昌集团郑州公司</p>
+						    	<p>总经理</p>
+						    	<div class="guanzhus Care_about">
+						    		<i class="iconfont">&#xe609;</i>关注
+						    	</div>
+						    	<i class="iconfont deletes">&#xe65b;</i>
+						   </li>
+							<li class="">
+						    	<img src="" alt="" />
+						    	<h3>孙家财5</h3>
+						    	<p>和昌集团郑州公司</p>
+						    	<p>总经理</p>
+						    	<div class="guanzhus Care_about">
+						    		<i class="iconfont">&#xe609;</i>关注
+						    	</div>
+						    	<i class="iconfont deletes">&#xe65b;</i>
+						   </li>
+						</ul>
+					</div>`)
 		}
 	})
-	/**
-	 * 轮播推荐
-	 */
-	var mySwiper = new Swiper('.recommended', {
-		slidesPerView :2.9,
-		spaceBetween : 20,
-		observer:true,//修改swiper自己或子元素时，自动初始化swiper
-    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
-	})
-	$(".recommended").on("click",".deletes",function(){
+	$(".contents").on("click",".deletes",function(){
 		$(this).parent().remove();
 	})
-	$(".recommended").on("click",".guanzhu",function(){
+	$(".contents").on("click",".guanzhus",function(){
 		if($(this).is(".cancel")){
-			console.log(111);
 			$(this).removeClass("cancel").addClass("Care_about");
 			$(this).html(`<i class="iconfont">&#xe609;</i>关注`);
 		}else{
 			$(this).removeClass("Care_about").addClass("cancel");
 			$(this).html(`√已关注`);
 		}
+	})
+	/**
+	 * 专家
+	 */
+	$(".contents").on("click",".connoisseur",function(){
+		location.href="../child/experts.html";
 	})
     /**
      * 上拉加载

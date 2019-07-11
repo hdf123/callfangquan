@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .swiper1 .swiper-slide, .more > div, .recommended .swiper-slide > div, .recommended .swiper-slide > i {
+.flexs, .swiper1 .swiper-slide, .more > div, .recommended > li > div, .recommended > li > i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,10 +233,14 @@ a {
 }
 
 .recommended {
+  width: 100%;
   padding-left: 0.4rem;
+  display: flex;
+  overflow-x: auto;
 }
-.recommended .swiper-slide {
+.recommended > li {
   width: 3.147rem;
+  margin-right: 20px;
   padding: 0.24rem 0 0.293rem 0;
   display: flex;
   flex-direction: column;
@@ -244,45 +248,43 @@ a {
   background: #ffffff;
   position: relative;
 }
-.recommended .swiper-slide > img {
+.recommended > li > img {
   width: 1.333rem;
   height: 1.333rem;
   border-radius: 50%;
 }
-.recommended .swiper-slide > h3 {
+.recommended > li > h3 {
   padding: 0.267rem 0 0.09rem 0;
   font-size: 0.32rem;
 }
-.recommended .swiper-slide > p {
+.recommended > li > p {
+  width: 3.147rem;
   font-size: 0.293rem;
+  text-align: center;
 }
-.recommended .swiper-slide > p:nth-child(3) {
+.recommended > li > p:nth-child(3) {
   padding: 0.09rem 0;
 }
-.recommended .swiper-slide > div {
+.recommended > li > div {
   width: 2.453rem;
   height: 0.613rem;
   margin-top: 0.2rem;
   font-size: 0.293rem;
   border-radius: 0.053rem;
 }
-.recommended .swiper-slide > div > i {
+.recommended > li > div > i {
   color: #ffffff;
   font-size: 0.45rem;
 }
-.recommended .swiper-slide > .Care_about {
+.recommended > li > .Care_about {
   color: #ffffff;
   background-color: #fba447;
 }
-.recommended .swiper-slide > .Care_about > i {
-  color: #ffffff;
-  font-size: 0.45rem;
-}
-.recommended .swiper-slide > .cancel {
+.recommended > li > .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.recommended .swiper-slide > i {
+.recommended > li > i {
   width: 0.59rem;
   height: 0.59rem;
   color: #cccccc;

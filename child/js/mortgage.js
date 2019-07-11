@@ -5,20 +5,14 @@ $(function(){
 	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
 	if(!call_logins) location.href="../home/home.html";
 //选项卡切换
-	var tabIndex =0;
-	var tabBar = function() {
-		var aTab = $('.mortgage_tab>li');
-		var oLine = $('.mortgage_tab>div');
-		aTab.on('click', function() {
-			tabIndex = $(this).index();
-			var mm=12.5+(100/3*tabIndex);
-			oLine.animate({ 'left': mm + '%' }, 300, function() {
-				$(".tab_child>form").eq(tabIndex).show();
-				$(".tab_child>form").eq(tabIndex).siblings().hide();
-			});
-		})
-	}
-	tabBar();
+	$('.mortgage_tab>li').on('click', function() {
+		var index = $(this).index();
+		var mm=12.5+(100/3*index);
+		$('.mortgage_tab>div').animate({ 'left': mm + '%' }, 300, function() {
+			$(".tab_child>form").eq(index).show();
+			$(".tab_child>form").eq(index).siblings().hide();
+		});
+	})
 	$(".tab_child>form").hide();
 	$(".tab_childa").show();
 	
@@ -124,7 +118,7 @@ $(function(){
         fund2.openSelectSwiper(); // 打开选择框
     });
 	//公积金利率
-	var k1=0,k2=0;//1:公积金,贷款；2：组合
+	var k1=0,k2=0;//1:公积金,商贷；2：组合
 	$(".tab_childa .interest_rate").click(function(){
 		k1=1;
 		$(".interestRate1").css({"display":"block"});
