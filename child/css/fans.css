@@ -156,9 +156,6 @@ a {
   padding: 0.1rem 0.2rem;
   border-radius: 0.053rem;
 }
-.lists > div:nth-child(2) > i {
-  color: #fba447;
-}
 .lists .Care_about {
   color: #fba447;
   border: solid 0.027rem #fba447;
@@ -171,5 +168,9 @@ a {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
+.lists .cancel > i {
+  color: #999999;
+  font-size: 0.4rem;
+}
 
-/*# sourceMappingURL=Focus.css.map */
+/*# sourceMappingURL=fans.css.map */

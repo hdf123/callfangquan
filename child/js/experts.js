@@ -52,6 +52,12 @@ $(function(){
 		location.href="Focus.html"
 	})
 	$(".heat>li:eq(1)").click(function(){
-		location.href="Focus.html"
+		location.href="fans.html"
+	})
+	/**
+	 * 咨询
+	 */
+	$(".footers").click(function(){
+		location.href="MyConsulting.html";
 	})
 })

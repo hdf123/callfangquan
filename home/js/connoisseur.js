@@ -113,6 +113,12 @@ $(function(){
 	$(".contents").on("click",".connoisseur",function(){
 		location.href="../child/experts.html";
 	})
+	/**
+	 * 咨询、提问
+	 */
+	$(".contents").on("click",".questions>div:eq(0)",function(){
+		location.href="../child/MyConsulting.html";
+	})
     /**
      * 上拉加载
      */

@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
-		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-<style>
-.a1{
-	width:0;
-	height:0;
-	border-left:50px solid transparent;
-	border-right:50px solid transparent;
-	border-bottom:100px solid rgba(99,0,0,0.5);
-}
-.a2{
-	width:0;
-	height:0;
-	border-bottom:100px solid rgba(99,0,0,0.5);
-	border-left:100px solid transparent;
-}
-</style>
-	<body>
-		<form class="aa">
-			First name: <input type="text" name="FirstName" value="Bill" /><br />
-			Last name: <input type="text" name="LastName" value="Gates" /><br />
-			<input type="text" name="aa" value="66" />
-		</form>
-		<button class="btn">序列化表单值</button>
-		<div class="a1">向上</div>
-		<div class="a2">右下</div>
-		
-		
-<script type="text/javascript">
-  	$(".btn").click(function(){
-    	console.log($(".aa").serialize());
-  	});
-	
-   
-</script>
-	</body>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>textarea 限制字数</title>
+ <style>
+  .container{
+   position: relative;
+   width: 730px;
+  }
+  .container span{
+   position: absolute;
+   bottom: 20px;
+   right: 30px;
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <textarea name="content" id="content" cols="100" rows="10"></textarea>
+  <span>0/10</span>
+ </div>
+ <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+ <script>
+  $(function(){
+    /**
+    * textarea 限制输入字数
+    * @param string str 类名或ID
+    * @param number num 限制输入的字数
+    */
+   function limitImport(str,num){
+    $(document).on('input propertychange',str,function(){
+     var self = $(this);
+     var content = self.val();
+     if (content.length > num){
+      self.val(content.substring(0,num));
+     } 
+     self.siblings('span').text(self.val().length+'/'+num);
+    });
+   }
+ 
+   //用法示例
+   limitImport('#content',10);
+ 
+  })
+ </script>
+</body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>我要咨询</title>
+		<link rel="stylesheet" type="text/css" href="css/MyConsulting.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<div class="iconfont lefts" onclick="history.go(-1)">取消</div>
+			<div class="centers">我要咨询</div>
+			<div class="rights">发送</div>
+		</header>
+		<section class="contents">
+			<textarea class="texts" placeholder="请详细描述您的问题（不少于10个字），以便TA能够详细了解您的问题，给出针对性的问答。" value=""></textarea>
+			<div class="mun">0/200</div>
+			<div class="privacy">
+				<div>您还有免费问3次的机会，本次提问免费。</div>
+				<label for="privacy">
+					<input type="checkbox" id="privacy" value="公开" />公开
+				</label>
+			</div>
+		</section>
+		
+		
+<script type="text/javascript">
+$(function(){
+   	limitImport('.texts',200);//输入限制
+
+   	$(".privacy").hide();
+   	$("#privacy").click(function(){
+   		$(".texts").focus();
+   		if($(this).is(":checked")){
+   			$(".texts").val("公开");
+   		}else{
+   			$(".texts").val("隐藏");
+   		}
+   	})
+   	/**
+   	 * 是否公开设置
+   	 */
+	//Android
+	var originalHeight=$(window).height() ||$(document.body).height();
+	window.onresize=function(){
+	    //键盘弹起与隐藏都会引起窗口的高度发生变化
+	    	var resizeHeight=$(window).height() ||$(document.body).height();
+	        if(resizeHeight-0<originalHeight-0){
+	         //当软键盘弹起，在此处操作
+	         	$(".privacy").show();
+	         }else{
+	         //当软键盘收起，在此处操作
+	         	$(".privacy").hide();
+	         }
+	}
+	//ios：focusin和focusout支持冒泡，对应focus和blur, 使用focusin和focusout的原因是focusin和focusout可以冒泡，focus和blur不会冒泡，这样就可以使用事件代理，处理多个输入框存在的情况。
+	/*
+	$(".texts").focusin(function(){
+		if(isIphone()){//软键盘弹出的事件处理
+			$(".privacy").show();
+        }
+	})
+	$(".texts").focusout(function(){
+		if(isIphone()){//软键盘弹出的事件处理
+			$(".privacy").hide();
+        }
+	})
+	*/
+	/**
+	 * 提交
+	 */
+   	$(".rights").click(function(){
+   		var mun=$(".texts").val();
+   		console.log(mun.length);
+   		console.log($(".texts").val());
+   		alert($(".texts").val());
+   		if(mun.length<10){
+   			console.log("输入不能小数10位");
+   		}
+   	})
+})
+</script>
+	</body>
+</html>

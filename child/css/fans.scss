@@ -58,9 +58,6 @@
     >div:nth-child(2){
         padding:0.1rem 0.2rem;
         border-radius: 0.053rem;
-        >i{
-            color: #fba447;
-        }
     }
     .Care_about{
         color: #fba447;
@@ -73,5 +70,9 @@
     .cancel{//已关注
         color:$colorb;
         border: solid 0.027rem #e5e5e5;
+        >i{
+            color:$colorb;
+            font-size:0.4rem;
+        }
     }
 }

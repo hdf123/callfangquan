@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import "../../css/base";
+@import "../../css/styles";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        height:100%;
+        padding:0 0.4rem;
+        font-size: 0.373rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+    .rights{
+        height:100%;
+        padding:0 0.4rem;
+        color:#71B4FB;
+        font-size: 0.373rem;
+        @extend .flexs;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+}

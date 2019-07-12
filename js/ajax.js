@@ -50,6 +50,28 @@ function imgks(){
 	}, true);
 }
 /**
+ * textarea
+ */
+function textareas(txthei){
+	//设置 textarea 的高度随着 内容 增加 自适应
+	txthei.height(txthei[0].scrollHeight);
+	txthei.on("keyup keydown", function(){
+	    $(this).height(this.scrollHeight);
+	})
+}
+//输入限制
+//limitImport('.texts',200);调用实例：类名或ID，限制的字数
+function limitImport(str,num){
+	$(document).on('input propertychange',str,function(){
+ 	var self = $(this);
+ 	var content = self.val();
+ 	if (content.length > num){
+  		self.val(content.substring(0,num));
+ 	} 
+ 	$(".mun").text(self.val().length+'/'+num);
+	});
+}
+/**
  * 基础布局
  */
 //function funkr(){

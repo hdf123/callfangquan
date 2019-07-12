@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers {
+.flexs, .headers .lefts, .headers .centers, .headers .rights {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,13 +104,19 @@ a {
   box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
 }
 .headers .lefts {
-  width: 1.173rem;
   height: 100%;
-  font-size: 0.42rem;
+  padding: 0 0.4rem;
+  font-size: 0.373rem;
 }
 .headers .centers {
   height: 100%;
   font-size: 0.48rem;
+}
+.headers .rights {
+  height: 100%;
+  padding: 0 0.4rem;
+  color: #71B4FB;
+  font-size: 0.373rem;
 }
 
 .contents {
@@ -118,58 +124,54 @@ a {
   left: auto;
   bottom: 0;
 }
-.contents > ul {
+
+.texts {
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  height: 3rem;
+  outline: none;
+  padding: 0 0.4rem;
+  margin-top: 0.427rem;
+  border: none;
+  resize: none;
+  font-size: 0.373rem;
 }
 
-.lists {
-  padding: 0.267rem 0.4rem;
+.texts::-webkit-input-placeholder {
+  /*WebKit browsers*/
+  color: #999999;
+  font-weight: 600;
+}
+
+.mun {
+  text-align: right;
+  font-size: 0.373rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.privacy {
+  width: 100%;
+  height: 1.1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0.387rem;
 }
-.lists > div:nth-child(1) {
-  display: flex;
-}
-.lists > div:nth-child(1) > img {
-  width: 1.333rem;
-  height: 1.333rem;
-  border-radius: 50%;
-}
-.lists > div:nth-child(1) > div {
-  margin-left: 0.253rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.lists > div:nth-child(1) > div > div:nth-child(1) {
-  font-size: 0.4rem;
-}
-.lists > div:nth-child(1) > div > div:nth-child(2) {
-  color: #666666;
+.privacy > div {
+  color: #999999;
   font-size: 0.32rem;
 }
-.lists > div:nth-child(2) {
-  padding: 0.1rem 0.2rem;
-  border-radius: 0.053rem;
-}
-.lists > div:nth-child(2) > i {
-  color: #fba447;
-}
-.lists .Care_about {
-  color: #fba447;
-  border: solid 0.027rem #fba447;
-}
-.lists .Care_about > i {
-  color: #fba447;
-  font-size: 0.45rem;
-}
-.lists .cancel {
+.privacy > label {
+  height: 100%;
+  display: flex;
+  align-items: center;
   color: #999999;
-  border: solid 0.027rem #e5e5e5;
+  font-size: 0.32rem;
+}
+.privacy > label input {
+  margin-right: 0.1rem;
 }
 
-/*# sourceMappingURL=Focus.css.map */
+/*# sourceMappingURL=MyConsulting.css.map */
