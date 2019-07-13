@@ -6,19 +6,149 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=yes"/>
-		<title>问答详情</title>
+		<title>TA的回答</title>
 		<link rel="stylesheet" type="text/css" href="css/answer.css"/>
 		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+	
 	<body>
 		<header class="headers">
 			<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
-			<div class="centers">问答详情</div>
+			<div class="centers">TA的回答</div>
 		</header>
 		<section class="contents">
 			<ul>
-				<li></li>
+				<li>
+					<div class="answer_title">
+						<img src="" alt="" />
+						<div>
+							<div>Kdder</div>
+							<p>2019-07-10</p>
+						</div>
+					</div>
+					<div class="conts">
+						看上了一个小区的地铁和学区，但是现在开盘的这一期，
+						房子就剩下一套，户型不太满意，是个小三房，但是不通透，主卧感觉还没
+						有次卧舒服，次卧和书房两个房间采光又不好，但是等着吧，怕下次开盘又
+						更好的---看上了一个小区的地铁和学区，但是现在开盘的这一期，
+						房子就剩下一套，户型不太满意，是个小三房，但是不通透，主卧感觉还没
+						有次卧舒服，次卧和书房两个房间采光又不好，但是等着吧，怕下次开盘又
+						更好的
+					</div>
+					<div class="connoisseur_box">
+						<div>
+							<img src="" alt="" />
+							<div>
+								聂广华 | 中岳秀峰集团副总裁
+							</div>
+						</div>
+						<div>
+							盘还是不错的，如果想考虑下次的户型，可以等几个月在出手，价格浮动不会差距太大。
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="answer_title">
+						<img src="" alt="" />
+						<div>
+							<div>Kdder</div>
+							<p>2019-07-10</p>
+						</div>
+					</div>
+					<div class="conts">
+						看上了一个小区的地铁和学区，但是现在开盘的这一期，
+						房子就剩下一套，户型不太满意，是个小三房，但是不通透，主卧感觉还没
+						有次卧舒服，次卧和书房两个房间采光又不好，但是等着吧，怕下次开盘又
+						更好的---看上了一个小区的地铁和学区，但是现在开盘的这一期，
+						房子就剩下一套，户型不太满意，是个小三房，但是不通透，主卧感觉还没
+						有次卧舒服，次卧和书房两个房间采光又不好，但是等着吧，怕下次开盘又
+						更好的
+					</div>
+					<div class="connoisseur_box">
+						<div>
+							<img src="" alt="" />
+							<div>
+								聂广华 | 中岳秀峰集团副总裁
+							</div>
+						</div>
+						<div>
+							盘还是不错的，如果想考虑下次的户型，可以等几个月在出手，价格浮动不会差距太大。
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="answer_title">
+						<img src="" alt="" />
+						<div>
+							<div>Kdder</div>
+							<p>2019-07-10</p>
+						</div>
+					</div>
+					<div class="conts">
+						看上了一个小区的地铁和学区，但是现在开盘的这一期，
+						房子就剩下一套，户型不太满意，是个小三房，但是不通透，主卧感觉还没
+						有次卧舒服，次卧和书房两个房间采光又不好，但是等着吧，怕下次开盘又
+						更好的---看上了一个小区的地铁和学区，但是现在开盘的这一期，
+						房子就剩下一套，户型不太满意，是个小三房，但是不通透，主卧感觉还没
+						有次卧舒服，次卧和书房两个房间采光又不好，但是等着吧，怕下次开盘又
+						更好的
+					</div>
+					<div class="connoisseur_box">
+						<div>
+							<img src="" alt="" />
+							<div>
+								聂广华 | 中岳秀峰集团副总裁
+							</div>
+						</div>
+						<div>
+							盘还是不错的，如果想考虑下次的户型，可以等几个月在出手，价格浮动不会差距太大。
+						</div>
+					</div>
+				</li>
 			</ul>
 		</section>
+
+
+<script type="text/javascript">
+$(function(){
+	/**
+	 * 登录状态
+	 */
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="home.html";
+	
+	omit($(".conts"),110);
+    /**
+     * 上拉加载
+     */
+	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
+	//加载数据
+	var LoadingDataFn = function(){
+		console.log("上拉加载");
+		var dom='';
+		for(var i=0;i<30;i++){
+			dom+=`<div>${i+1}</div>`
+		}
+		$('.contents').append(dom);
+		off_on = true;
+	};
+	//初始化， 第一次加载
+	$(document).ready(function() {
+	    LoadingDataFn();
+	});
+	$('.contents').scroll(function() {
+	    //当时滚动条离底部60px时开始加载下一页的内容
+	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+	        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
+	        if (off_on) {
+	              off_on = false;
+	              page++;
+	              console.log("第"+page+"页");
+	              LoadingDataFn();  //调用执行上面的加载方法
+	        }
+	    }
+	});
+})
+</script>
 	</body>
 </html>

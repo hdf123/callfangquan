@@ -29,4 +29,62 @@
     top:1.173rem;
     left:auto;
     bottom:0;
+    >ul{
+        padding-left:0.48rem;
+        >li{
+            padding:0.413rem 0 0.467rem 0;
+            border-bottom:1px solid #E6E6E6;
+        }
+    }
+}
+.answer_title{
+    display: flex;
+    >img{
+        width: 1.067rem;
+        height: 1.067rem;
+        border-radius:50%;
+    }
+    >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left:0.32rem;
+        >div{
+            font-size: 0.4rem;
+        }
+        >p{
+            color: #999999;
+            font-size: 0.293rem;
+        }
+    }
+}
+.conts{
+    width:100%;
+    margin:0.32rem 0;
+    padding:0 0.493rem 0 0.04rem;
+    >span{
+        font-size: 0.373rem;
+        line-height:0.52rem;
+    }
+}
+.connoisseur_box{
+    >div:nth-child(1){
+        display: flex;
+        align-items: center;
+        
+        >img{
+            width: 0.853rem;
+            height: 0.853rem;
+            border-radius:50%;
+        }
+        >div{
+            margin-left:0.267rem;
+            font-size: 0.373rem;
+        }
+    }
+    >div:nth-child(2){
+        font-size: 0.373rem;
+        margin-top:0.307rem;
+        line-height:0.52rem;
+    }
 }

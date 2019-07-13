@@ -50,10 +50,9 @@ function imgks(){
 	}, true);
 }
 /**
- * textarea
+ * 设置 textarea 的高度随着 内容 增加 自适应
  */
 function textareas(txthei){
-	//设置 textarea 的高度随着 内容 增加 自适应
 	txthei.height(txthei[0].scrollHeight);
 	txthei.on("keyup keydown", function(){
 	    $(this).height(this.scrollHeight);
@@ -70,6 +69,41 @@ function limitImport(str,num){
  	} 
  	$(".mun").text(self.val().length+'/'+num);
 	});
+}
+/**
+ * 文本省略显示
+ */
+//调用方法：记得转为DOM对象，显示的字数,收起的字体样式
+//omit($(".content")[0],50);
+function omit(ctn,len){
+	var content=ctn.html();
+	var span=$("<span>"+content.substring(0,len)+"</span>");
+	var as=$("<a></a>");
+	as.html(content.length>len?"...":"");  ////判断显示的字数是否大于默认显示的字数    来设置a的显示       
+	var span1=$("<span>展开</span>");
+	as.append(span1);
+	as.attr("href","javascript:void(0)");
+	as.css({"color":"black"});
+	span1.css({"color":"blue"});
+	
+	
+	ctn.on("click",as,function(){
+        if(as.html().indexOf("展开")>0){      //如果a中含有"展开"则显示"收起"
+          as.html("<<&nbsp;收起");
+          as.css({"color":"red"});
+          span.html(content);
+        }else{
+        	var span1=$("<span>展开</span>");
+            as.html("...");
+           	as.append(span1);
+           	as.css({"color":"black"});
+           	span1.css({"color":"blue"});
+           	span.html(content.substring(0,len));
+        }
+	})
+	ctn.html("");
+	ctn.append(span);
+	ctn.append(as);
 }
 /**
  * 基础布局

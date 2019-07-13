@@ -114,10 +114,13 @@ $(function(){
 		location.href="../child/experts.html";
 	})
 	/**
-	 * 咨询、提问
+	 * 咨询、回答
 	 */
 	$(".contents").on("click",".questions>div:eq(0)",function(){
 		location.href="../child/MyConsulting.html";
+	})
+	$(".contents").on("click",".questions>div:eq(1)",function(){
+		location.href="../child/answer.html";
 	})
     /**
      * 上拉加载
