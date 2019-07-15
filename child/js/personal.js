@@ -17,6 +17,16 @@ $(function(){
 			$(this).html(`√已关注`);
 		}
 	})
+	$(".contents").on("click",".guanzhus",function(){
+		if($(this).is(".cancel")){
+			$(this).removeClass("cancel").addClass("Care_about");
+			$(this).html(`<i class="iconfont">&#xe609;</i>关注`);
+			$(this).closest(".connoisseur_box").find(".recommended_box").remove();
+		}else{
+			$(this).removeClass("Care_about").addClass("cancel");
+			$(this).html(`<i class="iconfont">&#xe608;</i>互相关注`);
+		}
+	})
 	$(".tab_box>ul").hide();
 	$(".tab_box>ul:eq(0)").show();
 	/**
@@ -32,17 +42,4 @@ $(function(){
 	})
 	$(".tab_box>ul").hide();
 	$(".tab_box>ul:eq(0)").show();
-	/**
-	 * 关注
-	 */
-	$(".Focus").on("click",".guanzhu",function(){
-		console.log(1111);
-		if($(this).is(".cancel")){
-			$(this).removeClass("cancel").addClass("Care_about");
-			$(this).html(`<i class="iconfont">&#xe609;</i>关注`);
-		}else{
-			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html(`√已关注`);
-		}
-	})
 })
