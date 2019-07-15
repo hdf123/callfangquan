@@ -187,7 +187,7 @@
     height: 1.067rem;
     display:block;
     margin:0 auto;
-    color:#5facfb;
+    color:$colorc;
     font-size:$fontsb;
     background-color: #f9f9f9;
     border-radius: 0.053rem;
@@ -387,14 +387,13 @@
     width: 9.2rem;
     height: 1.067rem;
     margin:0 auto;
-    color: #5facfb;
+    color:$colorc;
     font-size: 0.373rem;
     outline:none;
     border:none;
     border-radius: 0.053rem;
     @extend .flexs;
-    background-color:rgba(242,248,255,1);
-//  background-color:$backgroundb;
+    background-color:$backgroundb;
 }
 .review_title{
     width:9.2rem;
@@ -558,3 +557,4 @@
     background:url(../../img/bubbles.png) no-repeat;
     background-size:100% 100%;
 }
+

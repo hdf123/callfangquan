@@ -274,6 +274,10 @@ a {
   top: 5.5rem;
   left: auto;
   bottom: 0;
+}
+.tab_box > ul {
+  width: 100%;
+  height: 100%;
   overflow: auto;
 }
 

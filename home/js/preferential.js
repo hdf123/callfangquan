@@ -16,6 +16,9 @@ $(function(){
 			$(this).html(`已订阅`);
 		}
 	})
+	$(".contents").on("click",".contact>img:eq(1)",function(){
+		location.href="../child/intention.html";
+	})
     /**
      * 上拉加载
      */

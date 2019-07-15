@@ -276,7 +276,7 @@ a {
   height: 1.067rem;
   display: block;
   margin: 0 auto;
-  color: #5facfb;
+  color: #0099ff;
   font-size: 0.373rem;
   background-color: #f9f9f9;
   border-radius: 0.053rem;
@@ -479,12 +479,12 @@ a {
   width: 9.2rem;
   height: 1.067rem;
   margin: 0 auto;
-  color: #5facfb;
+  color: #0099ff;
   font-size: 0.373rem;
   outline: none;
   border: none;
   border-radius: 0.053rem;
-  background-color: #f2f8ff;
+  background-color: rgba(0, 153, 255, 0.3);
 }
 
 .review_title {

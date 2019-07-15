@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<form>
+			<input type="text" name="aa" value="111" />
+			<input type="text" name="bb" value="222" />
+			<button class='btn' onclick="btn(this.form)">确定</button>
+		</form>
+		<button class='btn1'>确定1</button>
+	</body>
+	
+	
+<script type="text/javascript">
+	function btn(fmobj){
+		console.log(fmobj.aa.value);
+	}
+	$(".btn1").click(function(){
+		console.log($("form").serialize());
+		var str=$("form").serialize();
+		console.log(str);
+		strs = str.split("&");
+		var theRequest = new Object();
+		for(var i = 0; i < strs.length; i ++) {
+  			theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]);
+		}
+		console.log(theRequest);
+		
+	})
+</script>
+</html>

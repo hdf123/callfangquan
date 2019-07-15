@@ -23,5 +23,10 @@ $(function(){
 		localStorage.setItem('call_typew',JSON.stringify(ind));
 		location.href="brand_child.html";
 	})
-	
+	$(".sentiments>li,.newks>li").click(function(){
+		var ind=$(this).index();
+		console.log(ind);
+		localStorage.setItem('call_enterprise',JSON.stringify(ind));
+		location.href="brand_enterprise.html";
+	})
 })

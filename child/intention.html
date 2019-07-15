@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>中原楼市</title>
+		<link rel="stylesheet" type="text/css" href="css/intention.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
+			<div class="centers">填写信息</div>
+		</header>
+		<section class='contents'>
+			<form>
+				<div>
+					<div>
+						<div>姓名</div>
+						<input type="text" name="name" placeholder="请输入姓名" />
+					</div>
+					<div>
+						<div>联系电话</div>
+						<input type="number" name="phone" placeholder="请输入电话" />
+					</div>
+					<div>
+						<div>意向楼盘</div>
+						<input type="text" name="intention" placeholder="请输入意向楼盘" />
+					</div>
+				</div>
+				<input type="button" class="btn" value="提交" />
+			</form>
+		</section>
+		
+		
+<script type="text/javascript">
+$(function(){
+	/**
+	 * 登录状态
+	 */
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="home.html";
+	$(".btn").click(function(){
+		//手机号验证
+		/*
+		var myreg=/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
+		if(!myreg.test($("[name=phone]").val())){
+			return console.log("请填写正确的手机号");
+		}
+		*/
+		
+		console.log($("form").serialize());
+		var strs=$("form").serialize().split("&");
+		var theRequest ={};
+		for(var i = 0; i < strs.length; i ++) {
+  			theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]);
+		}
+		console.log(theRequest);
+	})
+	
+})
+</script>
+	</body>
+</html>

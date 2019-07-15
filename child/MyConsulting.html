@@ -26,8 +26,15 @@
 				</label>
 			</div>
 		</section>
-		
-		
+		<div class="popup_box">
+			<div class="popup">
+				<p>确定支付10元向TA提问吗？</p>
+				<div>
+					<div class="cancel">再想想</div>
+					<div class="confirm">确定</div>
+				</div>
+			</div>
+		</div>
 <script type="text/javascript">
 $(function(){
    	limitImport('.texts',200);//输入限制
@@ -73,15 +80,31 @@ $(function(){
 	/**
 	 * 提交
 	 */
+	$(".popup_box").hide();
    	$(".rights").click(function(){
    		var mun=$(".texts").val();
    		console.log(mun.length);
    		console.log($(".texts").val());
-   		alert($(".texts").val());
    		if(mun.length<10){
-   			console.log("输入不能小数10位");
+   			return console.log("输入不能小数10位");
    		}
+   		$(".popup_box").show();
    	})
+	$(".popup_box").click(function(event){
+		$(this).hide();
+		event.stopPropagation();
+	})
+	$(".popup").click(function(event){
+		event.stopPropagation();
+	})
+	$(".cancel").click(function(){//取消
+		$(".popup_box").hide();
+	})
+	$(".confirm").click(function(){//确认
+		var mun=$(".texts").val();
+		console.log(mun);
+		$(".popup_box").hide();
+	})
 })
 </script>
 	</body>

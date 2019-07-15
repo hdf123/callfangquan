@@ -6,6 +6,9 @@ $(function(){
 	if(!call_logins) location.href="home.html";
 	//更多
 	$(".ak").hide();
+	$(".rights>h3:eq(0)").click(function(){
+		location.href="personal.html";
+	})
 	$(".rights>h3:eq(1)").click(function(){
 		$(".ak").toggle();
 	})

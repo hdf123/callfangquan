@@ -6,10 +6,13 @@ $(function(){
 	if(!call_logins) location.href="../home/home.html";
 	//品牌类型
 	var call_typew=JSON.parse(localStorage.getItem('call_typew'));
-	if(call_typew==0) $(".centers").html("精选品牌")
-	else if(call_typew==1) $(".centers").html("人气品牌")
-	else if(call_typew==2) $(".centers").html("新锐品牌")
-	else location.href="home.html";
+	$(".centers").html(call_typew)
+	$(".lists>li").click(function(){
+		var ind=$(this).index();
+		console.log(ind);
+		localStorage.setItem('call_enterprise',JSON.stringify(ind));
+		location.href="brand_enterprise.html";
+	})
     /**
      * 上拉加载
      */

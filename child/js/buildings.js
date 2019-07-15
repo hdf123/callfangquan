@@ -3,26 +3,26 @@ $(function(){
 	 * 登录状态
 	 */
 	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="home.html";
+	if(!call_logins) location.href="../home/home.html";
 	/**
 	 * 页面渲染
 	 */
-	var yz_building=JSON.parse(localStorage.getItem('yz_building'));//转为对象
+	var call_building=JSON.parse(localStorage.getItem('call_building'));//转为对象
 	var ska="",skb="",states="";
-	for(i in yz_building.region){
-		ska+=`<div>${yz_building.region[i]}</div>`;
+	for(i in call_building.region){
+		ska+=`<div>${call_building.region[i]}</div>`;
 	}
-	for(i in yz_building.features){
-		skb+=`<div>${yz_building.features[i]}</div>`;
+	for(i in call_building.features){
+		skb+=`<div>${call_building.features[i]}</div>`;
 	}
-	if(yz_building.state=="在售"){
+	if(call_building.state=="在售"){
 		states=`<div class="sell">在售</div>`;
-	}else if(yz_building.state=="待售"){
+	}else if(call_building.state=="待售"){
 		states=`<div class="waiting">待售</div>`;
 	}else{
 		states=`<div>待售</div>`;
 	}
-	$(".buildings_title").html(`<h3>${yz_building.name}</h3>
+	$(".buildings_title").html(`<h3>${call_building.name}</h3>
 								<div>${ska}</div>
 								<div>
 									${states}
@@ -50,8 +50,8 @@ $(function(){
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			console.log(ind);
-			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
-//	    	location.href="buildings.html";
+			localStorage.setItem('call_building',JSON.stringify(data[ind]));
+	    	location.href="buildings.html";
 		} 
 	})
 	var mySwiper4= new Swiper('.swiper4', {
@@ -62,8 +62,8 @@ $(function(){
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			console.log(ind);
-			localStorage.setItem('yz_building',JSON.stringify(data[ind]));
-//	    	location.href="buildings.html";
+			localStorage.setItem('call_building',JSON.stringify(data[ind]));
+	    	location.href="buildings.html";
 		} 
 	})
 //选项卡切换
@@ -100,7 +100,6 @@ $(function(){
 	$(".headersk").hide();
 	$(".contents").scroll(function(){
 		$(".headersk").show();
-		console.log($(".contents").scrollTop());
 		var sk=$(".contents").scrollTop();
 		if(sk<530){
 			tabIndex=0;
@@ -263,7 +262,7 @@ $(function(){
     	}
     }
     $(".ul1>li").click(function(){
-    	localStorage.setItem('yz_consulting',JSON.stringify(2));
+    	localStorage.setItem('call_consulting',JSON.stringify(2));
     	location.href="consulting.html";
     })
     /**
