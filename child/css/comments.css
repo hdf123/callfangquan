@@ -11,8 +11,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.imgks {
-  display: inline-block;
+img {
+  display: block;
   background: rgba(238, 238, 238, 0.5);
 }
 
@@ -213,5 +213,3 @@ a {
   padding-bottom: 0.4rem;
   border-bottom: 1px solid #F3F3F3;
 }
-
-/*# sourceMappingURL=comments.css.map */

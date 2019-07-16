@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        height:100%;
+        padding:0 0.4rem;
+        font-size: 0.373rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+    .rights{
+        height:100%;
+        padding:0 0.4rem;
+        color:#71B4FB;
+        font-size: 0.373rem;
+        @extend .flexs;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+}
+.texts{
+    width:100%;
+    height:3rem;
+    outline: none;
+    padding:0 0.4rem;
+    margin-top:0.427rem;
+    border:none;
+    resize: none;
+    font-size: 0.373rem;
+}
+.texts::-webkit-input-placeholder{ /*WebKit browsers*/
+    color: #999999;
+    font-weight:600;
+}
+.mun{
+    text-align:right;
+    font-size: 0.373rem;
+    padding:0.2rem 0.4rem;
+}
+.privacy{
+    width:100%;
+    height:1.1rem;
+    position:absolute;
+    left:0;
+    bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 0.387rem;
+    >div{
+        color: #999999;
+        font-size: 0.32rem;
+    }
+    >label{
+        height:100%;
+        display: flex;
+        align-items: center;
+        color: #999999;
+        font-size: 0.32rem;
+        input{
+            margin-right:0.1rem;
+        }
+    }
+}
+.popup_box{
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:97;
+    @extend .flexs;
+}
+.popup{
+    width: 8.187rem;
+    padding:0.64rem 0 0.533rem 0;
+    background-color: #ffffff;
+    border-radius: 0.053rem;
+    >p{
+        text-align: center;
+        font-size: 0.48rem;
+    }
+    >div{
+        display: flex;
+        justify-content: space-around;
+        margin-top:0.933rem;
+        >div{
+            width: 3.053rem;
+            height: 1.067rem;
+            font-size: 0.373rem;
+            @extend .flexs;
+            border-radius: 0.053rem;
+        }
+        >div:nth-child(1){
+            color: #999999;
+            border:1px solid #e5e5e5;
+        }
+        >div:nth-child(2){
+            color: #ffffff;
+            background-color: #5facfb;
+        }
+    }
+}

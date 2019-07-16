@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+    padding-left:0.4rem;
+    padding-top:0.267rem;
+}
+.lists{
+    >li{
+        display: flex;
+        padding:0.32rem 0;
+        border-bottom:1px solid #dddddd;
+        >img{
+            width: 2.88rem;
+            height: 2.133rem;
+            border-radius: 0.053rem;
+        }
+        >div{
+            padding-left:0.32rem;
+            >h3:nth-child(1){
+                width:7rem;
+                font-size: 0.427rem;
+                @extend .yincang;
+            }
+            >h3:nth-child(2){
+                color: #f9351a;
+                font-size: 0.373rem;
+                margin-top:0.05rem;
+            }
+            >div:nth-child(3){
+                display: flex;
+                height:0.293rem;
+                margin-top:0.12rem;
+                >div:nth-child(1){
+                    height:100%;
+                    display: flex;
+                    align-items: center;
+                    border-right:0.027rem solid #e5e5e5;
+                    >div{
+                        color:#666666;
+                        font-size: 0.293rem;
+                        padding-right:0.133rem;
+                    }
+                }
+                >div:nth-child(2){
+                    height:100%;
+                    color:#666666;
+                    display: flex;
+                    align-items: center;
+                    font-size:0.293rem;
+                    padding-left:0.133rem;
+                }
+            }
+            >p{
+                color: #999999;
+                font-size: 0.267rem;
+                margin-top:0.15rem;
+            }
+            >div:nth-child(5){
+                display: flex;
+                margin-top:0.15rem;
+                >div{
+                    color:#999999;
+                    font-size:0.267rem;
+                    padding:0.03rem 0.08rem;
+                    background-color: #f5f5f5;
+                    border-radius: 0.027rem;
+                    margin-right:0.133rem;
+                }
+                >.sell{
+                    color:#0099ff;
+                    background-color:rgba(0,153,255,0.3);
+                }
+                >.waiting{
+                    color: #ffffff;
+                    background-color: #ffb956;
+                }
+            }
+        }
+    }
+}
