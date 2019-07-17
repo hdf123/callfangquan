@@ -1,9 +1,4 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="home.html";
 	//更多
 	$(".ak").hide();
 	$(".rights>h3:eq(0)").click(function(){
@@ -26,6 +21,12 @@ $(function(){
 		var ind=$(this).attr("videow");
 		localStorage.setItem('call_videow',JSON.stringify(ind));
 		location.href="hot_video.html";
+	})
+	/**
+	 * 观看
+	 */
+	$(".cafe_cont>li").click(function(){
+		location.href="watchs.html";
 	})
     /**
      * 上拉加载
