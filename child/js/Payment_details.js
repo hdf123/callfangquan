@@ -122,7 +122,6 @@ $(function(){
 				$(".money").html(formatCurrencyTenThou(ago.split(".")[0])+"."+ago.split(".")[1]);
 				$(".money_conts").animate({scrollTop:0},10);
 			}else{
-				console.log(loan1);
 				$(".reimbursement_title>li:eq(0)>p:eq(1)").html(loan1.money);//总额
 				$(".reimbursement_title>li:eq(1)>p:eq(1)").html(Math.abs((loan1.lixi/10000).toFixed(2)));//利息
 				var maxs=Math.max(loan1.glimit,loan1.slimit);
