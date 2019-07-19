@@ -11,7 +11,7 @@ $(function(){
 		});
 	})
 	$(".contents>div").hide();
-	$(".contents>div:eq(1)").show();
+	$(".contents>div:eq(0)").show();
 	/**
 	 * 全部内容显示隐藏
 	 */

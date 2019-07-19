@@ -52,7 +52,7 @@ a {
 }
 
 /*多行隐藏*/
-.yincangs, .cafe_cont > li > div > div {
+.yincangs {
   overflow: hidden;
   /*超出隐藏*/
   display: -webkit-box;
@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, .more > li {
+.flexs, .headers .lefts, .headers .centers, .headers .rights, .upload_box > div:nth-child(1) > i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,59 +104,18 @@ a {
   box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
 }
 .headers .lefts {
-  width: 1.173rem;
   height: 100%;
-  font-size: 0.42rem;
+  padding: 0 0.4rem;
+  font-size: 0.4rem;
 }
 .headers .centers {
   height: 100%;
   font-size: 0.48rem;
 }
 .headers .rights {
-  width: 1.8rem;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.headers .rights > h3 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 0.45rem;
-}
-.headers .rights > h3:nth-child(1) {
-  padding-right: 0.1rem;
-  justify-content: flex-end;
-}
-.headers .rights > h3:nth-child(2) {
-  padding-left: 0.1rem;
-}
-
-.more {
-  width: 3.067rem;
-  padding: 0 0.187rem;
-  background: white;
-  position: absolute;
-  top: 135%;
-  right: .133rem;
-}
-.more .triangle {
-  width: 0;
-  height: 0;
-  border-left: .15rem solid transparent;
-  border-right: .15rem solid transparent;
-  border-bottom: .3rem solid white;
-  position: absolute;
-  top: -0.29rem;
-  right: 10%;
-}
-.more > li {
-  height: 1.067rem;
-  font-size: 0.373rem;
-  border-bottom: 1px solid #f5f5f5;
-}
-.more > li > h3 {
-  margin-right: 0.15rem;
+  color: #999999;
+  padding: 0 0.4rem;
   font-size: 0.4rem;
 }
 
@@ -166,60 +125,70 @@ a {
   bottom: 0;
 }
 
-.swiper1 img {
-  height: 4.32rem;
+.texts {
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  padding: 0 0.4rem;
+  margin-top: 0.427rem;
+  border: none;
+  resize: none;
+  font-size: 0.373rem;
 }
 
-.cafe_title {
-  padding: 0 0.32rem;
-  margin-top: 0.52rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.cafe_title > h3 {
-  font-size: 0.48rem;
-}
-.cafe_title > div {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: #666666;
-  font-size: 0.32rem;
-  padding-left: 0.4rem;
-}
-.cafe_title > div > i {
-  padding-top: 0.05rem;
-  color: #666666;
-  font-size: 0.5rem;
-}
-
-.cafe_cont {
-  padding: 0 0.32rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.cafe_cont > li {
-  width: 4.533rem;
-  border-radius: 0.107rem;
-  border: 1px solid #e5e5e5;
-  /*no*/
-  margin-top: 0.267rem;
-}
-.cafe_cont > li > img {
-  width: 4.533rem;
-  height: 2.827rem;
-}
-.cafe_cont > li > div {
-  padding: 0 0.3rem;
-}
-.cafe_cont > li > div > div {
-  font-size: 0.347rem;
-  margin: 0.2rem 0 0.22rem 0;
-}
-.cafe_cont > li > div > p {
+.texts::-webkit-input-placeholder {
+  /*WebKit browsers*/
   color: #999999;
-  font-size: 0.293rem;
-  padding: 0.2rem 0;
+  font-weight: 600;
+}
+
+.mun {
+  text-align: right;
+  font-size: 0.373rem;
+  padding: 0.2rem 0.4rem;
+}
+
+/**
+     * 上传视频
+ */
+.upload_box {
+  width: 2.693rem;
+  height: 2.693rem;
+  margin-left: 1rem;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.upload_box > div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+}
+.upload_box > div:nth-child(1) > i {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+}
+.upload_box > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.upload_box > i {
+  width: 0.48rem;
+  height: 0.48rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#file {
+  opacity: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

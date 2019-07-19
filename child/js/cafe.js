@@ -1,11 +1,11 @@
 $(function(){
 	//更多
-	$(".ak").hide();
+	$(".more").hide();
 	$(".rights>h3:eq(0)").click(function(){
 		location.href="personal.html";
 	})
 	$(".rights>h3:eq(1)").click(function(){
-		$(".ak").toggle();
+		$(".more").toggle();
 	})
 	var mySwiper1 = new Swiper('.swiper1', {
 		loop : true,
@@ -15,6 +15,10 @@ $(function(){
 		pagination : '.swiper-pagination',
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
     	observeParents:true,//修改swiper的父元素时，自动初始化swiper
+	})
+	//我要上传
+	$(".upload_video").click(function(){
+		location.href="upload_video.html";
 	})
 	//热门视频:0;我的关注:1;
 	$(".btn").click(function(){
@@ -58,4 +62,7 @@ $(function(){
 	        }
 	    }
 	});
+	$(".cafe_cont>li").click(function(){
+		location.href="watchs.html";
+	})
 })
