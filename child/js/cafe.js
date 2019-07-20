@@ -20,6 +20,10 @@ $(function(){
 	$(".upload_video").click(function(){
 		location.href="upload_video.html";
 	})
+	//添加好友
+	$(".Add_buddy").click(function(){
+		location.href="Add_buddy.html";
+	})
 	//热门视频:0;我的关注:1;
 	$(".btn").click(function(){
 		var ind=$(this).attr("videow");

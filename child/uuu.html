@@ -26,11 +26,9 @@
 					<i class="iconfont">&#xe7cf;</i>
 					<input id="file" type="file" accept="video/*" name="myfile" />
 				</div>
-				<div class="videos">
-					<video src=""></video>
-					<!--<video controls="controls" src=""></video>-->
-					<i class="iconfont cha">&#xe65b;</i>
-				</div>
+				<img src="" class="imgs" alt="" />
+				<video style="display: none;" id="video" class="videos" src=""></video>
+				<i class="iconfont cha">&#xe65b;</i>
 			</div>
 		</section>
 		
@@ -38,37 +36,41 @@
 <script src="js/upload_video.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(function(){
-	var form = new FormData(); // FormData 对象
+	$(".cha").hide();
 	$("#file").on("change",function(){
         var that = this;
         var file = event.target.files[0];
-        if(file.size>= 20 * 1024 * 1024){
-        	return alert("文件过大,请选择小于20M的视频");
-        }
         var reader = new FileReader();
         reader.onload = function(e) { //文件读取成功完成时触发
-            $(".videos>video").attr("src",this.result);
-            $(".file").hide();
-            $(".videos").show();
-            form.append("file",file); 
-            
+            $(".videos").attr("src",this.result);
+            initialize();
         }
         reader.readAsDataURL(this.files[0]); // 读出 base64
         
         
+        var video,output,scale = 0.8;
+		var initialize = function() {
+			video = document.getElementById("video");
+			video.addEventListener('loadeddata',captureImage);
+		};
+		var captureImage = function() {
+	        var canvas = document.createElement("canvas");
+	        canvas.width = video.videoWidth * scale;
+	        canvas.height = video.videoHeight * scale;
+	        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+	        $(".file").hide();
+	        $(".cha").show();
+	        console.log(canvas.toDataURL("image/png"));
+	        $(".imgs").attr("src",canvas.toDataURL("image/png").replace(/==/g,""))
+		};
+        
     })
 	$(".cha").click(function(){
-		
+		$(this).hide();
 		$(".file").show();
 		$("#file").val("");
-		$(".videos").hide();
-		
-	})
-	$(".rights").click(function(){
-		form.append("texts",$(".texts").val()); 
-		for(var item of form.entries()){
-		　　console.log(item[0]+','+item[1]);
-		}
+		$(".imgs").attr("src","");
+		$("#video").attr("src","");
 	})
 })
 </script>
