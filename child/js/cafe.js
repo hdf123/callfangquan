@@ -24,6 +24,10 @@ $(function(){
 	$(".Add_buddy").click(function(){
 		location.href="Add_buddy.html";
 	})
+	//我的消息
+	$(".MyMessage").click(function(){
+		location.href="MyMessage.html";
+	})
 	//热门视频:0;我的关注:1;
 	$(".btn").click(function(){
 		var ind=$(this).attr("videow");

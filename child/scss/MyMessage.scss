@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:1.307rem;
+}
+.lists{
+    padding:0.347rem 0.32rem 0.587rem 0.32rem;
+}
+.message_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >div:nth-child(1){
+        display: flex;
+        >img{
+            width: 1.067rem;
+            height: 1.067rem;
+            border-radius:50%;
+        }
+        >div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left:0.347rem;
+            >div{
+                font-size: 0.373rem;
+            }
+            >p{
+                color: #999999;
+                font-size: 0.293rem;
+            }
+        }
+    }
+    >div:nth-child(2){
+        @extend .flexs;
+        color: #999999;
+        font-size: 0.32rem;
+        padding:0.16rem 0.3rem;
+        border-radius: 0.053rem;
+        border:1px solid #e5e5e5;
+    }
+}
+.message_content{
+    padding:0.227rem 0 0 1.44rem;
+    font-size: 0.373rem;
+}
+.footers{
+    height: 1.307rem;
+    display: flex;
+    align-items: center;
+    padding:0.267rem 0 0.267rem 0.32rem;
+}
+.inps{
+    width: 8.293rem;
+    height: 0.773rem;
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(248,248,248,1);
+    border-radius: 0.387rem;
+    >input{
+        width:90%;
+        height:100%;
+        border:none;
+        background-color:rgba(248,248,248,1);
+    }
+    >i{
+        width:10%;
+        height:100%;
+        @extend .flexs;
+        color:black;
+        font-size:0.45rem;
+        
+    }
+}
+.btn{
+    width:1.387rem;
+    height:100%;
+    color: #999999;
+    font-size: 0.4rem;
+    @extend .flexs;
+}

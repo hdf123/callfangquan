@@ -280,7 +280,7 @@
         return that
       },
       bind: function() {
-        $("#list_emotion").on("click", function(evt) {
+        $("#list_emotion").on("click", function(evt){
           if ("SPAN" == evt.target.tagName) {
             var val = evt.target.getAttribute("data-key").split('_');
             myInput.listen(this, {

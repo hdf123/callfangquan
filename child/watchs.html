@@ -207,9 +207,14 @@
 					<div>
 						<div class="inputs">
 							<i class="iconfont">&#xe6af;</i>
-							<input type="text" />
+							<article id="form_article" contenteditable="true" onkeydown="myInput.listen(this, event);"></article>
+							<i class="iconfont expression">&#xe61e;</i>
 						</div>
 						<div class="btn">发送</div>
+					</div>
+					<div class="page_emotion box_swipe" id="page_emotion">
+						<dl id="list_emotion" class="list_emotion pt_10"></dl><!-- 表情框 -->
+						<dt id="fg"><ol id="nav_emotion" class="nav_emotion"></ol></dt><!-- 分页提示点 -->
 					</div>
 				</div>
 			</div>
