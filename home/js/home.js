@@ -30,6 +30,17 @@ $(function(){
     	},2000);
     }
     /**
+     * 地产动态
+     */
+    $(".scrolls").on("click",".ul1>li",function(){
+    	var ind=$(this).attr("ind");
+    	console.log(ind);
+//  	location.href="../child/HousingMarketDynamic.html";
+    })
+    $(".titlek>div").click(function(){
+    	location.href="../child/HousingMarketDynamic.html";
+    })
+    /**
      * 上拉加载
      */
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载

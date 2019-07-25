@@ -230,6 +230,12 @@ a {
 /**
      * 底部
  */
+.footers {
+  display: flex;
+  height: 1.307rem;
+  background: white;
+  box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.53);
+}
 .footers > a:nth-child(5) {
   color: #5facfb;
 }

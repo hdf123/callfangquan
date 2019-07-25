@@ -52,7 +52,7 @@ a {
 }
 
 /*多行隐藏*/
-.yincangs, .list > div > div {
+.yincangs {
   overflow: hidden;
   /*超出隐藏*/
   display: -webkit-box;
@@ -117,34 +117,5 @@ a {
   top: 1.173rem;
   left: auto;
   bottom: 0;
-}
-.contents > ul {
-  padding: 0 0.32rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.list {
-  width: 4.533rem;
-  border-radius: 0.107rem;
-  border: 1px solid #e5e5e5;
-  /*no*/
-  margin-top: 0.267rem;
-}
-.list > img {
-  width: 4.533rem;
-  height: 2.827rem;
-}
-.list > div {
-  padding: 0 0.3rem;
-}
-.list > div > div {
-  font-size: 0.347rem;
-  margin: 0.2rem 0 0.22rem 0;
-}
-.list > div > p {
-  color: #999999;
-  font-size: 0.293rem;
-  padding: 0.2rem 0;
+  border-top: 10px solid #F5F5F5;
 }

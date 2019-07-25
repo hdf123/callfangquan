@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "../../css/base";
-@import "cafe";
 .headers{
     height: 1.173rem;
     background-color: #ffffff;
@@ -22,7 +21,33 @@
     top:1.173rem;
     left:auto;
     bottom:0;
+    >ul{
+        padding:0 0.32rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
-.cafe_cont{
-    @extend .cafe_cont;
+.list{
+    width: 4.533rem;
+    border-radius: 0.107rem;
+    border:1px solid #e5e5e5;/*no*/
+    margin-top:0.267rem;
+    >img{
+        width: 4.533rem;
+        height: 2.827rem;
+    }
+    >div{
+        padding:0 0.3rem;
+        >div{
+            @extend .yincangs;
+            font-size: 0.347rem;
+            margin:0.2rem 0 0.22rem 0;
+        }
+        >p{
+            color: #999999;
+            font-size: 0.293rem;
+            padding:0.2rem 0;
+        }
+    }
 }

@@ -486,6 +486,12 @@ a {
 /**
      * 底部
  */
+.footers {
+  height: 1.307rem;
+  display: flex;
+  background: white;
+  box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.53);
+}
 .footers > a:nth-child(1) {
   color: #5facfb;
 }

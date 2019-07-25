@@ -32,14 +32,10 @@ body {
 
 .footers {
   width: 10rem;
-  height: 1.307rem;
-  background: white;
   position: fixed;
   left: auto;
   bottom: 0;
   z-index: 96;
-  display: flex;
-  box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.53);
 }
 .footers > a {
   width: 100%;
@@ -53,5 +49,3 @@ body {
 .footers > a > div {
   font-size: 0.64rem;
 }
-
-/*# sourceMappingURL=layouts.css.map */

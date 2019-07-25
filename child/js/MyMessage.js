@@ -34,4 +34,38 @@ $(function(){
 	        }
 	    }
 	});
+	//选择回复
+	var say = '回复留言...',names="";
+	$(".contents").on("click",".reply",function(){
+		names=$(this).closest(".message_title").find(".name").html();
+		console.log(names);
+		$("#form_article").html("回复"+names+"：");
+	})
+	
+	$("#page_emotion").hide();
+	if ($("#form_article").html() === "") {
+		$("#form_article").html(say);
+	}
+	$("#form_article").click(function(){
+		console.log(names);
+        if($("#form_article").html() == say||$("#form_article").html()=="回复"+names+"："){
+           	$("#form_article").html("");
+        }
+    });
+    $("#page_emotion").click(function(event){
+     	event.stopPropagation();
+     })
+    $("#page_emotion dd").click(function(){//表情
+        $("#form_article").html( $("#form_article").html().replace(say, '') );
+    });
+    $(document).click(function(){
+    	$("#page_emotion").hide();
+    })
+    $(".expression").click(function(event){
+    	$("#page_emotion").toggle();
+    	event.stopPropagation();
+    })
+    $(".btn").click(function(){
+    	console.log($(".inputs article").html());
+    })
 })

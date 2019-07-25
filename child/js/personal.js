@@ -1,5 +1,16 @@
 $(function(){
 	/**
+	 * 登录状态
+	 */
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="../home/home.html";
+	var mys=true;
+	if(mys){
+		$(".rights,.experts>.guanzhu").hide();
+	}else{
+		$(".rights,.experts>.guanzhu").show();
+	}
+	/**
 	 * 关注
 	 */
 	$(".contents").on("click",".guanzhu",function(){

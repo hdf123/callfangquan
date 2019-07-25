@@ -75,6 +75,7 @@
     align-items: center;
     justify-content: space-between;
     >div:nth-child(1){
+        width:6rem;
         display: flex;
         >img{
             width: 1.733rem;
@@ -154,8 +155,8 @@
         border-radius: 0.44rem;
         border:1px solid #e5e5e5;
         @extend .flexs;
-        >.iconfont{
-            color:#8a8a8a;
+        >i{
+            font-size:0.45rem;
         }
         >span{
             color: #666666;
@@ -163,6 +164,12 @@
             margin-left:0.1rem;
         }
     }
+}
+.icon-dianzan{
+    color:#8a8a8a;
+}
+.icon-zan2{
+    color:#f9351a;
 }
 /**
      * 关联项目
@@ -205,9 +212,7 @@
 /**
      * 相关推荐
  */
-.recommended_box{
-    
-}
+.recommended_box{}
 .recommended_title{
     padding:0.427rem 0.32rem 0.12rem 0.32rem;
     display: flex;
@@ -307,6 +312,9 @@
             font-size: 0.32rem;
             margin-left:0.1rem;
         }
+    }
+    >.icon-dianzan{
+        
     }
 }
 .comments_content{
