@@ -34,8 +34,7 @@ $(function(){
      */
     $(".scrolls").on("click",".ul1>li",function(){
     	var ind=$(this).attr("ind");
-    	console.log(ind);
-//  	location.href="../child/HousingMarketDynamic.html";
+    	location.href="../child/Dynamic_details.html";
     })
     $(".titlek>div").click(function(){
     	location.href="../child/HousingMarketDynamic.html";

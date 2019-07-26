@@ -22,5 +22,33 @@
     top:1.173rem;
     left:auto;
     bottom:0;
-    border-top:10px solid #F5F5F5;
+    
+    padding:0 0.4rem;
+}
+.lists{
+    padding:0.373rem 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid #f5f5f5;
+    >div{
+        width:5.7rem;
+        >div{
+            font-size: 0.373rem;
+            @extend .yincangs;
+        }
+        >p{
+            margin-top:0.3rem;
+            >span{
+                color: #999999;
+                font-size: 0.293rem;
+            }
+            >span:nth-child(2){
+                margin-left:0.1rem;
+            }
+        }
+    }
+    >img{
+        width: 2.88rem;
+        height: 2.133rem;
+    }
 }

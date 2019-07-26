@@ -431,6 +431,7 @@ a {
   position: absolute;
   left: 0;
   bottom: 0;
+  overflow: hidden;
 }
 .reply_box > div:nth-child(1) {
   width: 100%;

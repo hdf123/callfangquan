@@ -1,0 +1,34 @@
+$(function(){
+	/**
+	 * 登录状态
+	 */
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="../home/home.html";
+	/**
+	 * 表情
+	 */
+	 var say = '请输入你的评论...';
+	$("#page_emotion").hide();
+	if ($("#form_article").html() === "") {
+		$("#form_article").html(say);
+	}
+	$("#form_article").click(function(){
+        if($("#form_article").html() == say){
+           	$("#form_article").html("");
+        }
+    });
+    $("#page_emotion").click(function(event){
+     	event.stopPropagation();
+     })
+    $("#page_emotion dd").click(function(){//表情
+        $("#form_article").html( $("#form_article").html().replace(say, '') );
+    });
+    $(document).click(function(){
+    	$("#page_emotion").hide();
+    })
+    $(".expression").click(function(event){
+    	$("#page_emotion").toggle();
+    	$(".footers").css({"height":"auto"});
+    	event.stopPropagation();
+    })
+})
