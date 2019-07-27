@@ -30,13 +30,17 @@ $(function(){
     	},2000);
     }
     /**
-     * 地产动态
+     * 热门问题
      */
-    $(".scrolls").on("click",".ul1>li",function(){
-    	var ind=$(this).attr("ind");
-    	location.href="../child/Dynamic_details.html";
+    $(".hot>div").click(function(){
+    	location.href="../child/HotIssue.html";
     })
-    $(".titlek>div").click(function(){
+	//地产动态
+//  $(".scrolls").on("click",".ul1>li",function(){
+//  	var ind=$(this).attr("ind");
+//  	location.href="../child/Dynamic_details.html";
+//  })
+    $(".provide>div").click(function(){
     	location.href="../child/HousingMarketDynamic.html";
     })
     /**

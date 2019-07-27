@@ -1,0 +1,227 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs, .tensile > p {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .headers > i, .tensile > div, .identity > div:nth-child(2), .vote_box > div:nth-child(2) > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers {
+  height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.2rem;
+  z-index: 96;
+}
+.headers > i {
+  width: 1rem;
+  height: 100%;
+  color: white;
+}
+.headers > i:nth-child(2) {
+  font-size: 0.52rem;
+}
+
+.contents {
+  top: 0;
+  left: auto;
+  bottom: 0;
+}
+
+.images {
+  width: 100%;
+  height: 3.627rem;
+  background: url(../../img/rebate_banners.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.tensile {
+  padding: 0 0.4rem;
+}
+.tensile > p {
+  font-size: 0.32rem;
+  -webkit-line-clamp: 3;
+}
+.tensile > div {
+  height: 1rem;
+  color: #5facfb;
+  margin-top: 0.2rem;
+  border-bottom: 1px solid #dddddd;
+}
+.tensile > div > i {
+  color: #5facfb;
+}
+
+.identity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.413rem 0.4rem;
+  border-bottom: 0.213rem solid #F5F5F5;
+}
+.identity > div:nth-child(1) {
+  display: flex;
+}
+.identity > div:nth-child(1) > img {
+  width: 0.853rem;
+  height: 0.853rem;
+  border-radius: 50%;
+}
+.identity > div:nth-child(1) > div {
+  margin-left: 0.24rem;
+}
+.identity > div:nth-child(1) > div > div {
+  font-size: 0.32rem;
+  font-weight: 600;
+}
+.identity > div:nth-child(1) > div > p {
+  color: #999999;
+  font-size: 0.293rem;
+}
+.identity > div:nth-child(2) {
+  color: #999999;
+  font-size: 0.293rem;
+}
+
+.vote_box {
+  padding: 0 0.4rem 0.907rem 0.4rem;
+}
+.vote_box > div:nth-child(1) {
+  margin: 0.51rem 0;
+  font-size: 0.373rem;
+}
+.vote_box > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.vote_box > div:nth-child(2) > div {
+  width: 4.413rem;
+  height: 0.773rem;
+  color: #ffffff;
+  font-size: 0.373rem;
+  border-radius: 0.053rem;
+}
+.vote_box > div:nth-child(2) > div:nth-child(1) {
+  background-image: linear-gradient(90deg, #5facfb 0%, #a3cffb 100%);
+}
+.vote_box > div:nth-child(2) > div:nth-child(2) {
+  background-image: linear-gradient(90deg, #f06947 1%, #f19a84 100%);
+}
+
+.hot {
+  margin-left: 0.4rem;
+  padding: 0.38rem 0.4rem 0.38rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E5E5E5;
+}
+.hot > div:nth-child(1) {
+  font-size: 0.373rem;
+  font-weight: 600;
+}
+.hot > div:nth-child(2) {
+  display: flex;
+}
+.hot > div:nth-child(2) > div:nth-child(1) {
+  display: flex;
+  margin-right: 0.133rem;
+}
+.hot > div:nth-child(2) > div:nth-child(1) > img {
+  width: 0.533rem;
+  height: 0.533rem;
+  border-radius: 50%;
+}
+.hot > div:nth-child(2) > div:nth-child(2) {
+  color: #999999;
+  font-size: 0.293rem;
+}

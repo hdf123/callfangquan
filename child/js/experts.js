@@ -15,7 +15,7 @@ $(function(){
 		$(".cover").css({"display":"none"});
 		$(".more").css({"display":"none"});
 	})
-	$(".more>li").click(function(){
+	$(".more>li:eq(0)").click(function(){
 		console.log($(this).index());
 		location.href="alias.html";
 	})
@@ -46,13 +46,16 @@ $(function(){
 		});
 	})
 	/**
-	 * 关注、粉丝
+	 * 关注、粉丝、帮助
 	 */
 	$(".heat>li:eq(0)").click(function(){
-		location.href="Focus.html"
+		location.href="Focus.html";
 	})
 	$(".heat>li:eq(1)").click(function(){
-		location.href="fans.html"
+		location.href="fans.html";
+	})
+	$(".heat>li:eq(2)").click(function(){
+		location.href="answer.html";
 	})
 	/**
 	 * 咨询

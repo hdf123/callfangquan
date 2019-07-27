@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import "../../css/base.scss";
+.headers{
+    height:1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right:0.2rem;
+    z-index:96;
+    >i{
+        width:1rem;
+        height:100%;
+        color:white;
+        @extend .flexs;
+    }
+    >i:nth-child(2){
+        font-size:0.52rem;
+    }
+}
+.contents{
+    top:0;
+    left:auto;
+    bottom:0;
+//  background-color: rgba(0,0,0,0.6);
+}
+.images{
+    width:100%;
+    height: 3.627rem;
+    background:url(../../img/rebate_banners.png) no-repeat;
+    background-size:100% 100%;
+}
+.tensile{
+    padding:0 0.4rem;
+    >p{
+        font-size: 0.32rem;
+        @extend .yincangs;
+        -webkit-line-clamp:3;
+    }
+    >div{
+        height:1rem;
+        color: #5facfb;
+        @extend .flexs;
+        margin-top:0.2rem;
+        border-bottom:1px solid #dddddd;
+        >i{
+            color: #5facfb;
+        }
+    }
+}
+.identity{
+    display: flex;
+    justify-content: space-between;
+    padding:0.413rem 0.4rem;
+    border-bottom:0.213rem solid #F5F5F5;
+    >div:nth-child(1){
+        display: flex;
+        >img{
+            width: 0.853rem;
+            height: 0.853rem;
+            border-radius:50%;
+        }
+        >div{
+            margin-left:0.24rem;
+            >div{
+                font-size: 0.32rem;
+                font-weight:600;
+            }
+            >p{
+                color: #999999;
+                font-size: 0.293rem;
+            }
+        }
+    }
+    >div:nth-child(2){
+        color: #999999;
+        font-size: 0.293rem;
+        @extend .flexs;
+    }
+}
+.vote_box{
+    padding:0 0.4rem 0.907rem 0.4rem;
+    >div:nth-child(1){
+        margin:0.51rem 0;
+        font-size: 0.373rem;
+    }
+    >div:nth-child(2){
+        display: flex;
+        justify-content:space-between;
+        >div{
+            width: 4.413rem;
+            height: 0.773rem;
+            color: #ffffff;
+            font-size: 0.373rem;
+            @extend .flexs;
+            border-radius: 0.053rem;
+        }
+        >div:nth-child(1){
+            background-image: linear-gradient(90deg,#5facfb 0%,#a3cffb 100%);
+        }
+        >div:nth-child(2){
+            background-image: linear-gradient(90deg,#f06947 1%,#f19a84 100%);
+        }
+    }
+}
+.hot{
+    margin-left:0.4rem;
+    padding:0.38rem 0.4rem 0.38rem 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid #E5E5E5;
+    >div:nth-child(1){
+        font-size: 0.373rem;
+        font-weight:600;
+    }
+    >div:nth-child(2){
+        display: flex;
+        >div:nth-child(1){
+            display: flex;
+            margin-right:0.133rem;
+            >img{
+                width: 0.533rem;
+                height: 0.533rem;
+                border-radius:50%;
+            }
+        }
+        >div:nth-child(2){
+            color: #999999;
+            font-size: 0.293rem;
+        }
+    }
+}

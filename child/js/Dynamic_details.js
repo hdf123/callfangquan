@@ -31,4 +31,11 @@ $(function(){
     	$(".footers").css({"height":"auto"});
     	event.stopPropagation();
     })
+    $(".praise").click(function(){
+    	if($(this).is(".icon-aixin")){
+    		$(this).removeClass("icon-aixin").addClass("icon-icon4");
+    	}else{
+    		$(this).removeClass("icon-icon4").addClass("icon-aixin");
+    	}
+    })
 })

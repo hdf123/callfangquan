@@ -45,14 +45,13 @@ $(function(){
 	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
 	if(!call_logins) location.href="home.html";
 	$(".btn").click(function(){
-		//手机号验证
 		/*
+		//手机号验证
 		var myreg=/^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
 		if(!myreg.test($("[name=phone]").val())){
 			return console.log("请填写正确的手机号");
 		}
 		*/
-		
 		console.log($("form").serialize());
 		var strs=$("form").serialize().split("&");
 		var theRequest ={};

@@ -255,11 +255,8 @@
         font-size: 0.373rem;
     }
 }
-
-
-
-
 .footers{
+    height:1.2rem;
     @extend .flexs;
     >h3{
         font-weight:900;
