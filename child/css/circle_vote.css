@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i, .identity > div:nth-child(2) {
+.flexs, .headers > i, .tensile > div, .identity > div:nth-child(2), .vote_box > div:nth-child(2) > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,6 +102,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding-right: 0.2rem;
+  z-index: 96;
 }
 .headers > i {
   width: 1rem;
@@ -115,7 +116,7 @@ a {
 .contents {
   top: 0;
   left: auto;
-  bottom: 1.173rem;
+  bottom: 0;
 }
 
 .images {
@@ -126,12 +127,33 @@ a {
 }
 
 .tensile {
-  width: 9.2rem;
-  margin: 0 auto;
+  padding: 0 0.4rem;
+}
+.tensile > p {
+  width: 100%;
+  height: 0.9rem;
   font-size: 0.32rem;
   line-height: 0.45rem;
-  padding: 0.4rem 0 0.627rem 0;
-  border-bottom: 1px solid #E5E5E5;
+  margin-top: 0.4rem;
+}
+.tensile > .omit {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+.tensile > div {
+  height: 1rem;
+  color: #5facfb;
+  margin-top: 0.2rem;
+  border-bottom: 1px solid #dddddd;
+}
+.tensile > div > i {
+  color: #5facfb;
 }
 
 .identity {
@@ -162,6 +184,31 @@ a {
 .identity > div:nth-child(2) {
   color: #999999;
   font-size: 0.293rem;
+}
+
+.vote_box {
+  padding: 0 0.4rem 0.907rem 0.4rem;
+}
+.vote_box > div:nth-child(1) {
+  margin: 0.51rem 0;
+  font-size: 0.373rem;
+}
+.vote_box > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.vote_box > div:nth-child(2) > div {
+  width: 4.413rem;
+  height: 0.773rem;
+  color: #ffffff;
+  font-size: 0.373rem;
+  border-radius: 0.053rem;
+}
+.vote_box > div:nth-child(2) > div:nth-child(1) {
+  background-image: linear-gradient(90deg, #5facfb 0%, #a3cffb 100%);
+}
+.vote_box > div:nth-child(2) > div:nth-child(2) {
+  background-image: linear-gradient(90deg, #f06947 1%, #f19a84 100%);
 }
 
 .hot {
@@ -259,32 +306,17 @@ a {
   background: #f5f5f5;
   padding: 0 0.4rem;
 }
-.reply_box > ul {
-  height: 2.5rem;
-  overflow: hidden;
-}
-.reply_box > ul > li {
+.reply_box > li {
   padding: 0.387rem 0;
   font-size: 0.32rem;
   border-bottom: 1px solid #E5E5E5;
 }
-.reply_box > .btns {
+.reply_box > div {
   color: #5facfb;
   font-size: 0.32rem;
   padding: 0.387rem 0;
 }
-.reply_box > .btns > i {
+.reply_box > div > i {
   color: #5facfb;
   font-size: 0.4rem;
-}
-
-.footers {
-  height: 1.173rem;
-  display: flex;
-  box-shadow: 0rem -0.013rem 0rem 0rem #e5e5e5;
-}
-.footers > input {
-  width: 8.08rem;
-  height: 0.853rem;
-  border-radius: 0.053rem;
 }

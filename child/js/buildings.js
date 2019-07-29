@@ -134,9 +134,6 @@ $(function(){
 			$(".headers").show();
 		}
 	})
-	$(".conters").click(function(){
-		alert(111)
-	})
 	/**
 	 * 更多信息
 	 */
