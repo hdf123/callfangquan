@@ -121,28 +121,33 @@
             }
         }
     }
-    >div:nth-child(2){
+}
+.reaction{
+    display: flex;
+    >div{
         display: flex;
-        >div{
-            display: flex;
-            align-items: center;
-        }
-        >div:nth-child(1){
+        align-items: center;
+    }
+    >div:nth-child(1){
+        padding:0 0.1rem;
+        color: #999999;
+        font-size: 0.293rem;
+    }
+    >div:nth-child(2){
+        color: #999999;
+        font-size: 0.293rem;
+    }
+    >div:nth-child(3){
+        >i{
             padding:0 0.1rem;
-            color: #999999;
-            font-size: 0.293rem;
+            font-size:.4rem;
         }
-        >div:nth-child(2){
-            color: #999999;
-            font-size: 0.293rem;
+        >.icon-zan2{
+            color:#F9351A;
         }
-        >div:nth-child(3){
-            color: #999999;
-            font-size: 0.32rem;
-            >i{
-                padding:0 0.1rem;
-                font-size:.4rem;
-            }
+        >span{
+           color: #999999;
+            font-size: 0.32rem; 
         }
     }
 }
@@ -189,10 +194,18 @@
 .footers{
     height: 1.173rem;
     display: flex;
+    align-items: center;
+    padding:0.16rem 0.4rem;
     box-shadow: 0rem -0.013rem 0rem 0rem #e5e5e5;
     >input{
         width: 8.08rem;
         height: 0.853rem;
         border-radius: 0.053rem;
+    }
+    >div{
+        width:1.12rem;
+        height:100%;
+        @extend .flexs;
+        font-size: 0.373rem;
     }
 }

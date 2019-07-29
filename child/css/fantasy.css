@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i, .identity > div:nth-child(2) {
+.flexs, .headers > i, .identity > div:nth-child(2), .footers > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,29 +222,33 @@ a {
   color: #999999;
   font-size: 0.293rem;
 }
-.discuss_title > div:nth-child(2) {
+
+.reaction {
   display: flex;
 }
-.discuss_title > div:nth-child(2) > div {
+.reaction > div {
   display: flex;
   align-items: center;
 }
-.discuss_title > div:nth-child(2) > div:nth-child(1) {
+.reaction > div:nth-child(1) {
   padding: 0 0.1rem;
   color: #999999;
   font-size: 0.293rem;
 }
-.discuss_title > div:nth-child(2) > div:nth-child(2) {
+.reaction > div:nth-child(2) {
   color: #999999;
   font-size: 0.293rem;
 }
-.discuss_title > div:nth-child(2) > div:nth-child(3) {
-  color: #999999;
-  font-size: 0.32rem;
-}
-.discuss_title > div:nth-child(2) > div:nth-child(3) > i {
+.reaction > div:nth-child(3) > i {
   padding: 0 0.1rem;
   font-size: .4rem;
+}
+.reaction > div:nth-child(3) > .icon-zan2 {
+  color: #F9351A;
+}
+.reaction > div:nth-child(3) > span {
+  color: #999999;
+  font-size: 0.32rem;
 }
 
 .discuss_content {
@@ -281,10 +285,17 @@ a {
 .footers {
   height: 1.173rem;
   display: flex;
+  align-items: center;
+  padding: 0.16rem 0.4rem;
   box-shadow: 0rem -0.013rem 0rem 0rem #e5e5e5;
 }
 .footers > input {
   width: 8.08rem;
   height: 0.853rem;
   border-radius: 0.053rem;
+}
+.footers > div {
+  width: 1.12rem;
+  height: 100%;
+  font-size: 0.373rem;
 }
