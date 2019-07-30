@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+    background:#f5f5f5;
+    >ul{
+        background:white;
+        padding:0 0.4rem;
+        >li{
+            display: flex;
+            align-items: center;
+            height: 1.2rem;
+            border-bottom:1px solid #E5E5E5;
+            >div{
+                font-size: 0.4rem;
+                white-space: nowrap;
+            }
+            >input{
+                width:100%;
+                height:100%;
+                border:none;
+                text-align: right;
+                padding-top:0.1rem;
+                font-size: 0.4rem;
+                margin-left:0.1rem;
+            }
+        }
+    }
+}
+.btn{
+    width: 9.2rem;
+    height: 1.173rem;
+    @extend .flexs;
+    color: #ffffff;
+    font-size: 0.4rem;
+    margin:0.92rem auto 0;
+    background-color: #5facfb;
+    border-radius: 0.053rem;
+}
+.disable{
+    pointer-events:none;
+    background-color: #C8DFF7;
+}
+/**
+     * 省市联动
+ */
+.right {
+    flex: 1;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input{
+    flex: 1;
+    height: 100%;
+    border: none;
+    font-size: 0.4rem;
+    text-align: right;
+    padding-right:0.1rem;
+}
+.input::-webkit-input-placeholder {
+    text-align: right;
+}
+.icon-qianjin{
+    color:#8a8a8a;
+    margin-top:0.05rem;
+    font-size:0.35rem!important;
+}
+
+
+
+#mymodal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+}
+.modal-main{
+    position: absolute;
+    bottom: -900px;
+    left: 0;
+    height:50%;
+    width: 100%;
+    background-color: #fff;
+    font-size: .373rem;
+}
+.address-title{
+    font-size: .4rem;
+    text-align: center;
+    padding:0.453rem 0;
+}
+.close{
+    position: absolute;
+    padding: .1rem;
+    right: 0.4rem;
+    top: 0.4rem;
+    color:#8a8a8a;
+}
+.optionwrapper{
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    padding-left: .2rem;
+    box-sizing: border-box;
+    .option-menu{
+        padding:.147rem .1rem;
+        margin-right: .15rem;
+        font-size: 0.373rem;
+    }
+}
+.active-option{
+    color: #2f80ed;
+    border-bottom:3px solid #2f80ed;
+}
+.option-content{
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.option-group{
+    display: none;
+    overflow: auto;
+    height: 100%;
+}
+.option-list{
+    padding: .2rem .2rem;
+    display: flex;
+    align-items: center;
+}
+.checked{
+    width: .15rem;
+    height: .15rem;
+    background-color: #2f80ed;
+    display: inline-block;
+    margin-left: .2rem;
+    border-radius: 50%;
+    display: none;
+    margin-top: .1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

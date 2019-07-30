@@ -127,7 +127,8 @@ a {
   font-size: 0.4rem;
   margin-left: 0.253rem;
 }
-.headers > div:nth-child(2) > div:nth-child(2) {
+
+.connoisseur {
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -136,7 +137,7 @@ a {
   background: rgba(0, 0, 0, 0.35);
   border-radius: 0.387rem 0rem 0rem 0.387rem;
 }
-.headers > div:nth-child(2) > div:nth-child(2) > img {
+.connoisseur > img {
   width: 0.32rem;
   height: 0.32rem;
   margin-right: 0.133rem;

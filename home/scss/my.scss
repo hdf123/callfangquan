@@ -29,23 +29,23 @@
                 margin-left:0.253rem;
             }
         }
-        >div:nth-child(2){
-            display: flex;
-            align-items: center;
-            color: #ffffff;
-            font-size: 0.32rem;
-            padding:0.2rem 0.3rem;
-            background: rgba(0,0,0,0.35);
-            border-radius: 0.387rem 0rem 0rem 0.387rem;
-            >img{
-                width:0.32rem;
-                height:0.32rem;
-                margin-right:0.133rem;
-                background:rgba(238,238,238,0);
-            }
-        }
     }
     background-color: #5facfb;
+}
+.connoisseur{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.32rem;
+    padding:0.2rem 0.3rem;
+    background: rgba(0,0,0,0.35);
+    border-radius: 0.387rem 0rem 0rem 0.387rem;
+    >img{
+        width:0.32rem;
+        height:0.32rem;
+        margin-right:0.133rem;
+        background:rgba(238,238,238,0);
+    }
 }
 .record_box{
     display: flex;
