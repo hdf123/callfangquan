@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+}
+.contents{
+    padding:0 0.4rem;
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+}
+.stopped_box{
+    width:100%;
+    padding-top:1.2rem;
+    background-color: #5facfb;
+    border-radius: 0.053rem;
+    position: relative;
+    margin-top:0.933rem;
+    >h3{
+        color: #ffffff;
+        font-size: 0.48rem;
+        text-align: center;
+    }
+    >div:nth-child(3){
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 0.32rem;
+        line-height:0.7rem;
+    }
+    >ul:nth-child(4){
+        padding:0 0.7rem;
+        display: flex;
+        justify-content:space-between;
+        >li{
+            color: #ffffff;
+            font-size: 0.293rem;
+            padding:0.03rem 0.06rem;
+            border-radius: 0.027rem;
+            border:1px solid #ffffff;
+        }
+    }
+    >div:nth-child(5){
+        padding:0.533rem 2.3rem 0.613rem 2.3rem;
+        display: flex;
+        justify-content: space-between;
+        >div{
+            height: 0.8rem;
+            @extend .flexs;
+            border-radius: 0.4rem;
+        }
+        >div:nth-child(1){
+            width: 1.733rem;
+            color: #ffffff;
+            font-size: 0.32rem;
+            background-color: #fbbb61;
+        }
+        >div:nth-child(2){
+            width: 2.133rem;
+            color: #fbbb61;
+            font-size: 0.32rem;
+            border:1px solid #e1c78c;
+        }
+    }
+}
+.portrait{
+    width:100%;
+    position:absolute;
+    top:-0.85rem;
+    >div{
+        margin:0 auto;
+        width: 1.733rem;
+        height: 1.733rem;
+        @extend .flexs;
+        background:white;
+        border-radius:50%;
+        position:relative;
+        >img:nth-child(1){
+            width: 1.7rem;
+            height: 1.7rem;
+            background:red;
+            border-radius:50%;
+        }
+        >img:nth-child(2){
+            width: 0.293rem;
+            height: 0.293rem;
+            position:absolute;
+            right:5%;
+            bottom:5%;
+            background:none;
+        }
+    }
+}

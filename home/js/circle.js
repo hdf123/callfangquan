@@ -7,6 +7,9 @@ $(function(){
 	$(".boxa>div").click(function(){
 		location.href="../child/fantasy.html";
 	})
+	$(".boxb").click(function(){
+		location.href="../child/circle_vote.html";
+	})
     /**
      * 上拉加载
      */

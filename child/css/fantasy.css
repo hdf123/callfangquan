@@ -292,6 +292,9 @@ a {
 .footers > input {
   width: 8.08rem;
   height: 0.853rem;
+  border: none;
+  font-size: 0.32rem;
+  background: #f5f5f5;
   border-radius: 0.053rem;
 }
 .footers > div {
