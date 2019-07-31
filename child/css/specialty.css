@@ -1,0 +1,238 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  list-style: none;
+  /*把此元素放置在父元素的中部。*/
+  vertical-align: middle;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  background: rgba(238, 238, 238, 0.5);
+}
+
+input {
+  /*1.清除文本框获取焦点时默认的边框阴影*/
+  outline: none;
+  /*2.去除边框*/
+  border: none;
+  /*3.添加边框*/
+  border: 1px solid #ccc;
+}
+
+/* 让链接默认不显示下划线， */
+a {
+  color: #333;
+  /*指针样式*/
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  /*导致鼠标在页面活动时视频延迟变卡问题解决.*/
+  blr: expression(this.onFocus=this.blur());
+}
+
+/* 清理浮动 */
+.clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+/*单行隐藏*/
+.yincang, .wdows > div, #wdows > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行隐藏*/
+.yincangs {
+  overflow: hidden;
+  /*超出隐藏*/
+  display: -webkit-box;
+  /*将对象作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient: vertical;
+  /*从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）*/
+  -webkit-line-clamp: 2;
+  /*超出2行用省略号表示*/
+}
+
+/*换行*/
+.newline {
+  word-break: break-all;
+  /* 只对英文起作用，以字母作为换行依据。*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据。*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行。*/
+}
+
+/*禁止换行*/
+.ban_newline {
+  white-space: nowrap;
+}
+
+/*placeholder样式*/
+.input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+.scroll_bar::-webkit-scrollbar {
+  width: 0 !important;
+  /*height:0 !important;*/
+  /*display: none;*/
+}
+
+/*上下左右居中*/
+.flexs, .headers .lefts, .headers .centers, .specialty > li > div, .screen, .btn > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headers {
+  height: 1.173rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.2);
+  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+}
+.headers .lefts {
+  width: 1.173rem;
+  height: 100%;
+  font-size: 0.42rem;
+}
+.headers .centers {
+  height: 100%;
+  font-size: 0.48rem;
+}
+
+.contents {
+  top: 1.173rem;
+  left: auto;
+  bottom: 0;
+  background: #f5f5f5;
+}
+.contents > div {
+  background: white;
+}
+
+.specialty_title {
+  display: flex;
+  align-items: flex-end;
+  padding: 0.533rem 0 0.413rem 0.4rem;
+}
+.specialty_title > h3 {
+  font-size: 0.48rem;
+}
+.specialty_title > p {
+  color: #999999;
+  font-size: 0.32rem;
+}
+
+.specialty {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.2535rem 0.186rem 0.2535rem;
+}
+.specialty > li {
+  width: 2.373rem;
+  margin-bottom: 0.347rem;
+}
+.specialty > li > div {
+  width: 2.08rem;
+  height: 0.88rem;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 0.053rem;
+}
+.specialty > li > .act {
+  color: #ffffff;
+  background-color: #5facfb;
+}
+
+.btns {
+  display: block;
+  width: 9.2rem;
+  height: 1.173rem;
+  color: #ffffff;
+  font-size: 0.4rem;
+  border-radius: 0.053rem;
+  margin: 0.907rem auto 0;
+  background-color: #5facfb;
+}
+
+.screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  width: 8.187rem;
+  padding: 0 0.667rem;
+  background-color: #ffffff;
+  border-radius: 0.053rem;
+}
+.popup > div:nth-child(1) {
+  text-align: center;
+  font-size: 0.4rem;
+  margin-top: 0.733rem;
+}
+.popup > div:nth-child(1) > input {
+  width: 1rem;
+  font-size: 0.4rem;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #333333;
+}
+
+.agreement_box {
+  padding: 0.307rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.agreement_box > p {
+  display: flex;
+}
+.agreement_box > p > img {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+.agreement_box > p > span {
+  font-size: 0.293rem;
+}
+.agreement_box > p > span:nth-child(3) {
+  color: #5facfb;
+}
+
+.btn {
+  margin: 0.346rem 0 0.747rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.btn > div {
+  width: 3.053rem;
+  height: 1.067rem;
+  font-size: 0.373rem;
+  border-radius: 0.053rem;
+}
+.btn > div:nth-child(1) {
+  color: #999999;
+  border: 1px solid #e5e5e5;
+}
+.btn > div:nth-child(2) {
+  color: #ffffff;
+  background-color: #5facfb;
+}

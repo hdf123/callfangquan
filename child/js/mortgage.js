@@ -15,8 +15,6 @@ $(function(){
 	})
 	$(".tab_child>form").hide();
 	$(".tab_childa").show();
-	
-	
 	/**
 	 * 公积金
 	 */
