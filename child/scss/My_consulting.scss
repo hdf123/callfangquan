@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+}
+.consulting{
+    border-bottom:1px solid #E5E5E5;
+    padding:0.52rem 0.493rem 0.533rem 0.52rem;
+    >div:nth-child(1){
+        font-size: 0.373rem;
+    }
+    >div:nth-child(2){
+        color: #5facfb;
+        font-size: 0.32rem;
+        padding:0.387rem 0 0.52rem 0;
+    }
+    >div:nth-child(3){
+        display: flex;
+        justify-content: space-between;
+        >div{
+            
+        }
+    }
+}

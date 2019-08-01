@@ -50,7 +50,7 @@
 .record_box{
     display: flex;
     margin-top:0.507rem;
-    >li{
+    >a{
         width:100%;
         height:1rem;
         >div{
@@ -76,7 +76,8 @@
     display: flex;
     justify-content: space-around;
     box-shadow: 0rem 0.04rem 0.267rem 0rem rgba(0, 0, 0, 0.08);
-    >li{
+    >a{
+        width:100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -100,7 +101,7 @@
 }
 .menu{
     width:100%;
-    >li{
+    >a{
         width:100%;
         height: 1.333rem;
         display: flex;

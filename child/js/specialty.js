@@ -38,6 +38,14 @@ $(function(){
 		$(".screen").hide();
 	})
 	$(".btn>div:eq(1)").click(function(){
+		var arr=[];
+		for(var i=0;i<$(".specialty li").length;i++){
+			if($(".specialty>li:eq("+i+")>div").is(".act")){
+				arr.push($(".specialty>li:eq("+i+")>div").html());
+			}
+		}
+		console.log(arr);
 		console.log($(".money").val());
+		$(".screen").hide();
 	})
 })

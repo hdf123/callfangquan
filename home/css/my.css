@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .record_box > li > div {
+.flexs, .record_box > a > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,18 +148,18 @@ a {
   display: flex;
   margin-top: 0.507rem;
 }
-.record_box > li {
+.record_box > a {
   width: 100%;
   height: 1rem;
 }
-.record_box > li > div {
+.record_box > a > div {
   height: 50%;
   color: #ffffff;
 }
-.record_box > li > div:nth-child(1) {
+.record_box > a > div:nth-child(1) {
   font-size: 0.48rem;
 }
-.record_box > li > div:nth-child(2) {
+.record_box > a > div:nth-child(2) {
   font-size: 0.293rem;
 }
 
@@ -174,17 +174,18 @@ a {
   justify-content: space-around;
   box-shadow: 0rem 0.04rem 0.267rem 0rem rgba(0, 0, 0, 0.08);
 }
-.menu_title > li {
+.menu_title > a {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.menu_title > li > img {
+.menu_title > a > img {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
 }
-.menu_title > li > p {
+.menu_title > a > p {
   margin-top: 0.147rem;
   font-size: 0.32rem;
 }
@@ -200,18 +201,18 @@ a {
 .menu {
   width: 100%;
 }
-.menu > li {
+.menu > a {
   width: 100%;
   height: 1.333rem;
   display: flex;
   align-items: center;
   padding-left: 0.4rem;
 }
-.menu > li > img {
+.menu > a > img {
   width: 0.533rem;
   height: 0.533rem;
 }
-.menu > li > div {
+.menu > a > div {
   width: 100%;
   height: 100%;
   padding: 0 0.3rem 0 0.373rem;
@@ -221,10 +222,10 @@ a {
   border-bottom: 1px solid #F5F5F5;
   /*no*/
 }
-.menu > li > div > p {
+.menu > a > div > p {
   font-size: 0.4rem;
 }
-.menu > li > div > i {
+.menu > a > div > i {
   font-size: 0.4rem;
 }
 
