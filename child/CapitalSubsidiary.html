@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>认证信息</title>
+		<link rel="stylesheet" type="text/css" href="css/CapitalSubsidiary.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<div>
+				<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
+				<div class="centers">资金明细</div>
+				<div class="rights">筛选</div>
+				<ul class="list">
+					<div></div>
+					<li>全部</li>
+					<li>咨询</li>
+					<li>充值</li>
+					<li>提现</li>
+				</ul>
+			</div>
+			<div>
+				<div>999.00</div>
+				<div>余额(元)</div>
+			</div>
+		</header>
+		<ul class="contents">
+			<li>
+				<div>
+					<div>充值</div>
+					<p>2019-05-12</p>
+				</div>
+				<div>+50.00</div>
+			</li>
+			<li>
+				<div>
+					<div>提现</div>
+					<p>2019-05-12</p>
+				</div>
+				<div>-30.00</div>
+			</li>
+			<li>
+				<div>
+					<div>向行家咨询</div>
+					<p>2019-05-12</p>
+				</div>
+				<div>-10.00</div>
+			</li>
+		</ul>
+		
+		
+<script type="text/javascript">
+$(function(){
+	$(".list").hide();
+	$(".rights").click(function(){
+		$(".list").toggle();
+	})
+    /**
+     * 上拉加载
+     */
+	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
+	//加载数据
+	var LoadingDataFn = function(){
+		console.log("上拉加载");
+		var dom='';
+		for(var i=0;i<30;i++){
+			dom+=`<li>${i+1}</li>`
+		}
+		$('.contents').append(dom);
+		off_on = true;
+	};
+	//初始化， 第一次加载
+	$(document).ready(function(){
+	    LoadingDataFn();
+	});
+	$('.contents').scroll(function() {
+	    //当时滚动条离底部60px时开始加载下一页的内容
+	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+	        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
+	        if (off_on) {
+	              off_on = false;
+	              page++;
+	              console.log("第"+page+"页");
+	              LoadingDataFn();  //调用执行上面的加载方法
+	        }
+	    }
+	});
+})
+</script>
+	</body>
+</html>

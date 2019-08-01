@@ -26,11 +26,16 @@
         display: block;
         width: 9.2rem;
         height: 1.173rem;
+        border:none;
         color: #ffffff;
         font-size: 0.4rem;
         margin:0.92rem auto 0;
         background-color: #5facfb;
         border-radius: 0.053rem;
+    }
+    >.disableds{
+        pointer-events:none;
+        background-color: #C8DFF7;
     }
 }
 form{
@@ -88,4 +93,3 @@ form{
         border:none;
     }
 }
-

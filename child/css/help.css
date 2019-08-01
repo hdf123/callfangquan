@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, form > div:nth-child(1) > div:nth-child(1) > p, form > div:nth-child(1) > div:nth-child(1) > i, form > div:nth-child(1) > .validation {
+.flexs, .headers .lefts, .headers .centers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,72 +118,17 @@ a {
   left: auto;
   bottom: 0;
   background: #F5F5F5;
+  padding-top: 0.52rem;
 }
-.contents > input {
-  display: block;
-  width: 9.2rem;
-  height: 1.173rem;
-  border: none;
-  color: #ffffff;
-  font-size: 0.4rem;
-  margin: 0.92rem auto 0;
-  background-color: #5facfb;
-  border-radius: 0.053rem;
-}
-.contents > .disableds {
-  pointer-events: none;
-  background-color: #C8DFF7;
-}
-
-form {
-  margin-top: 0.533rem;
-  background: white;
-}
-form > div:nth-child(1) {
-  display: flex;
-  align-items: center;
+.contents > a {
   height: 1.173rem;
   padding: 0 0.4rem;
-  border-bottom: 1px solid #E5E5E5;
-}
-form > div:nth-child(1) > div:nth-child(1) {
-  width: 1.76rem;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0rem -0.013rem 0rem 0rem #e5e5e5,0rem 0.013rem 0rem 0rem #e5e5e5;
 }
-form > div:nth-child(1) > div:nth-child(1) > p {
+.contents > a > div {
   font-size: 0.4rem;
-}
-form > div:nth-child(1) > div:nth-child(1) > i {
-  width: 0.6rem;
-  height: 0.7rem;
-  font-size: 0.5rem;
-  border-top: 1px solid #e5e5e5;
-  transform: rotate(90deg);
-}
-form > div:nth-child(1) > input {
-  width: 5.387rem;
-  height: 100%;
-  border: none;
-}
-form > div:nth-child(1) > .validation {
-  width: 2.053rem;
-  height: 0.693rem;
-  font-size: 0.32rem;
-  border-radius: 0.053rem;
-}
-form > div:nth-child(1) > .codes {
-  color: #5facfb;
-  border: 2px solid #5facfb;
-}
-form > div:nth-child(1) > .countdown {
-  color: #999999;
-  border: 2px solid #e5e5e5;
-}
-form > input:nth-child(2) {
-  width: 100%;
-  height: 1.173rem;
-  padding: 0 0.4rem;
-  border: none;
 }

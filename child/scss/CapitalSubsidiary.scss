@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height:3.84rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    background-image: linear-gradient(90deg,#5facfb 0%,#a3cffb 100%);
+    >div:nth-child(1){
+        height:1.373rem;
+        position:relative;
+        .lefts{
+            width:1.173rem;
+            height:100%;
+            color: #ffffff;
+            font-size:0.42rem;
+            @extend .flexs;
+        }
+        .centers{
+            height:100%;
+            @extend .flexs;
+            color: #ffffff;
+            font-size: 0.48rem;
+        }
+        .rights{
+            padding:0 0.4rem;
+            height:100%;
+            color: #ffffff;
+            @extend .flexs;
+            font-size: 0.4rem;
+        }
+        .list{
+            width: 2.613rem;
+            position:absolute;
+            top:1.25rem;
+            right:0.133rem;
+            background:white;
+            border-radius:0.1rem;
+            >div{
+                width:0;
+                height:0;
+                border-left:0.187rem solid transparent;
+                border-right:0.187rem solid transparent;
+                border-bottom:0.16rem solid white;
+                position: absolute;
+                top:-0.16rem;
+                right:0.5rem;
+            }
+            >li{
+                width:100%;
+                height:1.067rem;
+                @extend .flexs;
+                font-size: 0.373rem;
+                border-bottom:1px solid #E5E5E5;
+            }
+        }
+    }
+    >div:nth-child(2){
+        height:2.467rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        >div{
+            color: #ebebeb;
+            text-align: center;
+        }
+        >div:nth-child(1){
+            font-size: 0.907rem;
+        }
+        >div:nth-child(2){
+            font-size: 0.373rem;
+        }
+    }
+}
+.contents{
+    padding-left:0.4rem;
+    top:3.84rem;
+    left:auto;
+    bottom:0;
+    >li{
+        height: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom:1px solid #e5e5e5;
+        >div:nth-child(1){
+            >div{
+                font-size: 0.373rem;
+                line-height:0.6rem;
+            }
+            >p{
+                color: #999999;
+                font-size: 0.32rem;
+                line-height:0.55rem;
+            }
+        }
+        >div:nth-child(2){
+            font-size: 0.453rem;
+            padding-right:0.4rem;
+        }
+        
+    }
+}

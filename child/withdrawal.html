@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes"/>
+		<title>认证信息</title>
+		<link rel="stylesheet" type="text/css" href="css/withdrawal.css"/>
+		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="headers">
+			<h3 class="iconfont lefts" onclick="history.go(-1)">&#xe632;</h3>
+			<div class="centers">提现</div>
+		</header>
+		<section class="contents">
+			<div class="money_box">
+				<div>提现金额</div>
+				<div>
+					<div>¥</div>
+					<input type="number" class="money" value="" />
+				</div>
+				<div>当前余额0.00元（可提现0.00元）</div>
+				<div>满10元方可提现，单次最高提现500元。</div>
+			</div>
+			<input type="button" class="btn disableds" value="确认提现" />
+		</section>
+		
+		
+<script type="text/javascript">
+$(function(){
+	/**
+	 * 登录状态
+	 */
+	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
+	if(!call_logins) location.href="../home/home.html";
+	
+	$(".money").on("input propertychange",function(){
+        var reg = $(this).val().match(/\d+\.?\d{0,2}/);
+        var txt = '';
+        if (reg != null) {
+            txt = reg[0];
+        }
+        $(this).val(txt);
+        empty();
+	})
+	empty();
+	function empty(){
+		if($(".money").val()==""){
+			$(".btn").addClass("disableds");
+		}else{
+			$(".btn").removeClass("disableds");
+		}
+	}
+	$(".btn").click(function(){
+		if($(".money").val()>500){
+			console.log("输入金额不能大于500元");
+		}else if($(".money").val()<10){
+			console.log("输入金额不能小于10元");
+		}else{
+			console.log($(".money").val());
+		}
+	})
+})
+</script>
+	</body>
+</html>

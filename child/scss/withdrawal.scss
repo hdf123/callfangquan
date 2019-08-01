@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        width:1.173rem;
+        height:100%;
+        font-size:0.42rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+    background-color: rgba(245,245,245,1);
+    .btn{
+        display: block;
+        width: 9.2rem;
+        height: 1.173rem;
+        border:none;
+        color: #ffffff;
+        font-size: 0.4rem;
+        margin:0.92rem auto 0;
+        background-color: #5facfb;
+        border-radius: 0.053rem;
+    }
+    .disableds{
+        pointer-events:none;
+        background-color: #C8DFF7;
+    }
+}
+.money_box{
+    width:100%;
+    margin-top:0.44rem;
+    background:white;
+    padding:0.4rem;
+    >div:nth-child(1){
+        color: #666666;
+        font-size: 0.4rem;
+    }
+    >div:nth-child(2){
+        display: flex;
+        align-items: center;
+        height:1.6rem;
+        border-bottom:1px solid #e5e5e5;
+        >div{
+            font-size: 0.8rem;
+            padding-bottom:0.2rem;
+        }
+        >input{
+            width:8.7rem;
+            height:100%;
+            border:none;
+            font-size:0.8rem;
+            padding:0 0.1rem;
+        }
+    }
+    >div:nth-child(3){
+        color: #999999;
+        font-size: 0.32rem;
+        margin-top:0.3rem;
+        line-height:0.5rem;
+    }
+    >div:nth-child(4){
+        color: #999999;
+        font-size: 0.32rem;
+    }
+}
