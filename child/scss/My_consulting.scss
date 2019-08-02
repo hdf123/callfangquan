@@ -22,6 +22,11 @@
     left:auto;
     bottom:0;
 }
+.consulting_box{
+    width:100%;
+    height:100%;
+    overflow: auto;
+}
 .consulting{
     border-bottom:1px solid #E5E5E5;
     padding:0.52rem 0.493rem 0.533rem 0.52rem;
@@ -38,6 +43,33 @@
         justify-content: space-between;
         >div{
             
+        }
+    }
+}
+.record{
+    width:100%;
+    height:100%;
+    @extend .flexs;
+    >div{
+        >img{
+            width: 4.6rem;
+            height: 3.453rem;
+            background-color: rgba(0,0,0,0);
+        }
+        >p{
+            color: #999999;
+            font-size: 0.32rem;
+            text-align: center;
+            margin-top:0.36rem;
+        }
+        >a{
+            width: 1.893rem;
+            height: 0.613rem;
+            color: #5facfb;
+            font-size: 0.32rem;
+            @extend .flexs;
+            margin:0.747rem auto 0;
+            border:1px solid #5facfb;
         }
     }
 }
