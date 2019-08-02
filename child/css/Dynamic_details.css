@@ -222,7 +222,13 @@ a {
   overflow-x: auto;
   white-space: nowrap;
   line-height: 0.85rem;
+  display: flex;
+  align-items: center;
 }
 #form_article img {
   display: inline-block;
+}
+
+#form_article::-webkit-scrollbar {
+  width: 0 !important;
 }

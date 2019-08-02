@@ -117,7 +117,7 @@ $(function(){
 	 * 咨询、回答
 	 */
 	$(".contents").on("click",".questions>div:eq(0)",function(){
-		location.href="../child/MyConsulting.html";
+		location.href="../child/WantConsulting.html";
 	})
 	$(".contents").on("click",".questions>div:eq(1)",function(){
 		location.href="../child/answer.html";

@@ -218,7 +218,7 @@ a {
   justify-content: space-between;
 }
 .building > div:nth-child(4) > input {
-  width: 4.213rem;
+  width: 49%;
   height: 0.88rem;
   border: none;
   color: #ffffff;

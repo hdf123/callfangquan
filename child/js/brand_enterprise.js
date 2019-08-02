@@ -7,6 +7,7 @@ $(function(){
 	//企业
 	var call_enterprise=JSON.parse(localStorage.getItem('call_enterprise'));//转为对象
 	$(".centers").html(call_enterprise);
+	document.title =call_enterprise;
     /**
      * 上拉加载
      */

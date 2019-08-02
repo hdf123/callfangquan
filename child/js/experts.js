@@ -57,10 +57,4 @@ $(function(){
 	$(".heat>li:eq(2)").click(function(){
 		location.href="answer.html";
 	})
-	/**
-	 * 咨询
-	 */
-	$(".footers").click(function(){
-		location.href="MyConsulting.html";
-	})
 })

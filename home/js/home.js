@@ -36,10 +36,10 @@ $(function(){
     	location.href="../child/HotIssue.html";
     })
 	//地产动态
-//  $(".scrolls").on("click",".ul1>li",function(){
-//  	var ind=$(this).attr("ind");
-//  	location.href="../child/Dynamic_details.html";
-//  })
+    $(".provide_box").on("click",".lists",function(){
+    	var ind=$(this).attr("ind");
+    	location.href="../child/Dynamic_details.html";
+    })
     $(".provide>div").click(function(){
     	location.href="../child/HousingMarketDynamic.html";
     })

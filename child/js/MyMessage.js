@@ -36,10 +36,12 @@ $(function(){
 	});
 	//选择回复
 	var say = '回复留言...',names="";
+	$(".footers").hide();
 	$(".contents").on("click",".reply",function(){
 		names=$(this).closest(".message_title").find(".name").html();
-		console.log(names);
 		$("#form_article").html("回复"+names+"：");
+		$(".footers").show();
+		$(".contents").css({"bottom":"1.307rem"});
 	})
 	
 	$("#page_emotion").hide();
