@@ -11,6 +11,7 @@ document.write('<script src="../js/jquery.js"><\/script>');
 document.write('<script src="../js/flexible.js"><\/script>');
 document.write('<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>');
 document.write('<script src="../js/ajax.js"><\/script>');
+document.write('<script src="../js/annyang.min.js"><\/script>');
 document.write('<script src="../js/data.js"><\/script>');
 document.write('<script src="../js/webiaoqin_2.js"></script>');
 document.write('<script src="../js/echarts.js"><\/script>');
