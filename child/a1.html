@@ -2,28 +2,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta name="format-detection" content="telephone=yes"/>
-		<title>添加好友</title>
-		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
 	</head>
 	<body>
-		<input type="text" x-webkit-speech />
+		<input type="text" x-webkit-speech x-webkit-grammar="builtin:translate">
 <script type="text/javascript">
-if (annyang) {
-	var commands = {
-		"Hello": function(){alert(" I have heard your voice!");}
-	};
-	var commands2 = {
-		"Bye": function(){alert("再见！")}
+	if (document.createElement("input").webkitSpeech === undefined) {  
+		alert("很遗憾，你的浏览器不支持语音识别。");
+	}else{
+		alert("尝试使用语言识别来输入内容吧");
 	}
-	annyang.addCommands(commands);
-	annyang.addCommands(commands2);
-	annyang.start();
-}
 </script>
 	</body>
 </html>
