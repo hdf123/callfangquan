@@ -3,7 +3,7 @@
  */
 var urs="";
 function ajaxs(url,type,data,suFn,erFn,params){
- 	var token= JSON.parse(localStorage.getItem('tokens'));//获取token
+// 	var token=JSON.parse($.cookie('tokens'));//获取token
 	$.ajax(Object.assign({
 		url:urs+url,
 		headers:{"Authorization":token},

@@ -1,11 +1,6 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
 	//企业
-	var call_enterprise=JSON.parse(localStorage.getItem('call_enterprise'));//转为对象
+	var call_enterprise=JSON.parse($.cookie('call_enterprise'));
 	$(".centers").html(call_enterprise);
 	document.title =call_enterprise;
     /**

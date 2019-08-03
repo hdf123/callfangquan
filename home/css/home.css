@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .ul1 > li > div > span, .wdows > div, #wdows > div {
+.yincang, .ul1 > li > div > span, .details > div:nth-child(1), .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -428,6 +428,7 @@ a {
 }
 
 .details {
+  width: 6.2rem;
   margin-left: 0.44rem;
 }
 .details > div:nth-child(1) {

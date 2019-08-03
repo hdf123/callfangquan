@@ -1,9 +1,4 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
 //选项卡切换
 	$('.mortgage_tab>li').on('click', function() {
 		var index = $(this).index();
@@ -546,21 +541,13 @@ $(function(){
 				type:types//类型
 			}
 		}
-
-//		localStorage.setItem('call_chart1',JSON.stringify(chart1));//本息
-//		localStorage.setItem('call_chart2',JSON.stringify(chart2));//本金
-		
-		
 		if(funds.reimbursement==0){//本息
-			localStorage.setItem('call_chart',JSON.stringify(chart1));//展示
-			localStorage.setItem('call_chart1',JSON.stringify(chart2));
+			$.cookie('call_chart', JSON.stringify(chart1), { expires: 7, path: '/' });
+			$.cookie('call_chart1', JSON.stringify(chart2), { expires: 7, path: '/' });
 		}else{//本金
-			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
-			localStorage.setItem('call_chart1',JSON.stringify(chart1));
+			$.cookie('call_chart', JSON.stringify(chart2), { expires: 7, path: '/' });
+			$.cookie('call_chart1', JSON.stringify(chart1), { expires: 7, path: '/' });
 		}
-		
-		console.log(chart1);
-		console.log(chart2);
 		location.href="chart.html";
 	})
 	$(".button2").click(function(){
@@ -626,11 +613,11 @@ $(function(){
 			}
 		}
 		if(calculatek.reimbursement==0){//本息
-			localStorage.setItem('call_chart',JSON.stringify(chart1));//展示
-			localStorage.setItem('call_chart1',JSON.stringify(chart2));
+			$.cookie('call_chart', JSON.stringify(chart1), { expires: 7, path: '/' });
+			$.cookie('call_chart1', JSON.stringify(chart2), { expires: 7, path: '/' });
 		}else{//本金
-			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
-			localStorage.setItem('call_chart1',JSON.stringify(chart1));
+			$.cookie('call_chart', JSON.stringify(chart2), { expires: 7, path: '/' });
+			$.cookie('call_chart1', JSON.stringify(chart1), { expires: 7, path: '/' });
 		}
 		console.log(chart1);
 		console.log(chart2);
@@ -739,11 +726,11 @@ $(function(){
 			}
 		}
 		if(combination.reimbursement==0){//本息
-			localStorage.setItem('call_chart',JSON.stringify(chart1));//展示
-			localStorage.setItem('call_chart1',JSON.stringify(chart2));
+			$.cookie('call_chart', JSON.stringify(chart1), { expires: 7, path: '/' });
+			$.cookie('call_chart1', JSON.stringify(chart2), { expires: 7, path: '/' });
 		}else{//本金
-			localStorage.setItem('call_chart',JSON.stringify(chart2));//展示
-			localStorage.setItem('call_chart1',JSON.stringify(chart1));
+			$.cookie('call_chart', JSON.stringify(chart2), { expires: 7, path: '/' });
+			$.cookie('call_chart1', JSON.stringify(chart1), { expires: 7, path: '/' });
 		}
 		console.log(chart1);
 		console.log(chart2);
@@ -752,7 +739,6 @@ $(function(){
 	function Trim(str){//去掉%
 	  return str.replace(/[%]/g,"");
 	}
-
 	/**
 	 * 利率计算
 	 */

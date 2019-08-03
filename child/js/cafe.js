@@ -1,9 +1,4 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
 	//更多
 	$(".more").hide();
 	$(".rights>h3:eq(0)").click(function(){
@@ -36,7 +31,7 @@ $(function(){
 	//热门视频:0;我的关注:1;
 	$(".btn").click(function(){
 		var ind=$(this).attr("videow");
-		localStorage.setItem('call_videow',JSON.stringify(ind));
+		$.cookie('call_videow', JSON.stringify(ind), { expires: 7, path: '/' });
 		location.href="hot_video.html";
 	})
 	/**

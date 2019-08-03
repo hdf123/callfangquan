@@ -7,9 +7,9 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=yes"/>
 		<title>我要咨询</title>
-		<link rel="stylesheet" type="text/css" href="css/WantConsulting.css"/>
-		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/WantConsulting.css"/>
+<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<header class="headers">
@@ -36,10 +36,17 @@
 				</div>
 			</div>
 		</div>
+		
+
 <script type="text/javascript">
 $(function(){
    	limitImport('.texts',200);//输入限制
-
+	var free=3;//免费提问次数
+	if(free>0){
+		$(".privacy>div").html("您还有免费问"+free+"次的机会，本次提问免费。");
+	}else{
+		$(".privacy>div").html('你的免费问次数已用完!');
+	}
    	$(".privacy").hide();
    	$("#privacy").click(function(){
    		$(".texts").focus();
@@ -66,30 +73,30 @@ $(function(){
 	         }
 	}
 	//ios：focusin和focusout支持冒泡，对应focus和blur, 使用focusin和focusout的原因是focusin和focusout可以冒泡，focus和blur不会冒泡，这样就可以使用事件代理，处理多个输入框存在的情况。
-	/*
-	$(".texts").focusin(function(){
-		if(isIphone()){//软键盘弹出的事件处理
-			$(".privacy").show();
-        }
-	})
-	$(".texts").focusout(function(){
-		if(isIphone()){//软键盘弹出的事件处理
-			$(".privacy").hide();
-        }
-	})
-	*/
+//	$(".texts").focusin(function(){
+//		if(isIphone()){//软键盘弹出的事件处理
+//			$(".privacy").show();
+//      }
+//	})
+//	$(".texts").focusout(function(){
+//		if(isIphone()){//软键盘弹出的事件处理
+//			$(".privacy").hide();
+//      }
+//	})
 	/**
 	 * 提交
 	 */
 	$(".popup_box").hide();
    	$(".rights").click(function(){
    		var mun=$(".texts").val();
-   		console.log(mun.length);
-   		console.log($(".texts").val());
    		if(mun.length<10){
    			return console.log("输入不能小数10位");
    		}
-   		$(".popup_box").show();
+   		if(free<1){
+   			$(".popup_box").show();
+   		}else{
+   			console.log($(".texts").val());
+   		}
    	})
 	$(".popup_box").click(function(event){
 		$(this).hide();

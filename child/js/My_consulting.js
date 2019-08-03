@@ -1,18 +1,9 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-	
-	console.log($(".consulting_box>li").length);
 	if($(".consulting_box>li").length<1){
 		$(".consulting_box").hide();
 	}else{
 		$(".record").hide();
 	}
-	
-	
     /**
      * 上拉加载
      */

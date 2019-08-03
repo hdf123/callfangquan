@@ -1,10 +1,5 @@
 $(function(){
 	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-	/**
 	 * 上拉加载
 	 */
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载

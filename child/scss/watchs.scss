@@ -331,31 +331,16 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .reply_box{
     width: 10rem;
     height:auto;
     background-color: #ffffff;
-    position: absolute;
+    position: fixed;
     left:0;
     bottom:0;
+//  position: absolute;
+//  left:0;
+//  bottom:0;
     overflow: hidden;
     >div:nth-child(1){
         width:100%;

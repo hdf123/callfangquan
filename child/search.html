@@ -39,43 +39,40 @@
 			</div>
 		</section>
 <script type="text/javascript">
-	$(function(){
-		var yz_record=JSON.parse(localStorage.getItem('yz_record'));//转为对象
-    	if(yz_record==null){
-    		var yz_record=[];
-    	}else{
-    		console.log(yz_record[0]);
-    		$(".without").hide();
-    		var ss="";
-    		for(i in yz_record){
-    			ss+=`<li>${yz_record[i]}</li>`;
-    		}
-    		$(".contents").append(`<div class="contents_box">
-									<div>
-										<div>搜索历史</div>
-										<i class="iconfont removek">&#xe646;</i>
-									</div>
-									<ul>${ss}</ul>
-								</div>`)
-    	}
-    	$(".contents").on("click",".removek",function(){
-    		$(".contents_box").hide();
-    		localStorage.removeItem("yz_record");
-    		$(".without").show();
-    	})
-		$('.headers input').on('keypress', function (e){
-		    var keycode = e.keyCode;
-		    var texts=$(this).val();
-		    console.log(texts);
-		　　//keycode是键码，13也是电脑物理键盘的 enter 
-		    if(keycode == '13') {
-		    	e.preventDefault();
-		    	console.log("texts="+texts);
-		    	yz_record.push(texts)
-				localStorage.setItem('yz_record',JSON.stringify(yz_record));
-		    }
-		});
+$(function(){
+	if($.cookie('call_record')==undefined||JSON.parse($.cookie('call_record'))==null){
+		var call_record=[];
+	}else{
+		var call_record=JSON.parse($.cookie('call_record'));
+		$(".without").hide();
+		var record="";
+		for(i in call_record){
+			record+=`<li>${call_record[i]}</li>`;
+		}
+		$(".contents").append(`<div class="contents_box">
+								<div>
+									<div>搜索历史</div>
+									<i class="iconfont removek">&#xe646;</i>
+								</div>
+								<ul>${record}</ul>
+							</div>`)
+	}
+	$(".contents").on("click",".removek",function(){
+		$(".contents_box").hide();
+		$.cookie('call_record', null);
+		$(".without").show();
 	})
+	$('.headers input').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	　　//keycode是键码，13也是电脑物理键盘的 enter 
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	console.log("texts="+$(this).val());
+	    	call_record.push($(this).val())
+			$.cookie('call_record', JSON.stringify(call_record), {expires:999});
+	    }
+	});
+})
 </script>
 	</body>
 </html>

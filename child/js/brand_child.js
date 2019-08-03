@@ -1,16 +1,11 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
 	//品牌类型
-	var call_typew=JSON.parse(localStorage.getItem('call_typew'));
+	var call_typew=JSON.parse($.cookie('call_typew'));
 	$(".centers").html(call_typew)
 	$(".lists>li").click(function(){
 		var ind=$(this).index();
 		console.log(ind);
-		localStorage.setItem('call_enterprise',JSON.stringify(ind));
+		$.cookie('call_enterprise', JSON.stringify(ind), { expires: 7, path: '/' });
 		location.href="brand_enterprise.html";
 	})
     /**

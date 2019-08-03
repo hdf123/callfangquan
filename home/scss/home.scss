@@ -322,9 +322,11 @@
     }
 }
 .details{
+    width:6.2rem;
     margin-left:0.44rem;
     >div:nth-child(1){
         font-size:0.373rem;
+        @extend .yincang;
     }
     >div:nth-child(2){
         display: flex;

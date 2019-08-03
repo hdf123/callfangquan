@@ -1,21 +1,9 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-	
-	
-	console.log($(".Focus>li").length);
 	if($(".Focus>li").length<1){
 		$(".Focus").hide();
 	}else{
 		$(".record").hide();
 	}
-	
-	
-	
-	
 	$(".contents").on("click",".guanzhu",function(){
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");

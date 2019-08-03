@@ -7,9 +7,9 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=yes"/>
 		<title>我要上传</title>
-		<link rel="stylesheet" type="text/css" href="css/upload_video.css"/>
-		<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/upload_video.css"/>
+<script src="../js/js.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/time.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<header class="headers">
@@ -34,7 +34,7 @@
 			</div>
 		</section>
 		
-		
+
 <script src="js/upload_video.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(function(){
@@ -51,18 +51,13 @@ $(function(){
             $(".file").hide();
             $(".videos").show();
             form.append("file",file); 
-            
         }
         reader.readAsDataURL(this.files[0]); // 读出 base64
-        
-        
     })
 	$(".cha").click(function(){
-		
 		$(".file").show();
 		$("#file").val("");
 		$(".videos").hide();
-		
 	})
 	$(".rights").click(function(){
 		form.append("texts",$(".texts").val()); 

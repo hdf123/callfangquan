@@ -1,0 +1,48 @@
+{
+	"child/watchs.html": {
+		"refer": [
+			"child/cafe.html"
+		]
+	},
+	"child/cafe.html": {
+		"refer": [
+			"home/home.html"
+		]
+	},
+	"child/Dynamic_details.html": {
+		"refer": [
+			"home/home.html"
+		]
+	},
+	"child/Add_buddy.html": {
+		"refer": [
+			"child/cafe.html"
+		]
+	},
+	"child/WantConsulting.html": {
+		"refer": [
+			"home/connoisseur.html",
+			"child/experts.html"
+		]
+	},
+	"child/experts.html": {
+		"refer": [
+			"home/connoisseur.html"
+		]
+	},
+	"child/Brand.html": {
+		"refer": [
+			"home/home.html"
+		]
+	},
+	"child/answer.html": {
+		"refer": [
+			"child/experts.html"
+		]
+	},
+	"child/MyMessage.html": {
+		"refer": [
+			"child/cafe.html"
+		]
+	}
+}

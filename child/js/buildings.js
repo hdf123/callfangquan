@@ -1,13 +1,8 @@
 $(function(){
 	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-	/**
 	 * 页面渲染
 	 */
-	var call_building=JSON.parse(localStorage.getItem('call_building'));//转为对象
+	var call_building=JSON.parse($.cookie('call_building'));
 	var ska="",skb="",states="";
 	for(i in call_building.region){
 		ska+=`<div>${call_building.region[i]}</div>`;
@@ -50,7 +45,7 @@ $(function(){
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			console.log(ind);
-			localStorage.setItem('call_building',JSON.stringify(data[ind]));
+			$.cookie('call_building', JSON.stringify(data[ind]), { expires: 7, path: '/' });
 	    	location.href="buildings.html";
 		} 
 	})
@@ -62,7 +57,7 @@ $(function(){
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			console.log(ind);
-			localStorage.setItem('call_building',JSON.stringify(data[ind]));
+			$.cookie('call_building', JSON.stringify(data[ind]), { expires: 7, path: '/' });
 	    	location.href="buildings.html";
 		} 
 	})
@@ -259,7 +254,7 @@ $(function(){
     	}
     }
     $(".ul1>li").click(function(){
-    	localStorage.setItem('call_consulting',JSON.stringify(2));
+    	$.cookie('call_consulting', JSON.stringify(2), { expires: 7, path: '/' });
     	location.href="consulting.html";
     })
     /**

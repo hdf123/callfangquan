@@ -100,54 +100,54 @@
 		
 
 <script type="text/javascript">
-	$(function(){
-		$(".tab>div").click(function(){
-			var zuobiao=$(this).index();
-			$(this).addClass("act").siblings().removeClass("act");
-			mySwiper1.slideTo(zuobiao+1,500,false);
-		})
-		var mySwiper1 = new Swiper('.swiper1', {
-			loop:true,//循环
-			observer:true,//修改swiper自己或子元素时，自动初始化swiper
-			observeParents:true,//修改swiper的父元素时，自动初始化swiper
-			onSlideChangeStart:function(swiper){//swiper3中使用
-		        var xiabiao=swiper.realIndex;//循环状态下获取下标
-		        console.log(1);
-		         $(".tab>div").eq(xiabiao).addClass("act").siblings().removeClass("act");
-		   }
-		})
-		$(".scra").bind("click",function(){
-			location.href="preview.html"
-		})
-		/**
-		 * 懒加载
-		 */
-		var page = 1,off_on = false;
-		//加载数据
-		var LoadingDataFn = function() {
-		    var dom = '';
-		    for (var i = 0; i < 100; i++) {
-		        dom +=`<div>${i+1}</div>`;
-		    }
-//		    $('.scra').append(dom);
-		    off_on = true;
-		};
-		//初始化， 第一次加载
-		$(document).ready(function() {
-		    LoadingDataFn();
-		});
-		$('.scra').scroll(function() {
-		    //当时滚动条离底部60px时开始加载下一页的内容
-		    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
-		        if (off_on) {
-		            off_on = false;
-		            page++;
-		            console.log("第"+page+"页");
-		            LoadingDataFn();
-		        }
-		    }
-		});
+$(function(){
+	$(".tab>div").click(function(){
+		var zuobiao=$(this).index();
+		$(this).addClass("act").siblings().removeClass("act");
+		mySwiper1.slideTo(zuobiao+1,500,false);
 	})
+	var mySwiper1 = new Swiper('.swiper1', {
+		loop:true,//循环
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		onSlideChangeStart:function(swiper){//swiper3中使用
+	        var xiabiao=swiper.realIndex;//循环状态下获取下标
+	        console.log(1);
+	         $(".tab>div").eq(xiabiao).addClass("act").siblings().removeClass("act");
+	   }
+	})
+	$(".scra").bind("click",function(){
+		location.href="preview.html"
+	})
+	/**
+	 * 懒加载
+	 */
+	var page = 1,off_on = false;
+	//加载数据
+	var LoadingDataFn = function() {
+	    var dom = '';
+	    for (var i = 0; i < 100; i++) {
+	        dom +=`<div>${i+1}</div>`;
+	    }
+//		    $('.scra').append(dom);
+	    off_on = true;
+	};
+	//初始化， 第一次加载
+	$(document).ready(function() {
+	    LoadingDataFn();
+	});
+	$('.scra').scroll(function() {
+	    //当时滚动条离底部60px时开始加载下一页的内容
+	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+	        if (off_on) {
+	            off_on = false;
+	            page++;
+	            console.log("第"+page+"页");
+	            LoadingDataFn();
+	        }
+	    }
+	});
+})
 </script>
 	</body>
 </html>

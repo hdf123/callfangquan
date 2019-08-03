@@ -1,9 +1,4 @@
 /**
- * 登录状态
- */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-/**
  * 引入子页面，点击返回上一页
  */
 document.addEventListener('plusready', function() {
@@ -19,3 +14,8 @@ document.addEventListener('plusready', function() {
 		})
 	});
 });
+/**
+ * 登录状态
+ */
+var call_logins=JSON.parse($.cookie('call_logins'));
+if(!call_logins) location.href="../home/home.html";

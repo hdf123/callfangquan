@@ -151,57 +151,53 @@
 		</footer>
 		
 <script type="text/javascript">
-	$(function(){
-		/**
-		 * 登录状态
-		 */
-		var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-		if(!call_logins) location.href="../home/home.html";
-		var call_consulting=JSON.parse(localStorage.getItem('call_consulting'));
-		if(call_consulting==2){
-			$(".centers").html("最新动态");
-		}
-		$(".uus li").click(function(){
-			location.reload();
-		})
-		for (i in data) {
-			var aa='',as='',region=data[i].region;
-			for(j in region){
-				if(j==region.length-1){
-					aa+=`${region[j]}`;
-				}else{
-					aa+=`${region[j]}&nbsp;`;
-				}
-			}
-			if(data[i].state=="在售"){
-				as=`<div class="state sell">${data[i].state}</div>`;
-			}else if(data[i].state=="待售"){
-				as=`<div class="state waiting">${data[i].state}</div>`;
-			}else{
-				as=`<div class="state">${data[i].state}</div>`;
-			}
-			$(".uuk").append(`<li class="kys">
-					<img src=${data[i].img} alt="" />
-					<div class="recommended_con">
-						<div>${data[i].name}</div>
-						<div>
-							<div>${aa}</div>
-							<div>${data[i].area}</div>
-						</div>
-						<div>
-							${as}
-							<div>南北通透</div>
-							<div>配套成熟</div>
-						</div>
-						<div>售价待定</div>
-					</div>
-				</li>`);
-		}
-		$(".uuk").on("click",".kys",function(){
-			localStorage.setItem('yz_building',JSON.stringify(data[$(this).index()]));//转为json字符串
-			location.href="buildings.html";
-		})
+$(function(){
+	var call_consulting=JSON.parse($.cookie('call_consulting'));
+	console.log(call_consulting);
+	if(call_consulting==2){
+		$(".centers").html("最新动态");
+	}
+	$(".uus li").click(function(){
+		location.reload();
 	})
+	for (i in data) {
+		var aa='',as='',region=data[i].region;
+		for(j in region){
+			if(j==region.length-1){
+				aa+=`${region[j]}`;
+			}else{
+				aa+=`${region[j]}&nbsp;`;
+			}
+		}
+		if(data[i].state=="在售"){
+			as=`<div class="state sell">${data[i].state}</div>`;
+		}else if(data[i].state=="待售"){
+			as=`<div class="state waiting">${data[i].state}</div>`;
+		}else{
+			as=`<div class="state">${data[i].state}</div>`;
+		}
+		$(".uuk").append(`<li class="kys">
+				<img src=${data[i].img} alt="" />
+				<div class="recommended_con">
+					<div>${data[i].name}</div>
+					<div>
+						<div>${aa}</div>
+						<div>${data[i].area}</div>
+					</div>
+					<div>
+						${as}
+						<div>南北通透</div>
+						<div>配套成熟</div>
+					</div>
+					<div>售价待定</div>
+				</div>
+			</li>`);
+	}
+	$(".uuk").on("click",".kys",function(){
+		$.cookie('call_building', JSON.stringify(data[$(this).index()]), { expires: 7, path: '/' });
+		location.href="buildings.html";
+	})
+})
 </script>
 	</body>
 </html>

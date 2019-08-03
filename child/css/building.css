@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .choose > div:nth-child(1) > div, .choose > div:nth-child(2) > div, .cond > div > div {
+.flexs, .search > a, .choose > div:nth-child(1) > div, .choose > div:nth-child(2) > div, .cond > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,20 +105,15 @@ a {
 
 .search {
   height: 1.173rem;
-  padding: 0.213rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.search > i {
-  display: inline-block;
-  font-size: 0.5rem;
-  text-align: center;
-}
-.search > i:nth-child(1) {
+.search > a {
   width: 1.173rem;
+  height: 100%;
   color: #a1a1a1;
-}
-.search > i:nth-child(3) {
-  width: 1.333rem;
-  color: #a1a1a1;
+  font-size: 0.5rem;
 }
 .search > input {
   width: 7.304rem;

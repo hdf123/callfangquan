@@ -1,10 +1,4 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-	console.log($(".collection_box>li").length);
 	if($(".collection_box>li").length<1){
 		$(".collection_box").hide();
 	}else{

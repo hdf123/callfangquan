@@ -1,9 +1,4 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
 	$(".popup_box").hide();
 	$(".rights>i:eq(0)").click(function(){
 		location.href="search.html";
@@ -12,7 +7,6 @@ $(function(){
 		$(".popup_box").animate({"width":"100%"},300);
 		$(".popup_box").show();
 	})
-	
 	for(i in region){
 		$(".area>ul").append(`<li>${region[i].title}</li>`);
 	}

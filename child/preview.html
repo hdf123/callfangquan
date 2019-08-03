@@ -37,23 +37,17 @@
 		</footer>
 
 <script type="text/javascript">
-	$(function(){
-		/**
-		 * 登录状态
-		 */
-		var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-		if(!call_logins) location.href="home.html";
-	
-		var mySwiper = new Swiper('.swiper1', {
-			observer:true,//修改swiper自己或子元素时，自动初始化swiper
-			observeParents:true,//修改swiper的父元素时，自动初始化swiper
-			pagination : '.swiper-pagination',
-			paginationType : 'fraction'
-		})
-		$(".rights").click(function(){
-			location.href="photo.html"
-		})
+$(function(){
+	var mySwiper = new Swiper('.swiper1', {
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		pagination : '.swiper-pagination',
+		paginationType : 'fraction'
 	})
+	$(".rights").click(function(){
+		location.href="photo.html"
+	})
+})
 </script>
 	</body>
 </html>

@@ -1,11 +1,6 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
 	//视频类型
-	var call_videow=JSON.parse(localStorage.getItem('call_videow'));//转为对象
+	var call_videow=JSON.parse($.cookie('call_videow'));
 	if(call_videow==0) $(".centers").html("热门视频")
 	else if(call_videow==1) $(".centers").html("我的关注")
 	else location.href="../home/home.html";

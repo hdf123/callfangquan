@@ -1,6 +1,6 @@
 $(function(){
 	var call_logins=true;//登录状态
-	localStorage.setItem('call_logins',JSON.stringify(call_logins));//转为json字符串
+	$.cookie('call_logins', JSON.stringify(call_logins), { expires: 7, path: '/' });//时效7天
 	var mySwiper1 = new Swiper('.swiper1', {
 		loop : true,
 		autoplay: 2000,//可选选项，自动滑动
@@ -43,19 +43,51 @@ $(function(){
     $(".provide>div").click(function(){
     	location.href="../child/HousingMarketDynamic.html";
     })
+    //推荐
+    $(".recommended_box").on("click","",function(){
+    	location.href="../child/buildings.html";
+    })
     /**
      * 上拉加载
      */
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
 	var LoadingDataFn = function(){
-		console.log("上拉加载");
-		var dom='';
-		for(var i=0;i<30;i++){
-			dom+=`<div>${i+1}</div>`
-		}
-		$('.contents').append(dom);
-		off_on = true;
+		console.log(data);
+	    var dom = '';
+	    for (i in data) {
+	    	var ska="",skb="",states="";
+	    	for(j in data[i].region){
+	    		ska+=`<div>${data[i].region[j]}</div>`;
+	    	}
+	    	for(j in data[i].features){
+	    		skb+=`<div>${data[i].features[j]}</div>`;
+	    	}
+	    	if(data[i].state=="在售"){
+	    		states=`<div class="sell">在售</div>`;
+	    	}else if(data[i].state=="待售"){
+	    		states=`<div class="waiting">待售</div>`;
+	    	}else{
+	    		states=`<div>待售</div>`;
+	    	}
+	        dom +=`<li class="recommended">
+				<img src=${data[i].img} alt="" />
+				<div class="details">
+					<div>${data[i].name}</div>
+					<div class="environment">
+						<div>${ska}</div>
+						<div>${data[i].area}</div>
+					</div>
+					<div class="situation">
+						${states}
+						${skb}
+					</div>
+					<div>${data[i].price}</div>
+				</div>
+			</li>`;
+	    }
+	  	$('.recommended_box').append(dom);
+	    off_on = true;
 	};
 	//初始化， 第一次加载
 	$(document).ready(function() {

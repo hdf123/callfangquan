@@ -1,14 +1,9 @@
 $(function(){
 	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="home.html";
-	/**
 	 * 搜索
 	 */
 	$(".search").click(function(){
-		location.href="../child/search.html";
+//		location.href="../child/search.html";
 	})
 	var mySwiper = new Swiper('.swiper1', {
 		slidesPerView :6.7,
@@ -122,6 +117,17 @@ $(function(){
 	$(".contents").on("click",".questions>div:eq(1)",function(){
 		location.href="../child/answer.html";
 	})
+	//输入底部隐藏
+    var mHeight = $(document).height();
+    $(window).resize(function () {//对浏览器窗口调整大小进行显示隐藏
+        if($(document).height() < mHeight){
+            $(".footers").hide();
+            $("section").css({"bottom":0});
+        }else{
+            $(".footers").show();
+            $("section").css({"bottom":"2.5rem"});
+        }
+    });
     /**
      * 上拉加载
      */

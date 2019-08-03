@@ -1,9 +1,4 @@
 /**
- * 登录状态
- */
-var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-if(!call_logins) location.href="home.html";
-/**
  * 引入主页面，快速点击两次退出app
  */
 document.addEventListener('plusready', function(a) {
@@ -40,3 +35,8 @@ document.addEventListener('plusready', function(a) {
         }
     }, false);
 });
+/**
+ * 登录状态
+ */
+var call_logins=JSON.parse($.cookie('call_logins'));
+if(!call_logins) location.href="home.html";

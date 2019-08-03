@@ -1,17 +1,11 @@
 $(function(){
 	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-	/**
 	 * 搜索
 	 */
 	$('.search input').on('keypress', function (e){
 	    var keycode = e.keyCode;
 	    if(keycode == '13') {
 	    	e.preventDefault();
-	    	
 			alert($(this).val())
 	    }
 	});
@@ -252,7 +246,7 @@ $(function(){
 	    		states=`<div>待售</div>`;
 	    	}
 	        dom +=`<div class="building_box">
-				<img src=${data[i].img} class="imgks" alt="" />
+				<img src=${data[i].img} alt="" />
 				<div>
 					<h3>${data[i].name}</h3>
 					<p>${data[i].address}</p>
@@ -268,7 +262,7 @@ $(function(){
 				</div>
 			</div>`;
 	    }
-	  $('.contents').append(dom);
+	  	$('.contents').append(dom);
 	    off_on = true;
 	};
 	//初始化， 第一次加载
@@ -290,8 +284,7 @@ $(function(){
 	
 	
 	$(".contents").on("click",".building_box",function(){
-		localStorage.setItem('call_building',JSON.stringify(data[$(this).index()]));//转为json字符串
-		var ss =JSON.parse(localStorage.getItem('call_building'));//转为对象
+		$.cookie('call_building', JSON.stringify(data[$(this).index()]), { expires: 7, path: '/' });
 		location.href="buildings.html";
 	})
 })

@@ -1,10 +1,5 @@
 $(function(){
-	/**
-	 * 登录状态
-	 */
-	var call_logins=JSON.parse(localStorage.getItem('call_logins'));//转为对象
-	if(!call_logins) location.href="../home/home.html";
-	var call_chart=JSON.parse(localStorage.getItem('call_chart'));//转为对象
+	var call_chart=JSON.parse($.cookie('call_chart'));
 	console.log(call_chart);
 	$(".forms1 .business").hide();//商贷利率
 	$(".forms1 .diminishing").hide();//本金递减

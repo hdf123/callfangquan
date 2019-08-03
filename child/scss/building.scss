@@ -7,19 +7,15 @@
 }
 .search{
     height: 1.173rem;
-    padding:0.213rem 0;
-    >i{
-        display: inline-block;
-        font-size:0.5rem;
-        text-align: center;
-    }
-    >i:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >a{
         width:1.173rem;
+        height:100%;
         color:#a1a1a1;
-    }
-    >i:nth-child(3){
-        width:1.333rem;
-        color:#a1a1a1;
+        font-size:0.5rem;
+        @extend .flexs;
     }
     >input{
         width: 7.304rem;
