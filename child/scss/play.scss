@@ -23,5 +23,78 @@
     bottom:0;
     >video{
         width:100%;
+        height:5rem;
     }
+}
+.Introduction{
+    display: flex;
+    justify-content: space-between;
+    padding:0.453rem 0.4rem;
+    border-bottom:1px solid #dddddd;
+    >div{
+        width:90%;
+        >div{
+            height:0.5rem;
+            font-size: 0.4rem;
+        }
+        >p{
+            margin-top:0.16rem;
+            >span{
+                color: #666666;
+                font-size: 0.32rem;
+            }
+        }
+        >.yy{
+            @extend .yincang;
+        }
+    }
+    >i{
+        width:10%;
+        height:0.5rem;
+        font-size:0.6rem;
+        @extend .flexs;
+        -webkit-transition: transform .25s linear;
+        -moz-transition: transform .25s linear;
+        -o-transition: transform .25s linear;
+        transition: transform .25s linear;
+    }
+    >.rotating{
+        transform: rotate(180deg);
+        -webkit-transition: transform .25s linear;
+        -moz-transition: transform .25s linear;
+        -o-transition: transform .25s linear;
+        transition: transform .25s linear;
+    }
+}
+.experts_tab{
+    display: flex;
+    background:white;
+    position: relative;
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5, 0rem -0.013rem 0rem 0rem #e5e5e5;
+    >li{
+        width:100%;
+        height: 1.173rem;
+        @extend .flexs;
+        color: #666666;
+        font-size: 0.4rem;
+    }
+    >div{
+        position: absolute;
+        left:8.5%;
+        bottom: 0.16rem;
+        display: inline-block;
+        width:8%;
+        border-bottom:0.053rem solid #5facfb;
+    }
+    >.act{
+        color: #5facfb;
+    }
+}
+.box{
+    width:100%;
+    background-color:rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
 }

@@ -17,5 +17,6 @@ document.addEventListener('plusready', function() {
 /**
  * 登录状态
  */
-var call_logins=JSON.parse($.cookie('call_logins'));
-if(!call_logins) location.href="../home/home.html";
+if($.cookie('call_logins')==undefined||JSON.parse($.cookie('call_logins'))==false){
+	location.href="../home/home.html";
+}

@@ -201,6 +201,27 @@
 					"child/cafe.html"
 				],
 				"priority": 0
+			},
+			"child/www.html": {
+				"resources": [],
+				"refer": [
+					"child/cafe.html"
+				],
+				"priority": 0
+			},
+			"child/hot_video.html": {
+				"resources": [],
+				"refer": [
+					"child/cafe.html"
+				],
+				"priority": 0
+			},
+			"child/fantasy.html": {
+				"resources": [],
+				"refer": [
+					"home/circle.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -262,7 +283,6 @@
 				"js/ajax.js",
 				"child/scss/specialty.scss",
 				"child/js/chart.js",
-				"home/circle.html",
 				"child/js/collection.js",
 				"img/preferential.png",
 				"child/css/live.css",
@@ -284,7 +304,6 @@
 				"child/scss/hot_video.scss",
 				"js/qrcode.js",
 				"child/js/Dynamic_details.js",
-				"child/hot_video.html",
 				"child/css/CapitalSubsidiary.css",
 				"images/arclist/7.gif",
 				"child/css/purchase_preferential.css",
@@ -410,7 +429,6 @@
 				"child/Focus.html",
 				"images/arclist/71.gif",
 				"img/menu_connoisseur.png",
-				"child/fantasy.html",
 				"child/scss/door.scss",
 				"child/fans.html",
 				"css/styles.css",

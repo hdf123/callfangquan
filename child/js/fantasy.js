@@ -58,9 +58,9 @@ $(function(){
 		var sk=$(".contents").scrollTop();
 		var he=$(".images").outerHeight()-headHeight;
 		var bai=(sk/he).toFixed(1);
-//		console.log(sk);
-//		console.log(he);
-//		console.log(bai);
+		console.log(sk);
+		console.log(he);
+		console.log(bai);
 		$(".headers").css({"background-color":"rgba(255,255,255,"+bai+")"});
 		if(bai>1){
 			$(".headers").css({"border-bottom":"1px solid #e5e5e5"});

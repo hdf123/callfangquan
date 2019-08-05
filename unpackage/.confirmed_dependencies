@@ -44,5 +44,20 @@
 		"refer": [
 			"child/cafe.html"
 		]
+	},
+	"child/www.html": {
+		"refer": [
+			"child/cafe.html"
+		]
+	},
+	"child/hot_video.html": {
+		"refer": [
+			"child/cafe.html"
+		]
+	},
+	"child/fantasy.html": {
+		"refer": [
+			"home/circle.html"
+		]
 	}
 }

@@ -5,10 +5,9 @@ $(function(){
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
 	var LoadingDataFn = function(){
-		console.log("上拉加载");
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+=`<li>${i+1}</li>`
+			dom+=`<li>${i+1}</li>`;
 		}
 		$('.contents').append(dom);
 		off_on = true;

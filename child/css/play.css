@@ -45,7 +45,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang, .Introduction > div > .yy, .wdows > div, #wdows > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers {
+.flexs, .headers .lefts, .headers .centers, .Introduction > i, .experts_tab > li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,4 +120,75 @@ a {
 }
 .contents > video {
   width: 100%;
+  height: 5rem;
+}
+
+.Introduction {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.453rem 0.4rem;
+  border-bottom: 1px solid #dddddd;
+}
+.Introduction > div {
+  width: 90%;
+}
+.Introduction > div > div {
+  height: 0.5rem;
+  font-size: 0.4rem;
+}
+.Introduction > div > p {
+  margin-top: 0.16rem;
+}
+.Introduction > div > p > span {
+  color: #666666;
+  font-size: 0.32rem;
+}
+.Introduction > i {
+  width: 10%;
+  height: 0.5rem;
+  font-size: 0.6rem;
+  -webkit-transition: transform .25s linear;
+  -moz-transition: transform .25s linear;
+  -o-transition: transform .25s linear;
+  transition: transform .25s linear;
+}
+.Introduction > .rotating {
+  transform: rotate(180deg);
+  -webkit-transition: transform .25s linear;
+  -moz-transition: transform .25s linear;
+  -o-transition: transform .25s linear;
+  transition: transform .25s linear;
+}
+
+.experts_tab {
+  display: flex;
+  background: white;
+  position: relative;
+  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5, 0rem -0.013rem 0rem 0rem #e5e5e5;
+}
+.experts_tab > li {
+  width: 100%;
+  height: 1.173rem;
+  color: #666666;
+  font-size: 0.4rem;
+}
+.experts_tab > div {
+  position: absolute;
+  left: 8.5%;
+  bottom: 0.16rem;
+  display: inline-block;
+  width: 8%;
+  border-bottom: 0.053rem solid #5facfb;
+}
+.experts_tab > .act {
+  color: #5facfb;
+}
+
+.box {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
