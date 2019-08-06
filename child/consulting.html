@@ -152,8 +152,7 @@
 		
 <script type="text/javascript">
 $(function(){
-	var call_consulting=JSON.parse($.cookie('call_consulting'));
-	console.log(call_consulting);
+	var call_consulting = JSON.parse(localStorage.getItem('call_consulting'));
 	if(call_consulting==2){
 		$(".centers").html("最新动态");
 	}
@@ -194,7 +193,7 @@ $(function(){
 			</li>`);
 	}
 	$(".uuk").on("click",".kys",function(){
-		$.cookie('call_building', JSON.stringify(data[$(this).index()]), { expires: 7, path: '/' });
+		localStorage.setItem('call_building', JSON.stringify(data[$(this).index()]));
 		location.href="buildings.html";
 	})
 })

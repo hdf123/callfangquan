@@ -31,7 +31,7 @@ $(function(){
 	//热门视频:0;我的关注:1;
 	$(".btn").click(function(){
 		var ind=$(this).attr("videow");
-		$.cookie('call_videow', JSON.stringify(ind), { expires: 7, path: '/' });
+		localStorage.setItem('call_videow', JSON.stringify(ind));
 		location.href="hot_video.html";
 	})
 	/**

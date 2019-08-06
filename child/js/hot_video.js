@@ -1,6 +1,6 @@
 $(function(){
 	//视频类型
-	var call_videow=JSON.parse($.cookie('call_videow'));
+	var call_videow = JSON.parse(localStorage.getItem('call_videow'));
 	if(call_videow==0) $(".centers").html("热门视频")
 	else if(call_videow==1) $(".centers").html("我的关注")
 	else location.href="../home/home.html";

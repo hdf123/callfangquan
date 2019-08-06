@@ -43,5 +43,42 @@ $(function(){
 			
 		});
 	}
+	//当前时间展示；
+	var timestamp=new Date().getTime();//当前时间戳
+	$(".times").html(getMyDate(timestamp,1));
+	$(".more").click(function(){
+		$(".cons").prepend(`<div>999</div>`);
+		$(".watch").animate({scrollTop:0},10);
+	})
+	$(".aa").html("做人，无需去羡慕别人，也无需去花时间去羡慕别人是如何成功的，想的只要是自己如何能战胜自己，如何变得比昨天的自己强大就行。自己的磨练和坚持，加上自己的智慧和勤劳，会成功的。终将变成石佛那样受到大家的尊敬。");
+	$(".bb").html("1111111111111111111111");
+	/**
+	 * 表情
+	 */
+	 var say = '请输入你的评论...';
+	$("#page_emotion").hide();
+	if ($("#form_article").html() === "") {
+		$("#form_article").html(say);
+	}
+	$("#form_article").click(function(){
+        if($("#form_article").html() == say){
+           	$("#form_article").html("");
+        }
+    });
+    $("#page_emotion").click(function(event){
+     	event.stopPropagation();
+     })
+    $("#page_emotion dd").click(function(){//表情
+        $("#form_article").html( $("#form_article").html().replace(say, '') );
+    });
+    $(document).click(function(){
+    	$("#page_emotion").hide();
+    })
+    $(".expression").click(function(event){
+    	$("#page_emotion").toggle();
+    	event.stopPropagation();
+    })
+	
+	
 	
 })

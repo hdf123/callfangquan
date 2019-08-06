@@ -7,11 +7,11 @@ $(function(){
 	function typeks(types){//判断是等额本息还是等额本金
 		var loan='',loan1='';//本息、本金
 		if(getRequest().type==0){
-			loan=JSON.parse($.cookie('call_chart'));//本息
-			loan1=JSON.parse($.cookie('call_chart1'));//本金
+			loan= JSON.parse(localStorage.getItem('call_chart'));//本息
+			loan1= JSON.parse(localStorage.getItem('call_chart1'));//本金
 		}else{
-			loan=JSON.parse($.cookie('call_chart1'));//本息
-			loan1=JSON.parse($.cookie('call_chart'));//本金
+			loan= JSON.parse(localStorage.getItem('call_chart1'));//本息
+			loan1= JSON.parse(localStorage.getItem('call_chart'));//本金
 		}
 		if(types==0){//本息
 			$(".money_title>div:eq(0)>div").eq(0).addClass("act").siblings().removeClass("act");

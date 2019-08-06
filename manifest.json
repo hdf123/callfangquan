@@ -222,6 +222,20 @@
 					"home/circle.html"
 				],
 				"priority": 0
+			},
+			"child/play.html": {
+				"resources": [],
+				"refer": [
+					"child/live.html"
+				],
+				"priority": 0
+			},
+			"child/live.html": {
+				"resources": [],
+				"refer": [
+					"home/home.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -354,7 +368,6 @@
 				"js/annyang.min.js",
 				"child/css/certification.css",
 				"images/arclist/88.gif",
-				"child/live.html",
 				"home/my.html",
 				"child/css/chart.css",
 				"child/scss/brand_child.scss",
@@ -548,7 +561,6 @@
 				"img/menu_preferential.png",
 				"child/buildings.html",
 				"images/arclist/51.gif",
-				"child/play.html",
 				"child/js/surrounding.js",
 				"images/arclist/58.gif",
 				"images/default_1.gif",

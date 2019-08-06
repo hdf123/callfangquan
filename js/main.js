@@ -38,5 +38,5 @@ document.addEventListener('plusready', function(a) {
 /**
  * 登录状态
  */
-var call_logins=JSON.parse($.cookie('call_logins'));
+var call_logins = JSON.parse(localStorage.getItem('call_logins'));
 if(!call_logins) location.href="home.html";

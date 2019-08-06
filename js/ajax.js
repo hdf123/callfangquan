@@ -61,41 +61,6 @@ function limitImport(str,num){
 	});
 }
 /**
- * 基础布局
- */
-//function funkr(){
-//	var ss=$(document.body).outerHeight(true);
-//	var he=$(".heads").outerHeight();
-//	var ft=$(".foots").outerHeight();
-//	he==undefined?he=0:he=he;
-//	ft==undefined?ft=0:ft=ft;
-//	var bod=ss-(he+ft);
-//	$(".sets").css({"height":bod+"px"});
-//}
-/**
- * 弹窗(1秒后自动隐藏)，待改善
- */
-//function popups(contents,address){//contents：内容；address：地址
-//	$("#wdows").remove();
-//	$("body").append(`<div id="wdows">
-//						<div>${contents}</div>
-//					</div>`);
-//	$("#wdows").hide();//初始化异常弹窗
-//	$("#wdows").fadeIn(500,function(){
-//		setTimeout(function(){
-//			$("#wdows").fadeOut(1000,function(){
-//				console.log(address);
-//				address==""||address==undefined||address==null?location.reload():wode(address);//有传地址跳转，没有就刷新当前页面.
-//				function wode(address){
-//					address!="no"?location.href=address:console.log("什么也不做");
-//				}
-//			});
-//		},1000);
-//	});
-//}
-
-
-/**
  * 上拉加载
  */
 //_loadIndex 为请求的页数    _loadState为请求状态  0 可以请求  1 正在请求  2 请求结束
@@ -389,8 +354,29 @@ function linkage(address){
 		}
 	})
 }
-
-
+/**
+ * 当前时间
+ */
+function getMyDate(str,state){
+    var oDate = new Date(str),
+        oYear = oDate.getFullYear(),//年
+        oMonth = oDate.getMonth()+1,//月
+        oDay = oDate.getDate(),//日
+        oHour = oDate.getHours(),//时
+        oMin = oDate.getMinutes(),//分
+        oSen = oDate.getSeconds(),//秒
+        oFf=oDate.getMilliseconds()//毫秒
+        if(state==1){
+        	oTime = oYear +'.'+ getzf(oMonth) +'.'+ getzf(oDay);//最后拼接时间，年月日
+        }else{
+        	oTime = oYear +'-'+ getzf(oMonth) +'-'+ getzf(oDay) +' '+ getzf(oHour) +':'+ getzf(oMin) +':'+getzf(oSen);//最后拼接时间
+        }
+    return oTime;
+};
+//补0操作
+function getzf(num){
+	return num< 10 ? '0' + num:num;
+}
 
 
 

@@ -51,7 +51,7 @@
 <script type="text/javascript">
 $(function(){
 	$(".lists>li").click(function(){
-		$.cookie('call_photo', JSON.stringify($(this).index()), { expires: 7, path: '/' });
+		localStorage.setItem('call_photo', JSON.stringify($(this).index()));
 		location.href="preview.html";
 	})
     /**

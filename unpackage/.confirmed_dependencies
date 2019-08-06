@@ -59,5 +59,15 @@
 		"refer": [
 			"home/circle.html"
 		]
+	},
+	"child/play.html": {
+		"refer": [
+			"child/live.html"
+		]
+	},
+	"child/live.html": {
+		"refer": [
+			"home/home.html"
+		]
 	}
 }

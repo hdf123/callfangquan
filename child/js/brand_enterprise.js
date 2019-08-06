@@ -1,6 +1,6 @@
 $(function(){
 	//企业
-	var call_enterprise=JSON.parse($.cookie('call_enterprise'));
+	var call_enterprise = JSON.parse(localStorage.getItem('call_enterprise'));
 	$(".centers").html(call_enterprise);
 	document.title =call_enterprise;
     /**

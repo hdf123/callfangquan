@@ -40,10 +40,11 @@
 		</section>
 <script type="text/javascript">
 $(function(){
-	if($.cookie('call_record')==undefined||JSON.parse($.cookie('call_record'))==null){
+	var call_record = JSON.parse(localStorage.getItem('call_record'));
+	console.log(call_record);
+	if(call_record==null){
 		var call_record=[];
 	}else{
-		var call_record=JSON.parse($.cookie('call_record'));
 		$(".without").hide();
 		var record="";
 		for(i in call_record){
@@ -59,7 +60,7 @@ $(function(){
 	}
 	$(".contents").on("click",".removek",function(){
 		$(".contents_box").hide();
-		$.cookie('call_record', null);
+		localStorage.removeItem('call_record');
 		$(".without").show();
 	})
 	$('.headers input').on('keypress', function (e){
@@ -69,7 +70,7 @@ $(function(){
 	    	e.preventDefault();
 	    	console.log("texts="+$(this).val());
 	    	call_record.push($(this).val())
-			$.cookie('call_record', JSON.stringify(call_record), {expires:999});
+	    	localStorage.setItem('call_record', JSON.stringify(call_record));
 	    }
 	});
 })

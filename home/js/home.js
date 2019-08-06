@@ -1,6 +1,8 @@
 $(function(){
 	var call_logins=true;//登录状态
-	$.cookie('call_logins', JSON.stringify(call_logins), { expires: 7, path: '/' });//时效7天
+	localStorage.setItem('call_logins', JSON.stringify(call_logins));
+	
+	
 	var mySwiper1 = new Swiper('.swiper1', {
 		loop : true,
 		autoplay: 2000,//可选选项，自动滑动

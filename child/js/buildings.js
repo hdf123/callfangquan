@@ -2,7 +2,7 @@ $(function(){
 	/**
 	 * 页面渲染
 	 */
-	var call_building=JSON.parse($.cookie('call_building'));
+	var call_building = JSON.parse(localStorage.getItem('call_building'));
 	var ska="",skb="",states="";
 	for(i in call_building.region){
 		ska+=`<div>${call_building.region[i]}</div>`;
@@ -44,8 +44,7 @@ $(function(){
 		spaceBetween: 16,
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
-			console.log(ind);
-			$.cookie('call_building', JSON.stringify(data[ind]), { expires: 7, path: '/' });
+			localStorage.setItem('call_building', JSON.stringify(data[ind]));
 	    	location.href="buildings.html";
 		} 
 	})
@@ -57,7 +56,7 @@ $(function(){
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
 			console.log(ind);
-			$.cookie('call_building', JSON.stringify(data[ind]), { expires: 7, path: '/' });
+			localStorage.setItem('call_building', JSON.stringify(data[ind]));
 	    	location.href="buildings.html";
 		} 
 	})
@@ -254,7 +253,7 @@ $(function(){
     	}
     }
     $(".ul1>li").click(function(){
-    	$.cookie('call_consulting', JSON.stringify(2), { expires: 7, path: '/' });
+    	localStorage.setItem('call_consulting', JSON.stringify(2));
     	location.href="consulting.html";
     })
     /**

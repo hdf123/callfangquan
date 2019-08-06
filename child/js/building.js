@@ -284,7 +284,7 @@ $(function(){
 	
 	
 	$(".contents").on("click",".building_box",function(){
-		$.cookie('call_building', JSON.stringify(data[$(this).index()]), { expires: 7, path: '/' });
+		localStorage.setItem('call_building', JSON.stringify(data[$(this).index()]));
 		location.href="buildings.html";
 	})
 })

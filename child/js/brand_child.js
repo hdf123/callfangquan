@@ -1,11 +1,11 @@
 $(function(){
 	//品牌类型
-	var call_typew=JSON.parse($.cookie('call_typew'));
+	var call_typew = JSON.parse(localStorage.getItem('call_typew'));
 	$(".centers").html(call_typew)
 	$(".lists>li").click(function(){
 		var ind=$(this).index();
 		console.log(ind);
-		$.cookie('call_enterprise', JSON.stringify(ind), { expires: 7, path: '/' });
+		localStorage.setItem('call_enterprise', JSON.stringify(ind));
 		location.href="brand_enterprise.html";
 	})
     /**

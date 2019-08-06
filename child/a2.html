@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+<style>
+.talk-bubble {
+	margin: 40px;
+  	display: inline-block;
+  	position: relative;
+	width: 200px;
+	height: auto;
+	background-color:yellow;
+}
+.talktext{
+  	padding: 1em;
+	text-align: left;
+  	line-height: 1.5em;
+}
+.tri-right.left-in:after{
+	content: ' ';
+	position:absolute;
+	width:0;
+	height:0;
+  	left: -20px;
+	right: auto;
+  	top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: yellow yellow transparent transparent;
+}
+</style>
+	<body>
+		<div class="talk-bubble tri-right left-in">
+			<div class="talktext">
+				2This talk-bubble uses .left-in class to show a triangle on the left slightly indented. Still a blocky square.
+			</div>
+		</div>
+	</body>
+</html>

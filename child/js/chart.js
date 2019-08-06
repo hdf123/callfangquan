@@ -1,5 +1,5 @@
 $(function(){
-	var call_chart=JSON.parse($.cookie('call_chart'));
+	var call_chart = JSON.parse(localStorage.getItem('call_chart'));
 	console.log(call_chart);
 	$(".forms1 .business").hide();//商贷利率
 	$(".forms1 .diminishing").hide();//本金递减

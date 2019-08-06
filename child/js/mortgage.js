@@ -542,11 +542,11 @@ $(function(){
 			}
 		}
 		if(funds.reimbursement==0){//本息
-			$.cookie('call_chart', JSON.stringify(chart1), { expires: 7, path: '/' });
-			$.cookie('call_chart1', JSON.stringify(chart2), { expires: 7, path: '/' });
+			localStorage.setItem('call_chart', JSON.stringify(chart1));
+			localStorage.setItem('call_chart1', JSON.stringify(chart2));
 		}else{//本金
-			$.cookie('call_chart', JSON.stringify(chart2), { expires: 7, path: '/' });
-			$.cookie('call_chart1', JSON.stringify(chart1), { expires: 7, path: '/' });
+			localStorage.setItem('call_chart', JSON.stringify(chart2));
+			localStorage.setItem('call_chart1', JSON.stringify(chart1));
 		}
 		location.href="chart.html";
 	})
@@ -613,11 +613,11 @@ $(function(){
 			}
 		}
 		if(calculatek.reimbursement==0){//本息
-			$.cookie('call_chart', JSON.stringify(chart1), { expires: 7, path: '/' });
-			$.cookie('call_chart1', JSON.stringify(chart2), { expires: 7, path: '/' });
+			localStorage.setItem('call_chart', JSON.stringify(chart1));
+			localStorage.setItem('call_chart1', JSON.stringify(chart2));
 		}else{//本金
-			$.cookie('call_chart', JSON.stringify(chart2), { expires: 7, path: '/' });
-			$.cookie('call_chart1', JSON.stringify(chart1), { expires: 7, path: '/' });
+			localStorage.setItem('call_chart', JSON.stringify(chart2));
+			localStorage.setItem('call_chart1', JSON.stringify(chart1));
 		}
 		console.log(chart1);
 		console.log(chart2);
@@ -726,14 +726,12 @@ $(function(){
 			}
 		}
 		if(combination.reimbursement==0){//本息
-			$.cookie('call_chart', JSON.stringify(chart1), { expires: 7, path: '/' });
-			$.cookie('call_chart1', JSON.stringify(chart2), { expires: 7, path: '/' });
+			localStorage.setItem('call_chart', JSON.stringify(chart1));
+			localStorage.setItem('call_chart1', JSON.stringify(chart2));
 		}else{//本金
-			$.cookie('call_chart', JSON.stringify(chart2), { expires: 7, path: '/' });
-			$.cookie('call_chart1', JSON.stringify(chart1), { expires: 7, path: '/' });
+			localStorage.setItem('call_chart', JSON.stringify(chart2));
+			localStorage.setItem('call_chart1', JSON.stringify(chart1));
 		}
-		console.log(chart1);
-		console.log(chart2);
 		location.href="chart.html";
 	})
 	function Trim(str){//去掉%
