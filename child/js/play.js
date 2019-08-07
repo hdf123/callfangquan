@@ -2,7 +2,7 @@ $(function(){
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-//	var b3=b1-headers;
+	//var b3=b1-headers;
 	$(".box").css({"top":b1+"px"});
 	
 	
@@ -16,33 +16,36 @@ $(function(){
 			$(this).closest(".Introduction").find(".as").addClass("yy");
 			$(this).closest(".Introduction").find(".as").css({"height":"0.5rem"});
 		}
-		
-		
 		var b1=$(".experts_tab").offset().top;
 		var headers=$("header")[0].getBoundingClientRect().height;
 		var b2=$(".experts_tab")[0].getBoundingClientRect().height;
 		var b3=b1+b2-headers;
 		$(".box").css({"top":+b3+"px"});
-		
-		
 	})
 	/**
 	 * tab切换
 	 */
+	var inds=0,staging=0;
 	$('.experts_tab>li').on('click', function() {
-		$(this).addClass("act").siblings().removeClass("act");
-		var inds=$(this).index();
-		sessionStorage.setItem('call_inds001',JSON.stringify(inds));//转为json字符串
-		func();
+		inds=$(this).index();
+		if($(this).index()!=3) staging=$(this).index();
+		fff();
 	})
-	function func(){
-		var inds=JSON.parse(sessionStorage.getItem('call_inds001'));//转为对象
-		console.log(inds);
+	function fff(){
+		$('.experts_tab>li').addClass("act").siblings().removeClass("act");
 		var mm=8.5+(100/4*inds);
 		$('.experts_tab>div').animate({ 'left': mm + '%' }, 300, function() {
-			
+			if(inds==3){
+				$(".box>div").eq(inds).show();
+			}else{
+				$(".box>div").eq(inds).show().siblings().hide();
+			}
 		});
 	}
+	
+	
+	$(".box>div").hide();
+	$(".comments_box").show();
 	//当前时间展示；
 	var timestamp=new Date().getTime();//当前时间戳
 	$(".times").html(getMyDate(timestamp,1));
@@ -67,7 +70,7 @@ $(function(){
     });
     $("#page_emotion").click(function(event){
      	event.stopPropagation();
-     })
+    })
     $("#page_emotion dd").click(function(){//表情
         $("#form_article").html( $("#form_article").html().replace(say, '') );
     });
@@ -78,7 +81,25 @@ $(function(){
     	$("#page_emotion").toggle();
     	event.stopPropagation();
     })
-	
-	
+	//点赞、发送
+	$(".btn>i").click(function(){
+		if($(this).is(".icon-dianzan")){
+			$(this).removeClass("icon-dianzan").addClass("icon-zan2");
+		}else{
+			$(this).removeClass("icon-zan2").addClass("icon-dianzan");
+		}
+	})
+	$(".btn>h3").click(function(){
+		console.log($("#form_article").html());
+	})
+	//关注更多
+	$('.more_box').click(function(){
+		$(this).hide();
+		inds=staging;
+		fff();
+	})
+    $(".more_box>div").click(function(event){
+     	event.stopPropagation();
+    })
 	
 })

@@ -90,6 +90,9 @@
         color: #5facfb;
     }
 }
+/**
+     * 在线评论
+ */
 .box{
     width:100%;
     position:absolute;
@@ -143,7 +146,6 @@
             width: 1.067rem;
             height: 1.067rem;
             border-radius:50%;
-            background-color: red;
         }
         >div{
             margin-left:0.5rem;
@@ -184,7 +186,6 @@
             width: 1.067rem;
             height: 1.067rem;
             border-radius:50%;
-            background-color:red;
         }
         >div{
             margin-right:0.5rem;
@@ -217,6 +218,147 @@
     border-right:15px solid transparent;
     border-top:10px solid #FFFFFF;
 }
+/**
+     * 实况直播
+ */
+.live_box{
+    width:100%;
+    height:100%;
+    overflow:auto;
+    padding:0.76rem 0.32rem;
+    background:#F5F5F5;
+}
+.live{
+    >div:nth-child(1){
+        display: inline-block;
+        >div{
+            display: flex;
+            align-items: center;
+            background:#cccccc;
+            border-radius: 0.32rem;
+            padding:0.067rem 0.267rem 0.067rem 0.053rem;
+            >div:nth-child(1){
+                width: 0.507rem;
+                height: 0.507rem;
+                border-radius:50%;
+                background:white;
+                @extend .flexs;
+                >p{
+                    width: 0.24rem;
+                    height: 0.24rem;
+                    border-radius:50%;
+                    background:#cccccc;
+                }
+            }
+            >div:nth-child(2){
+                margin-left:0.253rem;
+                font-size: 0.373rem;
+            }
+        }
+    }
+    >div:nth-child(2){
+        margin:0.133rem 0 0.133rem 0.25rem;
+        padding:0.133rem 0 0.267rem 0.267rem;
+        border-left:2px solid #cccccc;
+        >div{
+            background:white;
+            padding:0.387rem 0.413rem;
+            >p{
+                font-size: 0.373rem;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+            }
+            img{
+                width: 7.813rem;
+                height: 4.4rem;
+                margin-top:0.253rem;
+            }
+        }
+    }
+}
+/**
+     * 相关资讯
+ */
+.consulting_box{
+    width:100%;
+    height:100%;
+    overflow:auto;
+    padding-left:0.4rem;
+    >ul{
+        >li{
+            height: 1.173rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom:1px solid #e5e5e5;
+            >p{
+                width:75%;
+                font-size: 0.4rem;
+                @extend .yincang;
+            }
+            >div{
+                color: #999999;
+                font-size: 0.293rem;
+                padding-right:0.387rem;
+            }
+        }
+    }
+}
+/**
+     * 关注更多
+ */
+.more_box{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index:98;
+    background-color:rgba(0,0,0,0.5);
+    display: flex;
+    align-items: flex-end;
+    >div{
+        width:100%;
+        background: white;
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0.32rem 0;
+            >div{
+                width: 0.267rem;
+                height: 0.027rem;
+                background-color: #999999;
+            }
+            >p{
+                color: #999999;
+                font-size: 0.267rem;
+                text-align: center;
+                margin:0 0.1rem;
+            }
+        }
+    }
+}
+.focusk{
+    display: flex;
+    margin:0.4rem 0 0.48rem 0;
+    >li{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        >img{
+            width: 1.76rem;
+            height: 1.76rem;
+        }
+        >p{
+            color: #666666;
+            font-size: 0.32rem;
+            margin-top:0.147rem;
+        }
+    }
+}
+
 .inps{
     background:white;
     position:absolute;
@@ -235,13 +377,16 @@
             margin-left:0.3rem;
             height:100%;
             display: flex;
-            >i{
+            >i,>h3{
                 width:50%;
                 height:100%;
                 @extend .flexs;
                 font-size:0.55rem;
             }
-            >i:nth-child(2){
+            >.icon-zan2{
+                color:#F9351A;
+            }
+            >h3:nth-child(2){
                 transform: rotateY(-180deg);
             }
         }
