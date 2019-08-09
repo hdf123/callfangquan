@@ -58,7 +58,7 @@ form{
             }
             >i{
                 width:0.6rem;
-                height:0.7rem;
+                height:0.6rem;
                 font-size:0.5rem;
                 @extend .flexs;
                 border-top:1px solid #e5e5e5;
@@ -69,6 +69,7 @@ form{
             width:5.387rem;
             height:100%;
             border:none;
+            padding:0 0.11rem;
         }
         >.validation{
             width: 2.053rem;

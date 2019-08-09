@@ -15,7 +15,7 @@
 		<header class="headers">
 			<div>
 				<i class="iconfont">&#xe641;</i>
-				<input type="text" placeholder=" 输入楼盘名或地址" />
+				<input type="text" placeholder=" 搜索行家" />
 			</div>
 			<div onclick="history.back(-1)">取消</div>
 			<!--<div onclick="history.go(-1)">取消</div>-->
@@ -37,6 +37,110 @@
 					<p>没有任何搜索历史</p>
 				</div>
 			</div>
+			<ul class="results">
+				<li class="connoisseur_box">
+					<div>
+						<div class="connoisseur">
+							<div>
+								<img src="" alt="" />
+								<img src="../img/vip.png" alt="" />
+							</div>
+							<div>
+								<h3>张志军1</h3>
+								<p>新合鑫置业 董事长</p>
+								<div>筑美好人居 享丰盛人生</div>
+							</div>
+						</div>
+						<div class="guanzhu cancel">√已关注</div>
+					</div>
+					<div class="questions">
+						<div>
+							<div>向TA咨询</div>
+						</div>
+						<div>
+							<div>TA的回答(<span>18</span>)</div>
+						</div>
+					</div>
+				</li>
+				<li class="connoisseur_box">
+					<div>
+						<div class="connoisseur">
+							<div>
+								<img src="" alt="" />
+								<img src="../img/vip.png" alt="" />
+							</div>
+							<div>
+								<h3>张志军2</h3>
+								<p>新合鑫置业 董事长</p>
+								<div>筑美好人居 享丰盛人生</div>
+							</div>
+						</div>
+						<div class="guanzhu Care_about">
+							<i class="iconfont">&#xe609;</i>关注
+						</div>
+					</div>
+					<div class="questions">
+						<div>
+							<div>向TA咨询</div>
+						</div>
+						<div>
+							<div>TA的回答(<span>18</span>)</div>
+						</div>
+					</div>
+				</li>
+				<li class="connoisseur_box">
+					<div>
+						<div class="connoisseur">
+							<div>
+								<img src="" alt="" />
+								<img src="../img/vip.png" alt="" />
+							</div>
+							<div>
+								<h3>张志军3</h3>
+								<p>新合鑫置业 董事长</p>
+								<div>筑美好人居 享丰盛人生</div>
+							</div>
+						</div>
+						<div class="guanzhu Care_about">
+							<i class="iconfont">&#xe609;</i>关注
+						</div>
+					</div>
+					<div class="questions">
+						<div>
+							<div>向TA咨询</div>
+						</div>
+						<div>
+							<div>TA的回答(<span>18</span>)</div>
+						</div>
+					</div>
+				</li>
+				<li class="connoisseur_box">
+					<div>
+						<div class="connoisseur">
+							<div>
+								<img src="" alt="" />
+								<img src="../img/vip.png" alt="" />
+							</div>
+							<div>
+								<h3>1张志军4</h3>
+								<p>新合鑫置业 董事长</p>
+								<div>筑美好人居 享丰盛人生</div>
+							</div>
+						</div>
+						<div class="guanzhu Care_about">
+							<i class="iconfont">&#xe609;</i>关注
+						</div>
+					</div>
+					<div class="questions">
+						<div>
+							<div>向TA咨询</div>
+						</div>
+						<div>
+							<div>TA的回答(<span>18</span>)</div>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</section>
 <script type="text/javascript">
 $(function(){
@@ -45,10 +149,11 @@ $(function(){
 	if(call_record==null){
 		var call_record=[];
 	}else{
-		$(".without").hide();
+		$(".without").hide();//历史为空
+		$(".contents>ul").hide();//搜索结果
 		var record="";
 		for(i in call_record){
-			record+=`<li>${call_record[i]}</li>`;
+			record+=`<li class="record">${call_record[i]}</li>`;
 		}
 		$(".contents").append(`<div class="contents_box">
 								<div>
@@ -59,20 +164,38 @@ $(function(){
 							</div>`)
 	}
 	$(".contents").on("click",".removek",function(){
-		$(".contents_box").hide();
+		$(".contents_box").hide();//历史记录
 		localStorage.removeItem('call_record');
 		$(".without").show();
 	})
 	$('.headers input').on('keypress', function (e){
 	    var keycode = e.keyCode;
-	　　//keycode是键码，13也是电脑物理键盘的 enter 
+	　　//keycode是键码，13也是电脑物理键盘的 enter
 	    if(keycode == '13') {
 	    	e.preventDefault();
 	    	console.log("texts="+$(this).val());
 	    	call_record.push($(this).val())
+	    	//数组去重
+	    	call_record=heavy(call_record);
 	    	localStorage.setItem('call_record', JSON.stringify(call_record));
+	    	search($(this).val());
 	    }
 	});
+	$(".contents").on("click",".record",function(){
+		search($(this).html());
+	})
+	
+	function search(ss){
+		$(".without").hide();//历史为空
+	    $(".contents_box").hide();//历史记录
+	    $(".contents>ul").show();//搜索结果
+  		var sd= $(".results").find('h3:contains('+ ss +')').closest(".connoisseur_box");
+  		console.log(sd.length);
+  		if(sd.length<1){
+  			alert("没有你要搜索的结果，请重新输入");
+  		}
+  		$(".results").html(sd);
+	}
 })
 </script>
 	</body>

@@ -98,15 +98,15 @@ a {
 }
 
 .headers {
-  height: 2.24rem;
+  height: 1.173rem;
   position: relative;
   background-color: #ffffff;
   box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.36);
 }
-.headers > div:nth-child(1) {
+.headers > a:nth-child(1) {
   padding: 0.16rem 0.4rem;
 }
-.headers > div:nth-child(1) > input {
+.headers > a:nth-child(1) > input {
   width: 9.2rem;
   height: 0.747rem;
   padding: 0 0.16rem;
@@ -153,7 +153,7 @@ a {
      * 内容区
  */
 .contents {
-  top: 2.24rem;
+  top: 1.173rem;
   left: auto;
   bottom: 1.307rem;
   background: #F5F5F5;

@@ -69,5 +69,10 @@
 		"refer": [
 			"home/home.html"
 		]
+	},
+	"child/binding.html": {
+		"refer": [
+			"home/my.html"
+		]
 	}
 }

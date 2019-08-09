@@ -377,8 +377,12 @@ function getMyDate(str,state){
 function getzf(num){
 	return num< 10 ? '0' + num:num;
 }
-
-
+/**
+ * 去重
+ */
+function heavy(heavy){
+	return Array.from(new Set(heavy));
+}
 
 
 

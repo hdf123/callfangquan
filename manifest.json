@@ -236,6 +236,13 @@
 					"home/home.html"
 				],
 				"priority": 0
+			},
+			"child/binding.html": {
+				"resources": [],
+				"refer": [
+					"home/my.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -334,7 +341,6 @@
 				"img/rebate_banner.png",
 				"child/css/MyMessage.css",
 				"icon/iconfont.eot",
-				"child/binding.html",
 				"images/arclist/55.gif",
 				"child/scss/answer.scss",
 				"child/js/experts.js",
@@ -368,7 +374,6 @@
 				"js/annyang.min.js",
 				"child/css/certification.css",
 				"images/arclist/88.gif",
-				"home/my.html",
 				"child/css/chart.css",
 				"child/scss/brand_child.scss",
 				"child/css/My_consulting.css",

@@ -2,11 +2,12 @@
 @import "../../css/base";
 @import "../../css/styles";
 .headers{
-    height:2.24rem;
+    //height:2.24rem;
+    height:1.173rem;
     position:relative;
     background-color: #ffffff;
     box-shadow: 0rem 0rem 0.2rem 0rem rgba(164, 164, 164, 0.36);
-    >div:nth-child(1){
+    >a:nth-child(1){
         padding:0.16rem 0.4rem;
         >input{
             width:9.2rem;
@@ -59,7 +60,7 @@
      * 内容区
  */
 .contents{
-    top:2.24rem;
+    top:1.173rem;
     left:auto;
     bottom:1.307rem;
     background: #F5F5F5;
