@@ -146,6 +146,11 @@ a {
 
 .contents_box {
   padding: 0 0.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .contents_box > div {
   padding: 0.267rem 0;
@@ -159,12 +164,25 @@ a {
 .contents_box > div > i {
   font-size: 0.373rem;
 }
-.contents_box > ul > li {
+
+.record_box {
+  position: absolute;
+  top: 1rem;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0;
+  overflow: auto;
+}
+.record_box > li {
   height: 1.173rem;
   display: flex;
   align-items: center;
   font-size: 0.373rem;
   border-bottom: 1px solid #E5E5E5;
+}
+
+.record_box::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 .without {

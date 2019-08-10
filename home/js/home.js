@@ -31,6 +31,10 @@ $(function(){
         	});
     	},2000);
     }
+    $(".ul1>li").click(function(){
+    	console.log($(this).attr("ind"));
+    	location.href="../child/dynamic.html";
+    })
     /**
      * 热门问题
      */
