@@ -332,6 +332,7 @@ a {
   width: 2.88rem;
   height: 0.853rem;
   color: #ffffff;
+  font-size: 0.373rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,7 +342,7 @@ a {
 }
 .problem_answer > div:nth-child(1) > div > i {
   color: #ffffff;
-  font-size: 0.35rem;
+  font-size: 0.38rem;
 }
 .problem_answer > div:nth-child(2) {
   height: 0.36rem;
