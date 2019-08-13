@@ -139,6 +139,7 @@ a {
   position: absolute;
   top: 135%;
   right: .133rem;
+  box-shadow: 0rem 0.08rem 0.32rem 0rem rgba(0, 0, 0, 0.1);
 }
 .more .triangle {
   width: 0;
@@ -158,6 +159,9 @@ a {
 .more > li > h3 {
   margin-right: 0.15rem;
   font-size: 0.4rem;
+}
+.more > li:last-child {
+  border: none;
 }
 
 .contents {
