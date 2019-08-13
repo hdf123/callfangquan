@@ -91,13 +91,13 @@ $(function(){
 		arr=[];
 	}
 	
-	$(".btn1>input").click(function(){
+	$(".btn1>div").click(function(){
 		results();
 	})
-	$(".btn2>input").click(function(){
+	$(".btn2>div").click(function(){
 		results();
 	})
-	$(".btn3>input").click(function(){
+	$(".btn3>div").click(function(){
 		results();
 	})
 	/**
@@ -153,10 +153,10 @@ $(function(){
 	/**
 	 * 清空筛选选项
 	 */
-	$(".btn4>input:eq(0)").click(function(){
+	$(".btn4>div:eq(0)").click(function(){
 		$(".ch4").find(".act").removeClass("act");
 	})
-	$(".btn4>input:eq(1)").click(function(){
+	$(".btn4>div:eq(1)").click(function(){
 		results();
 	})
 	function results(){

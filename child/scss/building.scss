@@ -201,14 +201,14 @@
     align-items: center;
     justify-content:center;
     border-top:1px solid #eeeeee;
-    >input{
-        width: 9.2rem;
-        height: 0.96rem;
-        background-color: #0099ff;
-        color: #ffffff;
-        font-size: 0.4rem;
-        border:none;
-    }
+//  >input{
+//      width: 9.2rem;
+//      height: 0.96rem;
+//      background-color: #0099ff;
+//      color: #ffffff;
+//      font-size: 0.4rem;
+//      border:none;
+//  }
     >div{
         width: 9.2rem;
         height: 0.96rem;
@@ -224,20 +224,36 @@
     align-items: center;
     justify-content: space-around;
     border-top:1px solid #eeeeee;
-    >input{
+    >div{
         width: 4.467rem;
         height: 0.96rem;
         font-size: 0.4rem;
+        @extend .flexs;
         border-radius: 0.053rem;
     }
-    >input:nth-child(1){
+    >div:nth-child(1){
         color: #999999;
         background:white;
+        border:1px solid #e5e5e5;
     }
-    >input:nth-child(2){
+    >div:nth-child(2){
         color: #ffffff;
         background-color:#0099ff;
     }
+//  >input{
+//      width: 4.467rem;
+//      height: 0.96rem;
+//      font-size: 0.4rem;
+//      border-radius: 0.053rem;
+//  }
+//  >input:nth-child(1){
+//      color: #999999;
+//      background:white;
+//  }
+//  >input:nth-child(2){
+//      color: #ffffff;
+//      background-color:#0099ff;
+//  }
 }
 .conditions{
     >div:nth-child(1){
