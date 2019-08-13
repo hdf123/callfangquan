@@ -291,6 +291,10 @@ a {
 .ch1 > label > .act, .ch2 > label > .act, .ch3 > label > .act {
   color: #0099ff;
 }
+.ch1 > label > input, .ch2 > label > input, .ch3 > label > input {
+  width: 0.373rem;
+  height: 0.373rem;
+}
 
 .btn1, .btn2, .btn3 {
   width: 100%;
