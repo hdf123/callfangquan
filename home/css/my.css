@@ -244,6 +244,3 @@ a {
 .footers > a:nth-child(5) {
   color: #5facfb;
 }
-.footers > a:nth-child(5) > div {
-  color: #5facfb;
-}

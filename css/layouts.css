@@ -46,6 +46,8 @@ body {
   justify-content: center;
   font-size: 0.267rem;
 }
-.footers > a > div {
-  font-size: 0.64rem;
+.footers > a > img {
+  width: 0.533rem;
+  height: 0.533rem;
+  margin-bottom: 0.1rem;
 }
