@@ -300,6 +300,7 @@ a {
   margin: 0 auto;
   display: flex;
   background: white;
+  border-radius: 0 0 0.053rem 0.053rem;
 }
 .questions > div {
   width: 100%;

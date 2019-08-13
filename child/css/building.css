@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .search > a, .choose > div:nth-child(1) > div, .choose > div:nth-child(2) > div, .cond > div > div {
+.flexs, .search > a, .choose > div:nth-child(1) > div, .choose > div:nth-child(2) > div, .btn1 > div, .btn2 > div, .btn3 > div, .cond > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -307,6 +307,13 @@ a {
   color: #ffffff;
   font-size: 0.4rem;
   border: none;
+}
+.btn1 > div, .btn2 > div, .btn3 > div {
+  width: 9.2rem;
+  height: 0.96rem;
+  color: #ffffff;
+  font-size: 0.4rem;
+  background-color: #0099ff;
 }
 
 .btn4 {

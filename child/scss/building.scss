@@ -209,6 +209,14 @@
         font-size: 0.4rem;
         border:none;
     }
+    >div{
+        width: 9.2rem;
+        height: 0.96rem;
+        color: #ffffff;
+        font-size: 0.4rem;
+        @extend .flexs;
+        background-color: #0099ff;
+    }
 }
 .btn4{
     height:1.547rem;
