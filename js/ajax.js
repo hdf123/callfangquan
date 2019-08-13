@@ -386,21 +386,19 @@ function heavy(heavy){
 /**
  * 系统状态栏颜色
  */
-function StatusBar(color){
-	function plusReady() {
-		var type = plus.os.name;
-		if(type == "iOS") {
-			plus.navigator.setStatusBarBackground(color);
-		} else {
-			plus.navigator.setStatusBarBackground(color);
-		}
-	}
-	if(window.plus) {
-		plusReady();
-	} else {
-		document.addEventListener("plusready", plusReady, false);
-	} 
-}
+//function plusReady() {
+//	var type = plus.os.name;
+//	if(type == "iOS") {
+//		plus.navigator.setStatusBarBackground("red");
+//	} else {
+//		plus.navigator.setStatusBarBackground("#666666");
+//	}
+//}
+//if(window.plus) {
+//	plusReady();
+//} else {
+//	document.addEventListener("plusready", plusReady, false);
+//} 
 
 
 

@@ -74,5 +74,20 @@
 		"refer": [
 			"home/my.html"
 		]
+	},
+	"child/withdrawal.html": {
+		"refer": [
+			"home/my.html"
+		]
+	},
+	"child/help.html": {
+		"refer": [
+			"home/my.html"
+		]
+	},
+	"child/CapitalSubsidiary.html": {
+		"refer": [
+			"home/my.html"
+		]
 	}
 }

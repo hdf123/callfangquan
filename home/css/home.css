@@ -190,7 +190,7 @@ a {
 }
 .menu > a > span {
   margin-top: 0.187rem;
-  color: #666666;
+  color: #333333;
   font-size: 0.32rem;
 }
 
@@ -234,6 +234,8 @@ a {
 }
 .ul1 > li > div {
   height: 50%;
+  display: flex;
+  align-items: center;
   font-size: 0.373rem;
 }
 .ul1 > li > div > i {
@@ -263,11 +265,12 @@ a {
   color: #666666;
   font-size: 0.32rem;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .titlek > div > i {
   color: #666666;
-  font-size: 0.35rem;
+  font-size: 0.25rem;
+  margin-top: 0.03rem;
 }
 
 /**
@@ -369,6 +372,7 @@ a {
 }
 .boxb > h3 {
   font-size: 0.48rem;
+  padding-bottom: 0.04rem;
 }
 
 .project_box {
@@ -419,7 +423,8 @@ a {
  */
 .recommended_box > li {
   display: flex;
-  margin-top: 0.52rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.48rem 0 0.347rem 0;
 }
 .recommended_box > li > img {
   width: 2.533rem;

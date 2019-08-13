@@ -243,6 +243,27 @@
 					"home/my.html"
 				],
 				"priority": 0
+			},
+			"child/withdrawal.html": {
+				"resources": [],
+				"refer": [
+					"home/my.html"
+				],
+				"priority": 0
+			},
+			"child/help.html": {
+				"resources": [],
+				"refer": [
+					"home/my.html"
+				],
+				"priority": 0
+			},
+			"child/CapitalSubsidiary.html": {
+				"resources": [],
+				"refer": [
+					"home/my.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -385,7 +406,6 @@
 				"child/js/MyMessage.js",
 				"child/js/upload_video.js",
 				"js/jquery.cookie.js",
-				"child/CapitalSubsidiary.html",
 				"images/arclist/35.gif",
 				"css/swiper-3.4.2.min.css",
 				"child/preview.html",
@@ -500,7 +520,6 @@
 				"images/arclist/34.gif",
 				"child/scss/withdrawal.scss",
 				"child/js/mortgage.js",
-				"child/help.html",
 				"child/css/watchs.css",
 				"images/arclist/13.gif",
 				"child/upload_video.html",
@@ -513,7 +532,6 @@
 				"child/js/hot_video.js",
 				"images/arclist/24.gif",
 				"child/building_information.html",
-				"child/withdrawal.html",
 				"images/arclist/6.gif",
 				"child/js/personal.js",
 				"child/scss/experts.scss",
