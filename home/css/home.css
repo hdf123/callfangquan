@@ -280,6 +280,9 @@ a {
   padding-bottom: 0.533rem;
   border-bottom: 1px solid #E5E5E5;
 }
+.problem_box > li:last-child {
+  border: none;
+}
 
 .problem_head {
   padding: 0.253rem 0 0.36rem 0;
