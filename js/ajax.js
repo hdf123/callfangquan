@@ -383,8 +383,24 @@ function getzf(num){
 function heavy(heavy){
 	return Array.from(new Set(heavy));
 }
-
-
+/**
+ * 系统状态栏颜色
+ */
+function StatusBar(color){
+	function plusReady() {
+		var type = plus.os.name;
+		if(type == "iOS") {
+			plus.navigator.setStatusBarBackground(color);
+		} else {
+			plus.navigator.setStatusBarBackground(color);
+		}
+	}
+	if(window.plus) {
+		plusReady();
+	} else {
+		document.addEventListener("plusready", plusReady, false);
+	} 
+}
 
 
 

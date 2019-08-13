@@ -4,6 +4,7 @@
 .headers{
     padding-top:0.45rem;
     padding-bottom:0.9rem;
+    background-color: #5facfb;
     >div:nth-child(1){
         padding-right:0.4rem;
         display: flex;
@@ -32,7 +33,6 @@
             }
         }
     }
-    background-color: #5facfb;
 }
 .connoisseur{
     display: flex;
