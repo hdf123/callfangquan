@@ -32,7 +32,7 @@ $(function(){
 		fff();
 	})
 	function fff(){
-		$('.experts_tab>li').addClass("act").siblings().removeClass("act");
+		$('.experts_tab>li').eq(inds).addClass("act").siblings().removeClass("act");
 		var mm=8.5+(100/4*inds);
 		$('.experts_tab>div').animate({ 'left': mm + '%' }, 300, function() {
 			if(inds==3){

@@ -1,9 +1,13 @@
 $(function(){
 	var mys=true;
 	if(mys){
-		$(".rights,.experts>.guanzhu").hide();
+//		$(".rights,.experts>.guanzhu").hide();
+		$(".rights").hide();
+		$("..experts>.guanzhu").hide();
 	}else{
-		$(".rights,.experts>.guanzhu").show();
+		$(".rights").show();
+		$("..experts>.guanzhu").show();
+//		$(".rights,.experts>.guanzhu").show();
 	}
 	/**
 	 * 关注
