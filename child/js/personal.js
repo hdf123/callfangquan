@@ -36,7 +36,7 @@ $(function(){
 	$('.experts_tab>li').on('click', function() {
 		$(this).addClass("act").siblings().removeClass("act");
 		var inds=$(this).index();
-		var mm=12.5+(100/3*inds);
+		var mm=14+(100/3*inds);
 		$('.experts_tab>div').animate({ 'left': mm + '%' }, 300, function() {
 			$(".tab_box>ul").eq(inds).show().siblings().hide();
 		});

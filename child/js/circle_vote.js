@@ -3,9 +3,11 @@ $(function(){
 		if($(this).children("i").is(".icon-xiala1")){
 			$(".tensile>p").removeClass("omit");
 			$(this).children("i").removeClass("icon-xiala1").addClass("icon-shangla");
+			$(this).children("span").html("收起");
 		}else{
 			$(".tensile>p").addClass("omit");
 			$(this).children("i").removeClass("icon-shangla").addClass("icon-xiala1");
+			$(this).children("span").html("展开");
 		}
 	})
 	$(".proportion").hide();

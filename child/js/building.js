@@ -159,7 +159,10 @@ $(function(){
 	$(".btn4>div:eq(1)").click(function(){
 		results();
 	})
+	$(".box").hide();
 	function results(){
+		$(".box").show();
+		$('#shclDefault').shCircleLoader();
 		var area=$(".conditions_area>div");//面积
 		var property=$(".conditions_property>div");//物业类型
 		var features=$(".conditions_features>div");//楼盘特色
@@ -177,7 +180,10 @@ $(function(){
 			}
 		}
 		$(".swiper1").css({"display":"none"});
-		
+		setTimeout(function(){
+			$(".box").hide();
+			$('#shclDefault').shCircleLoader('destroy');
+		}, 3000);
 		console.log(arr1);//选择的区域
 		console.log(arr2);//价格
 		console.log(arr3);//户型

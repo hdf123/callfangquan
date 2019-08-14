@@ -117,6 +117,13 @@ $(function(){
 		}
 	})
 	/**
+	 * 关联项目
+	 */
+	$(".associated").click(function(){
+		localStorage.setItem('call_building', JSON.stringify(data[1]));
+		location.href="buildings.html";
+	})
+	/**
 	 * 表情
 	 */
 	 var say = '请输入你的评论...';

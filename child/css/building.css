@@ -162,6 +162,7 @@ a {
 
 .contents {
   width: 10rem !important;
+  padding: 0 0.4rem;
   position: absolute;
   top: 3.066rem;
   left: auto;
@@ -170,7 +171,7 @@ a {
 }
 
 .building_box {
-  padding: 0.48rem 0.4rem 0.2rem 0.4rem;
+  padding: 0.48rem 0 0.2rem 0;
   display: flex;
   border-bottom: 1px solid #E5E5E5;
 }
@@ -196,6 +197,7 @@ a {
 .building_box > div > div:last-child {
   color: #f9351a;
   font-size: 0.373rem;
+  font-weight: 600;
 }
 
 .building_box:last-child {
@@ -367,4 +369,24 @@ a {
   width: calc(100% - 0.4rem);
   margin: 0.093rem auto 0;
   border-bottom: 1px solid #eeeeee;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box #shclDefault {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.box #shclDefault > div > div {
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }

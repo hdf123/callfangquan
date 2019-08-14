@@ -154,6 +154,9 @@ a {
 .tensile > div > i {
   color: #5facfb;
 }
+.tensile > div span {
+  color: #5facfb;
+}
 
 .identity {
   display: flex;

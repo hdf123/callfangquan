@@ -125,7 +125,7 @@ a {
 .more {
   padding: 0 0.2rem;
   position: absolute;
-  top: 2.24rem;
+  top: 1.173rem;
   left: 0;
   display: flex;
   flex-wrap: wrap;
@@ -182,12 +182,18 @@ a {
   border: solid 0.027rem #fba447;
 }
 .connoisseur_box > div:nth-child(1) > .Care_about > i {
+  display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
+  margin-bottom: 0.05rem;
 }
 .connoisseur_box > div:nth-child(1) .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
+}
+.connoisseur_box > div:nth-child(1) .cancel > i {
+  color: #8a8a8a;
+  font-size: 0.45rem;
 }
 
 .connoisseur {
@@ -289,7 +295,7 @@ a {
   height: 0.59rem;
   color: #cccccc;
   font-size: 0.45rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
   right: 0;

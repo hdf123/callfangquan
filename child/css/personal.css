@@ -126,7 +126,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.173rem 0.4rem;
+  padding: 0.44rem 0.4rem 0.413rem 0.4rem;
   background: white;
 }
 .experts > div:nth-child(2) {
@@ -185,7 +185,7 @@ a {
   display: flex;
   background: white;
   position: relative;
-  box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5, 0rem -0.013rem 0rem 0rem #e5e5e5;
+  box-shadow: 0rem 1px 0rem 0rem #e5e5e5, 0rem -1px 0rem 0rem #e5e5e5;
 }
 .experts_tab > li {
   width: 100%;
@@ -195,10 +195,10 @@ a {
 }
 .experts_tab > div {
   position: absolute;
-  left: 12.5%;
+  left: 14%;
   bottom: 0.16rem;
   display: inline-block;
-  width: 8%;
+  width: 5%;
   border-bottom: 0.053rem solid #5facfb;
 }
 .experts_tab > .act {

@@ -32,7 +32,7 @@ $(function(){
 			$(this).closest(".connoisseur_box").find(".recommended_box").remove();
 		}else{
 			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html(`√已关注`);
+			$(this).html(`<i class="iconfont icon-duihao"></i>已关注`);
 			$(this).closest(".connoisseur_box").children("div:eq(0)").after(`<div class="recommended_box">
 						<p>相关推荐</p>
 						<ul class="recommended">
