@@ -89,9 +89,14 @@ $(function(){
 			$(this).removeClass("icon-zan2").addClass("icon-dianzan");
 		}
 	})
-	$(".btn>h3").click(function(){
-		console.log($("#form_article").html());
-	})
+	$('#form_article').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	　　	//keycode是键码，13也是电脑物理键盘的 enter
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	console.log($("#form_article").html());
+	    }
+	});
 	//关注更多
 	$('.more_box').click(function(){
 		$(this).hide();

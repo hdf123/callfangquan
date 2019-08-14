@@ -185,7 +185,8 @@ a {
   display: flex;
   background: white;
   position: relative;
-  box-shadow: 0rem 1px 0rem 0rem #e5e5e5, 0rem -1px 0rem 0rem #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 .experts_tab > li {
   width: 100%;
