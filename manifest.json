@@ -264,6 +264,13 @@
 					"home/my.html"
 				],
 				"priority": 0
+			},
+			"child/buildings.html": {
+				"resources": [],
+				"refer": [
+					"child/building.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -582,7 +589,6 @@
 				"icon/demo_index.html",
 				"img/answer.png",
 				"img/menu_preferential.png",
-				"child/buildings.html",
 				"images/arclist/51.gif",
 				"child/js/surrounding.js",
 				"images/arclist/58.gif",
@@ -623,7 +629,6 @@
 				"child/scss/circle_vote.scss",
 				"img/cardb.png",
 				"images/del_2.png",
-				"child/building.html",
 				"child/scss/watchs.scss",
 				"images/arclist/1.gif",
 				"images/arclist/29.gif",

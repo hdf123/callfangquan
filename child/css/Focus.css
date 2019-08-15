@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 0, 0, 0.5);
 }
 
 input {
@@ -153,23 +153,28 @@ a {
   font-size: 0.32rem;
 }
 .lists > div:nth-child(2) {
+  font-size: 0.293rem;
   padding: 0.1rem 0.2rem;
   border-radius: 0.053rem;
-}
-.lists > div:nth-child(2) > i {
-  color: #fba447;
 }
 .lists .Care_about {
   color: #fba447;
   border: solid 0.027rem #fba447;
+  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
 }
 .lists .Care_about > i {
+  display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
+  margin-bottom: 0.05rem;
 }
 .lists .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
+}
+.lists .cancel > i {
+  color: #d0d0d0;
+  font-size: 0.45rem;
 }
 
 .record {

@@ -89,5 +89,10 @@
 		"refer": [
 			"home/my.html"
 		]
+	},
+	"child/buildings.html": {
+		"refer": [
+			"child/building.html"
+		]
 	}
 }

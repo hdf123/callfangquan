@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 0, 0, 0.5);
 }
 
 input {
@@ -147,6 +147,7 @@ a {
   width: 10%;
   height: 0.5rem;
   font-size: 0.6rem;
+  padding-top: 0.1rem;
   -webkit-transition: transform .25s linear;
   -moz-transition: transform .25s linear;
   -o-transition: transform .25s linear;

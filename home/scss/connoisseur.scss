@@ -86,6 +86,7 @@
         }
         >.Care_about{
             color: #fba447;
+            padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
             border: solid 0.027rem #fba447;
             >i{
                 display:inline-block;
@@ -98,7 +99,7 @@
             color:#999999;
             border: solid 0.027rem #e5e5e5;
             >i{
-                color:#8a8a8a;
+                color:rgba(208,208,208,1);
                 font-size:0.45rem;
             }
         }

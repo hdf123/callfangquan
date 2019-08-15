@@ -55,23 +55,28 @@
         }
     }
     >div:nth-child(2){
+        font-size: 0.293rem;
         padding:0.1rem 0.2rem;
         border-radius: 0.053rem;
-        >i{
-            color: #fba447;
-        }
     }
     .Care_about{
         color: #fba447;
         border: solid 0.027rem #fba447;
+        padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
         >i{
+            display:inline-block;
             color: #fba447;
             font-size:0.45rem;
+            margin-bottom:0.05rem;
         }
     }
     .cancel{//已关注
         color:#999999;
         border: solid 0.027rem #e5e5e5;
+        >i{
+            color:rgba(208,208,208,1);
+            font-size:0.45rem;
+        }
     }
 }
 .record{

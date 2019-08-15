@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 0, 0, 0.5);
 }
 
 input {
@@ -209,7 +209,7 @@ a {
 .tab_box {
   width: 10rem;
   position: absolute;
-  top: 3.5rem;
+  top: 3.82rem;
   left: auto;
   bottom: 0;
 }

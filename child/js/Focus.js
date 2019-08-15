@@ -7,10 +7,10 @@ $(function(){
 	$(".contents").on("click",".guanzhu",function(){
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
-			$(this).html(`<i class="iconfont">&#xe609;</i>关注`);
+			$(this).html(`<i class="iconfont icon-jia"></i>关注`);
 		}else{
 			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html(`√已关注`);
+			$(this).html(`<i class="iconfont icon-duihao"></i>已关注`);
 		}
 	})
 	/**

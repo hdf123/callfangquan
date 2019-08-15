@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 238, 238, 0.5);
+  background: rgba(238, 0, 0, 0.5);
 }
 
 input {
@@ -181,6 +181,7 @@ a {
 }
 .connoisseur_box > div:nth-child(1) > .Care_about {
   color: #fba447;
+  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
   border: solid 0.027rem #fba447;
 }
 .connoisseur_box > div:nth-child(1) > .Care_about > i {
@@ -194,7 +195,7 @@ a {
   border: solid 0.027rem #e5e5e5;
 }
 .connoisseur_box > div:nth-child(1) .cancel > i {
-  color: #8a8a8a;
+  color: #d0d0d0;
   font-size: 0.45rem;
 }
 
