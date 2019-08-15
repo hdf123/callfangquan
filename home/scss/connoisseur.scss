@@ -20,9 +20,11 @@
 }
 .swiper1{
     .swiper-slide{
+        width:auto!important;
         height: 1.173rem;
         @extend .flexs;
         @extend .yincang;
+        padding:0 0.28rem;
         font-size: 0.4rem;
     }
     .act{

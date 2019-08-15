@@ -108,6 +108,8 @@ a {
   justify-content: flex-end;
 }
 .headers > div:nth-child(1) > img {
+  width: 0.427rem;
+  height: 0.427rem;
   background-color: rgba(0, 0, 0, 0);
 }
 .headers > div:nth-child(2) {
@@ -187,6 +189,7 @@ a {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
 }
 .menu_title > a > p {
   margin-top: 0.147rem;
@@ -213,7 +216,7 @@ a {
 }
 .menu > a > img {
   width: 0.533rem;
-  height: 0.533rem;
+  background-color: rgba(0, 0, 0, 0);
 }
 .menu > a > div {
   width: 100%;

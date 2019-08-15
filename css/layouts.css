@@ -49,5 +49,6 @@ body {
 .footers > a > img {
   width: 0.533rem;
   height: 0.533rem;
+  background-color: rgba(0, 0, 0, 0);
   margin-bottom: 0.1rem;
 }

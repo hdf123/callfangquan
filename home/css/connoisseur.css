@@ -115,7 +115,9 @@ a {
 }
 
 .swiper1 .swiper-slide {
+  width: auto !important;
   height: 1.173rem;
+  padding: 0 0.28rem;
   font-size: 0.4rem;
 }
 .swiper1 .act {
