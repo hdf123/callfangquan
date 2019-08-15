@@ -1,6 +1,7 @@
 $(function(){
 //选项卡切换
 	$('.mortgage_tab>li').on('click', function() {
+		$(this).addClass("act").siblings().removeClass("act");
 		var index = $(this).index();
 		var mm=12.5+(100/3*index);
 		$('.mortgage_tab>div').animate({ 'left': mm + '%' }, 300, function() {

@@ -136,6 +136,7 @@ a {
 }
 .headers > div:nth-child(2) > div:nth-child(1) {
   font-size: 0.907rem;
+  font-weight: 600;
 }
 .headers > div:nth-child(2) > div:nth-child(2) {
   font-size: 0.373rem;

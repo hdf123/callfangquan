@@ -22,7 +22,7 @@
     left:auto;
     bottom:0;
     background:#f5f5f5;
-    >div{
+    >div:nth-child(1){
         background: white;
     }
 }
@@ -60,25 +60,20 @@
     }
 }
 .btns{
-    display: block;
     width: 9.2rem;
     height: 1.173rem;
     color: #ffffff;
     font-size: 0.4rem;
+    @extend .flexs;
     border-radius: 0.053rem;
     margin:0.907rem auto 0;
     background-color: #5facfb;
 }
 
 
-
-
-
-
-
-
-
-
+/**
+     * 弹窗
+ */
 .screen{
     position: fixed;
     top:0;

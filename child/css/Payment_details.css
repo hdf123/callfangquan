@@ -131,6 +131,7 @@ a {
 .contents > div:nth-child(1) .money {
   color: #ffffff;
   font-size: 0.907rem;
+  font-weight: 600;
   text-align: center;
   padding: 0.373rem 0 0.96rem 0;
 }

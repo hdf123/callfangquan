@@ -154,8 +154,8 @@
         border-radius: 0.44rem;
         border:1px solid #e5e5e5;
         @extend .flexs;
-        >i{
-            font-size:0.45rem;
+        img{
+            width:0.45rem;
         }
         >span{
             color: #666666;
@@ -163,12 +163,6 @@
             margin-left:0.1rem;
         }
     }
-}
-.icon-dianzan{
-    color:#8a8a8a;
-}
-.icon-zan2{
-    color:#f9351a;
 }
 /**
      * 关联项目

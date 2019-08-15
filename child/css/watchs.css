@@ -253,21 +253,13 @@ a {
   border-radius: 0.44rem;
   border: 1px solid #e5e5e5;
 }
-.heat > li > i {
-  font-size: 0.45rem;
+.heat > li img {
+  width: 0.45rem;
 }
 .heat > li > span {
   color: #666666;
   font-size: 0.32rem;
   margin-left: 0.1rem;
-}
-
-.icon-dianzan {
-  color: #8a8a8a;
-}
-
-.icon-zan2 {
-  color: #f9351a;
 }
 
 /**

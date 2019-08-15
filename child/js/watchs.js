@@ -38,16 +38,16 @@ $(function(){
 	/**
 	 * 热度
 	 */
+	var state=true;
 	$(".heat>li:eq(0)").click(function(){
-		console.log($(this).index());
-		if($(this).children("i").is(".icon-dianzan")){
-			$(this).children("i").removeClass("icon-dianzan");
-			$(this).children("i").addClass("icon-zan2");
+		if(state){
+			state=false;
+			$(this).children("img").attr("src","../img/praise_b.png");
 			var mun=Number($(this).children("span").text())+1;
 			$(this).children("span").text(mun);
 		}else{
-			$(this).children("i").removeClass("icon-zan2");
-			$(this).children("i").addClass("icon-dianzan");
+			state=true;
+			$(this).children("img").attr("src","../img/praise_a.png");
 			var mun=Number($(this).children("span").text())-1;
 			$(this).children("span").text(mun);
 		}

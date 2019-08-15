@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, form > div:nth-child(1) > div:nth-child(1) > p, form > div:nth-child(1) > div:nth-child(1) > i, form > div:nth-child(1) > .validation {
+.flexs, .headers .lefts, .headers .centers, .contents > div, form > div:nth-child(1) > div:nth-child(1) > p, form > div:nth-child(1) > div:nth-child(1) > i, form > div:nth-child(1) > .validation {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,6 +124,15 @@ a {
   width: 9.2rem;
   height: 1.173rem;
   border: none;
+  color: #ffffff;
+  font-size: 0.4rem;
+  margin: 0.92rem auto 0;
+  background-color: #5facfb;
+  border-radius: 0.053rem;
+}
+.contents > div {
+  width: 9.2rem;
+  height: 1.173rem;
   color: #ffffff;
   font-size: 0.4rem;
   margin: 0.92rem auto 0;

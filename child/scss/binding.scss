@@ -33,6 +33,16 @@
         background-color: #5facfb;
         border-radius: 0.053rem;
     }
+    >div{
+        width: 9.2rem;
+        height: 1.173rem;
+        color: #ffffff;
+        font-size: 0.4rem;
+        @extend .flexs;
+        margin:0.92rem auto 0;
+        background-color: #5facfb;
+        border-radius: 0.053rem;
+    }
     >.disableds{
         pointer-events:none;
         background-color: #C8DFF7;

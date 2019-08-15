@@ -160,6 +160,11 @@ a {
   margin-right: 0.15rem;
   font-size: 0.45rem;
 }
+.more > li img {
+  width: 0.45rem;
+  margin-right: 0.15rem;
+  background-color: rgba(0, 0, 0, 0);
+}
 .more > li:last-child {
   border: none;
 }
