@@ -123,6 +123,7 @@
 }
 .ul1{
     height:100%; 
+    padding-top:0.1rem;
     >li{
        height:100%; 
        >div{
@@ -171,6 +172,7 @@
  */
 .problem_box{
     >li{
+        padding-top:0.28rem;
         padding-bottom:0.533rem;
         border-bottom:1px solid #E5E5E5;
     }

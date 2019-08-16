@@ -228,6 +228,7 @@ a {
 
 .ul1 {
   height: 100%;
+  padding-top: 0.1rem;
 }
 .ul1 > li {
   height: 100%;
@@ -277,6 +278,7 @@ a {
      * 热门问题
  */
 .problem_box > li {
+  padding-top: 0.28rem;
   padding-bottom: 0.533rem;
   border-bottom: 1px solid #E5E5E5;
 }
