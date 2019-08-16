@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import "../../css/base";
+.headers{
+    height: 1.173rem;
+    background-color: #ffffff;
+    border-bottom:1px solid rgba(199,199,199,0.2);
+    box-shadow: 0rem 0.013rem 0rem 0rem #e5e5e5;
+    .lefts{
+        height:100%;
+        padding:0 0.4rem;
+        font-size: 0.373rem;
+        @extend .flexs;
+    }
+    .centers{
+        height:100%;
+        @extend .flexs;
+        font-size: 0.48rem;
+    }
+}
+.contents{
+    top:1.173rem;
+    left:auto;
+    bottom:0;
+}
+.questions{
+    padding:0 0.48rem;
+    >div:nth-child(1){
+        display: flex;
+        padding:0.413rem 0 0.32rem 0;
+        >img{
+            width: 1.067rem;
+            height: 1.067rem;
+            border-radius:50%;
+        }
+        >div{
+            margin-left:0.32rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            >div{
+                font-size: 0.4rem;
+            }
+            >p{
+                >span{
+                    color: #999999;
+                    font-size: 0.293rem;
+                }
+                >span:nth-child(2){
+                    margin-left:0.213rem;
+                }
+            }
+        }
+    }
+    >div:nth-child(2){
+        font-size: 0.373rem;
+    }
+    >p{
+        padding:0.293rem 0;
+        >span{
+            color: #999999;
+            font-size: 0.293rem;
+        }
+    }
+}
+.answer{
+    padding:0 0.48rem;
+    >div:nth-child(1){
+        display: flex;
+        align-items: center;
+        padding:0.254rem 0 0 0;
+        >img{
+            width: 0.853rem;
+            height: 0.853rem;
+            border-radius:50%;
+        }
+        >p{
+            margin-left:0.267rem;
+            font-size: 0.373rem;
+        }
+    }
+    >div:nth-child(2){
+        font-size: 0.373rem;
+        padding:0.3rem 0;
+        
+    }
+    >p{
+        >span{
+            color: #999999;
+            font-size: 0.293rem;
+        }
+        >span:nth-child(2){
+            margin-left:0.413rem;
+        }
+    }
+}
+.btn{
+    width: 9.2rem;
+    height: 1.173rem;
+    color: #ffffff;
+    font-size: 0.4rem;
+    margin:0.654rem auto;
+    @extend .flexs;
+    background-color: #5facfb;
+    border-radius: 0.053rem;
+}

@@ -41,6 +41,9 @@ $(function(){
     $(".hot>div").click(function(){
     	location.href="../child/HotIssue.html";
     })
+    $(".problem_box").on("click",".views",function(){
+    	location.href="../child/details.html";
+    })
 	//地产动态
     $(".provide_box").on("click",".lists",function(){
     	var ind=$(this).attr("ind");

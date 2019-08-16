@@ -1,4 +1,7 @@
 $(function(){
+	$(".problem_box").on("click",".views",function(){
+		location.href="details.html";
+	})
 	/**
 	 * 上拉加载
 	 */

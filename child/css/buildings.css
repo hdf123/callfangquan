@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0.2);
 }
 
 input {
@@ -477,10 +477,10 @@ a {
   width: 9.2rem;
   height: 1.067rem;
   margin: 0 auto;
-  color: #0099ff;
+  color: #5facfb;
   font-size: 0.373rem;
   border-radius: 0.053rem;
-  background-color: rgba(0, 153, 255, 0.3);
+  background-color: #f2f8ff;
 }
 
 .review_title {
@@ -645,3 +645,5 @@ a {
   background: url(../../img/bubbles.png) no-repeat;
   background-size: 100% 100%;
 }
+
+/*# sourceMappingURL=buildings.css.map */
