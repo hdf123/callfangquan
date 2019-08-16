@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0.2);
 }
 
 input {
@@ -104,7 +104,6 @@ a {
   text-align: center;
   line-height: 1.173rem;
   border-bottom: 1px solid #dddddd;
-  /*no*/
 }
 
 .contents {
@@ -121,7 +120,6 @@ a {
 .contents > ul > li {
   padding-right: 0.4rem;
   border-bottom: 1px solid #e5e5e5;
-  /*no*/
 }
 .contents > ul > li > img {
   width: 9.2rem;
@@ -198,3 +196,5 @@ a {
 .footers > a:nth-child(3) {
   color: #5facfb;
 }
+
+/*# sourceMappingURL=preferential.css.map */

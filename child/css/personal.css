@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0.2);
 }
 
 input {
@@ -277,15 +277,22 @@ a {
 }
 .Focus > li .Care_about, .fans > li .Care_about {
   color: #fba447;
+  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
   border: solid 0.027rem #fba447;
 }
 .Focus > li .Care_about > i, .fans > li .Care_about > i {
+  display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
+  margin-bottom: 0.05rem;
 }
 .Focus > li .cancel, .fans > li .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
+}
+.Focus > li .cancel > i, .fans > li .cancel > i {
+  color: #d0d0d0;
+  font-size: 0.45rem;
 }
 .Focus > li > div:nth-child(2), .fans > li > div:nth-child(2) {
   padding: 0.1rem 0.2rem;
@@ -296,3 +303,5 @@ a {
   color: #999999;
   font-size: 0.4rem;
 }
+
+/*# sourceMappingURL=personal.css.map */

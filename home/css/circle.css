@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0.2);
 }
 
 input {
@@ -233,3 +233,5 @@ a {
 .footers > a:nth-child(4) {
   color: #5facfb;
 }
+
+/*# sourceMappingURL=circle.css.map */

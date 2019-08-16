@@ -2,12 +2,13 @@
 @import "../../css/base";
 @import "../../css/styles";
 .headers{
+    
     height: 1.173rem;
     background-color: #ffffff;
     font-size: 0.48rem;
     text-align:center;
     line-height:1.173rem;
-    border-bottom:1px solid #dddddd;/*no*/
+    border-bottom:1px solid #dddddd;
 }
 .contents{
     padding-left:0.4rem;
@@ -20,7 +21,7 @@
         overflow:auto;
         >li{
             padding-right:0.4rem;
-            border-bottom:1px solid #e5e5e5;/*no*/
+            border-bottom:1px solid #e5e5e5;
             >img{
                 width: 9.2rem;
                 height: 4.347rem;
