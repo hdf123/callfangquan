@@ -13,12 +13,6 @@ $(function(){
     	observeParents:true,//修改swiper的父元素时，自动初始化swiper
 	})
 	/**
-	 * 搜索
-	 */
-	$(".search").click(function(){
-		location.href="../child/search.html";
-	})
-	/**
 	 * 滚动通知
 	 */
     var num=$(".ul1").find("li").length;
@@ -62,6 +56,14 @@ $(function(){
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
 	var LoadingDataFn = function(){
+		$(".loading_box").show();
+    	$(".loading_box").show(10,function(){
+    		$('.loadings').shCircleLoader();
+    	});
+		setTimeout(function(){//假设请求成功后取消loading动画
+			$(".loading_box").hide();
+			$('.loadings').shCircleLoader('destroy');
+		}, 1000);
 		console.log(data);
 	    var dom = '';
 	    for (i in data) {

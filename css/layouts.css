@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   margin: 0 auto;
 }
@@ -44,6 +45,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #8D8D8D;
   font-size: 0.267rem;
 }
 .footers > a > img {
@@ -52,3 +54,28 @@ body {
   background-color: rgba(0, 0, 0, 0);
   margin-bottom: 0.1rem;
 }
+
+/**
+     * 加载动画
+ */
+.loading_box {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading_box .loadings {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.loading_box .loadings > div > div {
+  background-color: white !important;
+}
+
+/*# sourceMappingURL=layouts.css.map */

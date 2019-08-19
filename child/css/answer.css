@@ -117,8 +117,12 @@ a {
   top: 1.173rem;
   left: auto;
   bottom: 0;
+  overflow: visible !important;
 }
 .contents > ul {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   padding-left: 0.48rem;
 }
 .contents > ul > li {
