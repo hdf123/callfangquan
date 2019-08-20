@@ -214,24 +214,10 @@
 .box{
     height: 1.1rem;
     overflow: hidden;
-    >.ul1{
-        height:100%; 
-        >li{
-           height:100%; 
-           padding:0 0.1rem 0 0.32rem;
-           font-size: 0.373rem;
-        }
-        >.yincangs{
-            @extend .yincangs;
-        }
-        >.flexk{
-            display: flex;
-            align-items: center;
-        }
-    }
 }
 .ul1{
     height:100%; 
+    padding-top:0.1rem;
     >li{
        height:100%; 
        padding:0 0.1rem 0 0.32rem;

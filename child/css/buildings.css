@@ -52,7 +52,7 @@ a {
 }
 
 /*多行隐藏*/
-.yincangs, .box > .ul1 > .yincangs, .ul1 > .yincangs {
+.yincangs, .ul1 > .yincangs {
   overflow: hidden;
   /*超出隐藏*/
   display: -webkit-box;
@@ -308,21 +308,10 @@ a {
   height: 1.1rem;
   overflow: hidden;
 }
-.box > .ul1 {
-  height: 100%;
-}
-.box > .ul1 > li {
-  height: 100%;
-  padding: 0 0.1rem 0 0.32rem;
-  font-size: 0.373rem;
-}
-.box > .ul1 > .flexk {
-  display: flex;
-  align-items: center;
-}
 
 .ul1 {
   height: 100%;
+  padding-top: 0.1rem;
 }
 .ul1 > li {
   height: 100%;

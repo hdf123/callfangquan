@@ -1,5 +1,10 @@
 $(function(){
-	$(".live_box,.list").click(function(){
+	//直播
+	$(".live_box").click(function(){
 		location.href="play.html";
+	})
+	//视频播放
+	$(".list").click(function(){
+		location.href="plays.html";
 	})
 })
