@@ -180,15 +180,22 @@ a {
 }
 .experts > .Care_about {
   color: #fba447;
+  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
   border: solid 0.027rem #fba447;
 }
 .experts > .Care_about > i {
+  display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
+  margin-bottom: 0.05rem;
 }
 .experts .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
+}
+.experts .cancel > i {
+  color: #d0d0d0;
+  font-size: 0.45rem;
 }
 
 .connoisseur {

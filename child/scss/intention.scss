@@ -55,14 +55,12 @@ form{
     }
 }
 .btn{
-    display: block;
     width: 9.2rem;
     height: 1.173rem;
-    border:none;
-    outline:none;
     margin:0.92rem auto 0;
     color: #ffffff;
     font-size: 0.4rem;
+    @extend .flexs;
     background-color: #5facfb;
     border-radius: 0.053rem;
 }

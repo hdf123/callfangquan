@@ -453,7 +453,8 @@ a {
   white-space: nowrap;
 }
 .distance_box > li > div:nth-child(1) > div > div:nth-child(2) {
-  color: #999999;
+  color: red;
+  font-size: 0.373rem;
 }
 .distance_box > li > div:nth-child(2) {
   color: #999999;

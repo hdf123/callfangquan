@@ -24,12 +24,11 @@
     bottom:0;
     background-color: rgba(245,245,245,1);
     .btn{
-        display: block;
         width: 9.2rem;
         height: 1.173rem;
-        border:none;
         color: #ffffff;
         font-size: 0.4rem;
+        @extend .flexs;
         margin:0.92rem auto 0;
         background-color: #5facfb;
         border-radius: 0.053rem;
