@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i, .tensile > div, .identity > div:nth-child(2), .vote_box > div:nth-child(2) > div, .footers > div {
+.flexs, .tensile > div, .identity > div:nth-child(2), .vote_box > div:nth-child(2) > div, .footers > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,13 +103,22 @@ a {
   justify-content: space-between;
   padding-right: 0.2rem;
 }
-.headers > i {
+.headers > a {
   width: 1rem;
   height: 100%;
-  color: #202020;
+  position: relative;
 }
-.headers > i:nth-child(2) {
-  font-size: 0.52rem;
+.headers > a > img {
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.headers > a:nth-child(2) > img {
+  width: 50%;
 }
 
 .contents {
@@ -153,9 +162,12 @@ a {
 }
 .tensile > div > i {
   color: #5facfb;
+  font-size: 0.4rem;
+  padding-top: 0.1rem;
 }
 .tensile > div span {
   color: #5facfb;
+  font-size: 0.32rem;
 }
 
 .identity {
@@ -316,24 +328,25 @@ a {
   align-items: center;
 }
 .reaction > div:nth-child(1) {
-  padding: 0 0.1rem;
   color: #999999;
   font-size: 0.293rem;
 }
 .reaction > div:nth-child(2) {
   color: #999999;
   font-size: 0.293rem;
+  margin: 0 0.2rem;
 }
-.reaction > div:nth-child(3) > i {
-  padding: 0 0.1rem;
-  font-size: .4rem;
+.reaction > div:nth-child(3) {
+  display: flex;
+  align-items: center;
 }
-.reaction > div:nth-child(3) > .icon-zan2 {
-  color: #F9351A;
+.reaction > div:nth-child(3) > img {
+  width: 0.4rem;
 }
 .reaction > div:nth-child(3) > span {
   color: #999999;
   font-size: 0.32rem;
+  margin-left: 0.1rem;
 }
 
 .discuss_content {

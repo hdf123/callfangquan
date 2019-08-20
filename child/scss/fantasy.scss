@@ -6,14 +6,24 @@
     display: flex;
     justify-content: space-between;
     padding-right:0.2rem;
-    >i{
+    >a{
         width:1rem;
         height:100%;
-        color:rgba(32,32,32,1);
-        @extend .flexs;
+        position: relative;
+        >img{
+            width:30%;
+            position:absolute;
+            left: 0; 
+            top: 0; 
+            right: 0; 
+            bottom: 0;
+            margin:auto;
+        }
     }
-    >i:nth-child(2){
-        font-size:0.52rem;
+    >a:nth-child(2){
+        >img{
+            width:50%;
+        }
     }
 }
 .contents{

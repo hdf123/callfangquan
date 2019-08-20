@@ -91,7 +91,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i, .identity > div:nth-child(2), .footers > div {
+.flexs, .identity > div:nth-child(2), .footers > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,13 +103,22 @@ a {
   justify-content: space-between;
   padding-right: 0.2rem;
 }
-.headers > i {
+.headers > a {
   width: 1rem;
   height: 100%;
-  color: #202020;
+  position: relative;
 }
-.headers > i:nth-child(2) {
-  font-size: 0.52rem;
+.headers > a > img {
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.headers > a:nth-child(2) > img {
+  width: 50%;
 }
 
 .contents {

@@ -57,13 +57,16 @@ $(function(){
 		names=$(this).closest(".discuss").attr("nam");
 		$(".inp").attr("placeholder","回复"+names+"~");
 	})
-	
+	//点赞
+	var state=false;
 	$(".contents").on("click",".praise",function(){
-		if($(this).children("i").is(".icon-dianzan")){
-			$(this).children("i").removeClass("icon-dianzan").addClass("icon-zan2");
+		if(!state){
+			state=true;
+			$(this).children("img").attr("src","../img/ab.png");
 			$(this).children("span").text(Number($(this).children("span").text())+1)
 		}else{
-			$(this).children("i").removeClass("icon-zan2").addClass("icon-dianzan");
+			state=false;
+			$(this).children("img").attr("src","../img/aa.png");
 			$(this).children("span").text(Number($(this).children("span").text())-1)
 		}
 	})
