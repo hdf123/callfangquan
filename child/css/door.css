@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -222,3 +222,5 @@ a {
   font-size: 0.373rem;
   margin-top: 0.15rem;
 }
+
+/*# sourceMappingURL=door.css.map */

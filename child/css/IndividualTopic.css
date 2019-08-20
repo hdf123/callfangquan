@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -244,3 +244,5 @@ a {
   height: 1.813rem;
   border-radius: 0.053rem;
 }
+
+/*# sourceMappingURL=IndividualTopic.css.map */

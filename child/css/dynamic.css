@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -152,3 +152,5 @@ a {
   margin: 0.6rem 0 1.587rem 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/*# sourceMappingURL=dynamic.css.map */

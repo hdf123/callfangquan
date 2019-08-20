@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -200,3 +200,5 @@ a {
 .money_conts > li > div:nth-child(1) {
   width: 10%;
 }
+
+/*# sourceMappingURL=Payment_details.css.map */

@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -231,3 +231,5 @@ a {
   font-size: 0.293rem;
   padding: 0.2rem 0;
 }
+
+/*# sourceMappingURL=cafe.css.map */

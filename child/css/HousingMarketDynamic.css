@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -146,3 +146,5 @@ a {
   width: 2.88rem;
   height: 2.133rem;
 }
+
+/*# sourceMappingURL=HousingMarketDynamic.css.map */

@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -387,3 +387,5 @@ a {
   height: 100%;
   font-size: 0.373rem;
 }
+
+/*# sourceMappingURL=circle_vote.css.map */

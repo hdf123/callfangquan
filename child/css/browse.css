@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -185,3 +185,5 @@ a {
 .answer_box > div:nth-child(3) > div:nth-child(2) {
   margin-left: 0.413rem;
 }
+
+/*# sourceMappingURL=browse.css.map */

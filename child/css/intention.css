@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -161,3 +161,5 @@ form > div > div:last-child {
   background-color: #5facfb;
   border-radius: 0.053rem;
 }
+
+/*# sourceMappingURL=intention.css.map */

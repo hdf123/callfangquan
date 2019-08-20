@@ -13,7 +13,7 @@
 
 img {
   display: block;
-  background: rgba(238, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0);
 }
 
 input {
@@ -165,3 +165,5 @@ a {
   text-align: center;
   margin-top: 0.36rem;
 }
+
+/*# sourceMappingURL=collection.css.map */
