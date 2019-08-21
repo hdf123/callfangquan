@@ -243,17 +243,17 @@
         font-size: 0.293rem;
         margin:0 0.2rem;
     }
-    >div:nth-child(3){
-        display: flex;
-        align-items: center;
-        >img{
-            width:0.4rem;
-        }
-        >span{
-            color: #999999;
-            font-size: 0.32rem; 
-            margin-left:0.1rem;
-        }
+}
+.praise{
+    display: flex;
+    align-items: center;
+    >img{
+        width:0.4rem;
+    }
+    >span{
+        color: #999999;
+        font-size: 0.32rem; 
+        margin-left:0.1rem;
     }
 }
 .discuss_content{

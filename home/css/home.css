@@ -4,6 +4,7 @@
   padding: 0;
   color: #333333;
   list-style: none;
+  font-family: helvetica;
   /*把此元素放置在父元素的中部。*/
   vertical-align: middle;
   box-sizing: border-box;
@@ -13,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(255, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 input {

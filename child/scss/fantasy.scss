@@ -140,26 +140,25 @@
         align-items: center;
     }
     >div:nth-child(1){
-        padding:0 0.1rem;
         color: #999999;
         font-size: 0.293rem;
     }
     >div:nth-child(2){
         color: #999999;
         font-size: 0.293rem;
+        margin:0 0.2rem;
     }
-    >div:nth-child(3){
-        >i{
-            padding:0 0.1rem;
-            font-size:.4rem;
-        }
-        >.icon-zan2{
-            color:#F9351A;
-        }
-        >span{
-           color: #999999;
-            font-size: 0.32rem; 
-        }
+}
+.praise{
+    display: flex;
+    align-items: center;
+    >img{
+        width:0.4rem;
+    }
+    >span{
+        color: #999999;
+        font-size: 0.32rem; 
+        margin-left:0.1rem;
     }
 }
 .discuss_content{

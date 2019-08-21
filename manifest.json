@@ -271,6 +271,13 @@
 					"child/building.html"
 				],
 				"priority": 0
+			},
+			"child/alias.html": {
+				"resources": [],
+				"refer": [
+					"home/my.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -397,7 +404,6 @@
 				"child/scss/surrounding.scss",
 				"img/choose_b.png",
 				"images/arclist/69.gif",
-				"child/alias.html",
 				"child/scss/CapitalSubsidiary.scss",
 				"js/annyang.min.js",
 				"child/css/certification.css",

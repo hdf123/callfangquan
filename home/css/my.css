@@ -4,6 +4,7 @@
   padding: 0;
   color: #333333;
   list-style: none;
+  font-family: helvetica;
   /*把此元素放置在父元素的中部。*/
   vertical-align: middle;
   box-sizing: border-box;
@@ -13,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(255, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 input {
@@ -102,12 +103,12 @@ a {
   padding-bottom: 0.9rem;
   background-color: #5facfb;
 }
-.headers > div:nth-child(1) {
+.headers > a:nth-child(1) {
   padding-right: 0.4rem;
   display: flex;
   justify-content: flex-end;
 }
-.headers > div:nth-child(1) > img {
+.headers > a:nth-child(1) > img {
   width: 0.427rem;
   height: 0.427rem;
 }
@@ -139,7 +140,7 @@ a {
   font-size: 0.32rem;
   padding: 0.2rem 0.3rem;
   background: rgba(0, 0, 0, 0.35);
-  border-radius: 0.387rem 0rem 0rem 0.387rem;
+  border-radius: 0.413rem 0rem 0rem 0.413rem;
 }
 .connoisseur > img {
   width: 0.32rem;
@@ -212,10 +213,13 @@ a {
   align-items: center;
   padding-left: 0.4rem;
 }
-.menu > a > img {
-  width: 0.533rem;
+.menu > a > div:nth-child(1) {
+  width: 0.6rem;
 }
-.menu > a > div {
+.menu > a > div:nth-child(1) > img {
+  margin: auto;
+}
+.menu > a > div:nth-child(2) {
   width: 100%;
   height: 100%;
   padding: 0 0.3rem 0 0.373rem;
@@ -223,13 +227,32 @@ a {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #F5F5F5;
-  /*no*/
 }
-.menu > a > div > p {
+.menu > a > div:nth-child(2) > p {
   font-size: 0.4rem;
 }
-.menu > a > div > i {
+.menu > a > div:nth-child(2) > i {
   font-size: 0.4rem;
+}
+.menu > a:nth-child(1) > div:nth-child(1) > img {
+  width: 0.533rem;
+  height: 0.533rem;
+}
+.menu > a:nth-child(2) > div:nth-child(1) > img {
+  width: 0.4rem;
+  height: 0.48rem;
+}
+.menu > a:nth-child(3) > div:nth-child(1) > img {
+  width: 0.453rem;
+  height: 0.4rem;
+}
+.menu > a:nth-child(4) > div:nth-child(1) > img {
+  width: 0.453rem;
+  height: 0.453rem;
+}
+.menu > a:nth-child(5) > div:nth-child(1) > img {
+  width: 0.507rem;
+  height: 0.453rem;
 }
 
 /**

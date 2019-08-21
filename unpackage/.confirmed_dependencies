@@ -94,5 +94,10 @@
 		"refer": [
 			"child/building.html"
 		]
+	},
+	"child/alias.html": {
+		"refer": [
+			"home/my.html"
+		]
 	}
 }

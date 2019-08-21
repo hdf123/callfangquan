@@ -127,10 +127,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0rem -0.013rem 0rem 0rem #e5e5e5,0rem 0.013rem 0rem 0rem #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 .contents > a > div {
   font-size: 0.4rem;
+}
+.contents > a:last-child {
+  border: none;
 }
 
 /*# sourceMappingURL=help.css.map */

@@ -240,24 +240,26 @@ a {
   align-items: center;
 }
 .reaction > div:nth-child(1) {
-  padding: 0 0.1rem;
   color: #999999;
   font-size: 0.293rem;
 }
 .reaction > div:nth-child(2) {
   color: #999999;
   font-size: 0.293rem;
+  margin: 0 0.2rem;
 }
-.reaction > div:nth-child(3) > i {
-  padding: 0 0.1rem;
-  font-size: .4rem;
+
+.praise {
+  display: flex;
+  align-items: center;
 }
-.reaction > div:nth-child(3) > .icon-zan2 {
-  color: #F9351A;
+.praise > img {
+  width: 0.4rem;
 }
-.reaction > div:nth-child(3) > span {
+.praise > span {
   color: #999999;
   font-size: 0.32rem;
+  margin-left: 0.1rem;
 }
 
 .discuss_content {
