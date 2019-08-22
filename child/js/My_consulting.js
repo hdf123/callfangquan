@@ -13,7 +13,7 @@ $(function(){
 		console.log("上拉加载");
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+='+<div>'+i+'</div>'+
+			dom+='+<div>'+(i+1)+'</div>';
 		}
 		$('.consulting_box').append(dom);
 		off_on = true;

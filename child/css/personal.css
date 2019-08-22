@@ -108,6 +108,7 @@ a {
   width: 1.173rem;
   height: 100%;
   font-size: 0.42rem;
+  font-weight: 600;
 }
 .headers .rights {
   height: 100%;
@@ -170,8 +171,8 @@ a {
 .connoisseur > div:nth-child(1) > img:nth-child(2) {
   width: 0.3rem;
   position: absolute;
-  right: 5%;
-  bottom: 5%;
+  right: 7%;
+  bottom: 7%;
 }
 .connoisseur > div:nth-child(2) {
   margin-left: 0.267rem;

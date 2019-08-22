@@ -19,7 +19,7 @@ $(function(){
 	}
 	$(".buildings_title").html('<h3>'+call_building.name+'</h3>'
 								+'<div>'+ska+'</div>'
-								+'<div>+'+states+skb
+								+'<div>'+states+skb
 								+'</div>');
 	var mySwiper1 = new Swiper('.swiper1', {
 		observer:true,//修改swiper自己或子元素时，自动初始化swiper
@@ -178,9 +178,9 @@ $(function(){
 					var ms='';
 					if(juli>=1000){
 						juli=(juli/1000).toFixed(3);
-						ms='<div>${juli}km</div>'
+						ms='<div>'+juli+'km</div>'
 					}else{
-						ms='<div>${juli}m</div>'
+						ms='<div>'+juli+'m</div>'
 					}
 					$(".distance_box").append('<li>'
 												+'<div>'

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base";
 .headers{
-    
     height: 1.173rem;
     background-color: #ffffff;
     border-bottom:1px solid rgba(199,199,199,0.2);
@@ -11,6 +10,7 @@
         height:100%;
         font-size:0.42rem;
         @extend .flexs;
+        font-weight:600;
     }
     .rights{
         height:100%;
@@ -71,8 +71,8 @@
         >img:nth-child(2){
             width:0.3rem;
             position: absolute;
-            right:5%;
-            bottom:5%;
+            right:7%;
+            bottom:7%;
         }
     }
     >div:nth-child(2){

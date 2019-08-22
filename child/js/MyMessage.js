@@ -7,7 +7,7 @@ $(function(){
 	var LoadingDataFn = function(){
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+='<li>'+i+'</li>';
+			dom+='<li>'+(i+1)+'</li>';
 		}
 		$('.contents').append(dom);
 		off_on = true;

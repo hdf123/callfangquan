@@ -4,6 +4,7 @@ $(function(){
 		$(".rights,.experts>.guanzhu").hide();
 	}else{
 		$(".rights,.experts>.guanzhu").show();
+		localStorage.setItem('call_name', JSON.stringify($(".connoisseur h3").html()));
 	}
 	/**
 	 * 关注

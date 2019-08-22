@@ -3,7 +3,7 @@ $(function(){
 	var len=0,total=200,states=false;
 	$(".review_box>div").html(len+'/'+total);
 	$('.puba').on('input propertychange', function (e){
-	    var texts=$(this).val();
+	    var texts=$(this).val().trim();
 		if(texts.length>total){
 			len=total;
 		}else{
@@ -68,7 +68,7 @@ $(function(){
 		if(!states){
 			return alert("发表内容不可为空");
 		}
-		console.log($(".puba").val());
+		console.log($(".puba").val().trim());
 		console.log($(".image_box .imgas").length);
 	})
 })

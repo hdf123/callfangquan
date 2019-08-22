@@ -42,7 +42,6 @@
 }
 .texts::-webkit-input-placeholder{ /*WebKit browsers*/
     color: #999999;
-    font-weight:600;
 }
 .mun{
     text-align:right;
@@ -67,6 +66,7 @@
     >i{
         width:100%;
         height:100%;
+        color:#cccccc;
         @extend .flexs;
         font-size:1.6rem;
     }

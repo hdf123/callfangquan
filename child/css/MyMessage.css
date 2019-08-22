@@ -4,6 +4,7 @@
   padding: 0;
   color: #333333;
   list-style: none;
+  font-family: helvetica;
   /*把此元素放置在父元素的中部。*/
   vertical-align: middle;
   box-sizing: border-box;
@@ -13,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(255, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 input {
@@ -91,7 +92,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, .message_title > div:nth-child(2), .footers > div:nth-child(1) > div:nth-child(2), .inputs > i {
+.flexs, .headers .lefts, .headers .centers, .reply, .footers > div:nth-child(1) > div:nth-child(2), .inputs > i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,10 +152,12 @@ a {
   color: #999999;
   font-size: 0.293rem;
 }
-.message_title > div:nth-child(2) {
+
+.reply {
+  width: 1.2rem;
+  height: 0.613rem;
   color: #999999;
   font-size: 0.32rem;
-  padding: 0.16rem 0.3rem;
   border-radius: 0.053rem;
   border: 1px solid #e5e5e5;
 }

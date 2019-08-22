@@ -4,6 +4,7 @@
   padding: 0;
   color: #333333;
   list-style: none;
+  font-family: helvetica;
   /*把此元素放置在父元素的中部。*/
   vertical-align: middle;
   box-sizing: border-box;
@@ -13,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(255, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 input {
@@ -91,7 +92,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i, .headersk > div:nth-child(1) > i, .mortgage_tab > li, .btn1, .assort, .footers > div {
+.flexs, .headers > a, .headers > i, .headersk > div:nth-child(1) > a, .mortgage_tab > li, .btn1, .assort, .footers > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,6 +104,22 @@ a {
   justify-content: space-between;
   padding-right: 0.2rem;
   z-index: 96;
+}
+.headers > a {
+  width: 1rem;
+  height: 100%;
+}
+.headers > a:nth-child(1) {
+  left: 0;
+}
+.headers > a:nth-child(1) > img {
+  width: 0.3rem;
+}
+.headers > a:nth-child(2) {
+  right: 0;
+}
+.headers > a:nth-child(2) > img {
+  width: 0.6rem;
 }
 .headers > i {
   width: 1rem;
@@ -124,17 +141,23 @@ a {
   position: relative;
   height: 1rem;
 }
-.headersk > div:nth-child(1) > i {
+.headersk > div:nth-child(1) > a {
   width: 1rem;
   height: 100%;
   position: absolute;
   top: 0;
 }
-.headersk > div:nth-child(1) > i:nth-child(1) {
+.headersk > div:nth-child(1) > a:nth-child(1) {
   left: 0;
 }
-.headersk > div:nth-child(1) > i:nth-child(3) {
+.headersk > div:nth-child(1) > a:nth-child(1) > img {
+  width: 0.3rem;
+}
+.headersk > div:nth-child(1) > a:nth-child(3) {
   right: 0;
+}
+.headersk > div:nth-child(1) > a:nth-child(3) > img {
+  width: 0.6rem;
 }
 .headersk > div:nth-child(1) .conters {
   width: 100%;
@@ -275,9 +298,9 @@ a {
   width: 8.827rem;
   height: 1.067rem;
   margin: 0 auto;
-  color: #0099ff;
+  color: #5facfb;
   font-size: 0.373rem;
-  background-color: #f9f9f9;
+  background-color: #f2f8ff;
   border-radius: 0.053rem;
 }
 
@@ -559,13 +582,14 @@ a {
   flex-wrap: wrap;
 }
 .comments_img > li {
-  width: 3.066rem;
+  width: calc(100% / 3);
   text-align: center;
   padding-bottom: 0.253rem;
 }
 .comments_img > li > img {
-  width: 2.693rem;
-  height: 2.693rem;
+  width: 2.826rem;
+  height: 2.826rem;
+  margin: 0 auto;
 }
 
 .comments_time {

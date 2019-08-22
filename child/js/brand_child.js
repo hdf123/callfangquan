@@ -16,7 +16,7 @@ $(function(){
 	var LoadingDataFn = function(){
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+='<div>'+i+'</div>'
+			dom+='<div>'+(i+1)+'</div>'
 		}
 		$('.contents').append(dom);
 		off_on = true;

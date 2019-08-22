@@ -54,14 +54,15 @@
             }
         }
     }
-    >div:nth-child(2){
-        @extend .flexs;
-        color: #999999;
-        font-size: 0.32rem;
-        padding:0.16rem 0.3rem;
-        border-radius: 0.053rem;
-        border:1px solid #e5e5e5;
-    }
+}
+.reply{
+    width: 1.2rem;
+    height: 0.613rem;
+    @extend .flexs;
+    color: #999999;
+    font-size: 0.32rem;
+    border-radius: 0.053rem;
+    border:1px solid #e5e5e5;
 }
 .message_content{
     margin-left:1.44rem;
