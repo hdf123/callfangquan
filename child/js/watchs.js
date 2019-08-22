@@ -83,7 +83,7 @@ $(function(){
 		console.log("上拉加载");
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+=`<li>${i+1}</li>`
+			dom+='<li>'+(i+1)+'</li>'
 		}
 		$('.Introduction_box').append(dom);
 		off_on = true;
@@ -153,21 +153,21 @@ $(function(){
      * 发送
      */
     $(".btn").click(function(){
-    	$(".comments_box>ul").prepend(`<li class="lists">
-						<div class="comments_title">
-							<div>
-								<img src="" alt="" />
-								<div>
-									<div>戴琳juri</div>
-									<p>05-25  16:04</p>
-								</div>
-							</div>
-							<div class="iconfont icon-dianzan praise">
-								<span>666</span>
-							</div>
-						</div>
-						<div class="comments_content ycs">${$(".inputs article").html()}</div>
-					</li>`);
+    	$(".comments_box>ul").prepend('<li class="lists">'
+						+'<div class="comments_title">'
+							+'<div>'
+								+'<img src="" alt="" />'
+								+'<div>'
+									+'<div>戴琳juri</div>'
+									+'<p>05-25  16:04</p>'
+								+'</div>'
+							+'</div>'
+							+'<div class="iconfont icon-dianzan praise">'
+								+'<span>666</span>'
+							+'</div>'
+						+'</div>'
+						+'<div class="comments_content ycs">'+$(".inputs article").html()+'</div>'
+					+'</li>');
 //  	$(".comments_box>ul").animate({scrollTop:$(".comments_box>ul")[0].scrollHeight},'1000');
     })
 })

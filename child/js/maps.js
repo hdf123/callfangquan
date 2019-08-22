@@ -8,7 +8,7 @@ $(function(){
 		$(".popup_box").show();
 	})
 	for(i in region){
-		$(".area>ul").append(`<li>${region[i].title}</li>`);
+		$(".area>ul").append('<li>'+region[i].title+'</li>');
 	}
 	/**
 	 * 地图标记

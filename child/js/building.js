@@ -36,6 +36,12 @@ $(function(){
 	var arr1=[],arr2=[],arr3=[],arrs1=[],arrs2=[],arrs3=[],arrs4=[];
 	$(".ch1>label").bind("click",function(e){
 		var _this=$(this);
+		if(_this.find("input").is(':checked')){
+			_this.find("img").attr("src","../img/optionsd.png");
+		}else{
+			_this.find("img").attr("src","../img/options.png");
+		}
+		
 		noLimit(e,_this,$(".region_limit"),"region",1);
 	}); 
 	$(".ch2>label").bind("click",function(e){
@@ -239,34 +245,33 @@ $(function(){
 	    for (i in data) {
 	    	var ska="",skb="",states="";
 	    	for(j in data[i].region){
-	    		ska+=`<div>${data[i].region[j]}</div>`;
+	    		ska+='<div>'+data[i].region[j]+'</div>';
 	    	}
 	    	for(j in data[i].features){
-	    		skb+=`<div>${data[i].features[j]}</div>`;
+	    		skb+='<div>'+data[i].features[j]+'</div>';
 	    	}
 	    	if(data[i].state=="在售"){
-	    		states=`<div class="sell">在售</div>`;
+	    		states='<div class="sell">在售</div>';
 	    	}else if(data[i].state=="待售"){
-	    		states=`<div class="waiting">待售</div>`;
+	    		states='<div class="waiting">待售</div>';
 	    	}else{
-	    		states=`<div>待售</div>`;
+	    		states='<div>售罄</div>';
 	    	}
-	        dom +=`<div class="building_box">
-				<img src=${data[i].img} alt="" />
-				<div>
-					<h3>${data[i].name}</h3>
-					<p>${data[i].address}</p>
-					<div class="environment">
-						<div>${ska}</div>
-						<div>${data[i].area}</div>
-					</div>
-					<div class="situation">
-						${states}
-						${skb}
-					</div>
-					<div>${data[i].price}</div>
-				</div>
-			</div>`;
+	        dom +='<div class="building_box">'
+						+'<img src='+data[i].img+' alt="" />'
+						+'<div>'
+							+'<h3>'+data[i].name+'</h3>'
+							+'<div class="price">'+data[i].price+'</div>'
+							+'<div class="environment">'
+								+'<div>'+ska+'</div>'
+								+'<div>'+data[i].area+'</div>'
+							+'</div>'
+							+'<div class="situation">'
+								+states+skb
+							+'</div>'
+						+'</div>'
+					+'</div>';
+					
 	    }
 	  	$('.contents').append(dom);
 	    off_on = true;

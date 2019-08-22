@@ -10,11 +10,11 @@ $(function(){
 		if(kk){
 			kk=false;
 			$(this).prev().css({"height":"auto"});
-			$(this).html(`收起 <i class="iconfont icon-shangla"></i>`);
+			$(this).html('收起 <i class="iconfont icon-shangla"></i>');
 		}else{
 			kk=true;
 			$(this).prev().css({"height":"2.5rem"});
-			$(this).html(`查看共3条回复 <i class="iconfont icon-xiala1"></i>`);
+			$(this).html('查看共3条回复 <i class="iconfont icon-xiala1"></i>');
 		}
 	})
 	var names="";
@@ -49,7 +49,7 @@ $(function(){
 		for(var i=0;i<ulli.length;i++){
 			if($(".discuss_box>li").eq(i).attr("nam")==names){
 				console.log(111);
-				$(".discuss_box>li").eq(i).find(".reply_box>ul").append(`<li>${inp}</li>`);
+				$(".discuss_box>li").eq(i).find(".reply_box>ul").append('<li>'+inp+'</li>');
 			}
 		}
 	})

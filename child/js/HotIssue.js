@@ -11,7 +11,7 @@ $(function(){
 		console.log("上拉加载");
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+=`<li>${i+1}</li>`
+			dom+='<li>'+i+'</li>'
 		}
 		$('.contents>ul').append(dom);
 		off_on = true;

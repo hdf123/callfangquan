@@ -184,23 +184,39 @@ function selectSwiper(obj) {
     _self.swiperData.closeFun = obj.closeFun || function () {
     }; // 取消按钮执行函数
     _self.swiperData.init = obj.init; // 初始化
-    var hgSelect = `
-        <div class="select">
-        	<div>
-	            <span class="close">取消</span>
-	            <div class="tits">111</div>
-	            <span class="ok">确定</span>
-        	</div>
-            <div class="selectData">
-                <div class="swiper-container">
-                    <div class="cloth"></div>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">请选择</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
+    var hgSelect ='<div class="select">'
+        	+'<div>'
+	            +'<span class="close">取消</span>'
+	            +'<div class="tits">111</div>'
+	            +'<span class="ok">确定</span>'
+        	+'</div>'
+           +'<div class="selectData">'
+                +'<div class="swiper-container">'
+                    +'<div class="cloth"></div>'
+                   +'<div class="swiper-wrapper">'
+                        +'<div class="swiper-slide">请选择</div>'
+                    +'</div>'
+                +'</div>'
+            +'</div>'
+        +'</div>';
+        
+        
+//  var hgSelect = `
+//      <div class="select">
+//      	<div>
+//	            <span class="close">取消</span>
+//	            <div class="tits">111</div>
+//	            <span class="ok">确定</span>
+//      	</div>
+//          <div class="selectData">
+//              <div class="swiper-container">
+//                  <div class="cloth"></div>
+//                  <div class="swiper-wrapper">
+//                      <div class="swiper-slide">请选择</div>
+//                  </div>
+//              </div>
+//          </div>
+//      </div>`;
     _self.init = function () { // 初始化
         _self.el.html(hgSelect);
         _self.el.addClass('click_no'); // 取消移动端点击阴影
@@ -273,12 +289,19 @@ function linkage(address){
 			// 初始化省份
 			var optionGroupOne = "";
 			$.each(newData,function(index, el) {
-				optionGroupOne += `<li class="option-list option-list-one">
-							<span>${newData[index]["n"]}</span>
-							<div class="checked">
-							</div>
-						</li>`
+				optionGroupOne += '<li class="option-list option-list-one">'
+							+'<span>'+newData[index]["n"]+'</span>'
+							+'<div class="checked">'
+							+'</div>'
+						+'</li>'
 			});
+//			$.each(newData,function(index, el) {
+//				optionGroupOne += `<li class="option-list option-list-one">
+//							<span>${newData[index]["n"]}</span>
+//							<div class="checked">
+//							</div>
+//						</li>`
+//			});
 			
 			$(".option-group-one").html(optionGroupOne)
 
@@ -303,12 +326,19 @@ function linkage(address){
 		var cityStr = "";
 		// console.log(citysArray)
 		$.each(citysArray,function(index, el) {
-			cityStr += `<li class="option-list option-list-two">
-					<span>${citysArray[index]["n"]}</span>
-					<div class="checked">
-					</div>
-				</li>`
+			cityStr += '<li class="option-list option-list-two">'
+					+'<span>'+citysArray[index]["n"]+'</span>'
+					+'<div class="checked">'
+					+'</div>'
+				+'</li>'
 		});
+//		$.each(citysArray,function(index, el) {
+//			cityStr += `<li class="option-list option-list-two">
+//					<span>${citysArray[index]["n"]}</span>
+//					<div class="checked">
+//					</div>
+//				</li>`
+//		});
 		$(".option-group").hide();
 		$(".optionwrapper").find(".option-menu").removeClass('active-option')
 		$(".option-menu-two").html(chooseMenuStr).addClass('active-option')
@@ -327,12 +357,19 @@ function linkage(address){
 		$(".option-menu").eq(parentIndex).text(cityName)
 		var areaStr = "";
 		$.each(cityArray,function(index, el) {
-			areaStr += `<li class="option-list option-list-three">
-					<span>${cityArray[index]}</span>
-					<div class="checked">
-					</div>
-				</li>`
+			areaStr += '<li class="option-list option-list-three">'
+					+'<span>'+cityArray[index]+'</span>'
+					+'<div class="checked">'
+					+'</div>'
+				+'</li>'
 		});
+//		$.each(cityArray,function(index, el) {
+//			areaStr += `<li class="option-list option-list-three">
+//					<span>${cityArray[index]}</span>
+//					<div class="checked">
+//					</div>
+//				</li>`
+//		});
 		$(".option-group").hide();
 		$(".optionwrapper").find(".option-menu").removeClass('active-option')
 		$(".option-menu-three").html(chooseMenuStr).addClass('active-option')

@@ -25,13 +25,13 @@ $(function(){
 					var yuezong=loan.ybenjin[i]+loan.ylixi[i];//月供
 					huankuan+=loan.ybenjin[i];
 					var benjin=loan.money*10000-huankuan.toFixed(2);//剩余本金
-					ks+=`<li>
-							<div>${i+1}</div>
-							<div>${Math.abs(yuezong.toFixed(2))}</div>
-							<div>${Math.abs(loan.ybenjin[i].toFixed(2))}</div>
-							<div>${Math.abs(loan.ylixi[i].toFixed(2))}</div>
-							<div>${Math.abs(benjin.toFixed(2))}</div>
-						</li>`;
+					ks+='<li>'
+							+'<div>'+(i+1)+'</div>'
+							+'<div>'+Math.abs(yuezong.toFixed(2))+'</div>'
+							+'<div>'+Math.abs(loan.ybenjin[i].toFixed(2))+'</div>'
+							+'<div>'+Math.abs(loan.ylixi[i].toFixed(2))+'</div>'
+							+'<div>'+Math.abs(benjin.toFixed(2))+'</div>'
+						+'</li>';
 				};
 				$(".money_conts").html(ks);
 				$(".money").html(formatCurrencyTenThou(ago.split(".")[0])+"."+ago.split(".")[1]);
@@ -81,13 +81,13 @@ $(function(){
 				}
 				//月供，本金,利息，剩余本金
 				function agos(ago,capital,interest,remaining){
-					ks+=`<li>
-							<div>${i+1}</div>
-							<div>${Math.abs(ago.toFixed(2))}</div>
-							<div>${Math.abs(capital.toFixed(2))}</div>
-							<div>${Math.abs(interest.toFixed(2))}</div>
-							<div>${Math.abs((loan.money*10000-remaining).toFixed(2))}</div>
-					</li>`;
+					ks+='<li>'
+							+'<div>'+(i+1)+'</div>'
+							+'<div>'+Math.abs(ago.toFixed(2))+'</div>'
+							+'<div>'+Math.abs(capital.toFixed(2))+'</div>'
+							+'<div>'+Math.abs(interest.toFixed(2))+'</div>'
+							+'<div>'+Math.abs((loan.money*10000-remaining).toFixed(2))+'</div>'
+					+'</li>';
 				}
 				$(".money_conts").html(ks);
 				var jun=((loan.gyuegong*loan.glimit+loan.syuegong*loan.slimit)/maxs).toFixed(2);
@@ -104,13 +104,13 @@ $(function(){
 				for(var i=0;i<loan1.limit;i++){
 					huankuan+=loan1.ybenjin;
 					ago+=Number(loan1.yuegong[i]);
-					ks+=`<li>
-							<div>${i+1}</div>
-							<div>${Math.abs((loan1.yuegong[i]).toFixed(2))}</div>
-							<div>${Math.abs(loan1.ybenjin.toFixed(2))}</div>
-							<div>${Math.abs(loan1.ylixi[i].toFixed(2))}</div>
-							<div>${Math.abs((loan1.money*10000-huankuan).toFixed(2))}</div>
-						</li>`;
+					ks+='<li>'
+							+'<div>'+(i+1)+'</div>'
+							+'<div>'+Math.abs((loan1.yuegong[i]).toFixed(2))+'</div>'
+							+'<div>'+Math.abs(loan1.ybenjin.toFixed(2))+'</div>'
+							+'<div>'+Math.abs(loan1.ylixi[i].toFixed(2))+'</div>'
+							+'<div>'+Math.abs((loan1.money*10000-huankuan).toFixed(2))+'</div>'
+						+'</li>';
 				}
 				$(".money_conts").html(ks);
 				ago=(ago/loan1.limit).toFixed(2);
@@ -163,13 +163,13 @@ $(function(){
 				console.log((gz+sz)/loan1.glimit);
 				//月供，本金,利息，剩余本金
 				function agos(ago,capital,interest,remaining){
-					ks+=`<li>
-							<div>${i+1}</div>
-							<div>${Math.abs(ago.toFixed(2))}</div>
-							<div>${Math.abs(capital.toFixed(2))}</div>
-							<div>${Math.abs(interest.toFixed(2))}</div>
-							<div>${Math.abs((loan1.money*10000-remaining).toFixed(2))}</div>
-					</li>`;
+					ks+='<li>'
+							+'<div>'+(i+1)+'</div>'
+							+'<div>'+Math.abs(ago.toFixed(2))+'</div>'
+							+'<div>'+Math.abs(capital.toFixed(2))+'</div>'
+							+'<div>'+Math.abs(interest.toFixed(2))+'</div>'
+							+'<div>'+Math.abs((loan1.money*10000-remaining).toFixed(2))+'</div>'
+					+'</li>';
 				}
 				$(".money_conts").html(ks);
 				jun=((gz+sz)/loan1.glimit).toFixed(2);

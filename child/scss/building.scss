@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
 .headers{
-    
     height:3.066rem;
     background:white;
     z-index:96;
@@ -35,6 +34,7 @@
         >div{
             width:100%;
             @extend .flexs;
+            font-size: 0.373rem;
             >i{
                 color:#a1a1a1;
             }
@@ -93,15 +93,15 @@
             font-size:0.373rem;
             @extend .yincang;
         }
-        >p{
-            color:#666666;
-            font-size:0.267rem;
-            line-height:0.5rem;
-        }
-        >div:last-child{
+//      >p{
+//          color:#999999;
+//          font-size:0.267rem;
+//          line-height:0.5rem;
+//      }
+        >.price{
             color: #f9351a;
             font-size:0.373rem;
-            font-weight:600;
+            margin:0.1rem 0 0.05rem 0;
         }
     }
 }
@@ -111,6 +111,7 @@
 .environment{
     display: flex;
     align-items: center;
+    margin:0.05rem 0 0.1rem 0;
     >div:nth-child(1){
         display: flex;
         align-items: center;
@@ -192,12 +193,17 @@
         align-items: center;
         justify-content: space-between;
         border-bottom:1px solid #eeeeee;
+        >span{
+            font-size: 0.4rem;
+        }
         >.act{
             color:#0099ff;
         }
         >input{
-            width:0.373rem;
-            height:0.373rem;
+            display:none;
+        }
+        >img{
+            width:0.6rem;
         }
     }
 }

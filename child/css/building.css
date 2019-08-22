@@ -4,6 +4,7 @@
   padding: 0;
   color: #333333;
   list-style: none;
+  font-family: helvetica;
   /*把此元素放置在父元素的中部。*/
   vertical-align: middle;
   box-sizing: border-box;
@@ -13,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(255, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 input {
@@ -131,6 +132,7 @@ a {
 }
 .choose > div:nth-child(1) > div {
   width: 100%;
+  font-size: 0.373rem;
 }
 .choose > div:nth-child(1) > div > i {
   color: #a1a1a1;
@@ -189,15 +191,10 @@ a {
   max-height: 0.5rem;
   font-size: 0.373rem;
 }
-.building_box > div > p {
-  color: #666666;
-  font-size: 0.267rem;
-  line-height: 0.5rem;
-}
-.building_box > div > div:last-child {
+.building_box > div > .price {
   color: #f9351a;
   font-size: 0.373rem;
-  font-weight: 600;
+  margin: 0.1rem 0 0.05rem 0;
 }
 
 .building_box:last-child {
@@ -207,6 +204,7 @@ a {
 .environment {
   display: flex;
   align-items: center;
+  margin: 0.05rem 0 0.1rem 0;
 }
 .environment > div:nth-child(1) {
   display: flex;
@@ -290,12 +288,17 @@ a {
   justify-content: space-between;
   border-bottom: 1px solid #eeeeee;
 }
+.ch1 > label > span, .ch2 > label > span, .ch3 > label > span {
+  font-size: 0.4rem;
+}
 .ch1 > label > .act, .ch2 > label > .act, .ch3 > label > .act {
   color: #0099ff;
 }
 .ch1 > label > input, .ch2 > label > input, .ch3 > label > input {
-  width: 0.373rem;
-  height: 0.373rem;
+  display: none;
+}
+.ch1 > label > img, .ch2 > label > img, .ch3 > label > img {
+  width: 0.6rem;
 }
 
 .btn1, .btn2, .btn3 {

@@ -38,18 +38,25 @@
         padding:0.06rem 0.12rem;
         border-radius: 0.053rem;
     }
-    >.Care_about{
-        color: #fba447;
-        border: solid 0.027rem #fba447;
-        >i{
+        >.Care_about{
             color: #fba447;
-            font-size:0.45rem;
+            padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
+            border: solid 0.027rem #fba447;
+            >i{
+                display:inline-block;
+                color: #fba447;
+                font-size:0.45rem;
+                margin-bottom:0.05rem;
+            }
         }
-    }
-    .cancel{
-        color:#999999;
-        border: solid 0.027rem #e5e5e5;
-    }
+        .cancel{
+            color:#999999;
+            border: solid 0.027rem #e5e5e5;
+            >i{
+                color:rgba(208,208,208,1);
+                font-size:0.45rem;
+            }
+        }
 }
 .connoisseur{
     width:6rem;

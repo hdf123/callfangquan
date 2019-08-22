@@ -10,15 +10,15 @@ $(function(){
 		$(".results").hide();//搜索结果
 		var record="";
 		for(i in call_record){
-			record+=`<li class="record">${call_record[i]}</li>`;
+			record+='<li class="record">'+call_record[i]+'</li>';
 		}
-		$(".contents").append(`<div class="contents_box">
-								<div>
-									<div>搜索历史</div>
-									<i class="iconfont removek">&#xe646;</i>
-								</div>
-								<ul class="record_box">${record}</ul>
-							</div>`)
+		$(".contents").append('<div class="contents_box">'
+								+'<div>'
+									+'<div>搜索历史</div>'
+									+'<i class="iconfont removek">&#xe646;</i>'
+								+'</div>'
+								+'<ul class="record_box">'+record+'</ul>'
+							+'</div>')
 	}
 	//清除历史记录
 	$(".contents").on("click",".removek",function(){

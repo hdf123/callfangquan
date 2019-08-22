@@ -2,11 +2,11 @@ $(function(){
 	$(".contents").on("click",".guanzhu",function(){
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
-			$(this).html(`<i class="iconfont icon-jia"></i>关注`);
+			$(this).html('<i class="iconfont icon-jia"></i>关注');
 			$(this).closest(".connoisseur_box").find(".recommended_box").remove();
 		}else{
 			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html(`<i class="iconfont">&#xe608;</i>互相关注`);
+			$(this).html('<i class="iconfont">&#xe608;</i>互相关注');
 		}
 	})
 	/**
@@ -18,7 +18,7 @@ $(function(){
 		console.log("上拉加载");
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+=`<li>${i+1}</li>`
+			dom+='<li>'+i+1+'</li>'
 		}
 		$('.contents>ul').append(dom);
 		off_on = true;

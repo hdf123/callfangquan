@@ -5,10 +5,10 @@ $(function(){
 	$(".contents").on("click",".subscribe",function(){
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
-			$(this).html(`<i class="iconfont">&#xe609;</i>订阅`);
+			$(this).html('<i class="iconfont">&#xe609;</i>订阅');
 		}else{
 			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html(`已订阅`);
+			$(this).html('已订阅');
 		}
 	})
 	$(".contents").on("click",".contact>img:eq(1)",function(){
@@ -30,7 +30,8 @@ $(function(){
 		console.log("上拉加载");
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+=`<div>${i+1}</div>`
+			i+=1;
+			dom+='<div>'+i+'</div>'
 		}
 		$('.contents>ul').append(dom);
 		off_on = true;

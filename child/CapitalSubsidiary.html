@@ -77,7 +77,7 @@ $(function(){
 		console.log("上拉加载");
 		var dom='';
 		for(var i=0;i<30;i++){
-			dom+=`<li>${i+1}</li>`
+			dom+='<div>'+(i+1)+'</div>'
 		}
 		$('.contents').append(dom);
 		off_on = true;

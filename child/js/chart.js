@@ -16,7 +16,7 @@ $(function(){
 		$(".forms1 .totals p").html(call_chart.money);//总额
 		$(".forms1 .interest p").html((call_chart.lixi/10000).toFixed(2));//利息
 		$(".forms1 .funds>td:eq(1)>p").html(call_chart.glilv*100);//公积金利率
-		$(".forms1 .Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong[0].toFixed(0)}</p>元/月`);//月供
+		$(".forms1 .Monthly>td:eq(1)").html('首月月供：<p>'+call_chart.yuegong[0].toFixed(0)+'</p>元/月');//月供
 		$(".forms1 .diminishing>td:eq(1)>p").html(call_chart.diminishing.toFixed(2));//递减
 	}else if(call_chart.type=="021"){//商贷本息
 		typeks=0;
@@ -32,7 +32,7 @@ $(function(){
 		$(".forms1 .funds").hide();//商贷利率
 		$(".forms1 .totals p").html(call_chart.money);//总额
 		$(".forms1 .business>td:eq(1)>p").html(call_chart.slilv*100);//商贷利率
-		$(".forms1 .Monthly>td:eq(1)").html(`首月月供：<p>${call_chart.yuegong[0].toFixed(0)}</p>元/月`);//月供
+		$(".forms1 .Monthly>td:eq(1)").html('首月月供：<p>'+call_chart.yuegong[0].toFixed(0)+'</p>元/月');//月供
 		$(".forms1 .diminishing>td:eq(1)>p").html(call_chart.diminishing.toFixed(2));//递减
 	}else if(call_chart.type=="031"){//组合本息
 		typeks=0;

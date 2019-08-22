@@ -69,33 +69,32 @@ $(function(){
 	    for (i in data) {
 	    	var ska="",skb="",states="";
 	    	for(j in data[i].region){
-	    		ska+=`<div>${data[i].region[j]}</div>`;
+	    		ska+='<div>'+data[i].region[j]+'</div>';
 	    	}
 	    	for(j in data[i].features){
-	    		skb+=`<div>${data[i].features[j]}</div>`;
+	    		skb+='<div>'+data[i].features[j]+'</div>';
 	    	}
 	    	if(data[i].state=="在售"){
-	    		states=`<div class="sell">在售</div>`;
+	    		states='<div class="sell">在售</div>';
 	    	}else if(data[i].state=="待售"){
-	    		states=`<div class="waiting">待售</div>`;
+	    		states='<div class="waiting">待售</div>';
 	    	}else{
-	    		states=`<div>待售</div>`;
+	    		states='<div>售罄</div>';
 	    	}
-	        dom +=`<li class="recommended">
-				<img src=${data[i].img} alt="" />
-				<div class="details">
-					<div>${data[i].name}</div>
-					<div class="environment">
-						<div>${ska}</div>
-						<div>${data[i].area}</div>
-					</div>
-					<div class="situation">
-						${states}
-						${skb}
-					</div>
-					<div>${data[i].price}</div>
-				</div>
-			</li>`;
+	        dom +='<li class="recommended">'
+				+'<img src='+data[i].img+' alt="" />'
+				+'<div class="details">'
+					+'<div>'+data[i].name+'</div>'
+					+'<div class="environment">'
+						+'<div>'+ska+'</div>'
+						+'<div>'+data[i].area+'</div>'
+					+'</div>'
+					+'<div class="situation">'
+						+states+skb
+					+'</div>'
+					+'<div>'+data[i].price+'</div>'
+				+'</div>'
+			+'</li>';
 	    }
 	  	$('.recommended_box').append(dom);
 	    off_on = true;

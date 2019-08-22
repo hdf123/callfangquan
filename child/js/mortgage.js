@@ -424,10 +424,10 @@ $(function(){
 	for(i in interest_rate){
 		for(j in interest_rate[i].arr1){
 			var rate=(interest_rate[i].rate*10000)*(interest_rate[i].arr1[j]*10000)/100000000;
-			$(".lists").append(`<li rate=${rate}><p>${interest_rate[i].arr2[j]}</p></li>`)
+			$(".lists").append('<li rate='+rate+'><p>'+interest_rate[i].arr2[j]+'</p></li>')
 		}
 	}
-	$(".lists>li:first-child").append(`<i class="iconfont">&#xe73b;</i>`);
+	$(".lists>li:first-child").append('<i class="iconfont">&#xe73b;</i>');
 	/**
 	 * 获取利率
 	 */
@@ -444,7 +444,7 @@ $(function(){
 	//选择利率
 	$(".lists li").click(function(){
 		if($(this).find("i").length==0){
-			$(this).append(`<i class="iconfont">&#xe73b;</i>`);
+			$(this).append('<i class="iconfont">&#xe73b;</i>');
 			$(this).siblings().children().remove("i");
 			$(".inputk input").val($(this).attr("rate"));
 		}
