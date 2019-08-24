@@ -54,13 +54,14 @@
     display: none;
 }
 .distance_box{
-    height:7rem;
+    height:7.2rem;
     padding:0.26rem 0.4rem;
     overflow: hidden;
     >li{
+        height:0.9rem;
         display: flex;
+        align-items: center;
         justify-content:space-between;
-        padding:0.2rem 0;
         >div{
             font-size:0.373rem;
         }
@@ -93,7 +94,7 @@
     width: 9.2rem;
     height: 1.067rem;
     border-radius: 0.053rem;
-    margin:0 auto;
+    margin:0.4rem auto;
     color:#0099ff;
     font-size:0.373rem;
     @extend .flexs;
@@ -103,7 +104,6 @@
 }
 .surrounding_title{
     padding:0.253rem 0.4rem;
-    margin-top:0.4rem;
     font-size: 0.533rem;
 }
 .building_box{

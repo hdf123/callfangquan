@@ -107,15 +107,16 @@ $(function(){
 	/**
 	 * 查看更多
 	 */
+	var state=true;
 	$(".more").click(function(){
-		if($(this).find(".iconfont").is(".icon-shang")){
-			$(this).find(".iconfont").removeClass("icon-shang");
-			$(this).find(".iconfont").addClass("icon-shang-copy");
+		if(state){
+			$(this).html("收起");
+			state=false;
 			$(".distance_box").css({"height":"auto"});
 		}else{
-			$(this).find(".iconfont").removeClass("icon-shang-copy");
-			$(this).find(".iconfont").addClass("icon-shang");
-			$(".distance_box").css({"height":"7rem"});
+			$(this).html("展开更多");
+			state=true;
+			$(".distance_box").css({"height":"7.2rem"});
 		}
 	})
 	/**
