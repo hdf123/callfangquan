@@ -47,7 +47,7 @@ $(function(){
     	location.href="../child/HousingMarketDynamic.html";
     })
     //推荐
-    $(".recommended_box").on("click","",function(){
+    $(".recommended_box").on("click",".recommended",function(){
     	location.href="../child/buildings.html";
     })
     /**

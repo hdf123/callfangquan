@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
 .headers{
-    
     height: 1.173rem;
     background:white;
     border-bottom:1px solid #eeeeee;
@@ -38,6 +37,7 @@
         width:10rem;
         overflow: hidden;
         .swiper-slide{
+            font-size: 0.373rem;
             text-align: center;
         }
         .act{
@@ -54,7 +54,7 @@
     display: none;
 }
 .distance_box{
-    height:7.4rem;
+    height:7rem;
     padding:0.26rem 0.4rem;
     overflow: hidden;
     >li{
