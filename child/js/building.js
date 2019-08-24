@@ -37,19 +37,40 @@ $(function(){
 	$(".ch1>label").bind("click",function(e){
 		var _this=$(this);
 		if(_this.find("input").is(':checked')){
-			_this.find("img").attr("src","../img/optionsd.png");
+			$("[name=region]:checkbox").prop("checked", false);
+			_this.find("input").prop('checked',true);
+			_this.siblings().find("span").removeClass("act");
+			_this.siblings().find("img").attr("src","../img/options.png");//取消
+			_this.find("img").attr("src","../img/optionsd.png");//选中
 		}else{
 			_this.find("img").attr("src","../img/options.png");
 		}
-		
 		noLimit(e,_this,$(".region_limit"),"region",1);
 	}); 
 	$(".ch2>label").bind("click",function(e){
 		var _this=$(this);
+		if(_this.find("input").is(':checked')){
+			$("[name=price]:checkbox").prop("checked", false);
+			_this.find("input").prop('checked',true);
+			_this.siblings().find("span").removeClass("act");
+			_this.siblings().find("img").attr("src","../img/options.png");//取消
+			_this.find("img").attr("src","../img/optionsd.png");//选中
+		}else{
+			_this.find("img").attr("src","../img/options.png");
+		}
 		noLimit(e,_this,$(".price_limit"),"price",2);
 	});
 	$(".ch3>label").bind("click",function(e){
 		var _this=$(this);
+		if(_this.find("input").is(':checked')){
+			$("[name=door]:checkbox").prop("checked", false);
+			_this.find("input").prop('checked',true);
+			_this.siblings().find("span").removeClass("act");
+			_this.siblings().find("img").attr("src","../img/options.png");//取消
+			_this.find("img").attr("src","../img/optionsd.png");//选中
+		}else{
+			_this.find("img").attr("src","../img/options.png");
+		}
 		noLimit(e,_this,$(".door_limit"),"door",3);
 	}); 
 	function noLimit(e,_this,limit,names,nums){
@@ -82,13 +103,23 @@ $(function(){
 			});
 	   	}
 	}
-	$(".region_limit").bind("click",function(e){
+	$(".region_limit").bind("click",function(e){//区域不限
 		var _this=$(this);
+		$(".ch1").find("img").siblings("span").removeClass("act");
+		$(".ch1").find("img").attr("src","../img/options.png");
 		limit(_this,"region",arr1);
 	})
 	$(".price_limit").bind("click",function(e){
 		var _this=$(this);
+		$(".ch2").find("img").siblings("span").removeClass("act");
+		$(".ch2").find("img").attr("src","../img/options.png");
 		limit(_this,"price",arr2);
+	})
+	$(".door_limit").bind("click",function(e){
+		var _this=$(this);
+		$(".ch3").find("img").siblings("span").removeClass("act");
+		$(".ch3").find("img").attr("src","../img/options.png");
+		limit(_this,"door",arr3);
 	})
 	function limit(_this,names,arr){
 		$("[name="+names+"]:checkbox").prop("checked", false);
@@ -128,6 +159,7 @@ $(function(){
 	function choose(_this){
 		if(_this.children("div").is(".act")){
 			_this.children("div").removeClass("act");
+			/*
 			if(!$(".conditions_state>div:eq(0)>div").is(".act")){
 				$(".quick>div").eq(0).removeClass("act");
 			}
@@ -140,8 +172,11 @@ $(function(){
 			if(!$(".conditions_features>div:eq(1)>div").is(".act")){
 				$(".quick>div").eq(3).removeClass("act");
 			}
+			*/
 		}else{
 			_this.children("div").addClass("act");
+			_this.siblings("div").children("div").removeClass("act");
+			/*
 			if($(".conditions_state>div:eq(0)>div").is(".act")){
 				$(".quick>div").eq(0).addClass("act");
 			}
@@ -154,6 +189,7 @@ $(function(){
 			if($(".conditions_features>div:eq(1)>div").is(".act")){
 				$(".quick>div").eq(3).addClass("act");
 			}
+			*/
 		}
 	}
 	/**
@@ -167,8 +203,6 @@ $(function(){
 	})
 	$(".loading_box").hide();
 	function results(){
-		$(".loading_box").show();
-		$('.loadings').shCircleLoader();
 		var area=$(".conditions_area>div");//面积
 		var property=$(".conditions_property>div");//物业类型
 		var features=$(".conditions_features>div");//楼盘特色
@@ -181,15 +215,11 @@ $(function(){
 		function confirm(arr,xx,ad){
 			for(var i=0;i<arr.length;i++){
 				if($("."+xx+">div:eq("+i+")>div").is(".act")){
-					ad.push($("."+xx+">div:eq("+i+")>div").html());
+					ad.push($("."+xx+">div:eq("+i+")>div").attr("ids"));
 				}
 			}
 		}
 		$(".swiper1").css({"display":"none"});
-		setTimeout(function(){
-			$(".loading_box").hide();
-			$('.loadings').shCircleLoader('destroy');
-		}, 1000);
 		console.log(arr1);//选择的区域
 		console.log(arr2);//价格
 		console.log(arr3);//户型
@@ -202,6 +232,7 @@ $(function(){
 	/**
 	 * 快捷选项
 	 */
+	/*
 	$(".quick>div").click(function(){
 		if($(this).is(".act")){
 			$(this).removeClass("act");
@@ -234,6 +265,7 @@ $(function(){
 		}
 		results();
 	})
+	*/
 	/**
 	 * 分页
 	 */
@@ -271,7 +303,6 @@ $(function(){
 							+'</div>'
 						+'</div>'
 					+'</div>';
-					
 	    }
 	  	$('.contents').append(dom);
 	    off_on = true;

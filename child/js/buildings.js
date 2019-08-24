@@ -85,10 +85,6 @@ $(function(){
 	/**
 	 * 滚动显示
 	 */
-	console.log("基础信息------------"+$(".swiper1").position().top);
-	console.log("户型------------"+$(".door_box").position().top);
-	console.log("周边------------"+$(".surrounding_title").position().top);
-	console.log("点评------------"+$(".review_title").position().top);
 	$(".headersk").hide();
 	$(".contents").scroll(function(){
 		$(".headersk").show();
