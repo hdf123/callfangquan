@@ -74,9 +74,7 @@
                 >div{
                     display: inline-block;
                     white-space: nowrap;
-                }
-                >div:nth-child(1){
-                    
+                    font-size: 0.373rem;
                 }
                 >div:nth-child(2){
                     color:#999999;
@@ -139,8 +137,10 @@
         @extend .yincang;
     }
     >div{
+        width: 0.8rem;
+        height: 0.427rem;
         font-size:0.267rem;
-        padding:0.08rem 0.147rem;
+        @extend .flexs;
         border-radius: 0.053rem;
         border:solid 0.02rem #333333;
     }

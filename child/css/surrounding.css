@@ -92,7 +92,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers > i, .headers > div, .more {
+.flexs, .headers > i, .headers > div, .more, .titls > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,6 +178,7 @@ a {
 .distance_box > li > div:nth-child(1) > div > div {
   display: inline-block;
   white-space: nowrap;
+  font-size: 0.373rem;
 }
 .distance_box > li > div:nth-child(1) > div > div:nth-child(2) {
   color: #999999;
@@ -240,8 +241,9 @@ a {
   font-size: 0.373rem;
 }
 .titls > div {
+  width: 0.8rem;
+  height: 0.427rem;
   font-size: 0.267rem;
-  padding: 0.08rem 0.147rem;
   border-radius: 0.053rem;
   border: solid 0.02rem #333333;
 }
