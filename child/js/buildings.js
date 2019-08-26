@@ -58,6 +58,21 @@ $(function(){
 	    	location.href="buildings.html";
 		} 
 	})
+	var mySwiper5 = new Swiper('.swiper5', {
+		slidesPerView :2.2,
+    	spaceBetween :20,
+		observer:true,
+    	observeParents:true,
+	})
+	/**
+	 * 全部户型
+	 */
+	$(".door_box>div:eq(0)").click(function(){
+		location.href="door.html";
+	})
+	$(".swiper5").bind("click",".swiper-slide",function(){
+		location.href="preview.html";
+	})
 //选项卡切换
 	var tabIndex = 0;
 	var tabBar = function() {
@@ -127,15 +142,6 @@ $(function(){
 	 */
 	$(".situation>div:eq(1),.situation>div:eq(2),.btn1").click(function(){
 		location.href="building_information.html";
-	})
-	/**
-	 * 全部户型
-	 */
-	$(".door_box>div:eq(0)").click(function(){
-		location.href="door.html";
-	})
-	$(".doors").bind("click",function(){
-		location.href="preview.html";
 	})
 	/**
 	 * 获取附近信息
