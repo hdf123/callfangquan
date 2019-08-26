@@ -75,28 +75,24 @@ $(function(){
 	})
 //选项卡切换
 	var tabIndex = 0;
-	var tabBar = function() {
-		var aTab = $('.mortgage_tab>li');
-		aTab.on('click', function() {
-			var tabIndex=$(this).index();
-			var mm=8.5+(100/4*tabIndex);
-			var oLine = $('.mortgage_tab>div');
-			oLine.animate({ 'left': mm + '%' }, 300, function() {
-				console.log(tabIndex);
-				if(tabIndex==0){
-					$(".contents").scrollTop(0)
-				}else if(tabIndex==1){
-					$(".contents").scrollTop(790)
-				}else if(tabIndex==2){
-					$(".contents").scrollTop(810)
-				}else{
-					$(".contents").scrollTop(1277)
-				}
-			});
+	$('.mortgage_tab>li').on('click', function() {
+		var tabIndex=$(this).index();
+		var mm=8.5+(100/4*tabIndex);
+		var oLine = $('.mortgage_tab>div');
+		oLine.animate({ 'left': mm + '%' }, 300, function() {
+			console.log(tabIndex);
+			if(tabIndex==0){
+				$(".contents").scrollTop(0)
+			}else if(tabIndex==1){
+				$(".contents").scrollTop(580)
+			}else if(tabIndex==2){
+				$(".contents").scrollTop(910)
+			}else{
+				$(".contents").scrollTop(1420)
+			}
+		});
 
-		})
-	}
-	tabBar();
+	})
 	/**
 	 * 滚动显示
 	 */
@@ -109,17 +105,17 @@ $(function(){
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>530&&sk<810){
+		}else if(sk>580&&sk<910){
 			tabIndex=1;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>810&&sk<1270){
+		}else if(sk>910&&sk<1420){
 			tabIndex=2;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
 			oLine.stop(true,true).animate({ 'left': mm + '%' }, 300)
-		}else if(sk>1270){
+		}else if(sk>1420){
 			tabIndex=3;
 			var mm=8.5+(100/4*tabIndex);
 			var oLine = $('.mortgage_tab>div');
