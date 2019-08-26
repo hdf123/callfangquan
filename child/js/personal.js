@@ -1,6 +1,5 @@
 $(function(){
-	var mys=false;
-	if(mys){
+	if(getRequest().ind==0){
 		$(".rights,.experts>.guanzhu").hide();
 	}else{
 		$(".rights,.experts>.guanzhu").show();

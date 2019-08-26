@@ -14,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 input {
@@ -167,6 +167,8 @@ html, body {
   height: 100%;
   overflow: auto;
   background: white;
+  position: relative;
+  top: -1px;
 }
 
 .options {

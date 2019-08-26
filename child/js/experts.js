@@ -10,9 +10,10 @@ $(function(){
 		$(".cover").css({"display":"none"});
 		$(".more").css({"display":"none"});
 	})
+	//名片
 	$(".more>li:eq(0)").click(function(){
 		console.log($(this).index());
-		location.href="alias.html";
+		location.href="alias.html?ind=1";
 	})
 	/**
 	 * 关注

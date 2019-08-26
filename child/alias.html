@@ -44,7 +44,9 @@
 		
 <script type="text/javascript">
 $(function(){
-
+	if(getRequest().ind==0) $(".centers").html("我的名片");
+	else $(".centers").html("TA的名片");
+	
 })
 </script>
 	</body>
