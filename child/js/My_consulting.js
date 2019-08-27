@@ -4,6 +4,9 @@ $(function(){
 	}else{
 		$(".record").hide();
 	}
+	$(".consulting_box").on("click",".consulting",function(){
+		location.href="reply.html";
+	})
     /**
      * 上拉加载
      */

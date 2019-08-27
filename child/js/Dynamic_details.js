@@ -1,4 +1,6 @@
 $(function(){
+	console.log(getRequest().name);
+	$(".centers>div").html(getRequest().name);
 	/**
 	 * 表情
 	 */

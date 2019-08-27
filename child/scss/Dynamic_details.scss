@@ -14,8 +14,14 @@
     }
     .centers{
         height:100%;
-        @extend .flexs;
-        font-size: 0.48rem;
+        >div{
+            width:45%;
+            margin:0 auto;
+            text-align: center;
+            font-size: 0.48rem;
+            line-height:1.173rem;
+            @extend .yincang;
+        }
     }
     .rights{}
 }
@@ -60,7 +66,7 @@
     font-size: 0.533rem;
 }
 .comments_box{
-    
+    padding-bottom:0.5rem;
 }
 .comments{
     display: flex;
@@ -72,9 +78,13 @@
     }
     >div{
         margin-left:0.253rem;
+        >div{
+            font-size: 0.4rem;
+        }
         >p{
             width:7.9rem;
             margin-top:0.213rem;
+            font-size: 0.373rem;
         }
     }
 }
