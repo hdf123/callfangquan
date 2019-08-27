@@ -1,6 +1,7 @@
 $(function(){
 	$(".contents").on("click",".lists",function(){
-		location.href="Dynamic_details.html";
+		var name=$(this).find(".name").html();
+		location.href="../child/Dynamic_details.html?name="+name;
 	})
     /**
      * 上拉加载

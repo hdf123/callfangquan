@@ -41,7 +41,6 @@ $(function(){
 	//地产动态
     $(".provide_box").on("click",".lists",function(){
     	var name=$(this).find("div").html();
-    	console.log(name);
     	//var ind=$(this).attr("ind");
     	location.href="../child/Dynamic_details.html?name="+name;
     })
