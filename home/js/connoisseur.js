@@ -31,7 +31,8 @@ $(function(){
 	/**
 	 * 关注
 	 */
-	$(".contents").on("click",".guanzhu",function(){
+	$(".contents").on("click",".guanzhu",function(event){
+		event.stopPropagation();
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
 			$(this).html('<i class="iconfont">&#xe609;</i>关注');
