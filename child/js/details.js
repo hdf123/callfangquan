@@ -1,7 +1,24 @@
 $(function(){
 	$(".answer").hide();
+	$(".popup_box").hide();
+	var mun=3;//免费次数
 	$(".btn").click(function(){
-		$(this).hide(10,function(){
+		if(mun>0){
+			$(".popup_box").show();
+		}else{
+			alert("去支付");
+		}
+	})
+	$(".popup_box").click(function(event){
+		$(this).hide();
+		event.stopPropagation();
+	})
+	$(".cancel").click(function(){
+		$(".popup_box").hide();
+	})
+	$(".confirm").click(function(){
+		$(".popup_box").hide();
+		$(".btn").hide(10,function(){
 			$(".answer").show();
 		})
 	})

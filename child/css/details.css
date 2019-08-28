@@ -92,7 +92,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, .btn {
+.flexs, .headers .lefts, .headers .centers, .btn, .popup_box, .popup > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,6 +196,52 @@ a {
   margin: 0.654rem auto;
   background-color: #5facfb;
   border-radius: 0.053rem;
+}
+
+.popup_box {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 97;
+}
+
+.popup {
+  width: 8.187rem;
+  padding: 0.64rem 0 0.533rem 0;
+  background-color: #ffffff;
+  border-radius: 0.053rem;
+}
+.popup > p:nth-child(1) {
+  text-align: center;
+  font-size: 0.48rem;
+}
+.popup > p:nth-child(2) {
+  color: #999999;
+  text-align: center;
+  font-size: 0.267rem;
+  margin-top: 0.2rem;
+}
+.popup > div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.68rem;
+}
+.popup > div > div {
+  width: 3.053rem;
+  height: 1.067rem;
+  font-size: 0.373rem;
+  border-radius: 0.053rem;
+}
+.popup > div > div:nth-child(1) {
+  color: #999999;
+  border: 1px solid #e5e5e5;
+}
+.popup > div > div:nth-child(2) {
+  color: #ffffff;
+  background-color: #5facfb;
 }
 
 /*# sourceMappingURL=details.css.map */

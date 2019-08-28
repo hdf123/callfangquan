@@ -23,6 +23,12 @@ $(function(){
 		$(this).children().addClass("act").parent().siblings().children().removeClass("act");
 	})
 	/**
+	 * 隐藏相关推荐
+	 */
+	$(document).click(function(){
+		$(".recommended_box").hide();
+	})
+	/**
 	 * 关注
 	 */
 	$(".contents").on("click",".guanzhu",function(){
@@ -53,8 +59,9 @@ $(function(){
 					+'</div>')
 		}
 	})
-	$(".contents").on("click",".deletes",function(){
+	$(".contents").on("click",".deletes",function(event){
 		$(this).parent().remove();
+		event.stopPropagation();
 	})
 	$(".contents").on("click",".guanzhus",function(){
 		if($(this).is(".cancel")){

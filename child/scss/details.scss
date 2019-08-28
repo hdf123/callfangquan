@@ -104,3 +104,49 @@
     background-color: #5facfb;
     border-radius: 0.053rem;
 }
+.popup_box{
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:97;
+    @extend .flexs;
+}
+.popup{
+    width: 8.187rem;
+    padding:0.64rem 0 0.533rem 0;
+    background-color: #ffffff;
+    border-radius: 0.053rem;
+    >p:nth-child(1){
+        text-align: center;
+        font-size: 0.48rem;
+    }
+    >p:nth-child(2){
+        color: #999999;
+        text-align: center;
+        font-size: 0.267rem;
+        margin-top:0.2rem;
+    }
+    >div{
+        display: flex;
+        justify-content: space-around;
+        margin-top:0.68rem;
+        >div{
+            width: 3.053rem;
+            height: 1.067rem;
+            font-size: 0.373rem;
+            @extend .flexs;
+            border-radius: 0.053rem;
+        }
+        >div:nth-child(1){
+            color: #999999;
+            border:1px solid #e5e5e5;
+        }
+        >div:nth-child(2){
+            color: #ffffff;
+            background-color: #5facfb;
+        }
+    }
+}

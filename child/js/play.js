@@ -4,6 +4,7 @@ $(function(){
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
 	//var b3=b1-headers;
 	$(".box").css({"top":b1+"px"});
+	
 	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
 	
 	$(".Introduction>i").click(function(){
