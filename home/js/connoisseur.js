@@ -64,6 +64,9 @@ $(function(){
 		$(this).parent().remove();
 		event.stopPropagation();
 	})
+	$(".contents").on("click",".questions",function(event){
+		event.stopPropagation();
+	})
 	$(".contents").on("click",".guanzhus",function(){
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
