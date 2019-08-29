@@ -1,4 +1,5 @@
 $(function(){
+	var k1=false,shows=true;
 	/**
 	 * 搜索
 	 */
@@ -11,12 +12,23 @@ $(function(){
     	observeParents:true,//修改swiper的父元素时，自动初始化swiper
 		onClick: function(swiper) {
 			var ind=swiper.clickedSlide.attributes["ind"].nodeValue;
+			if(ind!=6){
+				k1=false;
+				$(".more,.screen").hide();
+			}
 			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
 		} 
 	})
-	$(".more").hide();
+	$(".more,.screen").hide();
 	$(".swiper1").on("click",".morek",function(){
-		$(".more").toggle();
+		if(k1){
+			k1=false;
+			$(".more,.screen").hide();
+		}else{
+			k1=true;
+			$(".more,.screen").show();
+		}
+		
 	})
 	$(".more>div").click(function(){
 		console.log($(this).index());
@@ -25,8 +37,16 @@ $(function(){
 	/**
 	 * 隐藏相关推荐
 	 */
-	$(document).click(function(){
-		$(".recommended_box").hide();
+	$(".contents").on("click",".control",function(){
+		if(shows){
+			shows=false;
+			$(this).children("img").attr("src","../img/c2.png")
+			$(this).closest(".connoisseur_box").find(".recommended_box").hide();
+		}else{
+			shows=true;
+			$(this).children("img").attr("src","../img/c1.png")
+			$(this).closest(".connoisseur_box").find(".recommended_box").show();
+		}
 	})
 	/**
 	 * 关注
@@ -36,14 +56,14 @@ $(function(){
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
 			$(this).html('<i class="iconfont">&#xe609;</i>关注');
+			//清除当前行家
 			$(this).closest(".connoisseur_box").remove();
-//			$(this).closest(".connoisseur_box").find(".recommended_box").remove();
+			//清除当前行家相关推荐
+			//$(this).closest(".connoisseur_box").find(".recommended_box").remove();
 			
 		}else{
 			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html('<i class="iconfont icon-duihao"></i>已关注');
-			
-			$(this).closest(".connoisseur_box").children("div:eq(0)").after('<div class="recommended_box">'
+			$(this).closest(".connoisseur_box").children(".questions").before('<div class="recommended_box">'
 						+'<p>相关推荐</p>'
 						+'<ul class="recommended">'
 							+'<li class="">'
@@ -58,6 +78,13 @@ $(function(){
 						   +'</li>'
 						+'</ul>'
 					+'</div>')
+			$(this).parent().html('<div class="guanzhu cancel">'
+								+'<i class="iconfont icon-duihao"></i>已关注'
+							+'</div>'
+							+'<div class="control">'
+								+'<img src="../img/down.png" alt="" />'
+							+'</div>');
+			
 		}
 	})
 	$(".contents").on("click",".deletes",function(event){
@@ -79,8 +106,9 @@ $(function(){
 	/**
 	 * 专家
 	 */
-	$(".contents").on("click",".connoisseur",function(){
+	$(".contents").on("click",".connoisseur",function(event){
 		location.href="../child/experts.html";
+		event.stopPropagation();
 	})
 	/**
 	 * 咨询、回答

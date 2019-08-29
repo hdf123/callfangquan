@@ -63,6 +63,14 @@
 /**
      * 内容区
  */
+.screen{
+    background:rgba(0,0,0,0.3);
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .contents{
     top:1.173rem;
     left:auto;
@@ -72,7 +80,7 @@
 .connoisseur_box{
     margin-top:0.213rem;
     >div:nth-child(1){
-        width: 9.52rem;
+        width: 10rem;
         margin:0 auto;
         display: flex;
         align-items: center;
@@ -80,30 +88,6 @@
         padding:0.4rem;
         background: white;
         border-bottom:1px solid #dddddd;
-        >div:nth-child(2){
-            font-size:0.293rem;
-            padding:0.06rem 0.12rem;
-            border-radius: 0.053rem;
-        }
-        >.Care_about{
-            color: #fba447;
-            padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
-            border: solid 0.027rem #fba447;
-            >i{
-                display:inline-block;
-                color: #fba447;
-                font-size:0.45rem;
-                margin-bottom:0.05rem;
-            }
-        }
-        .cancel{
-            color:#999999;
-            border: solid 0.027rem #e5e5e5;
-            >i{
-                color:rgba(208,208,208,1);
-                font-size:0.45rem;
-            }
-        }
     }
 }
 .connoisseur{
@@ -138,6 +122,73 @@
             font-size:0.32rem;
             @extend .yincang;
         }
+    }
+}
+.related_box{
+    width:2.6rem;
+    height:1.6rem;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >.guanzhu{
+        height:0.613rem;
+        font-size:0.293rem;
+        @extend .flexs;
+        border-radius: 0.053rem;
+    }
+    >.Care_about{
+        width:1.3rem;
+        color: #fba447;
+        position: absolute;
+        right:0;
+        border: solid 0.027rem #fba447;
+        >i{
+            display:inline-block;
+            color: #fba447;
+            font-size:0.45rem;
+            margin-top:0.05rem;
+        }
+    }
+    >.cancel{
+        width:1.8rem;
+        color:#999999;
+        border: solid 0.027rem #e5e5e5;
+        >i{
+            color:rgba(208,208,208,1);
+            font-size:0.45rem;
+        }
+    }
+}
+.rotating{
+    transform: rotate(180deg);
+    -webkit-transition: transform .25s linear;
+    -moz-transition: transform .25s linear;
+    -o-transition: transform .25s linear;
+    transition: transform .25s linear;
+}
+.rotatings{
+    transform: rotate(360deg);
+    -webkit-transition: transform .25s linear;
+    -moz-transition: transform .25s linear;
+    -o-transition: transform .25s linear;
+    transition: transform .25s linear;
+}
+.control{
+    width: 0.613rem;
+    height: 0.613rem;
+    position:relative;
+    border-radius: 0.053rem;
+    border:2px solid #e5e5e5;
+    >img{
+        width:0.5rem;
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin:auto;
+        background:rgba(0,0,0,0);
     }
 }
 .recommended_box{
@@ -223,7 +274,7 @@
     }
 }
 .questions{
-    width: 9.52rem;
+    width: 10rem;
     margin:0 auto;
     display: flex;
     background: white;
