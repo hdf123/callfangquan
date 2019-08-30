@@ -99,5 +99,10 @@
 		"refer": [
 			"home/my.html"
 		]
+	},
+	"child/mortgage.html": {
+		"refer": [
+			"home/home.html"
+		]
 	}
 }

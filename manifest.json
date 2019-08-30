@@ -278,6 +278,13 @@
 					"home/my.html"
 				],
 				"priority": 0
+			},
+			"child/mortgage.html": {
+				"resources": [],
+				"refer": [
+					"home/home.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -494,7 +501,6 @@
 				"child/brand_enterprise.html",
 				"img/ma_help.png",
 				"child/scss/Add_buddy.scss",
-				"child/mortgage.html",
 				"images/arclist/9.gif",
 				"home/scss/connoisseur.scss",
 				"child/css/answer.css",

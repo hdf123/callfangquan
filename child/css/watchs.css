@@ -184,7 +184,6 @@ a {
   width: 1.733rem;
   height: 1.733rem;
   border-radius: 50%;
-  background: red;
 }
 .wtitles > div:nth-child(1) > div {
   margin-left: 0.267rem;
@@ -210,8 +209,10 @@ a {
   border: solid 0.027rem #fba447;
 }
 .wtitles > .Care_about > i {
+  display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
+  margin-bottom: 0.05rem;
 }
 .wtitles .cancel {
   color: #999999;
