@@ -97,12 +97,13 @@
     display: flex;
     flex-wrap: wrap;
     >li{
-        width:3.066rem;
+        width:calc(100% / 3);
         text-align: center;
         padding-bottom:0.253rem;
         >img{
             width: 2.693rem;
             height: 2.693rem;
+            margin:0 auto;
         }
     }
 }
