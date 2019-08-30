@@ -14,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(199, 199, 199, 0.3);
 }
 
 input {
@@ -169,6 +169,7 @@ a {
 .tensile > div span {
   color: #5facfb;
   font-size: 0.32rem;
+  margin-left: 0.1rem;
 }
 
 .identity {

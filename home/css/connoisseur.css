@@ -14,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(199, 199, 199, 0.3);
 }
 
 input {
@@ -243,7 +243,6 @@ a {
   display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
-  margin-top: 0.05rem;
 }
 .related_box > .cancel {
   width: 1.8rem;
@@ -347,7 +346,6 @@ a {
   display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
-  margin-bottom: 0.05rem;
 }
 .swiper2 .swiper-slide .cancel {
   color: #999999;
