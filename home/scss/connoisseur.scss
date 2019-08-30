@@ -2,7 +2,6 @@
 @import "../../css/base";
 @import "../../css/styles";
 .headers{
-    
     //height:2.24rem;
     height:1.173rem;
     position:relative;
@@ -198,12 +197,9 @@
         font-size: 0.293rem;
     }
 }
-.recommended{
-    width:100%;
-    padding-left:0.4rem;
-    display: flex;
-    overflow-x: auto;
-    >li{
+.swiper2{
+    padding:0 0.4rem;
+    .swiper-slide{
         width: 3.147rem;
         margin-right:20px;
         padding:0.24rem 0 0.293rem 0;

@@ -19,6 +19,12 @@ $(function(){
 			$(".swiper1 .swiper-slide").eq(ind).addClass("act").siblings().removeClass("act");
 		} 
 	})
+	var mySwiper = new Swiper('.swiper2', {
+		slidesPerView :2.5,
+		spaceBetween :10,
+		observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    	observeParents:true,//修改swiper的父元素时，自动初始化swiper
+	})
 	$(".more,.screen").hide();
 	$(".swiper1").on("click",".morek",function(){
 		if(k1){
@@ -88,7 +94,13 @@ $(function(){
 		}
 	})
 	$(".contents").on("click",".deletes",function(event){
+		var _this=$(this).closest(".recommended_box");
 		$(this).parent().remove();
+		var lens=$(".swiper2 .swiper-slide").length;
+		console.log(lens);
+		if(lens<1){
+			_this.hide();
+		}
 		event.stopPropagation();
 	})
 	$(".contents").on("click",".questions",function(event){

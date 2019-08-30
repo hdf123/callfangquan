@@ -14,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 input {
@@ -92,7 +92,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .swiper1 .swiper-slide, .more > div, .related_box > .guanzhu, .recommended > li > div, .recommended > li > i {
+.flexs, .swiper1 .swiper-slide, .more > div, .related_box > .guanzhu, .swiper2 .swiper-slide > div, .swiper2 .swiper-slide > i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,13 +297,10 @@ a {
   font-size: 0.293rem;
 }
 
-.recommended {
-  width: 100%;
-  padding-left: 0.4rem;
-  display: flex;
-  overflow-x: auto;
+.swiper2 {
+  padding: 0 0.4rem;
 }
-.recommended > li {
+.swiper2 .swiper-slide {
   width: 3.147rem;
   margin-right: 20px;
   padding: 0.24rem 0 0.293rem 0;
@@ -313,54 +310,54 @@ a {
   background: #ffffff;
   position: relative;
 }
-.recommended > li > img {
+.swiper2 .swiper-slide > img {
   width: 1.333rem;
   height: 1.333rem;
   border-radius: 50%;
 }
-.recommended > li > h3 {
+.swiper2 .swiper-slide > h3 {
   padding: 0.267rem 0 0.09rem 0;
   font-size: 0.32rem;
 }
-.recommended > li > p {
+.swiper2 .swiper-slide > p {
   width: 3.147rem;
   font-size: 0.293rem;
   text-align: center;
 }
-.recommended > li > p:nth-child(3) {
+.swiper2 .swiper-slide > p:nth-child(3) {
   padding: 0.09rem 0;
 }
-.recommended > li > div {
+.swiper2 .swiper-slide > div {
   width: 2.453rem;
   height: 0.613rem;
   margin-top: 0.2rem;
   font-size: 0.293rem;
   border-radius: 0.053rem;
 }
-.recommended > li > div > i {
+.swiper2 .swiper-slide > div > i {
   color: #ffffff;
   font-size: 0.45rem;
 }
-.recommended > li > .Care_about {
+.swiper2 .swiper-slide > .Care_about {
   color: #fba447;
   padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
   border: solid 0.027rem #fba447;
 }
-.recommended > li > .Care_about > i {
+.swiper2 .swiper-slide > .Care_about > i {
   display: inline-block;
   color: #fba447;
   font-size: 0.45rem;
   margin-bottom: 0.05rem;
 }
-.recommended > li .cancel {
+.swiper2 .swiper-slide .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.recommended > li .cancel > i {
+.swiper2 .swiper-slide .cancel > i {
   color: #d0d0d0;
   font-size: 0.45rem;
 }
-.recommended > li > i {
+.swiper2 .swiper-slide > i {
   width: 0.59rem;
   height: 0.59rem;
   color: #cccccc;
