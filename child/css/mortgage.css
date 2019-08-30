@@ -14,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0);
 }
 
 input {
@@ -134,10 +134,10 @@ a {
 }
 .mortgage_tab > div {
   position: absolute;
-  left: 12.5%;
+  left: 14.5%;
   bottom: 0.16rem;
   display: inline-block;
-  width: 8%;
+  width: 0.4rem;
   border-bottom: 0.04rem solid #5facfb;
 }
 .mortgage_tab .act {
@@ -228,6 +228,7 @@ a {
   font-size: 0.4rem;
 }
 .fund_box > .way > div:nth-child(2) > div > i {
+  color: #333333;
   font-size: 0.4rem;
   margin-right: 0.08rem;
 }

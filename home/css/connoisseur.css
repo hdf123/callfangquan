@@ -14,7 +14,7 @@
 
 img {
   display: block;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0);
 }
 
 input {
@@ -276,10 +276,10 @@ a {
   height: 0.613rem;
   position: relative;
   border-radius: 0.053rem;
-  border: 2px solid #e5e5e5;
+  border: 0.027rem solid #e5e5e5;
 }
 .control > img {
-  width: 0.5rem;
+  width: 0.45rem;
   position: absolute;
   top: 0;
   left: 0;
