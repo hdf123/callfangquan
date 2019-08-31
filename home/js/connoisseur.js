@@ -61,7 +61,7 @@ $(function(){
 		event.stopPropagation();
 		if($(this).is(".cancel")){
 			$(this).removeClass("cancel").addClass("Care_about");
-			$(this).html('<i class="iconfont">&#xe609;</i>关注');
+			$(this).html('关注');
 			//清除当前行家
 			$(this).closest(".connoisseur_box").remove();
 			//清除当前行家相关推荐
@@ -71,32 +71,36 @@ $(function(){
 			$(this).removeClass("Care_about").addClass("cancel");
 			$(this).closest(".connoisseur_box").children(".questions").before('<div class="recommended_box">'
 						+'<p>相关推荐</p>'
-						+'<ul class="recommended">'
-							+'<li class="">'
-						    	+'<img src="" alt="" />'
-						    	+'<h3>孙家财1</h3>'
-						    	+'<p>和昌集团郑州公司</p>'
-						    	+'<p>总经理</p>'
-						    	+'<div class="guanzhus Care_about">'
-						    		+'<i class="iconfont">&#xe609;</i>关注'
-						    	+'</div>'
-						    	+'<i class="iconfont deletes">&#xe65b;</i>'
-						   +'</li>'
-						+'</ul>'
-					+'</div>')
+						+'<div class="recommended">'
+							+'<ul class="recommended">'
+								+'<li class="recommended_child">'
+									+'<div>'
+										+'<img src="" alt="" />'
+								    	+'<h3>孙家财1</h3>'
+								    	+'<p>和昌集团郑州公司</p>'
+								    	+'<p>总经理</p>'
+								    	+'<div class="guanzhus Care_about">'
+								    		+'<img src="../img/duis.png" alt="" />关注</div>'
+								    	+'<i class="iconfont deletes">&#xe65b;</i>'
+							    	+'</div>'
+								+'</li>'
+							+'</ul>'
+						+'</div>'	
+					+'</div>');
+						
 			$(this).parent().html('<div class="guanzhu cancel">'
-								+'<i class="iconfont icon-duihao"></i>已关注'
-							+'</div>'
-							+'<div class="control">'
-								+'<img src="../img/down.png" alt="" />'
-							+'</div>');
+									+'<img src="../img/dui.png" alt="" />已关注'
+								+'</div>'
+								+'<div class="control">'
+									+'<img src="../img/down.png" alt="" />'
+								+'</div>');
 			
 		}
 	})
 	$(".contents").on("click",".deletes",function(event){
 		var _this=$(this).closest(".recommended_box");
 		$(this).parent().remove();
-		var lens=$(".swiper2 .swiper-slide").length;
+		var lens=$(".recommended_child").length;
 		console.log(lens);
 		if(lens<1){
 			_this.hide();
@@ -107,15 +111,15 @@ $(function(){
 		event.stopPropagation();
 	})
 	$(".contents").on("click",".guanzhus",function(){
-		$(this).closest(".swiper-slide").hide();
+		$(this).closest(".recommended_child").hide();
 		
 		
 //		if($(this).is(".cancel")){
 //			$(this).removeClass("cancel").addClass("Care_about");
-//			$(this).html('<i class="iconfont">&#xe609;</i>关注');
+//			$(this).html('关注');
 //		}else{
 //			$(this).removeClass("Care_about").addClass("cancel");
-//			$(this).html('<i class="iconfont icon-duihao"></i>已关注');
+//			$(this).html('已关注');
 //		}
 	})
 	/**

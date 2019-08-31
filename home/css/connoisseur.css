@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -92,7 +94,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .swiper1 .swiper-slide, .more > div, .related_box > .guanzhu, .swiper2 .swiper-slide > div, .swiper2 .swiper-slide > i {
+.flexs, .swiper1 .swiper-slide, .more > div, .related_box > .guanzhu, .recommended > li > div > div, .recommended > li > div > i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,6 +202,7 @@ a {
 }
 .connoisseur > div:nth-child(1) > img:nth-child(2) {
   width: 0.3rem;
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   right: 5%;
   bottom: 5%;
@@ -234,25 +237,25 @@ a {
   border-radius: 0.053rem;
 }
 .related_box > .Care_about {
-  width: 1.3rem;
+  width: 1.2rem;
   color: #fba447;
   position: absolute;
   right: 0;
   border: solid 0.027rem #fba447;
 }
-.related_box > .Care_about > i {
-  display: inline-block;
-  color: #fba447;
-  font-size: 0.45rem;
+.related_box > .Care_about > img {
+  width: 0.28rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
 .related_box > .cancel {
   width: 1.8rem;
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.related_box > .cancel > i {
-  color: #d0d0d0;
-  font-size: 0.45rem;
+.related_box > .cancel > img {
+  width: 0.4rem;
+  margin-right: 0.1rem;
 }
 
 .rotating {
@@ -297,12 +300,17 @@ a {
   font-size: 0.293rem;
 }
 
-.swiper2 {
-  padding: 0 0.4rem;
+.recommended {
+  width: 10rem;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
 }
-.swiper2 .swiper-slide {
+.recommended > li {
+  padding: 0 0.135rem;
+}
+.recommended > li > div {
   width: 3.147rem;
-  margin-right: 20px;
   padding: 0.24rem 0 0.293rem 0;
   display: flex;
   flex-direction: column;
@@ -311,53 +319,45 @@ a {
   position: relative;
   border: 0.013rem  solid #e5e5e5;
 }
-.swiper2 .swiper-slide > img {
+.recommended > li > div > img {
   width: 1.333rem;
   height: 1.333rem;
   border-radius: 50%;
 }
-.swiper2 .swiper-slide > h3 {
+.recommended > li > div > h3 {
   padding: 0.267rem 0 0.09rem 0;
   font-size: 0.32rem;
 }
-.swiper2 .swiper-slide > p {
+.recommended > li > div > p {
   width: 3.147rem;
   font-size: 0.293rem;
   text-align: center;
 }
-.swiper2 .swiper-slide > p:nth-child(3) {
+.recommended > li > div > p:nth-child(3) {
   padding: 0.09rem 0;
 }
-.swiper2 .swiper-slide > div {
+.recommended > li > div > div {
   width: 2.453rem;
   height: 0.613rem;
   margin-top: 0.2rem;
   font-size: 0.293rem;
   border-radius: 0.053rem;
 }
-.swiper2 .swiper-slide > div > i {
+.recommended > li > div > .Care_about {
   color: #ffffff;
-  font-size: 0.45rem;
-}
-.swiper2 .swiper-slide > .Care_about {
-  color: #fba447;
-  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
+  background-color: #fba447;
   border: solid 0.027rem #fba447;
 }
-.swiper2 .swiper-slide > .Care_about > i {
-  display: inline-block;
-  color: #fba447;
-  font-size: 0.45rem;
+.recommended > li > div > .Care_about > img {
+  width: 0.28rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
-.swiper2 .swiper-slide .cancel {
+.recommended > li > div .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.swiper2 .swiper-slide .cancel > i {
-  color: #d0d0d0;
-  font-size: 0.45rem;
-}
-.swiper2 .swiper-slide > i {
+.recommended > li > div > i {
   width: 0.59rem;
   height: 0.59rem;
   color: #cccccc;
@@ -366,6 +366,12 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+}
+.recommended > li:first-child {
+  padding-left: 0.4rem;
+}
+.recommended > li:last-child {
+  padding-right: 0.4rem;
 }
 
 .questions {

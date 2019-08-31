@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -92,7 +94,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .rights, .experts_tab > li, .reply > div:nth-child(1) > div, .footers {
+.flexs, .headers .lefts, .headers .rights, .experts > div:nth-child(2), .experts_tab > li, .reply > div:nth-child(1) > div, .footers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,28 +177,28 @@ a {
   background: white;
 }
 .experts > div:nth-child(2) {
+  height: 0.613rem;
   font-size: 0.293rem;
-  padding: 0.06rem 0.12rem;
   border-radius: 0.053rem;
 }
 .experts > .Care_about {
+  width: 1.3rem;
   color: #fba447;
-  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
   border: solid 0.027rem #fba447;
 }
-.experts > .Care_about > i {
-  display: inline-block;
-  color: #fba447;
-  font-size: 0.45rem;
-  margin-bottom: 0.05rem;
+.experts > .Care_about > img {
+  width: 0.28rem;
+  margin-right: 0.05rem;
+  background: rgba(0, 0, 0, 0);
 }
 .experts .cancel {
+  width: 1.8rem;
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.experts .cancel > i {
-  color: #d0d0d0;
-  font-size: 0.45rem;
+.experts .cancel > img {
+  width: 0.4rem;
+  margin-right: 0.1rem;
 }
 
 .connoisseur {
@@ -213,6 +215,7 @@ a {
 }
 .connoisseur > div:nth-child(1) > img:nth-child(2) {
   width: 0.3rem;
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   right: 5%;
   bottom: 5%;

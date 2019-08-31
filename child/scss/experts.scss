@@ -74,27 +74,28 @@
     padding:0.173rem 0.4rem;
     background: white;
     >div:nth-child(2){
+        height: 0.613rem;
         font-size:0.293rem;
-        padding:0.06rem 0.12rem;
+        @extend .flexs;
         border-radius: 0.053rem;
     }
     >.Care_about{
+        width:1.3rem;
         color: #fba447;
-        padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
         border: solid 0.027rem #fba447;
-        >i{
-            display:inline-block;
-            color: #fba447;
-            font-size:0.45rem;
-            margin-bottom:0.05rem;
+        >img{
+            width:0.28rem;
+            margin-right: 0.05rem;
+            background:rgba(0,0,0,0);
         }
     }
     .cancel{
+        width:1.8rem;
         color:#999999;
         border: solid 0.027rem #e5e5e5;
-        >i{
-            color:rgba(208,208,208,1);
-            font-size:0.45rem;
+        >img{
+            width: 0.4rem;
+            margin-right: 0.1rem;
         }
     }
 }
@@ -110,6 +111,7 @@
         }
         >img:nth-child(2){
             width:0.3rem;
+            background:rgba(0,0,0,0);
             position: absolute;
             right:5%;
             bottom:5%;

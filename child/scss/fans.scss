@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "../../css/base";
 .headers{
+    
     height: 1.173rem;
     background-color: #ffffff;
     border-bottom:1px solid rgba(199,199,199,0.2);
@@ -55,14 +56,15 @@
         }
     }
     >div:nth-child(2){
+        height: 0.613rem;
         font-size: 0.293rem;
-        padding:0.1rem 0.2rem;
+        @extend .flexs;
         border-radius: 0.053rem;
     }
     >.Care_about{
+        width:1.3rem;
         color: #fba447;
         border: solid 0.027rem #fba447;
-        padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
         >i{
             display:inline-block;
             color: #fba447;
@@ -71,6 +73,7 @@
         }
     }
     >.cancel{//已关注
+        width:2.2rem;
         color:#999999;
         border: solid 0.027rem #e5e5e5;
         >i{
