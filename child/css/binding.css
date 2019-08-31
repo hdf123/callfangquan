@@ -186,7 +186,7 @@ form > div:nth-child(1) > .validation {
 }
 form > div:nth-child(1) > .codes {
   color: #5facfb;
-  border: 2px solid #5facfb;
+  border: 0.027rem solid #5facfb;
 }
 form > div:nth-child(1) > .countdown {
   color: #999999;

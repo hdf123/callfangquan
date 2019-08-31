@@ -57,7 +57,6 @@ $(function(){
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
 	var LoadingDataFn = function(){
-		$(".loading_box").show();
     	$(".loading_box").show(10,function(){
     		$('.loadings').shCircleLoader();
     	});

@@ -280,7 +280,7 @@ a {
 .control > img {
   width: 0.45rem;
   position: absolute;
-  top: 0;
+  top: 0.05rem;
   left: 0;
   right: 0;
   bottom: 0;
