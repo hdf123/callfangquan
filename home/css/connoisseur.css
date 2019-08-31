@@ -309,6 +309,7 @@ a {
   align-items: center;
   background: #ffffff;
   position: relative;
+  border: 0.013rem  solid #e5e5e5;
 }
 .swiper2 .swiper-slide > img {
   width: 1.333rem;
