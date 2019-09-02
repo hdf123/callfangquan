@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -136,7 +138,7 @@ a {
 
 .money_box {
   width: 100%;
-  margin-top: 0.44rem;
+  margin-top: 0.267rem;
   background: white;
   padding: 0.4rem;
 }

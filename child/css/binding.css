@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -146,7 +148,7 @@ a {
 }
 
 form {
-  margin-top: 0.533rem;
+  margin-top: 0.267rem;
   background: white;
 }
 form > div:nth-child(1) {

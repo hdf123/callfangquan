@@ -103,21 +103,46 @@ $(function(){
 		var lens=$(".recommended_child").length;
 		console.log(lens);
 		if(lens<1){
-			_this.hide();
+			console.log("重新进行相关推荐数据请求");
+			/*重新进行相关推荐数据请求*/
 		}
 		event.stopPropagation();
 	})
 	$(".contents").on("click",".questions",function(event){
 		event.stopPropagation();
 	})
+	var ksk=3;
 	$(".contents").on("click",".guanzhus",function(){
-		if($(this).is(".cancel")){
-			$(this).removeClass("cancel").addClass("Care_about");
-			$(this).html('<img src="../img/duis.png" alt="" />关注');
+		var _this=$(this).closest(".recommended");
+		$(this).closest(".recommended_child").remove();
+		var len=_this.children("li").length;
+		console.log(len);
+		if(len<1){
+			alert("添加已关注行家数据");
 		}else{
-			$(this).removeClass("Care_about").addClass("cancel");
-			$(this).html('<img src="../img/dui.png" alt="" />已关注');
+			ksk+=1;
+			//alert("重新进行相关推荐数据请求");
+			_this.append('<li class="recommended_child">'
+							+'<div>'
+								+'<img src="" alt="" />'
+						    	+'<h3>孙家财'+ksk+'</h3>'
+						    	+'<p>和昌集团郑州公司</p>'
+						    	+'<p>总经理</p>'
+						    	+'<div class="guanzhus Care_about">'
+						    		+'<img src="../img/duis.png" alt="" />关注'
+						    	+'</div>'
+						    	+'<i class="iconfont deletes">&#xe65b;</i>'
+							+'</div>'
+						+'</li>');
 		}
+		
+//		if($(this).is(".cancel")){
+//			$(this).removeClass("cancel").addClass("Care_about");
+//			$(this).html('<img src="../img/duis.png" alt="" />关注');
+//		}else{
+//			$(this).removeClass("Care_about").addClass("cancel");
+//			$(this).html('<img src="../img/dui.png" alt="" />已关注');
+//		}
 	})
 	/**
 	 * 专家
