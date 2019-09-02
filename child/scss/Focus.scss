@@ -65,14 +65,20 @@
         width:1.3rem;
         color: #fba447;
         border: solid 0.027rem #fba447;
+        >img{
+            width:0.28rem;
+            background:rgba(0,0,0,0);
+            margin-right:0.05rem;
+        }
     }
     .cancel{//已关注
         width:1.8rem;
         color:#999999;
         border: solid 0.027rem #e5e5e5;
-        >i{
-            color:rgba(208,208,208,1);
-            font-size:0.45rem;
+        >img{
+            width:0.37rem;
+            background:rgba(0,0,0,0);
+            margin-right:0.05rem;
         }
     }
 }

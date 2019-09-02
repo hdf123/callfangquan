@@ -34,29 +34,31 @@
     padding:0.44rem 0.4rem 0.413rem 0.4rem;
     background: white;
     >div:nth-child(2){
-        font-size:0.293rem;
-        padding:0.06rem 0.12rem;
+        height: 0.613rem;
+        @extend .flexs;
+        font-size: 0.293rem;
         border-radius: 0.053rem;
     }
-        >.Care_about{
-            color: #fba447;
-            padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
-            border: solid 0.027rem #fba447;
-            >i{
-                display:inline-block;
-                color: #fba447;
-                font-size:0.45rem;
-                margin-bottom:0.05rem;
-            }
+    >.Care_about{
+        width:1.3rem;
+        color: #fba447;
+        border: solid 0.027rem #fba447;
+        >img{
+            width:0.28rem;
+            background:rgba(0,0,0,0);
+            margin-right:0.05rem;
         }
-        .cancel{
-            color:#999999;
-            border: solid 0.027rem #e5e5e5;
-            >i{
-                color:rgba(208,208,208,1);
-                font-size:0.45rem;
-            }
+    }
+    .cancel{
+        width:1.8rem;
+        color:#999999;
+        border: solid 0.027rem #e5e5e5;
+        >img{
+            width:0.37rem;
+            background:rgba(0,0,0,0);
+            margin-right:0.05rem;
         }
+    }
 }
 .connoisseur{
     width:6rem;
@@ -186,38 +188,41 @@
                 }
             }
         }
+        >div:nth-child(2){
+            height: 0.613rem;
+            @extend .flexs;
+            font-size: 0.293rem;
+            border-radius: 0.053rem;
+        }
         .Care_about{
+            width:1.3rem;
             color: #fba447;
-            padding:0.1rem 0.18rem 0.05rem 0.1rem!important;
             border: solid 0.027rem #fba447;
-            >i{
-                display:inline-block;
-                color: #fba447;
-                font-size:0.45rem;
-                margin-bottom:0.05rem;
+            >img{
+                width:0.28rem;
+                background:rgba(0,0,0,0);
+                margin-right:0.05rem;
             }
         }
         .cancel{//已关注
+            width:1.8rem;
             color:#999999;
             border: solid 0.027rem #e5e5e5;
-            >i{
-                color:rgba(208,208,208,1);
-                font-size:0.45rem;
+            >img{
+                width:0.37rem;
+                background:rgba(0,0,0,0);
+                margin-right:0.05rem;
             }
-        }
-        >div:nth-child(2){
-            padding:0.1rem 0.2rem;
-            border-radius: 0.053rem;
         }
     }
 }
 .fans{
     >li{
-    .cancel{//已关注
-        >i{
-            color:#999999;
-            font-size:0.4rem;
+        .cancel{//已关注
+            width:2.2rem;
+            >img{
+                width:0.28rem;
+            }
         }
-    }
     }
 }

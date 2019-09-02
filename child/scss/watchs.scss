@@ -98,23 +98,30 @@
         }
     }
     >div:nth-child(2){
+        height: 0.613rem;
+        @extend .flexs;
         font-size:0.293rem;
-        padding:0.06rem 0.12rem;
         border-radius: 0.053rem;
     }
     >.Care_about{
+        width:1.3rem;
         color: #fba447;
         border: solid 0.027rem #fba447;
-        >i{
-            display: inline-block;
-            color: #fba447;
-            font-size:0.45rem;
-            margin-bottom: 0.05rem;
+        >img{
+            width:0.28rem;
+            background:rgba(0,0,0,0);
+            margin-right:0.05rem;
         }
     }
     .cancel{
+        width:1.8rem;
         color:#999999;
         border: solid 0.027rem #e5e5e5;
+        >img{
+            width:0.37rem;
+            background:rgba(0,0,0,0);
+            margin-right:0.05rem;
+        }
     }
 }
 .Introduction{
@@ -160,6 +167,7 @@
         @extend .flexs;
         img{
             width:0.45rem;
+            background:rgba(0,0,0,0);
         }
         >span{
             color: #666666;

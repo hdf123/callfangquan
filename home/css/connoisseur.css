@@ -254,8 +254,9 @@ a {
   border: solid 0.027rem #e5e5e5;
 }
 .related_box > .cancel > img {
-  width: 0.4rem;
+  width: 0.37rem;
   margin-right: 0.1rem;
+  background: rgba(0, 0, 0, 0);
 }
 
 .rotating {
@@ -356,6 +357,11 @@ a {
 .recommended > li > div .cancel {
   color: #999999;
   border: solid 0.027rem #e5e5e5;
+}
+.recommended > li > div .cancel > img {
+  width: 0.37rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
 .recommended > li > div > i {
   width: 0.59rem;

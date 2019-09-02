@@ -22,6 +22,18 @@ $(function(){
 		location.href="personal.html";
 	})
 	/**
+	 * 关注
+	 */
+	$(".contents").on("click",".guanzhu",function(){
+		if($(this).is(".cancel")){
+			$(this).removeClass("cancel").addClass("Care_about");
+			$(this).html('<img src="../img/duia.png" alt="" />关注');
+		}else{
+			$(this).removeClass("Care_about").addClass("cancel");
+			$(this).html('<img src="../img/dui.png" alt="" />已关注');
+		}
+	})
+	/**
 	 * 全部内容显示隐藏
 	 */
 	$(".Introduction>i").click(function(){

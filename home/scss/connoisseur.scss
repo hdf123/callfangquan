@@ -156,8 +156,9 @@
         color:#999999;
         border: solid 0.027rem #e5e5e5;
         >img{
-            width:0.4rem;
+            width:0.37rem;
             margin-right:0.1rem;
+            background: rgba(0,0,0,0);
         }
     }
 }
@@ -254,6 +255,11 @@
             .cancel{
                 color:#999999;
                 border: solid 0.027rem #e5e5e5;
+                >img{
+                    width:0.37rem;
+                    background:rgba(0,0,0,0);
+                    margin-right:0.05rem;
+                }
             }
             >i{
                 width:0.59rem;

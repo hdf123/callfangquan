@@ -165,14 +165,20 @@ a {
   color: #fba447;
   border: solid 0.027rem #fba447;
 }
+.lists .Care_about > img {
+  width: 0.28rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
+}
 .lists .cancel {
   width: 1.8rem;
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.lists .cancel > i {
-  color: #d0d0d0;
-  font-size: 0.45rem;
+.lists .cancel > img {
+  width: 0.37rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
 
 .record {

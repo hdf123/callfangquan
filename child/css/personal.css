@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -92,7 +94,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .rights, .experts_tab > li {
+.flexs, .headers .lefts, .headers .rights, .experts > div:nth-child(2), .experts_tab > li, .Focus > li > div:nth-child(2), .fans > li > div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,28 +134,29 @@ a {
   background: white;
 }
 .experts > div:nth-child(2) {
+  height: 0.613rem;
   font-size: 0.293rem;
-  padding: 0.06rem 0.12rem;
   border-radius: 0.053rem;
 }
 .experts > .Care_about {
+  width: 1.3rem;
   color: #fba447;
-  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
   border: solid 0.027rem #fba447;
 }
-.experts > .Care_about > i {
-  display: inline-block;
-  color: #fba447;
-  font-size: 0.45rem;
-  margin-bottom: 0.05rem;
+.experts > .Care_about > img {
+  width: 0.28rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
 .experts .cancel {
+  width: 1.8rem;
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.experts .cancel > i {
-  color: #d0d0d0;
-  font-size: 0.45rem;
+.experts .cancel > img {
+  width: 0.37rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
 
 .connoisseur {
@@ -284,33 +287,37 @@ a {
   color: #666666;
   font-size: 0.32rem;
 }
+.Focus > li > div:nth-child(2), .fans > li > div:nth-child(2) {
+  height: 0.613rem;
+  font-size: 0.293rem;
+  border-radius: 0.053rem;
+}
 .Focus > li .Care_about, .fans > li .Care_about {
+  width: 1.3rem;
   color: #fba447;
-  padding: 0.1rem 0.18rem 0.05rem 0.1rem !important;
   border: solid 0.027rem #fba447;
 }
-.Focus > li .Care_about > i, .fans > li .Care_about > i {
-  display: inline-block;
-  color: #fba447;
-  font-size: 0.45rem;
-  margin-bottom: 0.05rem;
+.Focus > li .Care_about > img, .fans > li .Care_about > img {
+  width: 0.28rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
 .Focus > li .cancel, .fans > li .cancel {
+  width: 1.8rem;
   color: #999999;
   border: solid 0.027rem #e5e5e5;
 }
-.Focus > li .cancel > i, .fans > li .cancel > i {
-  color: #d0d0d0;
-  font-size: 0.45rem;
-}
-.Focus > li > div:nth-child(2), .fans > li > div:nth-child(2) {
-  padding: 0.1rem 0.2rem;
-  border-radius: 0.053rem;
+.Focus > li .cancel > img, .fans > li .cancel > img {
+  width: 0.37rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
 }
 
-.fans > li .cancel > i {
-  color: #999999;
-  font-size: 0.4rem;
+.fans > li .cancel {
+  width: 2.2rem;
+}
+.fans > li .cancel > img {
+  width: 0.28rem;
 }
 
 /*# sourceMappingURL=personal.css.map */

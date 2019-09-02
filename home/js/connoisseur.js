@@ -116,10 +116,10 @@ $(function(){
 		
 //		if($(this).is(".cancel")){
 //			$(this).removeClass("cancel").addClass("Care_about");
-//			$(this).html('关注');
+//			$(this).html('<img src="../img/duis.png" alt="" />关注');
 //		}else{
 //			$(this).removeClass("Care_about").addClass("cancel");
-//			$(this).html('已关注');
+//			$(this).html('<img src="../img/dui.png" alt="" />已关注已关注');
 //		}
 	})
 	/**
