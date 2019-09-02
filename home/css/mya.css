@@ -100,45 +100,37 @@ a {
   justify-content: center;
 }
 
-.contents {
-  top: 0;
-  left: auto;
-  bottom: 1.307rem;
-  background: white;
-}
-
-.mk {
-  position: relative;
+.headers {
   padding-top: 0.45rem;
   padding-bottom: 0.9rem;
   background-color: #5facfb;
 }
-.mk > a:nth-child(1) {
+.headers > a:nth-child(1) {
   padding-right: 0.4rem;
   display: flex;
   justify-content: flex-end;
 }
-.mk > a:nth-child(1) > img {
+.headers > a:nth-child(1) > img {
   width: 0.427rem;
   height: 0.427rem;
   background: rgba(0, 0, 0, 0);
 }
-.mk > div:nth-child(2) {
+.headers > div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 0.4rem;
 }
-.mk > div:nth-child(2) > div:nth-child(1) {
+.headers > div:nth-child(2) > div:nth-child(1) {
   display: flex;
   align-items: center;
 }
-.mk > div:nth-child(2) > div:nth-child(1) > img {
+.headers > div:nth-child(2) > div:nth-child(1) > img {
   width: 1.747rem;
   height: 1.747rem;
   border-radius: 50%;
 }
-.mk > div:nth-child(2) > div:nth-child(1) > p {
+.headers > div:nth-child(2) > div:nth-child(1) > p {
   color: #ffffff;
   font-size: 0.4rem;
   margin-left: 0.253rem;
@@ -206,9 +198,16 @@ a {
   font-size: 0.32rem;
 }
 
+.contents {
+  top: 5.45rem;
+  left: auto;
+  bottom: 1.307rem;
+  padding-top: 1.85rem;
+  background: white;
+}
+
 .menu {
   width: 100%;
-  margin-top: 1.8rem;
 }
 .menu > a {
   width: 100%;
@@ -273,4 +272,4 @@ a {
   color: #5facfb;
 }
 
-/*# sourceMappingURL=my.css.map */
+/*# sourceMappingURL=mya.css.map */
