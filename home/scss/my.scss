@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "../../css/base";
-@import "../../css/styles";
 .headers{
     padding-top:0.45rem;
     padding-bottom:0.9rem;
@@ -12,6 +11,7 @@
         >img{
             width:0.427rem;
             height:0.427rem;
+            background:rgba(0,0,0,0);
         }
     }
     >div:nth-child(2){
@@ -114,6 +114,7 @@
             width:0.6rem;
             >img{
                 margin:auto;
+                background:rgba(0,0,0,0);
             }
         }
         >div:nth-child(2){

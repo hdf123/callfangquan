@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import "../../css/base";
-@import "../../css/styles";
 .headers{
     height: 1.173rem;
     background-color: #ffffff;
@@ -32,9 +31,11 @@
                 >img{
                     width: 0.747rem;
                     height: 0.747rem;
+                    background:rgba(0,0,0,0);
                 }
                 >img:nth-child(1){
                     margin-right:0.667rem;
+                    background:rgba(0,0,0,0);
                 }
             }
         }
