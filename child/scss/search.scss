@@ -100,11 +100,13 @@
         }
     }
 }
-
+.results{
+    background: #F5F5F5;
+}
 .connoisseur_box{
     margin-top:0.213rem;
     >div:nth-child(1){
-        width: 9.52rem;
+        width: 10rem;
         margin:0 auto;
         display: flex;
         align-items: center;
@@ -112,23 +114,6 @@
         padding:0.4rem;
         background: white;
         border-bottom:1px solid #dddddd;
-        >div:nth-child(2){
-            font-size:0.293rem;
-            padding:0.06rem 0.12rem;
-            border-radius: 0.053rem;
-        }
-        >.Care_about{
-            color: #fba447;
-            border: solid 0.027rem #fba447;
-            >i{
-                color: #fba447;
-                font-size:0.45rem;
-            }
-        }
-        .cancel{
-            color:#999999;
-            border: solid 0.027rem #e5e5e5;
-        }
     }
 }
 .connoisseur{
@@ -143,6 +128,7 @@
         }
         >img:nth-child(2){
             width:0.3rem;
+            background:rgba(0,0,0,0);
             position: absolute;
             right:5%;
             bottom:5%;
@@ -165,11 +151,66 @@
         }
     }
 }
+.related_box{
+    width:2.6rem;
+    height:1.6rem;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >.guanzhu{
+        height:0.613rem;
+        font-size:0.293rem;
+        @extend .flexs;
+        border-radius: 0.053rem;
+    }
+    >.Care_about{
+        width:1.2rem;
+        color: #fba447;
+        position: absolute;
+        right:0;
+        border: solid 0.027rem #fba447;
+        >img{
+            width:0.28rem;
+            background:rgba(0,0,0,0);
+            margin-right:0.05rem;
+        }
+    }
+    >.cancel{
+        width:1.8rem;
+        color:#999999;
+        border: solid 0.027rem #e5e5e5;
+        >img{
+            width:0.37rem;
+            margin-right:0.1rem;
+            background: rgba(0,0,0,0);
+        }
+    }
+}
+.control{
+    width: 0.613rem;
+    height: 0.613rem;
+    position:relative;
+    border-radius: 0.053rem;
+    border:0.027rem solid #e5e5e5;
+//  border:2px solid #e5e5e5;
+    >img{
+        width:0.45rem;
+        position:absolute;
+        top: 0.05rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin:auto;
+        background:rgba(0,0,0,0);
+    }
+}
 .questions{
-    width: 9.52rem;
+    width: 10rem;
     margin:0 auto;
     display: flex;
     background: white;
+    border-radius:0 0 0.053rem 0.053rem;
     >div{
         width:100%;
         height:1.067rem;
@@ -186,5 +227,92 @@
             color: #5facfb;
             border-right:1px solid #e5e5e5;
         }
+    }
+}
+.recommended_box{
+    padding-bottom:0.4rem;
+    >p{
+        padding:0.253rem 0 0.267rem 0.4rem;
+        font-size: 0.293rem;
+    }
+}
+.recommended{
+    width:10rem;
+    margin:0 auto;
+    display: flex;
+    overflow-x: auto;
+    >li{
+        padding:0 0.135rem;
+        >div{
+            width: 3.147rem;
+            padding:0.24rem 0 0.293rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            position:relative;
+            border:0.013rem  solid #e5e5e5;
+            >img{
+                width: 1.333rem;
+                height: 1.333rem;
+                border-radius:50%;
+            }
+            >h3{
+                padding:0.267rem 0 0.09rem 0;
+                font-size: 0.32rem;
+            }
+            >p{
+                width: 3.147rem;
+                font-size: 0.293rem;
+                text-align: center;
+            }
+            >p:nth-child(3){
+                padding:0.09rem 0;
+            }
+            >div{
+                width: 2.453rem;
+                height: 0.613rem;
+                margin-top:0.2rem;
+                @extend .flexs;
+                font-size: 0.293rem;
+                border-radius: 0.053rem;
+            }
+            >.Care_about{
+                color: #ffffff;
+                background-color: #fba447;
+                border: solid 0.027rem #fba447;
+                >img{
+                    width:0.28rem;
+                    background:rgba(0,0,0,0);
+                    margin-right:0.05rem;
+                }
+            }
+            .cancel{
+                color:#999999;
+                border: solid 0.027rem #e5e5e5;
+                >img{
+                    width:0.37rem;
+                    background:rgba(0,0,0,0);
+                    margin-right:0.05rem;
+                }
+            }
+            >i{
+                width:0.59rem;
+                height:0.59rem;
+                color:#cccccc;
+                font-size:0.4rem;
+                background-color:rgba(0,0,0,0);
+                @extend .flexs;
+                position:absolute;
+                top:0;
+                right:0;
+            }
+        }
+    }
+    >li:first-child{
+        padding-left:0.4rem;
+    }
+    >li:last-child{
+        padding-right:0.4rem;
     }
 }

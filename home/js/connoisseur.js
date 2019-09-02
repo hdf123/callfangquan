@@ -125,9 +125,6 @@ $(function(){
 						+'</li>');
 		}
 	}
-	$(".contents").on("click",".questions",function(event){
-		event.stopPropagation();
-	})
 	$(".contents").on("click",".guanzhus",function(){
 		var _this=$(this).closest(".recommended");
 		$(this).closest(".recommended_child").remove();

@@ -52,8 +52,10 @@
         height:1.6rem;
         border-bottom:1px solid #e5e5e5;
         >div{
-            font-size: 0.8rem;
-            padding-bottom:0.2rem;
+            >img{
+                width:0.45rem;
+                background:rgba(0,0,0,0);
+            }
         }
         >input{
             width:8.7rem;

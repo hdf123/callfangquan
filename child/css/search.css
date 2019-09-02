@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -92,7 +94,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers div:nth-child(2), .without {
+.flexs, .headers div:nth-child(2), .without, .related_box > .guanzhu, .recommended > li > div > div, .recommended > li > div > i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,11 +204,15 @@ a {
   font-size: 0.373rem;
 }
 
+.results {
+  background: #F5F5F5;
+}
+
 .connoisseur_box {
   margin-top: 0.213rem;
 }
 .connoisseur_box > div:nth-child(1) {
-  width: 9.52rem;
+  width: 10rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -214,23 +220,6 @@ a {
   padding: 0.4rem;
   background: white;
   border-bottom: 1px solid #dddddd;
-}
-.connoisseur_box > div:nth-child(1) > div:nth-child(2) {
-  font-size: 0.293rem;
-  padding: 0.06rem 0.12rem;
-  border-radius: 0.053rem;
-}
-.connoisseur_box > div:nth-child(1) > .Care_about {
-  color: #fba447;
-  border: solid 0.027rem #fba447;
-}
-.connoisseur_box > div:nth-child(1) > .Care_about > i {
-  color: #fba447;
-  font-size: 0.45rem;
-}
-.connoisseur_box > div:nth-child(1) .cancel {
-  color: #999999;
-  border: solid 0.027rem #e5e5e5;
 }
 
 .connoisseur {
@@ -247,6 +236,7 @@ a {
 }
 .connoisseur > div:nth-child(1) > img:nth-child(2) {
   width: 0.3rem;
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   right: 5%;
   bottom: 5%;
@@ -267,11 +257,66 @@ a {
   font-size: 0.32rem;
 }
 
+.related_box {
+  width: 2.6rem;
+  height: 1.6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.related_box > .guanzhu {
+  height: 0.613rem;
+  font-size: 0.293rem;
+  border-radius: 0.053rem;
+}
+.related_box > .Care_about {
+  width: 1.2rem;
+  color: #fba447;
+  position: absolute;
+  right: 0;
+  border: solid 0.027rem #fba447;
+}
+.related_box > .Care_about > img {
+  width: 0.28rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
+}
+.related_box > .cancel {
+  width: 1.8rem;
+  color: #999999;
+  border: solid 0.027rem #e5e5e5;
+}
+.related_box > .cancel > img {
+  width: 0.37rem;
+  margin-right: 0.1rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+.control {
+  width: 0.613rem;
+  height: 0.613rem;
+  position: relative;
+  border-radius: 0.053rem;
+  border: 0.027rem solid #e5e5e5;
+}
+.control > img {
+  width: 0.45rem;
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0);
+}
+
 .questions {
-  width: 9.52rem;
+  width: 10rem;
   margin: 0 auto;
   display: flex;
   background: white;
+  border-radius: 0 0 0.053rem 0.053rem;
 }
 .questions > div {
   width: 100%;
@@ -287,6 +332,93 @@ a {
 .questions > div:nth-child(1) > div {
   color: #5facfb;
   border-right: 1px solid #e5e5e5;
+}
+
+.recommended_box {
+  padding-bottom: 0.4rem;
+}
+.recommended_box > p {
+  padding: 0.253rem 0 0.267rem 0.4rem;
+  font-size: 0.293rem;
+}
+
+.recommended {
+  width: 10rem;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+}
+.recommended > li {
+  padding: 0 0.135rem;
+}
+.recommended > li > div {
+  width: 3.147rem;
+  padding: 0.24rem 0 0.293rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+  border: 0.013rem  solid #e5e5e5;
+}
+.recommended > li > div > img {
+  width: 1.333rem;
+  height: 1.333rem;
+  border-radius: 50%;
+}
+.recommended > li > div > h3 {
+  padding: 0.267rem 0 0.09rem 0;
+  font-size: 0.32rem;
+}
+.recommended > li > div > p {
+  width: 3.147rem;
+  font-size: 0.293rem;
+  text-align: center;
+}
+.recommended > li > div > p:nth-child(3) {
+  padding: 0.09rem 0;
+}
+.recommended > li > div > div {
+  width: 2.453rem;
+  height: 0.613rem;
+  margin-top: 0.2rem;
+  font-size: 0.293rem;
+  border-radius: 0.053rem;
+}
+.recommended > li > div > .Care_about {
+  color: #ffffff;
+  background-color: #fba447;
+  border: solid 0.027rem #fba447;
+}
+.recommended > li > div > .Care_about > img {
+  width: 0.28rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
+}
+.recommended > li > div .cancel {
+  color: #999999;
+  border: solid 0.027rem #e5e5e5;
+}
+.recommended > li > div .cancel > img {
+  width: 0.37rem;
+  background: rgba(0, 0, 0, 0);
+  margin-right: 0.05rem;
+}
+.recommended > li > div > i {
+  width: 0.59rem;
+  height: 0.59rem;
+  color: #cccccc;
+  font-size: 0.4rem;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.recommended > li:first-child {
+  padding-left: 0.4rem;
+}
+.recommended > li:last-child {
+  padding-right: 0.4rem;
 }
 
 /*# sourceMappingURL=search.css.map */
