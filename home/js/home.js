@@ -1,5 +1,5 @@
 $(function(){
-//	$("body").show();
+	$("body").show();
 	var call_logins=true;//登录状态
 	localStorage.setItem('call_logins', JSON.stringify(call_logins));
 	
