@@ -47,6 +47,17 @@ $(function(){
 			$(this).prev().css({"height":"0.5rem"});
 		}
 	})
+	$(".Introduction>div").click(function(){
+		if($(this).is(".yy")){
+			$(this).next().addClass("rotating");
+			$(this).removeClass("yy");
+			$(this).css({"height":"auto"});
+		}else{
+			$(this).next().removeClass("rotating");
+			$(this).addClass("yy");
+			$(this).css({"height":"0.5rem"});
+		}
+	})
 	/**
 	 * 热度
 	 */

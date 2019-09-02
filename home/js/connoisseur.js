@@ -1,5 +1,5 @@
 $(function(){
-	var k1=false,shows=true;
+	var k1=false,shows=true,ksk=3;
 	/**
 	 * 搜索
 	 */
@@ -98,23 +98,12 @@ $(function(){
 		}
 	})
 	$(".contents").on("click",".deletes",function(event){
-		var _this=$(this).closest(".recommended_box");
-		$(this).parent().remove();
-		var lens=$(".recommended_child").length;
-		console.log(lens);
-		if(lens<1){
-			console.log("重新进行相关推荐数据请求");
-			/*重新进行相关推荐数据请求*/
-		}
-		event.stopPropagation();
-	})
-	$(".contents").on("click",".questions",function(event){
-		event.stopPropagation();
-	})
-	var ksk=3;
-	$(".contents").on("click",".guanzhus",function(){
 		var _this=$(this).closest(".recommended");
 		$(this).closest(".recommended_child").remove();
+		funk(_this);
+		event.stopPropagation();
+	})
+	function funk(_this){
 		var len=_this.children("li").length;
 		console.log(len);
 		if(len<1){
@@ -135,6 +124,14 @@ $(function(){
 							+'</div>'
 						+'</li>');
 		}
+	}
+	$(".contents").on("click",".questions",function(event){
+		event.stopPropagation();
+	})
+	$(".contents").on("click",".guanzhus",function(){
+		var _this=$(this).closest(".recommended");
+		$(this).closest(".recommended_child").remove();
+		funk(_this);
 		
 //		if($(this).is(".cancel")){
 //			$(this).removeClass("cancel").addClass("Care_about");
