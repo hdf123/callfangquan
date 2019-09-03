@@ -201,7 +201,6 @@ $(function(){
 	$(".btn4>div:eq(1)").click(function(){
 		results();
 	})
-	$(".loading_box").hide();
 	function results(){
 		var area=$(".conditions_area>div");//面积
 		var property=$(".conditions_property>div");//物业类型

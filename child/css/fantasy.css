@@ -113,6 +113,7 @@ a {
 }
 .headers > a > img {
   width: 30%;
+  background: none;
   position: absolute;
   left: 0;
   top: 0;
