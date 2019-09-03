@@ -13,7 +13,7 @@ $(function(){
 		var menuOne = $(".option-menu").eq(0).text();
 		var menuTwo = $(".option-menu").eq(1).text();
 		var addressVal = menuOne +" "+ menuTwo +" "+ areaName;
-		$(".address").val(addressVal);
+		$("#address").val(addressVal);
 		funck();
 	})
 	function funck(){
@@ -21,6 +21,7 @@ $(function(){
 			$(".btn").addClass("disable");
 		}else{
 			$(".btn").removeClass("disable");
+			$(".btn").attr("disabled",false);
 		}
 	}
 	$(".btn").click(function(){

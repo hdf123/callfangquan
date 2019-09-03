@@ -151,13 +151,14 @@ a {
   height: 1.173rem;
   color: #ffffff;
   font-size: 0.4rem;
+  border: none;
   margin: 0.92rem auto 0;
   background-color: #5facfb;
   border-radius: 0.053rem;
+  -webkit-appearance: none;
 }
 
 .disable {
-  pointer-events: none;
   background-color: #C8DFF7;
 }
 
