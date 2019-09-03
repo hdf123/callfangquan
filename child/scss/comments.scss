@@ -30,6 +30,7 @@
     top:1.173rem;
     left:auto;
     bottom:0;
+    overflow: visible!important;
 }
 .review_box{
     width:100%;
@@ -80,6 +81,7 @@
             padding-bottom:0.1rem;
             >img{
                 width:0.5rem;
+                background:none;
             }
         }
         >.act{

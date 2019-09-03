@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
 .headers{
+    
     height:1rem;
     display: flex;
     justify-content: space-between;
@@ -153,6 +154,7 @@
     align-items: center;
     >img{
         width:0.4rem;
+        background: none;
     }
     >span{
         color: #999999;

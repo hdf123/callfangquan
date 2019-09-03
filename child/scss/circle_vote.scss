@@ -17,11 +17,13 @@
             right: 0; 
             bottom: 0;
             margin:auto;
+            background:none;
         }
     }
     >a:nth-child(2){
         >img{
             width:50%;
+            background:none;
         }
     }
 }
@@ -249,6 +251,7 @@
     align-items: center;
     >img{
         width:0.4rem;
+        background:none;
     }
     >span{
         color: #999999;

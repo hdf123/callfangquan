@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -117,9 +119,11 @@ a {
   right: 0;
   bottom: 0;
   margin: auto;
+  background: none;
 }
 .headers > a:nth-child(2) > img {
   width: 50%;
+  background: none;
 }
 
 .contents {
@@ -345,6 +349,7 @@ a {
 }
 .praise > img {
   width: 0.4rem;
+  background: none;
 }
 .praise > span {
   color: #999999;
