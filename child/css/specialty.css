@@ -213,6 +213,7 @@ a {
 }
 .agreement_box > p {
   display: flex;
+  align-items: center;
 }
 .agreement_box > p > img {
   width: 0.35rem;
