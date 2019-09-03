@@ -1,5 +1,5 @@
 $(function(){
-	if($(".consulting_box>li").length<1){
+	if($(".consulting_box>.consulting").length<1){
 		$(".consulting_box").hide();
 	}else{
 		$(".record").hide();
@@ -15,8 +15,8 @@ $(function(){
 	var LoadingDataFn = function(){
 		console.log("上拉加载");
 		var dom='';
-		for(var i=0;i<30;i++){
-			dom+='+<div>'+(i+1)+'</div>';
+		for(var i=1;i<31;i++){
+			dom+='<div>'+i+'</div>';
 		}
 		$('.consulting_box').append(dom);
 		off_on = true;

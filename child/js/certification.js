@@ -17,18 +17,22 @@ $(function(){
 		funck();
 	})
 	function funck(){
-		if($(".name").val()==""||$(".phone").val()==""||$(".unit").val()==""||$(".positions").val()==""||$(".address").val()==""){
+		if($("[name='name']").val()==""||$("[name='phone']").val()==""||$("[name='unit']").val()==""||$("[name='positions']").val()==""||$("[name='address']").val()==""){
 			$(".btn").addClass("disable");
 		}else{
 			$(".btn").removeClass("disable");
 		}
 	}
 	$(".btn").click(function(){
-		console.log($(".name").val());
-		console.log($(".phone").val());
-		console.log($(".unit").val());
-		console.log($(".positions").val());
-		console.log($(".address").val());
+		var aa=$("[name='name']").val();
+		console.log(aa);
+ 		var dats = {};
+        var vals = $('form').serializeArray();
+        $.each(vals, function () {
+            dats[this.name] = this.value;
+        });
+        console.log(dats);
 		location.href="specialty.html";
+
 	})
 })
