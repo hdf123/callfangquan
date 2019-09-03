@@ -56,5 +56,6 @@ $(function(){
 		console.log(arr1);
 		console.log($(".money").val());
 		$(".screen").hide();
+		location.href="../home/my.html";
 	})
 })

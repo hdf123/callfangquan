@@ -90,15 +90,18 @@
     background-color: #ffffff;
     border-radius: 0.053rem;
     >div:nth-child(1){
-        text-align: center;
+        display: flex;
+        justify-content: center;
         font-size: 0.4rem;
         margin-top:0.733rem;
-        >input{
-            width:1rem;
-            font-size: 0.4rem;
-            text-align: center;
-            border:none;
-            border-bottom:2px solid #333333;
+        >div{
+            border-bottom:0.027rem solid #333333;
+            >input{
+                width:1rem;
+                font-size: 0.4rem;
+                text-align: center;
+                border:none;
+            }
         }
     }
 }

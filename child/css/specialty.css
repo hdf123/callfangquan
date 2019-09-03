@@ -24,6 +24,8 @@ input {
   border: none;
   /*3.添加边框*/
   border: 1px solid #ccc;
+  /*4.解决iphone safari上的圆角和渐变问题*/
+  -webkit-appearance: none;
 }
 
 /* 让链接默认不显示下划线， */
@@ -188,16 +190,19 @@ a {
   border-radius: 0.053rem;
 }
 .popup > div:nth-child(1) {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font-size: 0.4rem;
   margin-top: 0.733rem;
 }
-.popup > div:nth-child(1) > input {
+.popup > div:nth-child(1) > div {
+  border-bottom: 0.027rem solid #333333;
+}
+.popup > div:nth-child(1) > div > input {
   width: 1rem;
   font-size: 0.4rem;
   text-align: center;
   border: none;
-  border-bottom: 2px solid #333333;
 }
 
 .agreement_box {
