@@ -90,7 +90,7 @@ $(function(){
    	$(".rights").click(function(){
    		var mun=$(".texts").val();
    		if(mun.length<10){
-   			return console.log("输入不能小数10位");
+   			return console.log("输入长度不能小于10位");
    		}
    		if(free<1){
    			$(".popup_box").show();

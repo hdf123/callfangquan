@@ -29,10 +29,14 @@ $(function(){
 	    }
 	});
 	//选择回复
-	var say = '回复留言...',names="";
+	var say = '回复留言...',names="",ks='';
 	$(".footers").hide();
 	$(".contents").on("click",".reply",function(){
 		names=$(this).closest(".message_title").find(".name").html();
+		
+		ks=$(this).closest(".lists");
+		
+		
 		$("#form_article").html("回复"+names+"：");
 		$(".footers").show();
 		$(".contents").css({"bottom":"1.307rem"});
@@ -63,5 +67,21 @@ $(function(){
     })
     $(".btn").click(function(){
     	console.log($(".inputs article").html());
+    	ks.append('<div class="reply_box">'
+					+'<img src="" alt="" />'
+					+'<div>'
+						+'<div>'
+							+'<div>name</div>'
+							+'<div>19-05-13  16:27</div>'
+						+'</div>'
+						+'<div>'
+							+'回复<span>戴琳jur</span>：'+$(".inputs article").html()
+						+'</div>'
+					+'</div>'
+				+'</div>')
+    	
+    	names="";
+    	ks='';
+    	$("#form_article").html(say);
     })
 })
