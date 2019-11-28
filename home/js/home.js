@@ -64,7 +64,7 @@ $(function(){
 		setTimeout(function(){//假设请求成功后取消loading动画
 			$(".loading_box").hide();
 			$('.loadings').shCircleLoader('destroy');
-		}, 10000);
+		}, 1000);
 		console.log(data);
 	    var dom = '';
 	    for (i in data) {

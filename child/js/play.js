@@ -2,7 +2,6 @@ $(function(){
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-	//var b3=b1-headers;
 	$(".box").css({"top":b1+"px"});
 	
 	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
@@ -51,8 +50,8 @@ $(function(){
 	var timestamp=new Date().getTime();//当前时间戳
 	$(".times").html(getMyDate(timestamp,1));
 	$(".more").click(function(){
-		$(".cons").prepend('<div>999</div>');
-		$(".watch").animate({scrollTop:0},10);
+		$(".cons").append('<div>999</div>');
+		$(".watch").animate({scrollTop:"100%"},10);
 	})
 	$(".aa").html("做人，无需去羡慕别人，也无需去花时间去羡慕别人是如何成功的，想的只要是自己如何能战胜自己，如何变得比昨天的自己强大就行。自己的磨练和坚持，加上自己的智慧和勤劳，会成功的。终将变成石佛那样受到大家的尊敬。");
 	$(".bb").html("1111111111111111111111");
@@ -64,6 +63,10 @@ $(function(){
 	if ($("#form_article").html() === "") {
 		$("#form_article").html(say);
 	}
+	$(".inputs img").click(function(event){
+		$("#page_emotion").show();
+		event.stopPropagation();
+	})
 	$("#form_article").click(function(){
         if($("#form_article").html() == say){
            	$("#form_article").html("");
@@ -90,14 +93,28 @@ $(function(){
 			$(this).removeClass("icon-zan2").addClass("icon-dianzan");
 		}
 	})
-	$('#form_article').on('keypress', function (e){
+	$(".btn div").click(function(){
+		send();
+	})
+	$('#form_article').on('keypress',function (e){
 	    var keycode = e.keyCode;
 	　　	//keycode是键码，13也是电脑物理键盘的 enter
 	    if(keycode == '13') {
 	    	e.preventDefault();
-	    	console.log($("#form_article").html());
+	    	send();
 	    }
 	});
+	function send(){
+    	$(".cons").prepend(`<div class="mys">
+							<div>
+								<div>
+									<p> </p>
+									<div class="bb">${$("#form_article").html()}</div>
+								</div>
+								<img src="" alt="" />
+							</div>
+						</div>`);
+	}
 	//关注更多
 	$('.more_box').click(function(){
 		$(this).hide();

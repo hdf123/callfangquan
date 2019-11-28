@@ -207,6 +207,9 @@
                 background:#FFFFFF;
                 margin-top:0.1rem;
                 @extend .newline;
+                img{
+                    display: inline-block;
+                }
             }
         }
     }
