@@ -64,6 +64,7 @@ $(function(){
 		}else{
 			ns=datask.length;
 		}
+		console.log(ns);
 		for(var i=0;i<ns;i++){
 			if(datask[i].id!=1){
 				$(".cons").append(`<div class="other">
