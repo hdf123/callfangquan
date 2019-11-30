@@ -5,7 +5,6 @@ $(function(){
 	$(".box").css({"top":b1+"px"});
 	
 	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
-	
 	$(".Introduction>i").click(function(){
 		if($(this).closest(".Introduction").find(".as").is(".yy")){
 			$(this).addClass("rotating");
@@ -43,22 +42,60 @@ $(function(){
 		});
 	}
 	
-	
+/**
+ * 发表的评论
+ */
+    var datask=[
+    	{name:"小明",con:"111",id:1},
+    	{name:"花花",con:"真好看",id:2},
+    	{name:"秀儿",con:"666",id:3},
+    	{name:"小明",con:"是的",id:1},
+    	{name:"小虎",con:"是吗",id:4},
+    ]
+	$(document).ready(function(){//页面刚开始加载的数据
+		funa(1);	
+	})
+	function funa(n){
+//		datask.reverse();
+		var ns=0;
+		console.log(n);
+		if(n==1){
+			ns=2;
+		}else{
+			ns=datask.length;
+		}
+		for(var i=0;i<ns;i++){
+			if(datask[i].id!=1){
+				$(".cons").append(`<div class="other">
+										<div>
+											<img src="" alt="" />
+											<div>
+												<p>name</p>
+												<div class="aa">${datask[i].con}</div>
+											</div>
+										</div>
+									</div>`);
+			}else{
+				$(".cons").append(`<div class="mys">
+									<div>
+										<div>
+											<p> </p>
+											<div class="bb">${datask[i].con}</div>
+										</div>
+										<img src="" alt="" />
+									</div>
+								</div>`);
+			}
+		}
+	}
+
 	$(".box>div").hide();
 	$(".comments_box").show();
 	//当前时间展示；
 	var timestamp=new Date().getTime();//当前时间戳
 	$(".times").html(getMyDate(timestamp,1));
-	$(".more").click(function(){
-		$(".cons").append('<div>999</div>');
-		$(".watch").animate({scrollTop:"100%"},10);
-	})
-	$(".aa").html("做人，无需去羡慕别人，也无需去花时间去羡慕别人是如何成功的，想的只要是自己如何能战胜自己，如何变得比昨天的自己强大就行。自己的磨练和坚持，加上自己的智慧和勤劳，会成功的。终将变成石佛那样受到大家的尊敬。");
-	$(".bb").html("1111111111111111111111");
-	/**
-	 * 表情
-	 */
-	 var say = '请输入你的评论...';
+	//表情
+	var say = '请输入你的评论...';
 	$("#page_emotion").hide();
 	if ($("#form_article").html() === "") {
 		$("#form_article").html(say);
@@ -85,6 +122,11 @@ $(function(){
     	$("#page_emotion").toggle();
     	event.stopPropagation();
     })
+	$(".more").click(function(){//查看更多
+		$(".cons").empty();
+		funa(2);
+
+	})
 	//点赞、发送
 	$(".btn>i").click(function(){
 		if($(this).is(".icon-dianzan")){
@@ -105,7 +147,15 @@ $(function(){
 	    }
 	});
 	function send(){
-    	$(".cons").prepend(`<div class="mys">
+		var sd={
+			name:"小明",
+			con:$("#form_article").html(),
+			id:1
+		}
+		datask.push(sd);//讲发送的内容添加到数据库
+//		datask.reverse();
+		console.log(datask);
+    	$(".cons").append(`<div class="mys">
 							<div>
 								<div>
 									<p> </p>
@@ -114,6 +164,9 @@ $(function(){
 								<img src="" alt="" />
 							</div>
 						</div>`);
+		var scrollHeight = $('.cons').prop("scrollHeight");
+      	$('.watch').scrollTop(scrollHeight,300);
+//    	$(".watch").animate({scrollTop:"100%"},10);
 	}
 	//关注更多
 	$('.more_box').click(function(){

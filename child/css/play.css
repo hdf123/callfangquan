@@ -263,6 +263,7 @@ input::-webkit-outer-spin-button {
 .other > div > div {
   margin-left: 0.5rem;
   position: relative;
+  margin-bottom: 0.35rem;
 }
 .other > div > div > p {
   height: 0.5rem;
