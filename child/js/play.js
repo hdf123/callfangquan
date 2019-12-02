@@ -2,7 +2,8 @@ $(function(){
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-	$(".box").css({"top":b1+"px"});
+	var b3=b1+b2-headers;
+	$(".box").css({"top":+b3+"px"});
 	
 	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
 	$(".Introduction>i").click(function(){
@@ -15,10 +16,8 @@ $(function(){
 			$(this).closest(".Introduction").find(".as").addClass("yy");
 			$(this).closest(".Introduction").find(".as").css({"height":"0.5rem"});
 		}
-		var b1=$(".experts_tab").offset().top;
-		var headers=$("header")[0].getBoundingClientRect().height;
-		var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-		var b3=b1+b2-headers;
+		b1=$(".experts_tab").offset().top;
+		b3=b1+b2-headers;
 		$(".box").css({"top":+b3+"px"});
 	})
 	/**
@@ -58,7 +57,6 @@ $(function(){
 	function funa(n){
 //		datask.reverse();
 		var ns=0;
-		console.log(n);
 		if(n==1){
 			ns=2;
 		}else{
@@ -125,7 +123,8 @@ $(function(){
 	$(".more").click(function(){//查看更多
 		$(".cons").empty();
 		funa(2);
-
+		var scrollHeight = $('.cons').prop("scrollHeight");
+		$('.watch').scrollTop(scrollHeight,300);
 	})
 	//点赞、发送
 	$(".btn>i").click(function(){
