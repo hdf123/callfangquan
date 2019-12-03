@@ -86,8 +86,7 @@ $(function(){
 			}
 		}
 	}
-
-	$(".box>div").hide();
+	$(".box>div:eq(0)").hide();
 	$(".comments_box").show();
 	//当前时间展示；
 	var timestamp=new Date().getTime();//当前时间戳

@@ -209,6 +209,9 @@ input::-webkit-outer-spin-button {
   left: 0;
   bottom: 0;
 }
+.box > div:not(:first-child) {
+  display: none;
+}
 
 .comments_box {
   width: 100%;
@@ -428,12 +431,13 @@ input::-webkit-outer-spin-button {
   bottom: 0;
   z-index: 98;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: flex-end;
 }
 .more_box > div {
   width: 100%;
   background: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .more_box > div > div {
   display: flex;
