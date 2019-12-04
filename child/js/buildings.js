@@ -145,6 +145,12 @@ $(function(){
 	var near="公交";
 	$(".swiper2 .swiper-slide").click(function(){
 		$(this).addClass("act").siblings().removeClass("act");
+		var ind=$(this).index()-1;
+		if(ind>0){
+			mySwiper2.slideTo(ind, 100, false);
+		}else if(ind==0){
+			mySwiper2.slideTo(ind, 100, false);
+		}
 		var near=$(this).text();
 		map.clearOverlays();//清除地图覆盖物
         map.addOverlay(marker);// 将标注添加到地图中
