@@ -53,7 +53,7 @@ $(function(){
     	{name:"小虎",con:"是吗",id:4},
     ]
 	$(document).ready(function(){//页面刚开始加载的数据
-		funa(1);	
+		funa(1);
 	})
 	function funa(n){
 //		datask.reverse();
@@ -67,25 +67,25 @@ $(function(){
 		console.log(ns);
 		for(var i=0;i<ns;i++){
 			if(datask[i].id!=1){
-				$(".cons").append(`<div class="other">
-										<div>
-											<img src="" alt="" />
-											<div>
-												<p>name</p>
-												<div class="aa">${datask[i].con}</div>
-											</div>
-										</div>
-									</div>`);
+				$(".cons").append('<div class="other">'
+										+'<div>'
+											+'<img src="" alt="" />'
+											+'<div>'
+												+'<p>name</p>'
+												+'<div class="aa">${datask[i].con}</div>'
+											+'</div>'
+										+'</div>'
+									+'</div>');
 			}else{
-				$(".cons").append(`<div class="mys">
-									<div>
-										<div>
-											<p> </p>
-											<div class="bb">${datask[i].con}</div>
-										</div>
-										<img src="" alt="" />
-									</div>
-								</div>`);
+				$(".cons").append('<div class="mys">'
+									+'<div>'
+										+'<div>'
+											+'<p> </p>'
+											+'<div class="bb">${datask[i].con}</div>'
+										+'</div>'
+										+'<img src="" alt="" />'
+									+'</div>'
+								+'</div>');
 			}
 		}
 	}
@@ -157,19 +157,65 @@ $(function(){
 		datask.push(sd);//讲发送的内容添加到数据库
 //		datask.reverse();
 		console.log(datask);
-    	$(".cons").append(`<div class="mys">
-							<div>
-								<div>
-									<p> </p>
-									<div class="bb">${$("#form_article").html()}</div>
-								</div>
-								<img src="" alt="" />
-							</div>
-						</div>`);
+    	$(".cons").append('<div class="mys">'
+							+'<div>'
+								+'<div>'
+									+'<p> </p>'
+									+'<div class="bb">${$("#form_article").html()}</div>'
+								+'</div>'
+								+'<img src="" alt="" />'
+							+'</div>'
+						+'</div>');
 		var scrollHeight = $('.cons').prop("scrollHeight");
       	$('.watch').scrollTop(scrollHeight,300);
 //    	$(".watch").animate({scrollTop:"100%"},10);
 	}
+/**
+ * 实况直播
+ */
+	function funa(){
+		$(".live_box").append('<div class="live">'
+						+'<div>'
+							+'<div>'
+								+'<div><p></p></div>'
+								+'<div>2019-04-17  14:51:26</div>'
+							+'</div>'
+						+'</div>'
+						+'<div>'
+							+'<div>'
+								+'<p>试乘直升机的客户难掩激动心情，纷纷拍照或录小视频</p>'
+								+'<img src="" alt="" />'
+							+'</div>'
+						+'</div>'
+					+'</div>');
+	}
+    /**
+     * 上拉加载
+     */
+	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
+	//加载数据
+	var LoadingDataFn = function(){
+		console.log("上拉加载");
+		var dom='';
+		funa();
+		off_on = true;
+	};
+	//初始化， 第一次加载
+	$(document).ready(function() {
+	    LoadingDataFn();
+	});
+	$('.live_box').scroll(function() {
+	    //当时滚动条离底部60px时开始加载下一页的内容
+	    if (($(this)[0].scrollTop + $(this).height() + 60) >= $(this)[0].scrollHeight) {
+	        //这里用 [ off_on ] 来控制是否加载 （这样就解决了 当上页的条件满足时，一下子加载多次的问题啦）
+	        if (off_on) {
+	              off_on = false;
+	              page++;
+	              console.log("第"+page+"页");
+	              LoadingDataFn();  //调用执行上面的加载方法
+	        }
+	    }
+	});
 	//关注更多
 	$('.more_box').click(function(){
 		$(this).hide();
