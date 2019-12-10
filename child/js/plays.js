@@ -2,8 +2,12 @@ $(function(){
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-	//var b3=b1-headers;
-	$(".box").css({"top":b1+"px"});
+	var b3=b1-headers;
+	console.log("b1---"+b1);
+	console.log("b2---"+b2);
+	console.log("b3---"+b3);
+	console.log("headers---"+headers);
+	$(".box").css({"top":b3+"px"});
 	
 	
 	$(".Introduction>i").click(function(){
@@ -60,7 +64,7 @@ $(function(){
 		var ns=0;
 		console.log(n);
 		if(n==1){
-			ns=4;
+			ns=2;
 		}else{
 			ns=datask.length;
 		}
@@ -72,7 +76,7 @@ $(function(){
 											+'<img src="" alt="" />'
 											+'<div>'
 												+'<p>name</p>'
-												+'<div class="aa">${datask[i].con}</div>'
+												+'<div class="aa">'+datask[i].con+'</div>'
 											+'</div>'
 										+'</div>'
 									+'</div>');
@@ -81,7 +85,7 @@ $(function(){
 									+'<div>'
 										+'<div>'
 											+'<p> </p>'
-											+'<div class="bb">${datask[i].con}</div>'
+											+'<div class="bb">'+datask[i].con+'</div>'
 										+'</div>'
 										+'<img src="" alt="" />'
 									+'</div>'
@@ -173,7 +177,7 @@ $(function(){
 /**
  * 实况直播
  */
-	function funa(){
+	function funb(){
 		$(".live_box").append('<div class="live">'
 						+'<div>'
 							+'<div>'
@@ -197,7 +201,7 @@ $(function(){
 	var LoadingDataFn = function(){
 		console.log("上拉加载");
 		var dom='';
-		funa();
+		funb();
 		off_on = true;
 	};
 	//初始化， 第一次加载

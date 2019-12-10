@@ -2,7 +2,11 @@ $(function(){
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-	var b3=b1+b2-headers;
+	var b3=b1-headers;
+	console.log("b1---"+b1);
+	console.log("b2---"+b2);
+	console.log("b3---"+b3);
+	console.log("headers---"+headers);
 	$(".box").css({"top":+b3+"px"});
 	
 	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
@@ -64,25 +68,25 @@ $(function(){
 		}
 		for(var i=0;i<ns;i++){
 			if(datask[i].id!=1){
-				$(".cons").append(`<div class="other">
-										<div>
-											<img src="" alt="" />
-											<div>
-												<p>name</p>
-												<div class="aa">${datask[i].con}</div>
-											</div>
-										</div>
-									</div>`);
+				$(".cons").append('<div class="other">'
+										+'<div>'
+											+'<img src="" alt="" />'
+											+'<div>'
+												+'<p>name</p>'
+												+'<div class="aa">'+datask[i].con+'</div>'
+											+'</div>'
+										+'</div>'
+									+'</div>');
 			}else{
-				$(".cons").append(`<div class="mys">
-									<div>
-										<div>
-											<p> </p>
-											<div class="bb">${datask[i].con}</div>
-										</div>
-										<img src="" alt="" />
-									</div>
-								</div>`);
+				$(".cons").append('<div class="mys">'
+									+'<div>'
+										+'<div>'
+											+'<p> </p>'
+											+'<div class="bb">'+datask[i].con+'</div>'
+										+'</div>'
+										+'<img src="" alt="" />'
+									+'</div>'
+								+'</div>');
 			}
 		}
 	}
