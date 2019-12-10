@@ -2,7 +2,7 @@ $(function(){
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-	var b3=b1-headers;
+	var b3=b1+b2-headers;
 	
 	console.log("b1--"+b1);
 	console.log("b2---"+b2);
@@ -16,11 +16,6 @@ $(function(){
 	$(".box").css({"top":+b3+"px"});
 	
 	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
-	$(document).ajaxStop(function(){
-	  	console.log("所有 AJAX 请求已完成");
-	});
-	var hei=$('.contents video')[0].getBoundingClientRect().height;
-	console.log(hei);
 	$(".Introduction>i").click(function(){
 		if($(this).closest(".Introduction").find(".as").is(".yy")){
 			$(this).addClass("rotating");
