@@ -132,8 +132,10 @@ input::-webkit-outer-spin-button {
   left: auto;
   bottom: 0;
 }
-.contents > video {
-  width: 100%;
+.contents video {
+  width: 10rem;
+  height: 5.6rem !important;
+  background: #630000;
 }
 
 .Introduction {
