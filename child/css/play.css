@@ -134,6 +134,7 @@ input::-webkit-outer-spin-button {
 }
 .contents > video {
   width: 100%;
+  min-height: 2.63rem;
 }
 
 .Introduction {

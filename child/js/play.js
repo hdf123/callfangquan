@@ -19,7 +19,8 @@ $(function(){
 	$(document).ajaxStop(function(){
 	  	console.log("所有 AJAX 请求已完成");
 	});
-	
+	var hei=$('.contents video')[0].getBoundingClientRect().height;
+	console.log(hei);
 	$(".Introduction>i").click(function(){
 		if($(this).closest(".Introduction").find(".as").is(".yy")){
 			$(this).addClass("rotating");
