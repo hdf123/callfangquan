@@ -2,7 +2,7 @@ $(function(){
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
-	var b3=b1-headers;
+	var b3=b1+b2-headers;
 	console.log("b1---"+b1);
 	console.log("b2---"+b2);
 	console.log("b3---"+b3);
