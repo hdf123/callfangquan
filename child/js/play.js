@@ -1,5 +1,4 @@
 $(function(){
-	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
 	var b1=$(".experts_tab").offset().top;
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
@@ -9,11 +8,14 @@ $(function(){
 	console.log("b2---"+b2);
 	console.log("b3---"+b3);
 	console.log("headers---"+headers);
+	
 	$(".cons").append("b1--"+b1+"<br/>");
 	$(".cons").append("b2---"+b2+"<br/>");
 	$(".cons").append("b3---"+b3+"<br/>");
 	$(".cons").append("headers---"+headers);
 	$(".box").css({"top":+b3+"px"});
+	
+	$('.contents video').attr("src","http://1252583354.vod2.myqcloud.com/2985ef10vodtranscq1252583354/fc36d2ea5285890780451231863/v.f30.mp4");
 	
 	$(document).ajaxStop(function(){
 	  	console.log("所有 AJAX 请求已完成");
