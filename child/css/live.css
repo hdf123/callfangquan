@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .live_cont > div:nth-child(1), .list > div:nth-child(1), .wdows > div, #wdows > div {
+.yincang, .live_cont > div:nth-child(1), .list > div:nth-child(1) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -129,7 +129,6 @@ input::-webkit-outer-spin-button {
 
 .contents {
   top: 1.173rem;
-  left: auto;
   bottom: 0;
   overflow: auto;
 }

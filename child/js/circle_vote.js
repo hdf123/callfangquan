@@ -88,7 +88,7 @@ $(function(){
 		}
 	})
 	/**
-	 * 滚动事件
+	 * 滚动事件	
 	 */
 	$(".contents").scroll(function(){
 		var headHeight=$(".headers").outerHeight()+5;

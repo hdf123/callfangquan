@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .Introduction > .yy, .associated > div > div, .wdows > div, #wdows > div {
+.yincang, .Introduction > .yy, .associated > div > div {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -84,6 +84,17 @@ a {
 /*placeholder样式*/
 .input::-webkit-input-placeholder {
   text-align: center;
+}
+
+input::-webkit-inner-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+  /*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+
+input::-webkit-outer-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
 }
 
 /*隐藏滚动条*/
@@ -124,9 +135,7 @@ a {
 
 .contents {
   top: 6.773rem;
-  left: auto;
   bottom: 0;
-  overflow: visible !important;
 }
 
 .Introduction_box {

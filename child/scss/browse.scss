@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base";
+
 .headers{
     height: 1.173rem;
     background-color: #ffffff;
@@ -20,8 +21,8 @@
 .contents{
     padding-left:0.4rem;
     top:1.173rem;
-    left:auto;
     bottom:0;
+    overflow: auto;
 }
 .browse{
     padding:0 0.4rem 0.213rem 0;

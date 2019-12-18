@@ -54,4 +54,16 @@ $(function(){
 	})
 	$(".tab_box>ul").hide();
 	$(".tab_box>ul:eq(0)").show();
+	
+	var dom="";
+	for(var i=0;i<6;i++){
+		dom+=`<li>
+				<div>
+					<div>${i+1}共享生活空间，是怎样一副面孔呢?共享生活空间，是怎样一副面孔呢?</div>
+					<p>2019-05-13</p>
+				</div>
+				<img src="" alt="" />
+			</li>`;
+	}
+	$(".dynamic").append(dom);
 })

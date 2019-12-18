@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .buildings_title > h3, .situation > div:nth-child(2) > div:nth-child(2) > p, .situation > div:nth-child(3) > div:nth-child(2) > p, .distance_box > li > div:nth-child(1) > div, .comments_title > div:nth-child(1) span, .swiper3 .swiper-slide h4, .swiper4 .swiper-slide h4, .wdows > div, #wdows > div {
+.yincang, .buildings_title > h3, .situation > div:nth-child(2) > div:nth-child(2) > p, .situation > div:nth-child(3) > div:nth-child(2) > p, .distance_box > li > div:nth-child(1) > div, .comments_title > div:nth-child(1) span, .swiper3 .swiper-slide h4, .swiper4 .swiper-slide h4 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -84,6 +84,17 @@ a {
 /*placeholder样式*/
 .input::-webkit-input-placeholder {
   text-align: center;
+}
+
+input::-webkit-inner-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+  /*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+
+input::-webkit-outer-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
 }
 
 /*隐藏滚动条*/
@@ -193,10 +204,7 @@ img {
 }
 
 .contents {
-  max-width: 10rem;
-  position: absolute;
   top: 0;
-  left: auto;
   bottom: 1.547rem;
   overflow: auto;
 }
@@ -446,7 +454,7 @@ img {
   display: flex;
   justify-content: center;
   font-size: 0.373rem;
-  padding: 0.36rem 0 0.36rem 0;
+  padding: 0.36rem 0 0.36rem 0.4rem;
 }
 .swiper2 .act {
   color: #0099ff;

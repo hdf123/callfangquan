@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
+
 body{
     background-color: #000000;
 }
@@ -38,14 +39,11 @@ body{
     }
 }
 .contents{
-    width:10rem !important;
-    position:fixed;
     top:1.173rem;
-    left:auto;
-    bottom:3rem;
+    bottom:0;
 }
 .swiper1{
-    height:calc(100% - 1.333rem);
+    height:calc(100% - 1.333rem - 3rem);
     background:white;
     .swiper-slide{
         width:100%;
@@ -75,7 +73,7 @@ body{
         font-size:0.373rem;
     }
 }
-.footers{
+.foots{
     height:3rem;
     padding-left:0.4rem;
     display: flex;

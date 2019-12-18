@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
+
 .headers{
     background:white;
     z-index:96;
@@ -53,10 +54,7 @@
     }
 }
 .contents{
-    width:10rem !important;
-    position:absolute;
     top:2.3rem;
-    left:auto;
     bottom:0;
 }
 .swiper1{

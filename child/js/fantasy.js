@@ -38,7 +38,18 @@ $(function(){
 	/**
 	 * 发表
 	 */
+	$('.inp').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	　　	//keycode是键码，13也是电脑物理键盘的 enter
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	reply();
+	    }
+	});
 	$(".footers>div").click(function(){
+		reply();
+	})
+	function reply(){
 		if(names==""){
 			return alert("请选择要回复的对象");
 		}
@@ -48,11 +59,10 @@ $(function(){
 		console.log(ulli.length);
 		for(var i=0;i<ulli.length;i++){
 			if($(".discuss_box>li").eq(i).attr("nam")==names){
-				console.log(111);
 				$(".discuss_box>li").eq(i).find(".reply_box>ul").append('<li>'+inp+'</li>');
 			}
 		}
-	})
+	}
 	/**
 	 * 滚动事件
 	 */

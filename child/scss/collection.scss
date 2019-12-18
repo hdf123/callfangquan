@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import "../../css/base";
+
 .headers{
-    
     height: 1.173rem;
     background-color: #ffffff;
     border-bottom:1px solid rgba(199,199,199,0.2);
@@ -20,8 +20,8 @@
 }
 .contents{
     top:1.173rem;
-    left:auto;
     bottom:0;
+    overflow: auto;
     >ul{
         padding:0 0.4rem;
         width:100%;

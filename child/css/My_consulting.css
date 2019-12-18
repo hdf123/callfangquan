@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -86,6 +86,17 @@ a {
   text-align: center;
 }
 
+input::-webkit-inner-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+  /*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+
+input::-webkit-outer-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+}
+
 /*隐藏滚动条*/
 .scroll_bar::-webkit-scrollbar {
   width: 0 !important;
@@ -118,7 +129,6 @@ a {
 
 .contents {
   top: 1.173rem;
-  left: auto;
   bottom: 0;
 }
 

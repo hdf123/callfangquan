@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .wdows > div, #wdows > div {
+.yincang {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -86,6 +86,17 @@ a {
   text-align: center;
 }
 
+input::-webkit-inner-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+  /*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+
+input::-webkit-outer-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+}
+
 /*隐藏滚动条*/
 .scroll_bar::-webkit-scrollbar {
   width: 0 !important;
@@ -94,7 +105,7 @@ a {
 }
 
 /*上下左右居中*/
-.flexs, .headers .lefts, .headers .centers, .specialty > li > div, .btns, .screen, .btn > div {
+.flexs, .headers .lefts, .headers .centers, .specialty > li > div, .btns, .btn > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,7 +129,6 @@ a {
 
 .contents {
   top: 1.173rem;
-  left: auto;
   bottom: 0;
   background: #f5f5f5;
 }
@@ -179,13 +189,20 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
+  margin: auto;
   z-index: 98;
   background-color: rgba(0, 0, 0, 0.5);
+  display: none;
 }
 
 .popup {
   width: 8.187rem;
+  height: 4.5rem;
   padding: 0 0.667rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
   border-radius: 0.053rem;
 }

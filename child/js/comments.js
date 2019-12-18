@@ -20,6 +20,14 @@ $(function(){
 	var page = 1,off_on = false;
 	//加载数据
 	var LoadingDataFn = function() {
+    	$(".loading_box").show(10,function(){
+    		$('.loadings').shCircleLoader();
+    	});
+		setTimeout(function(){//假设请求成功后取消loading动画
+			$(".loading_box").hide(10,function(){
+				$('.loadings').shCircleLoader('destroy');
+			});
+		}, 1000);
 	    var dom = '';
 	    for (var i =1; i <31; i++) {
 	        dom+='<div>'+i+'</div>';

@@ -35,4 +35,23 @@ $(function(){
     		$(this).removeClass("icon-icon4").addClass("icon-aixin");
     	}
     })
+    
+    function myInput(en){
+    	console.log(en);
+    }
+    
+//	$('.headers input').on('keypress', function (e){
+//	    var keycode = e.keyCode;
+//	　　	//keycode是键码，13也是电脑物理键盘的 enter
+//	    if(keycode == '13') {
+//	    	e.preventDefault();
+//	    	console.log("texts="+$(this).val());
+//	    	call_record.push($(this).val())
+//	    	//数组去重
+//	    	call_record=heavy(call_record);
+//	    	call_record=call_record.slice(-100);//只保存100条记录
+//	    	localStorage.setItem('call_record', JSON.stringify(call_record));
+//	    	search($(this).val());
+//	    }
+//	});
 })

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base";
+
 .headers{
     height: 1.173rem;
     background-color: #ffffff;
@@ -26,9 +27,9 @@
 }
 .contents{
     top:1.173rem;
-    left:auto;
     bottom:1.307rem;
     padding:0 0.4rem;
+    overflow: auto;
     >h3:nth-child(1){
         font-size: 0.533rem;
         padding:0.587rem 0;

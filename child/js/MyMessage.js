@@ -5,9 +5,45 @@ $(function(){
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
 	var LoadingDataFn = function(){
+    	$(".loading_box").show(10,function(){
+    		$('.loadings').shCircleLoader();
+    	});
+		setTimeout(function(){//假设请求成功后取消loading动画
+			$(".loading_box").hide(10,function(){
+				$('.loadings').shCircleLoader('destroy');
+			});
+		}, 1000);
 		var dom='';
-		for(var i=0;i<30;i++){
-			dom+='<li>'+(i+1)+'</li>';
+		for(var i=0;i<3;i++){
+			dom+='<div class="lists">'
+					+'<div class="message_title">'
+						+'<div>'
+							+'<img src="" alt="" />'
+							+'<div>'
+								+'<div class="name">戴琳jur</div>'
+								+'<p>19-05-13  16:27</p>'
+							+'</div>'
+						+'</div>'
+						+'<div class="reply">回复</div>'
+					+'</div>'
+					+'<div class="message_content">'
+						+(i+1)+'筑美好人居 享丰盛人生筑美好人居 享丰盛人生'
+						+'筑美好人居 享丰盛人生筑美好人居 享丰盛人生'
+						+'筑美好人居 享丰盛人生筑美好人居 享丰盛人生'
+					+'</div>'
+					+'<div class="reply_box">'
+						+'<img src="" alt="" />'
+						+'<div>'
+							+'<div>'
+								+'<div>name</div>'
+								+'<div>19-05-13  16:27</div>'
+							+'</div>'
+							+'<div>'
+								+'回复<span>戴琳jur</span>：筑美好人居 享丰盛人生筑美好人居 享丰盛人生'
+							+'</div>'
+						+'</div>'
+					+'</div>'
+				+'</div>';
 		}
 		$('.contents').append(dom);
 		off_on = true;

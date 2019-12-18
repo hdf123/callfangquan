@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .ul1 > li > div > span, .details > div:nth-child(1), .wdows > div, #wdows > div {
+.yincang, .ul1 > li > div > span, .details > div:nth-child(1) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -84,6 +84,17 @@ a {
 /*placeholder样式*/
 .input::-webkit-input-placeholder {
   text-align: center;
+}
+
+input::-webkit-inner-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+  /*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+
+input::-webkit-outer-spin-button {
+  /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
 }
 
 /*隐藏滚动条*/
@@ -142,8 +153,8 @@ body {
  */
 .contents {
   top: 1.173rem;
-  left: auto;
   bottom: 1.307rem;
+  overflow: auto;
 }
 
 .swiper_box {

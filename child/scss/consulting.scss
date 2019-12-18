@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
+
 .headers{
     height: 1.173rem;
     z-index:96;
@@ -31,11 +32,8 @@
     }
 }
 .contents{
-    width:10rem !important;
     padding:0 0.413rem;
-    position:fixed;
     top:1.173rem;
-    left:auto;
     bottom:1.587rem;
     overflow: auto;
     >h3{

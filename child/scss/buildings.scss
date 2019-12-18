@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
+
 img{
     background:none;
 }
@@ -94,11 +95,7 @@ img{
     }
 }
 .contents{
-    max-width:10rem;
-//  padding-bottom:1.547rem;
-    position: absolute;
     top:0;
-    left: auto;
     bottom:1.547rem;
     overflow: auto;
 }
@@ -347,7 +344,7 @@ img{
         display: flex;
         justify-content: center;
         font-size: 0.373rem;
-        padding:0.36rem 0 0.36rem 0;
+        padding:0.36rem 0 0.36rem 0.4rem;
     }
     .act{
         color:#0099ff;

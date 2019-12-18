@@ -3,10 +3,6 @@ $(function(){
 	var headers=$("header")[0].getBoundingClientRect().height;
 	var b2=$(".experts_tab")[0].getBoundingClientRect().height;
 	var b3=b1+b2-headers;
-	console.log("b1---"+b1);
-	console.log("b2---"+b2);
-	console.log("b3---"+b3);
-	console.log("headers---"+headers);
 	$(".box").css({"top":b3+"px"});
 	
 	

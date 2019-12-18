@@ -40,7 +40,14 @@ $(function(){
 	var page = 1,off_on = false;//page：分页码;off_on：禁止重复加载
 	//加载数据
 	var LoadingDataFn = function(){
-		console.log("上拉加载");
+    	$(".loading_box").show(10,function(){
+    		$('.loadings').shCircleLoader();
+    	});
+		setTimeout(function(){//假设请求成功后取消loading动画
+			$(".loading_box").hide(10,function(){
+				$('.loadings').shCircleLoader('destroy');
+			});
+		}, 1000);
 		var dom='';
 		for(var i=0;i<30;i++){
 			dom+='<div>'+(i+1)+'</div>'
@@ -64,8 +71,6 @@ $(function(){
 	        }
 			var _ele=document.querySelector(".uu");
 	    	_ele.style.transform ='translateY(-500)px)';
-
-
 	    }else{
 	    	
 	    }

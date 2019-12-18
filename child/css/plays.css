@@ -48,7 +48,7 @@ a {
 }
 
 /*单行隐藏*/
-.yincang, .Introduction > div > .yy, .consulting_box > ul > li > p, .wdows > div, #wdows > div {
+.yincang, .Introduction > div > .yy, .consulting_box > ul > li > p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -129,7 +129,6 @@ input::-webkit-outer-spin-button {
 
 .contents {
   top: 1.173rem;
-  left: auto;
   bottom: 0;
 }
 .contents video {

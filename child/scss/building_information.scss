@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base.scss";
+
 body{
     background:#f5f5f5;
 }
@@ -30,7 +31,9 @@ body{
     }
 }
 .contents{
-    padding-top:1.173rem;
+    top:1.173rem;
+    bottom:0;
+    overflow: auto;
 }
 .merchants{
     display: flex;

@@ -2,7 +2,7 @@ $(function(){
 	/**
 	 * 页面渲染
 	 */
-	var call_building = JSON.parse(localStorage.getItem('call_building'));
+	var call_building =data[2];
 	var ska="",skb="",states="";
 	for(i in call_building.region){
 		ska+='<div>'+call_building.region[i]+'</div>';

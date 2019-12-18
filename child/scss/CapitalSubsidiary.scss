@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base";
+
 .headers{
     height:3.84rem;
     background-color: #ffffff;
@@ -50,8 +51,8 @@
 .contents{
     padding-left:0.4rem;
     top:3.84rem;
-    left:auto;
     bottom:0;
+    overflow: auto;
     >li{
         height: 1.6rem;
         display: flex;

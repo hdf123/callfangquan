@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../css/base";
+
 .headers{
     height: 1.173rem;
     background-color: #ffffff;
@@ -19,9 +20,9 @@
 }
 .contents{
     top:1.173rem;
-    left:auto;
     bottom:0;
     padding-left:0.4rem;
+    overflow: auto;
     .Brand_title{
         height:1.49rem;
         display: flex;
