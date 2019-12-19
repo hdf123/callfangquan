@@ -18,6 +18,7 @@ $(function(){
      	event.stopPropagation();
      })
     $("#page_emotion dd").click(function(){//表情
+    	console.log(111);
         $("#form_article").html( $("#form_article").html().replace(say, '') );
     });
     $(document).click(function(){
@@ -36,22 +37,21 @@ $(function(){
     	}
     })
     
-    function myInput(en){
-    	console.log(en);
-    }
     
-//	$('.headers input').on('keypress', function (e){
-//	    var keycode = e.keyCode;
-//	　　	//keycode是键码，13也是电脑物理键盘的 enter
-//	    if(keycode == '13') {
-//	    	e.preventDefault();
-//	    	console.log("texts="+$(this).val());
-//	    	call_record.push($(this).val())
-//	    	//数组去重
-//	    	call_record=heavy(call_record);
-//	    	call_record=call_record.slice(-100);//只保存100条记录
-//	    	localStorage.setItem('call_record', JSON.stringify(call_record));
-//	    	search($(this).val());
-//	    }
-//	});
+	$('#form_article').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	　　	//keycode是键码，13也是电脑物理键盘的 enter
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	console.log("texts="+$(this).html());
+	    	$(".comments_box").append('<li class="comments">'
+					+'<img src="" alt="" />'
+					+'<div>'
+						+'<div>名称</div>'
+						+'<p>'+$(this).html()+'</p>'
+					+'</div>'
+				+'</li>');
+			$(this).html("");
+	    }
+	});
 })

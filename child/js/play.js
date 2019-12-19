@@ -120,10 +120,6 @@ $(function(){
     $(document).click(function(){
     	$("#page_emotion").hide();
     })
-    $(".expression").click(function(event){
-    	$("#page_emotion").toggle();
-    	event.stopPropagation();
-    })
 	$(".more").click(function(){//查看更多
 		$(".cons").empty();
 		funa(2);

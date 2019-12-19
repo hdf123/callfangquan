@@ -14,7 +14,6 @@
 
 img {
   display: block;
-  background: rgba(199, 199, 199, 0.3);
 }
 
 input {
@@ -55,7 +54,7 @@ a {
 }
 
 /*多行隐藏*/
-.yincangs, .associated > div > p, .recommended > li > div, .ycs {
+.yincangs, .associated > div > p, .recommended > li > div {
   overflow: hidden;
   /*超出隐藏*/
   display: -webkit-box;
@@ -433,6 +432,12 @@ input::-webkit-outer-spin-button {
   width: 8rem;
   font-size: 0.373rem;
   line-height: 0.533rem;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .comments_content img {
   display: inline-block;

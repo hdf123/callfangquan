@@ -39,7 +39,7 @@ $(function(){
 								+'<div>19-05-13  16:27</div>'
 							+'</div>'
 							+'<div>'
-								+'回复<span>戴琳jur</span>：筑美好人居 享丰盛人生筑美好人居 享丰盛人生'
+								+'<span>回复</span><span>戴琳jur</span>：<span>筑美好人居 享丰盛人生筑美好人居 享丰盛人生</span>'
 							+'</div>'
 						+'</div>'
 					+'</div>'
@@ -69,10 +69,7 @@ $(function(){
 	$(".footers").hide();
 	$(".contents").on("click",".reply",function(){
 		names=$(this).closest(".message_title").find(".name").html();
-		
 		ks=$(this).closest(".lists");
-		
-		
 		$("#form_article").html("回复"+names+"：");
 		$(".footers").show();
 		$(".contents").css({"bottom":"1.307rem"});
@@ -101,8 +98,18 @@ $(function(){
     	$("#page_emotion").toggle();
     	event.stopPropagation();
     })
+	$('#form_article').on('keypress', function (e){
+	    var keycode = e.keyCode;
+	　　	//keycode是键码，13也是电脑物理键盘的 enter
+	    if(keycode == '13') {
+	    	e.preventDefault();
+	    	reply();
+	    }
+	});
     $(".btn").click(function(){
-    	console.log($(".inputs article").html());
+    	reply();
+    })
+    function reply(){
     	ks.append('<div class="reply_box">'
 					+'<img src="" alt="" />'
 					+'<div>'
@@ -110,14 +117,16 @@ $(function(){
 							+'<div>name</div>'
 							+'<div>19-05-13  16:27</div>'
 						+'</div>'
-						+'<div>'
-							+'回复<span>戴琳jur</span>：'+$(".inputs article").html()
-						+'</div>'
+						+'<div><span>'
+							+'回复</span><span>戴琳jur</span>：<span>'+$("#form_article").html()
+						+'</span></div>'
 					+'</div>'
 				+'</div>')
     	
     	names="";
     	ks='';
     	$("#form_article").html(say);
-    })
+    	$(".footers").hide();
+    	$(".contents").css({"bottom":"0"});
+    }
 })

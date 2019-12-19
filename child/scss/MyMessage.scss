@@ -99,7 +99,8 @@
             padding-bottom:0.48rem;
             margin-top:0.3rem;
             font-size: 0.373rem;
-            >span{
+            @extend .newline;
+            >span:nth-child(2){
                 color: #5facfb;
                 font-size: 0.373rem;
             }

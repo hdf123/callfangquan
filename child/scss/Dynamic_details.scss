@@ -85,6 +85,10 @@
             width:7.9rem;
             margin-top:0.213rem;
             font-size: 0.373rem;
+            @extend .newline;
+            img{
+                display: inline-block;
+            }
         }
     }
 }
@@ -136,12 +140,7 @@
     overflow-x: auto;
     white-space: nowrap;
     line-height:0.85rem;
-    display: flex;
-    align-items: center;
     img{
         display: inline-block;
     }
-}
-#form_article::-webkit-scrollbar {
-    width: 0 !important;
 }

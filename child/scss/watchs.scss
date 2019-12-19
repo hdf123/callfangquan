@@ -326,14 +326,16 @@
     width:8rem;
     font-size: 0.373rem;
     line-height: 0.533rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     img{
         display: inline-block;
     }
 }
-
-.ycs{@extend .yincangs;}
-
-
 .reply_box{
     width:10rem;
     height: auto;

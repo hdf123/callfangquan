@@ -14,7 +14,6 @@
 
 img {
   display: block;
-  background: rgba(199, 199, 199, 0.3);
 }
 
 input {
@@ -67,7 +66,7 @@ a {
 }
 
 /*换行*/
-.newline {
+.newline, .comments > div > p {
   word-break: break-all;
   /* 只对英文起作用，以字母作为换行依据。*/
   word-wrap: break-word;
@@ -201,6 +200,9 @@ input::-webkit-outer-spin-button {
   margin-top: 0.213rem;
   font-size: 0.373rem;
 }
+.comments > div > p img {
+  display: inline-block;
+}
 
 .footers {
   width: 10rem;
@@ -250,15 +252,9 @@ input::-webkit-outer-spin-button {
   overflow-x: auto;
   white-space: nowrap;
   line-height: 0.85rem;
-  display: flex;
-  align-items: center;
 }
 #form_article img {
   display: inline-block;
-}
-
-#form_article::-webkit-scrollbar {
-  width: 0 !important;
 }
 
 /*# sourceMappingURL=Dynamic_details.css.map */
